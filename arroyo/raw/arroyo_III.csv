@@ -1,0 +1,31 @@
+;;plant_ge;Nastanthus;Nastanthus;Cerastium;Cerastium;Chaetanthera;Chaetanthera;Chaetanthera;Erigeron;Leuceria;Nassauvia;Nassauvia;Nassauvia;Senecio;Draba;Draba;Cardamine;Phacelia;Adesmia;Adesmia;Caiophora;Loasa;Nototriche;Oxalis;Oxalis;Calandrinia;Calandrinia;Calandrinia;Calandrinia;Calandrinia;Ranunculus;Acaena;Oreopolus;Tropaeolum;Azorella;L.;Pozoa;Valeriana;Junellia;Viola;Viola;Viola
+;;plant_sp;aglomeratus;spathulatus;arvense;montioides;apiculata;flabellata;lycopodioides;andicola;salina;lagascae;pinnigera;pungens;francisci;gilliesii;tenuis;nivalis;secunda;capitellata;glomerula;coronata;caespitosa;compacta;compacta;sp.1;affinis;caespitosa;occulta;picta;sericea;peduncularis;pinnatifida;glacialis;polyphyllum;madreporica;acaulis;coriacea;radicalis;uniflora;atropurpurea;montagnei;philippii
+pol_ge;pol_sp;no.;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41
+Andinus;venustus;1;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Anthidium;sp.;2;;;;;;;;;;;;;;0;0;0;1;1;1;1;1;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+Bombus;dahlbomii;3;;;;;;;;;;;;1;;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Cynthia;terpsichore;4;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Dasybasis;sp. 1;5;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+Diptera;n.i.;6;;;1;1;;;;1;;1;1;1;;0;1;1;0;0;0;0;0;1;0;1;0;1;1;1;0;1;0;0;0;1;1;1;1;1;1;0;0
+Faunula;leucoglene;7;;;;;1;1;1;;;;;;;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Habromyia;lipoflava;8;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0
+Hymenoptera;n.i.;9;1;1;;;;;;;;;;;;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+Hypsochila;wagenknecti;10;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Megachile;semirufa;11;;;;;;;;;;;;;;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Phulia;nymphula;12;;;;;;;;;;1;;;;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0
+Pseudolucia;chilensis;13;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+Scaeva;melanostoma;14;;;;;;;;;1;;;1;1;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;1;1;0;0;0;0;0;0;0
+Stenanthidium;espinosai;15;;;;;;;;;;;;;;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Tatochila;mercedis;16;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Troch;n.i.;17;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+Villa ;sp. ;18;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+Yramea;modesta;19;;;;;1;;1;;;1;;;;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;1;1;0;0;0;0;1;1;1;1
+Bombyllidae;n.i.;20;;;1;;;;;;;;;;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Sarcophagidae;n.i.;21;;;;;;;;;;;;;;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+Coleoptera;n.i.;22;;;;;;;;;;;;;;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Syrphidae;n.i.;23;;;;;;;;;;;;;;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Tachinidae;n.i.;24;;;;;;;;;;;;;;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Megachile;sp. 5;25;;;;;;;;;;;;;;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+Troch;n.i.;26;;;;;;;;;;;;;;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Sarcophagidae;sp.;27;;;;;;;;;;1;;;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+Vibrissiomyia;sp.;28;;;;;;;;;;;;;;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0
