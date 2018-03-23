@@ -244,10 +244,10 @@ names(taxons_df1) <- c("original_name", "name_clear")
 
 for (i in 1:nrow(taxons_df1)) {
 
-  if(((str_detect(taxons_df[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df[i, 1], "[:punct:]") == TRUE) &
-       str_detect(taxons_df[i, 1], "sp") == TRUE) ||
-       str_detect(taxons_df[i, 1], "n\\.i\\.") == TRUE ||
-       str_detect(taxons_df[i, 1], "sp$") == TRUE){
+  if(((str_detect(taxons_df1[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df1[i, 1], "[:punct:]") == TRUE) &
+       str_detect(taxons_df1[i, 1], "sp") == TRUE) ||
+       str_detect(taxons_df1[i, 1], "n\\.i\\.") == TRUE ||
+       str_detect(taxons_df1[i, 1], "sp$") == TRUE){
 
     taxons_df1[i, 2] <- word(taxons_df1[i, 1], start = 1)
 
@@ -301,10 +301,10 @@ names(taxons_df2) <- c("original_name", "name_clear")
 
 for (i in 1:nrow(taxons_df2)) {
 
-  if(((str_detect(taxons_df[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df[i, 1], "[:punct:]") == TRUE) &
-       str_detect(taxons_df[i, 1], "sp") == TRUE) ||
-       str_detect(taxons_df[i, 1], "n\\.i\\.") == TRUE ||
-       str_detect(taxons_df[i, 1], "sp$") == TRUE){
+  if(((str_detect(taxons_df2[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df2[i, 1], "[:punct:]") == TRUE) &
+       str_detect(taxons_df2[i, 1], "sp") == TRUE) ||
+       str_detect(taxons_df2[i, 1], "n\\.i\\.") == TRUE ||
+       str_detect(taxons_df2[i, 1], "sp$") == TRUE){
 
     taxons_df2[i, 2] <- word(taxons_df2[i, 1], start = 1)
 
@@ -358,10 +358,10 @@ names(taxons_df3) <- c("original_name", "name_clear")
 
 for (i in 1:nrow(taxons_df3)) {
 
-  if(((str_detect(taxons_df[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df[i, 1], "[:punct:]") == TRUE) &
-       str_detect(taxons_df[i, 1], "sp") == TRUE) ||
-       str_detect(taxons_df[i, 1], "n\\.i\\.") == TRUE ||
-       str_detect(taxons_df[i, 1], "sp$") == TRUE){
+  if(((str_detect(taxons_df3[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df3[i, 1], "[:punct:]") == TRUE) &
+       str_detect(taxons_df3[i, 1], "sp") == TRUE) ||
+       str_detect(taxons_df3[i, 1], "n\\.i\\.") == TRUE ||
+       str_detect(taxons_df3[i, 1], "sp$") == TRUE){
 
     taxons_df3[i, 2] <- word(taxons_df3[i, 1], start = 1)
 
