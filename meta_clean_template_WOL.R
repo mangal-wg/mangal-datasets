@@ -101,24 +101,24 @@ inter <- list(taxon_1_level = "[taxon, population, individual]",
 setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_name")
 
 # Open file
-FWname <- read.csv2(file = "raw/FWname.csv", header = FALSE, sep = ",")
+FW_name <- read.csv2(file = "raw/FW_name.csv", header = FALSE, sep = ",")
 
 # Cleaning for melt()
 ## Get ROW one with Genus_species
-x  <- unname(unlist(FWname[1, ]))
+x  <- unname(unlist(FW_name[1, ]))
 x[1] <- 1
-colnames(FWname) <- unlist(x)
+colnames(FW_name) <- unlist(x)
 rm(x)
 
 ## Delete unused row
-FWname <- FWname[-1, ]
+FW_name <- FW_name[-1, ]
 
 # Melt df
-FWname <- melt(FWname, id.vars = c(1), na.rm = TRUE)
+FW_name <- melt(FW_name, id.vars = c(1), na.rm = TRUE)
 
 # Remove interaction value = 0 (no interaction)
-names(FWname) <- c("sp_taxon_1", "sp_taxon_2", "value")
-FWname <- subset(FWname, FWname$value != 0)
+names(FW_name) <- c("sp_taxon_1", "sp_taxon_2", "value")
+FW_name <- subset(FW_name, FW_name$value != 0)
 
 #------------------------------
 # Set taxo_back and taxon table
