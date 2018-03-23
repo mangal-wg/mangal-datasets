@@ -1,0 +1,16 @@
+Azorean Flores;;;origin;end;nat;nat;nat;nat;nat;nat;intr;intr;intr
+;;;plant_ge;Azorina;Crithmum;Solidago;Beta;Daucus;Silene;Chamomilla;Lotus;Freesia;Reseda
+;;;plant\pol;vidalii;maritimum;sempervivens;vulgaris;carota;vulgaris;suaveolens;corniculatus;refracta;luteola
+origin;pol_ge;pol_sp;no.;1;2;3;4;5;6;7;8;9;10
+end;Halictus;sp.;1;98;0;141;0;11;7;21;0;0;11
+nat;Sepsis;thoracica;2;51;87;0;8;0;30;0;0;0;0
+nat;Agrotis;ipsilon;3;0;0;22;0;0;0;0;0;0;0
+nat;Bombus;ruderatus;4;9;0;0;0;0;0;0;47;11;0
+nat;Colias;crocea;5;9;0;0;0;0;0;0;21;12;0
+intr;Musca;domestica;6;23;83;0;0;102;0;42;0;0;0
+intr;Apis;mellifera;7;89;0;0;0;0;0;0;9;0;9
+intr;Lucilia;sericata;8;0;93;0;0;8;0;0;0;0;0
+intr;Lasius;niger;9;37;0;0;0;0;0;0;0;0;0
+intr;Anothomyia;pluvialis;10;0;0;0;0;0;0;23;0;0;0
+intr;Calliphora;vemitoria;11;13;0;0;0;0;0;0;0;0;0
+intr;Eristalix;tenax;12;0;12;0;0;0;0;0;0;0;0
