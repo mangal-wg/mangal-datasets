@@ -97,11 +97,8 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/kaehler_et_al_2005")
-# 
 # # Open file
-# kaehler_et_al_2005 <- read.csv2(file = "raw/kaehler_et_al_2005.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+# kaehler_et_al_2005 <- read.csv2(file = "importation_mangal/kaehler_et_al_2005/raw/kaehler_et_al_2005.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 # 
 # # Cleaning for melt()
 # ## Get ROW one with Genus_species
@@ -208,7 +205,7 @@ inter <- list(taxon_1_level = "taxon",
 # # Set traits table
 # #------------------------------
 # 
-# # traits_df <- read.csv2(file = "data/kaehler_et_al_2005_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_traits.csv", header = TRUE)
 # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -217,16 +214,15 @@ inter <- list(taxon_1_level = "taxon",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/kaehler_et_al_2005_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/kaehler_et_al_2005_taxons.csv"), row.names = FALSE)
-# write.csv2(x = kaehler_et_al_2005, file = paste0(getwd(), "/data/kaehler_et_al_2005_inter.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/kaehler_et_al_2005_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_taxons.csv", row.names = FALSE)
+# write.csv2(x = kaehler_et_al_2005, file = "importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_inter.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/kaehler_et_al_2005")
-taxo_back_df <- read.csv2("data/kaehler_et_al_2005_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/kaehler_et_al_2005_taxons.csv", header = TRUE)
-kaehler_et_al_2005 <- read.csv2("data/kaehler_et_al_2005_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/kaehler_et_al_2005_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_taxons.csv", header = TRUE)
+kaehler_et_al_2005 <- read.csv2("importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/kaehler_et_al_2005/data/kaehler_et_al_2005_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions

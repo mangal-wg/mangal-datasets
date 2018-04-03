@@ -23,7 +23,7 @@ srid <- 4326
 attr_inter <- list(name   = "Presence/Absence",
               table_owner = "interactions",
               description = "Presence or absence of a recorded interaction",
-              unit        = "null")
+              unit        = "NA")
 
 # attr1 <- list(name        = "NAME",
 #               table_owner = "TABLE_OWNER",
@@ -98,12 +98,9 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/Elberling_Olesen")
-# 
 # # Open file
-# Elberling_Olesen <- read.csv2(file = "raw/Elberling_Olesen.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
-# 
+# Elberling_Olesen <- read.csv2(file = "importation_mangal/Elberling_Olesen/raw/Elberling_Olesen.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+# /Users/gabriel/Documents/stage/
 # # Cleaning for melt()
 # ## Get ROW one with Genus_species
 # x  <- Elberling_Olesen[1, ]
@@ -211,7 +208,7 @@ inter <- list(taxon_1_level = "taxon",
 # # Set traits table
 # #------------------------------
 # 
-# # traits_df <- read.csv2(file = "data/Elberling_Olesen_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/Elberling_Olesen/data/Elberling_Olesen_traits.csv", header = TRUE)
 # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -220,16 +217,15 @@ inter <- list(taxon_1_level = "taxon",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/Elberling_Olesen_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/Elberling_Olesen_taxons.csv"), row.names = FALSE)
-# write.csv2(x = Elberling_Olesen, file = paste0(getwd(), "/data/Elberling_Olesen_inter.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/Elberling_Olesen_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/Elberling_Olesen/data/Elberling_Olesen_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/Elberling_Olesen/data/Elberling_Olesen_taxons.csv", row.names = FALSE)
+# write.csv2(x = Elberling_Olesen, file = "importation_mangal/Elberling_Olesen/data/Elberling_Olesen_inter.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/Elberling_Olesen/data/Elberling_Olesen_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/Elberling_Olesen")
-taxo_back_df <- read.csv2("data/Elberling_Olesen_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/Elberling_Olesen_taxons.csv", header = TRUE)
-Elberling_Olesen <- read.csv2("data/Elberling_Olesen_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/Elberling_Olesen_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/Elberling_Olesen/data/Elberling_Olesen_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/Elberling_Olesen/data/Elberling_Olesen_taxons.csv", header = TRUE)
+Elberling_Olesen <- read.csv2("importation_mangal/Elberling_Olesen/data/Elberling_Olesen_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/Elberling_Olesen/data/Elberling_Olesen_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions

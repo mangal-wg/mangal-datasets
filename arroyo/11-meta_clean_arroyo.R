@@ -81,11 +81,8 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/arroyo")
-# 
 #   # Open file
-#   arroyo_I <- read.csv2(file = paste0("raw/arroyo_I.csv"), header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+#   arroyo_I <- read.csv2(file = "importation_mangal/arroyo/raw/arroyo_I.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 # 
 #   # Cleaning for melt()
 #   ## Merge two first COLUMNS Genus species
@@ -114,7 +111,7 @@ inter <- list(taxon_1_level = "taxon",
 # 
 # # arroyo_II
 # 
-#   arroyo_II <- read.csv2(file = "raw/arroyo_II.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+#   arroyo_II <- read.csv2(file = "importation_mangal/arroyo/raw/arroyo_II.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 #   arroyo_II[1:2, 1:2] <- "sp."
 #   arroyo_II <- unite(arroyo_II, sp1, c(V1, V2), sep = " ", remove = TRUE)
 #   x  <- paste(arroyo_II[1, ], sep =" ", arroyo_II[2, ])
@@ -128,7 +125,7 @@ inter <- list(taxon_1_level = "taxon",
 # 
 # # arroyo_III
 # 
-#   arroyo_III <- read.csv2(file = "raw/arroyo_III.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+#   arroyo_III <- read.csv2(file = "importation_mangal/arroyo/raw/arroyo_III.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 #   arroyo_III[1:2, 1:2] <- "sp."
 #   arroyo_III <- unite(arroyo_III, sp1, c(V1, V2), sep = " ", remove = TRUE)
 #   x  <- paste(arroyo_III[1, ], sep =" ", arroyo_III[2, ])
@@ -208,10 +205,9 @@ inter <- list(taxon_1_level = "taxon",
 # }
 # 
 # # Writing taxo_back_df
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/arroyo_taxo_back.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/arroyo/data/arroyo_taxo_back.csv", row.names = FALSE)
 
-setwd("importation_mangal/arroyo")
-taxo_back_df <- read.csv2("data/arroyo_taxo_back.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/arroyo/data/arroyo_taxo_back.csv", header = TRUE)
 
 #------------------------------
   # POST commun table
@@ -271,9 +267,8 @@ enviro1 <- list(name  = "mean altitude",
                 date  = "1981-03-01",
                 value = 2400)
 
-setwd("importation_mangal/arroyo")
-taxon_df1 <- read.csv2("data/arroyo_I_taxons.csv", header = TRUE)
-arroyo_I <- read.csv2("data/arroyo_I_inter.csv", header = TRUE)
+taxons_df1 <- read.csv2("importation_mangal/arroyo/data/arroyo_I_taxons.csv", header = TRUE)
+arroyo_I  <- read.csv2("importation_mangal/arroyo/data/arroyo_I_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro1, attr1)
@@ -282,10 +277,8 @@ POST_taxons(taxons_df1)
 POST_interactions(arroyo_I, enviro = enviro1, attr = attr_inter)
 
 # # Writing taxon and interaction table
-# write.csv2(x = taxons_df1, file = paste0(getwd(), "/data/arroyo_I_taxons.csv"), row.names = FALSE)
-# write.csv2(x = arroyo_I, file = paste0(getwd(), "/data/arroyo_I_inter.csv"), row.names = FALSE)
-
-
+# write.csv2(x = taxons_df1, file = "importation_mangal/arroyo/data/arroyo_I_taxons.csv", row.names = FALSE)
+# write.csv2(x = arroyo_I, file = "importation_mangal/arroyo/data/arroyo_I_inter.csv", row.names = FALSE)
 
 # #------------------------------
 # # arroyo 2
@@ -328,9 +321,8 @@ enviro2 <- list(name  = "mean altitude",
                 date  = "1981-03-01",
                 value = 2900)
 
-setwd("importation_mangal/arroyo")
-taxon_df2 <- read.csv2("data/arroyo_II_taxons.csv", header = TRUE)
-arroyo_II <- read.csv2("data/arroyo_II_inter.csv", header = TRUE)
+taxons_df2 <- read.csv2("importation_mangal/arroyo/data/arroyo_II_taxons.csv", header = TRUE)
+arroyo_II <- read.csv2("importation_mangal/arroyo/data/arroyo_II_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro2, attr1)
@@ -339,10 +331,8 @@ POST_taxons(taxons_df2)
 POST_interactions(arroyo_II, enviro = enviro2)
 
 # # Writing taxon and interaction table
-# write.csv2(x = taxons_df2, file = paste0(getwd(), "/data/arroyo_II_taxons.csv"), row.names = FALSE)
-# write.csv2(x = arroyo_II, file = paste0(getwd(), "/data/arroyo_II_inter.csv"), row.names = FALSE)
-
-
+# write.csv2(x = taxons_df2, file = "importation_mangal/arroyo/data/arroyo_II_taxons.csv", row.names = FALSE)
+# write.csv2(x = arroyo_II, file = "importation_mangal/arroyo/data/arroyo_II_inter.csv", row.names = FALSE)
 
 # #------------------------------
 # # arroyo 3
@@ -385,9 +375,8 @@ enviro3 <- list(name  = "mean altitude",
                 date  = "1981-03-01",
                 value = 3400)
 
-setwd("importation_mangal/arroyo")
-taxon_df3 <- read.csv2("data/arroyo_III_taxons.csv", header = TRUE)
-arroyo_III <- read.csv2("data/arroyo_III_inter.csv", header = TRUE)
+taxons_df3 <- read.csv2("importation_mangal/arroyo/data/arroyo_III_taxons.csv", header = TRUE)
+arroyo_III <- read.csv2("importation_mangal/arroyo/data/arroyo_III_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro3, attr1)
@@ -399,4 +388,4 @@ POST_interactions(arroyo_III, enviro = enviro3, attr = attr_inter)
 # write.csv2(x = taxons_df3, file = paste0(getwd(), "/data/arroyo_III_taxons.csv"), row.names = FALSE)
 # write.csv2(x = arroyo_III, file = paste0(getwd(), "/data/arroyo_III_inter.csv"), row.names = FALSE)
 
-rm(taxon, lat, lon, srid, attr_inter, attr1, refs, users, enviro1, enviro2, enviro3, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxons_df3, taxo_back_df, arroyo_I, arroyo_II, arroyo_III)
+rm(lat, lon, srid, attr_inter, attr1, refs, users, enviro1, enviro2, enviro3, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxons_df3, taxo_back_df, arroyo_I, arroyo_II, arroyo_III)

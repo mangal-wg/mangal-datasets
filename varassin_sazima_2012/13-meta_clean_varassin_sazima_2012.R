@@ -96,11 +96,8 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/varassin_sazima_2012")
-# 
 # # Open file
-# varassin_sazima_2012 <- read.csv2(file = "raw/varassin_sazima_2012.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+# varassin_sazima_2012 <- read.csv2(file = "importation_mangal/varassin_sazima_2012/raw/varassin_sazima_2012.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 # 
 # # Cleaning for melt()
 # ## Get ROW one with Genus_species
@@ -209,7 +206,7 @@ inter <- list(taxon_1_level = "taxon",
 # # Set traits table
 # #------------------------------
 # 
-# # traits_df <- read.csv2(file = "data/varassin_sazima_2012_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_traits.csv", header = TRUE)
 # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -218,16 +215,15 @@ inter <- list(taxon_1_level = "taxon",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/varassin_sazima_2012_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/varassin_sazima_2012_taxons.csv"), row.names = FALSE)
-# write.csv2(x = varassin_sazima_2012, file = paste0(getwd(), "/data/varassin_sazima_2012_inter.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/varassin_sazima_2012_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_taxons.csv", row.names = FALSE)
+# write.csv2(x = varassin_sazima_2012, file = "importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_inter.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/varassin_sazima_2012")
-taxo_back_df <- read.csv2("data/varassin_sazima_2012_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/varassin_sazima_2012_taxons.csv", header = TRUE)
-varassin_sazima_2012 <- read.csv2("data/varassin_sazima_2012_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/varassin_sazima_2012_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_taxons.csv", header = TRUE)
+varassin_sazima_2012 <- read.csv2("importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/varassin_sazima_2012/data/varassin_sazima_2012_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions

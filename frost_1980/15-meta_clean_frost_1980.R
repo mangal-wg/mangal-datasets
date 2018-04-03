@@ -95,13 +95,9 @@ inter <- list(taxon_1_level = "taxon",
 
 # #------------------------------
 #   # Cleaning matrix
-# #------------------------------
-# 
-# # Set WD
-# setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/frost_1980")
-# 
+# #------------------------------# 
 # # Open file
-# frost_1980 <- read.csv2(file = "raw/frost_1980.csv", header = FALSE, sep = ";")
+# frost_1980 <- read.csv2(file = "importation_mangal/frost_1980/raw/frost_1980.csv", header = FALSE, sep = ";")
 # 
 # # Cleaning for melt()
 # ## Get ROW one with Genus_species
@@ -210,7 +206,7 @@ inter <- list(taxon_1_level = "taxon",
 # # Set traits table
 # #------------------------------
 # 
-# # traits_df <- read.csv2(file = "data/frost_1980_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/frost_1980/data/frost_1980_traits.csv", header = TRUE)
 # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -219,16 +215,15 @@ inter <- list(taxon_1_level = "taxon",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/frost_1980_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/frost_1980_taxons.csv"), row.names = FALSE)
-# write.csv2(x = frost_1980, file = paste0(getwd(), "/data/frost_1980_inter.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/frost_1980_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/frost_1980/data/frost_1980_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/frost_1980/data/frost_1980_taxons.csv", row.names = FALSE)
+# write.csv2(x = frost_1980, file = "importation_mangal/frost_1980/data/frost_1980_inter.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/frost_1980/data/frost_1980_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/frost_1980")
-taxo_back_df <- read.csv2("data/frost_1980_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/frost_1980_taxons.csv", header = TRUE)
-frost_1980 <- read.csv2("data/frost_1980_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/frost_1980_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/frost_1980/data/frost_1980_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/frost_1980/data/frost_1980_taxons.csv", header = TRUE)
+frost_1980 <- read.csv2("importation_mangal/frost_1980/data/frost_1980_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/frost_1980/data/frost_1980_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions

@@ -96,11 +96,8 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/barret_helenurm_1987")
-# 
 # # Open file
-# barret_helenurm_1987 <- read.csv2(file = "raw/barret&helenurm_1987.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+# barret_helenurm_1987 <- read.csv2(file = "importation_mangal/barret&helenurm_1987/raw/barret&helenurm_1987.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 # 
 # # Cleaning for melt()
 # ## Merge two first COLUMNS Genus species
@@ -216,7 +213,7 @@ inter <- list(taxon_1_level = "taxon",
 # # Set traits table
 # #------------------------------
 # 
-# # traits_df <- read.csv2(file = "data/barret_helenurm_1987_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/barret&helenurm_1987/data/barret_helenurm_1987_traits.csv", header = TRUE)
 # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -225,16 +222,15 @@ inter <- list(taxon_1_level = "taxon",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/barret_helenurm_1987_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/barret_helenurm_1987_taxons.csv"), row.names = FALSE)
-# write.csv2(x = barret_helenurm_1987, file = paste0(getwd(), "/data/barret_helenurm_1987_inter.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/barret_helenurm_1987_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/barret&helenurm_1987/data/barret_helenurm_1987_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/barret&helenurm_1987/data/barret_helenurm_1987_taxons.csv", row.names = FALSE)
+# write.csv2(x = barret_helenurm_1987, file = "importation_mangal/barret&helenurm_1987/data/barret_helenurm_1987_inter.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/barret&helenurm_1987/data/barret_helenurm_1987_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/barret_helenurm_1987")
-taxo_back_df <- read.csv2("data/barret_helenurm_1987_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/barret_helenurm_1987_taxons.csv", header = TRUE)
-barret_helenurm_1987 <- read.csv2("data/barret_helenurm_1987_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/barret_helenurm_1987_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/barret_helenurm_1987/data/barret_helenurm_1987_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/barret_helenurm_1987/data/barret_helenurm_1987_taxons.csv", header = TRUE)
+barret_helenurm_1987 <- read.csv2("importation_mangal/barret_helenurm_1987/data/barret_helenurm_1987_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/barret&helenurm_1987/data/barret_helenurm_1987_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions
@@ -246,7 +242,7 @@ POST_refs()
 POST_users()
 # POST_environments(enviro, attr_##)
 POST_datasets()
-POST_networks(networks)
+POST_networks(networks, enviro)
 POST_taxo_back()
 POST_taxons(taxons_df)
 # POST_traits(traits_df)

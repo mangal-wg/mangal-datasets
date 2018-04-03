@@ -26,12 +26,12 @@ attr_inter <- list(name        = "meening of the interaction value",
                    unit        = "NA")
 
 
-# attr1 <- list(name        = "NAME",
+# attr1 <- list(name        = "name",
 #               table_owner = "TABLE_OWNER",
 #               description = "DESCRIPTION",
 #               unit        = "NA")
 
-# attr2 <- list(name        = "NAME",
+# attr2 <- list(name        = "name",
 #               table_owner = "TABLE_OWNER",
 #               description = "DESCRIPTION",
 #               unit        = "NA")
@@ -47,14 +47,14 @@ refs <- list(doi       = "NA",
              bibtex    = "bibtext long format")
 
 
-users <- list(name         = "NAME",
+users <- list(name         = "name",
               email        = "null",
               orcid        = "null",
               organization = "null",
               type         = "administrator")
 
 
-datasets <- list(name        = "NAME",
+datasets <- list(name        = "name",
                  date        = "1111-11-11",
                  description = "Description of the dataset collected",
                  public      = FALSE)
@@ -81,64 +81,61 @@ inter <- list(taxon_1_level = "[taxon, population, individual]",
   # Cleaning matrix
 #------------------------------
 
-# Set WD
-setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_NAME")
-
   # Open file
-  FW_NAME_I <- read.csv2(file = paste0("raw/FW_NAME_I.csv"), header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+  FW_name_I <- read.csv2(file = "importation_mangal/FW_name/raw/FW_name_I.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 
   # Cleaning for melt()
   ## Merge two first COLUMNS Genus species
-  FW_NAME_I[1:2, 1:2] <- "sp."
-  FW_NAME_I <- unite(FW_NAME_I, sp1, c(V1, V2), sep = " ", remove = TRUE)
+  FW_name_I[1:2, 1:2] <- "sp."
+  FW_name_I <- unite(FW_name_I, sp1, c(V1, V2), sep = " ", remove = TRUE)
 
   ## Get ROW one with Genus_species
-  x  <- paste(FW_NAME_I[1, ], sep =" ", FW_NAME_I[2, ])
+  x  <- paste(FW_name_I[1, ], sep =" ", FW_name_I[2, ])
   x[1] <- "species"
-  colnames(FW_NAME_I) <- x
+  colnames(FW_name_I) <- x
   rm(x)
 
   ## Delete unused row
-  FW_NAME_I <- FW_NAME_I[-c(1:3), -2]
+  FW_name_I <- FW_name_I[-c(1:3), -2]
 
   # Melt df
-  FW_NAME_I <- melt(FW_NAME_I, id.vars = c("species"), na.rm = TRUE)
+  FW_name_I <- melt(FW_name_I, id.vars = c("species"), na.rm = TRUE)
 
   # Retirer les 0 et ajouter dans la table network edge_list = FALSE
 
-  names(FW_NAME_I) <- c("sp_taxon_1", "sp_taxon_2", "value")
+  names(FW_name_I) <- c("sp_taxon_1", "sp_taxon_2", "value")
 
   # Remove interaction value = 0 (no interaction)
-  names(FW_NAME_I) <- c("sp_taxon_1", "sp_taxon_2", "value")
-  FW_NAME_I <- subset(FW_NAME_I, FW_NAME_I$value != 0)
+  names(FW_name_I) <- c("sp_taxon_1", "sp_taxon_2", "value")
+  FW_name_I <- subset(FW_name_I, FW_name_I$value != 0)
 
-# FW_NAME_II
+# FW_name_II
 
-  FW_NAME_II <- read.csv2(file = "raw/FW_NAME_II.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
-  FW_NAME_II[1:2, 1:2] <- "sp."
-  FW_NAME_II <- unite(FW_NAME_II, sp1, c(V1, V2), sep = " ", remove = TRUE)
-  x  <- paste(FW_NAME_II[1, ], sep =" ", FW_NAME_II[2, ])
+  FW_name_II <- read.csv2(file = "importation_mangal/FW_name/raw/FW_name_II.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+  FW_name_II[1:2, 1:2] <- "sp."
+  FW_name_II <- unite(FW_name_II, sp1, c(V1, V2), sep = " ", remove = TRUE)
+  x  <- paste(FW_name_II[1, ], sep =" ", FW_name_II[2, ])
   x[1] <- "species"
-  colnames(FW_NAME_II) <- x
+  colnames(FW_name_II) <- x
   rm(x)
-  FW_NAME_II <- FW_NAME_II[-c(1:3), -2]
-  FW_NAME_II <- melt(FW_NAME_II, id.vars = c("species"), na.rm = TRUE)
-  names(FW_NAME_II) <- c("sp_taxon_1", "sp_taxon_2", "value")
-  FW_NAME_II <- subset(FW_NAME_II, FW_NAME_II$value != 0)
+  FW_name_II <- FW_name_II[-c(1:3), -2]
+  FW_name_II <- melt(FW_name_II, id.vars = c("species"), na.rm = TRUE)
+  names(FW_name_II) <- c("sp_taxon_1", "sp_taxon_2", "value")
+  FW_name_II <- subset(FW_name_II, FW_name_II$value != 0)
 
-# FW_NAME_III
+# FW_name_III
 
-  FW_NAME_III <- read.csv2(file = "raw/FW_NAME_III.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
-  FW_NAME_III[1:2, 1:2] <- "sp."
-  FW_NAME_III <- unite(FW_NAME_III, sp1, c(V1, V2), sep = " ", remove = TRUE)
-  x  <- paste(FW_NAME_III[1, ], sep =" ", FW_NAME_III[2, ])
+  FW_name_III <- read.csv2(file = "importation_mangal/FW_name/raw/FW_name_III.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+  FW_name_III[1:2, 1:2] <- "sp."
+  FW_name_III <- unite(FW_name_III, sp1, c(V1, V2), sep = " ", remove = TRUE)
+  x  <- paste(FW_name_III[1, ], sep =" ", FW_name_III[2, ])
   x[1] <- "species"
-  colnames(FW_NAME_III) <- x
+  colnames(FW_name_III) <- x
   rm(x)
-  FW_NAME_III <- FW_NAME_III[-c(1:3), -2]
-  FW_NAME_III <- melt(FW_NAME_III, id.vars = c("species"), na.rm = TRUE)
-  names(FW_NAME_III) <- c("sp_taxon_1", "sp_taxon_2", "value")
-  FW_NAME_III <- subset(FW_NAME_III, FW_NAME_III$value != 0)
+  FW_name_III <- FW_name_III[-c(1:3), -2]
+  FW_name_III <- melt(FW_name_III, id.vars = c("species"), na.rm = TRUE)
+  names(FW_name_III) <- c("sp_taxon_1", "sp_taxon_2", "value")
+  FW_name_III <- subset(FW_name_III, FW_name_III$value != 0)
 
 #------------------------------
 # Set taxo_back and taxon table
@@ -146,9 +143,9 @@ setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_NAME")
 # Create taxo_back_df
 
 ## Get Unique taxon of data
-taxon <- unique(c(as.vector(unique(FW_NAME_I$sp_taxon_2)), as.vector(unique(FW_NAME_I$sp_taxon_1)),
-                  as.vector(unique(FW_NAME_II$sp_taxon_2)), as.vector(unique(FW_NAME_II$sp_taxon_1)),
-                  as.vector(unique(FW_NAME_III$sp_taxon_2)), as.vector(unique(FW_NAME_III$sp_taxon_1))))
+taxon <- unique(c(as.vector(unique(FW_name_I$sp_taxon_2)), as.vector(unique(FW_name_I$sp_taxon_1)),
+                  as.vector(unique(FW_name_II$sp_taxon_2)), as.vector(unique(FW_name_II$sp_taxon_1)),
+                  as.vector(unique(FW_name_III$sp_taxon_2)), as.vector(unique(FW_name_III$sp_taxon_1))))
 
 
 ### Check for spelling mistakes... ###
@@ -210,10 +207,9 @@ for (i in 1:nrow(taxo_back_df)) {
 }
 
 # Writing taxo_back_df
-write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/FW_NAME_taxo_back.csv"), row.names = FALSE)
+write.csv2(x = taxo_back_df, file = "importation_mangal/FW_name/data/FW_name_taxo_back.csv", row.names = FALSE)
 
-# setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_NAME")
-# taxo_back_df <- read.csv2("data/FW_NAME_taxo_back.csv", header = TRUE)
+# taxo_back_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxo_back.csv", header = TRUE)
 
 #------------------------------
   # POST commun table
@@ -233,11 +229,11 @@ POST_taxo_back()
 # POST_traits(traits_df)
 
 #------------------------------
-# FW_NAME 1
+# FW_name 1
 #------------------------------
 
 # Create taxons_df
-taxon <- c(as.vector(unique(FW_NAME_I$sp_taxon_2)), as.vector(unique(FW_NAME_I$sp_taxon_1)))
+taxon <- c(as.vector(unique(FW_name_I$sp_taxon_2)), as.vector(unique(FW_name_I$sp_taxon_1)))
 
 taxons_df1 <- data.frame(taxon, NA)
 names(taxons_df1) <- c("original_name", "name_clear")
@@ -257,7 +253,7 @@ for (i in 1:nrow(taxons_df1)) {
 }
 
 # Set metadata
-networks <- list(name               = "FW_NAME_I",
+networks <- list(name               = "FW_name_I",
                    date             = "1111-11-11",
                    lat              = lat,
                    lon              = lon,
@@ -273,28 +269,27 @@ enviro1 <- list(name  = "attribute name",
                 date  = "1111-11-11",
                 value = 0)
 
-# setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_NAME")
-# taxon_df1 <- read.csv2("data/FW_NAME_I_taxons.csv", header = TRUE)
-# FW_NAME_I <- read.csv2("data/FW_NAME_I_inter.csv", header = TRUE)
+# taxon_df1 <- read.csv2("importation_mangal/FW_name/data/FW_name_I_taxons.csv", header = TRUE)
+# FW_name_I <- read.csv2("importation_mangal/FW_name/data/FW_name_I_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro1, attr1)
 POST_networks(networks, enviro = enviro1)
 POST_taxons(taxons_df1)
-POST_interactions(FW_NAME_I, enviro = enviro1, attr_inter)
+POST_interactions(FW_name_I, enviro = enviro1, attr_inter)
 
 # Writing taxon and interaction table
-write.csv2(x = taxons_df1, file = paste0(getwd(), "/data/FW_NAME_I_taxons.csv"), row.names = FALSE)
-write.csv2(x = FW_NAME_I, file = paste0(getwd(), "/data/FW_NAME_I_inter.csv"), row.names = FALSE)
+write.csv2(x = taxons_df1, file = "importation_mangal/FW_name/data/FW_name_I_taxons.csv", row.names = FALSE)
+write.csv2(x = FW_name_I, file = "importation_mangal/FW_name/data/FW_name_I_inter.csv", row.names = FALSE)
 
 
 
 #------------------------------
-# FW_NAME 2
+# FW_name 2
 #------------------------------
 
 # Create taxons_df
-taxon <- c(as.vector(unique(FW_NAME_II$sp_taxon_2)), as.vector(unique(FW_NAME_II$sp_taxon_1)))
+taxon <- c(as.vector(unique(FW_name_II$sp_taxon_2)), as.vector(unique(FW_name_II$sp_taxon_1)))
 
 taxons_df2 <- data.frame(taxon, NA)
 names(taxons_df2) <- c("original_name", "name_clear")
@@ -314,7 +309,7 @@ for (i in 1:nrow(taxons_df2)) {
 }
 
 # Set metadata
-networks <- list(name             = "FW_NAME_II",
+networks <- list(name             = "FW_name_II",
                  date             = "1111-11-11",
                  lat              = lat,
                  lon              = lon,
@@ -330,28 +325,27 @@ enviro2 <- list(name  = "attribute name",
                 date  = "1111-11-11",
                 value = 0)
 
-# setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_NAME")
-# taxon_df2 <- read.csv2("data/FW_NAME_II_taxons.csv", header = TRUE)
-# FW_NAME_II <- read.csv2("data/FW_NAME_II_inter.csv", header = TRUE)
+# taxon_df2 <- read.csv2("importation_mangal/FW_name/data/FW_name_II_taxons.csv", header = TRUE)
+# FW_name_II <- read.csv2("importation_mangal/FW_name/data/FW_name_II_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro2, attr1)
 POST_networks(networks, enviro = enviro2)
 POST_taxons(taxons_df2)
-POST_interactions(FW_NAME_II, enviro = enviro2, attr_inter)
+POST_interactions(FW_name_II, enviro = enviro2, attr_inter)
 
 # Writing taxon and interaction table
-write.csv2(x = taxons_df2, file = paste0(getwd(), "/data/FW_NAME_II_taxons.csv"), row.names = FALSE)
-write.csv2(x = FW_NAME_II, file = paste0(getwd(), "/data/FW_NAME_II_inter.csv"), row.names = FALSE)
+write.csv2(x = taxons_df2, file = "importation_mangal/FW_name/data/FW_name_II_taxons.csv", row.names = FALSE)
+write.csv2(x = FW_name_II, file = "importation_mangal/FW_name/data/FW_name_II_inter.csv", row.names = FALSE)
 
 
 
 #------------------------------
-# FW_NAME 3
+# FW_name 3
 #------------------------------
 
 # Create taxons_df
-taxon <- c(as.vector(unique(FW_NAME_III$sp_taxon_2)), as.vector(unique(FW_NAME_III$sp_taxon_1)))
+taxon <- c(as.vector(unique(FW_name_III$sp_taxon_2)), as.vector(unique(FW_name_III$sp_taxon_1)))
 
 taxons_df3 <- data.frame(taxon, NA)
 names(taxons_df3) <- c("original_name", "name_clear")
@@ -371,7 +365,7 @@ for (i in 1:nrow(taxons_df3)) {
 }
 
 # Set metadata
-networks <- list(name             = "FW_NAME_III",
+networks <- list(name             = "FW_name_III",
                  date             = "1111-11-11",
                  lat              = lat,
                  lon              = lon,
@@ -387,18 +381,17 @@ enviro3 <- list(name  = "attribute name",
                 date  = "1111-11-11",
                 value = 0)
 
-# setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_NAME")
-# taxon_df3 <- read.csv2("data/FW_NAME_III_taxons.csv", header = TRUE)
-# FW_NAME_III <- read.csv2("data/FW_NAME_III_inter.csv", header = TRUE)
+# taxon_df3 <- read.csv2("importation_mangal/FW_name/data/FW_name_III_taxons.csv", header = TRUE)
+# FW_name_III <- read.csv2("importation_mangal/FW_name/data/FW_name_III_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro3, attr1)
 POST_networks(networks, enviro = enviro3)
 POST_taxons(taxons_df3)
-POST_interactions(FW_NAME_III, enviro = enviro3, attr_inter)
+POST_interactions(FW_name_III, enviro = enviro3, attr_inter)
 
 # Writing taxon and interaction table
-write.csv2(x = taxons_df3, file = paste0(getwd(), "/data/FW_NAME_III_taxons.csv"), row.names = FALSE)
-write.csv2(x = FW_NAME_III, file = paste0(getwd(), "/data/FW_NAME_III_inter.csv"), row.names = FALSE)
+write.csv2(x = taxons_df3, file = "importation_mangal/FW_name/data/FW_name_III_taxons.csv", row.names = FALSE)
+write.csv2(x = FW_name_III, file = "importation_mangal/FW_name/data/FW_name_III_inter.csv", row.names = FALSE)
 
-rm(taxon, lat, lon, srid, attr_inter, attr1, refs, users, enviro1, enviro2, enviro3, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxons_df3, taxo_back_df, FW_NAME_I, FW_NAME_II, FW_NAME_III)
+rm(taxon, lat, lon, srid, attr_inter, attr1, refs, users, enviro1, enviro2, enviro3, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxons_df3, taxo_back_df, FW_name_I, FW_name_II, FW_name_III)

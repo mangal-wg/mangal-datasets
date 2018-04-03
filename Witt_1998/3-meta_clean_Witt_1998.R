@@ -97,11 +97,8 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/Witt_1998")
-# 
 # # Open file
-# Witt_1998 <- read.csv2(file = "raw/Witt_1998.csv", header = FALSE, sep = ",")
+# Witt_1998 <- read.csv2(file = "importation_mangal/Witt_1998/raw/Witt_1998.csv", header = FALSE, sep = ",")
 # 
 # # Cleaning for melt()
 # ## Get ROW one with Genus_species
@@ -210,7 +207,7 @@ inter <- list(taxon_1_level = "taxon",
 # # Set traits table
 # #------------------------------
 # 
-# # traits_df <- read.csv2(file = "data/Witt_1998_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/Witt_1998/data/Witt_1998_traits.csv", header = TRUE)
 # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -219,16 +216,15 @@ inter <- list(taxon_1_level = "taxon",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/Witt_1998_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/Witt_1998_taxons.csv"), row.names = FALSE)
-# write.csv2(x = Witt_1998, file = paste0(getwd(), "/data/Witt_1998_inter.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/Witt_1998_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/Witt_1998/data/Witt_1998_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal_Witt_1998/data/Witt_1998_taxons.csv", row.names = FALSE)
+# write.csv2(x = Witt_1998, file = "importation_mangal/Witt_1998/data/Witt_1998_inter.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/Witt_1998/data/Witt_1998_traits.csv", row.names = FALSE)
 # 
-setwd("importation_mangal/Witt_1998")
-taxo_back_df <- read.csv2("data/Witt_1998_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/Witt_1998_taxons.csv", header = TRUE)
-Witt_1998 <- read.csv2("data/Witt_1998_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/Witt_1998_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/Witt_1998/data/Witt_1998_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/Witt_1998/data/Witt_1998_taxons.csv", header = TRUE)
+Witt_1998 <- read.csv2("importation_mangal/Witt_1998/data/Witt_1998_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/Witt_1998/data/Witt_1998_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions

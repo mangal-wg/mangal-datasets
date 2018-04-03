@@ -63,11 +63,8 @@ traits <- list(date = "1111-11-11")
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/olesen_al_2002")
-# 
 #   # Open file
-#   olesen_aigrettes <- read.csv2(file = "raw/olesen_aigrettes.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+#   olesen_aigrettes <- read.csv2(file = "importation_mangal/Olesen_al_2002/raw/olesen_aigrettes.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 # 
 #   # Cleaning for melt()
 #   ## Merge two first COLUMNS Genus species
@@ -93,7 +90,7 @@ traits <- list(date = "1111-11-11")
 # 
 # # olesen_flores
 # 
-#   olesen_flores <- read.csv2(file = "raw/olesen_flores.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+#   olesen_flores <- read.csv2(file = "importation_mangal/Olesen_al_2002/raw/olesen_flores.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 #   olesen_flores <- olesen_flores[-1, -1]
 #   olesen_flores[1:2, 1:2] <- "sp."
 #   olesen_flores <- unite(olesen_flores, sp1, c(V2, V3), sep = " ", remove = TRUE)
@@ -176,10 +173,9 @@ traits <- list(date = "1111-11-11")
 # }
 
 # # Writing taxo_back_df
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/olesen_taxo_back.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/Olesen_al_2002/data/olesen_taxo_back.csv", row.names = FALSE)
 
-setwd("importation_mangal/olesen")
-taxo_back_df <- read.csv2("data/olesen_taxo_back.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/Olesen_al_2002/data/olesen_taxo_back.csv", header = TRUE)
 
 #------------------------------
   # POST commun table
@@ -256,9 +252,8 @@ inter <- list(taxon_1_level = "taxon",
               lon           = lon,
               srid          = srid)
 
-setwd("importation_mangal/olesen")
-taxon_df1 <- read.csv2("data/olesen_aigrettes_taxons.csv", header = TRUE)
-olesen_aigrettes <- read.csv2("data/olesen_aigrettes_inter.csv", header = TRUE)
+taxons_df1 <- read.csv2("importation_mangal/Olesen_al_2002/data/olesen_aigrettes_taxons.csv", header = TRUE)
+olesen_aigrettes <- read.csv2("importation_mangal/Olesen_al_2002/data/olesen_aigrettes_inter.csv", header = TRUE)
 
 # POST table
 # POST_environments(enviro1, attr1)
@@ -267,10 +262,8 @@ POST_taxons(taxons_df1)
 POST_interactions(olesen_aigrettes, enviro = enviro1, attr_inter)
 
 # # Writing taxon and interaction table
-# write.csv2(x = taxons_df1, file = paste0(getwd(), "/data/olesen_aigrettes_taxons.csv"), row.names = FALSE)
-# write.csv2(x = olesen_aigrettes, file = paste0(getwd(), "/data/olesen_aigrettes_inter.csv"), row.names = FALSE)
-
-
+# write.csv2(x = taxons_df1, file = "importation_mangal/Olesen_al_2002/data/olesen_aigrettes_taxons.csv", row.names = FALSE)
+# write.csv2(x = olesen_aigrettes, file = "importation_mangal/Olesen_al_2002/data/olesen_aigrettes_inter.csv", row.names = FALSE)
 
 # #------------------------------
 # # olesen 2
@@ -330,9 +323,8 @@ inter <- list(taxon_1_level = "taxon",
               lon           = lon,
               srid          = srid)
 
-setwd("importation_mangal/olesen")
-taxon_df2 <- read.csv2("data/olesen_flores_taxons.csv", header = TRUE)
-olesen_flores <- read.csv2("data/olesen_flores_inter.csv", header = TRUE)
+taxons_df2 <- read.csv2("importation_mangal/Olesen_al_2002/data/olesen_flores_taxons.csv", header = TRUE)
+olesen_flores <- read.csv2("importation_mangal/Olesen_al_2002/data/olesen_flores_inter.csv", header = TRUE)
 
 # POST table
 # POST_environments(enviro2, attr1)
@@ -341,7 +333,7 @@ POST_taxons(taxons_df2)
 POST_interactions(olesen_flores, enviro = enviro2, attr_inter)
 
 # Writing taxon and interaction table
-# write.csv2(x = taxons_df2, file = paste0(getwd(), "/data/olesen_flores_taxons.csv"), row.names = FALSE)
-# write.csv2(x = olesen_flores, file = paste0(getwd(), "/data/olesen_flores_inter.csv"), row.names = FALSE)
+# write.csv2(x = taxons_df2, file = "importation_mangal/Olesen_al_2002/data/olesen_flores_taxons.csv", row.names = FALSE)
+# write.csv2(x = olesen_flores, file = "importation_mangal/Olesen_al_2002/data/olesen_flores_inter.csv", row.names = FALSE)
 
-rm(taxon, lat, lon, srid, attr_inter, refs, users, enviro1, enviro2, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxo_back_df, olesen_aigrettes, olesen_flores)
+rm(lat, lon, srid, attr_inter, refs, users, enviro1, enviro2, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxo_back_df, olesen_aigrettes, olesen_flores)

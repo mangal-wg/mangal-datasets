@@ -96,11 +96,8 @@ inter <- list(taxon_1_level = "[taxon, population, individual]",
   # Cleaning matrix
 #------------------------------
 
-# Set WD
-setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_name")
-
 # Open file
-FW_name <- read.csv2(file = "raw/FW_name.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+FW_name <- read.csv2(file = "importation_mangal/FW_name/raw/FW_name.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 
 # Cleaning for melt()
 ## Merge two first COLUMNS Genus species
@@ -216,7 +213,7 @@ for (i in 1:nrow(taxons_df)) {
 # Set traits table
 #------------------------------
 
-# traits_df <- read.csv2(file = "data/FW_name_traits.csv", header = TRUE)
+# traits_df <- read.csv2(file = "importation_mangal/FW_name/data/FW_name_traits.csv", header = TRUE)
 
 # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # names(traits_df) <- c("taxon", "name", "value")
@@ -225,16 +222,15 @@ for (i in 1:nrow(taxons_df)) {
 # Writing taxon and interaction table
 #------------------------------
 
-write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/FW_name_taxo_back.csv"), row.names = FALSE)
-write.csv2(x = taxons_df, file = paste0(getwd(), "/data/FW_name_taxons.csv"), row.names = FALSE)
-write.csv2(x = FW_name, file = paste0(getwd(), "/data/FW_name_inter.csv"), row.names = FALSE)
-# write.csv2(x = traits_df, file = paste0(getwd(), "/data/FW_name_traits.csv"), row.names = FALSE)
+write.csv2(x = taxo_back_df, file = "importation_mangal/FW_name/data/FW_name_taxo_back.csv", row.names = FALSE)
+write.csv2(x = taxons_df, file = "importation_mangal/FW_name/data/FW_name_taxons.csv", row.names = FALSE)
+write.csv2(x = FW_name, file = "importation_mangal/FW_name/data/FW_name_inter.csv", row.names = FALSE)
+# write.csv2(x = traits_df, file = "importation_mangal/FW_name/data/FW_name_traits.csv", row.names = FALSE)
 
-# setwd("C:/Users/Dell_Gabriel/Desktop/StageGravel/importation_mangal/FW_name")
-# taxo_back_df <- read.csv2("data/FW_name_taxo_back.csv", header = TRUE)
-# taxons_df <- read.csv2("data/FW_name_taxons.csv", header = TRUE)
-# FW_name <- read.csv2("data/FW_name_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/FW_name_traits.csv", header = TRUE)
+# taxo_back_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxo_back.csv", header = TRUE)
+# taxons_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxons.csv", header = TRUE)
+# FW_name <- read.csv2("importation_mangal/FW_name/data/FW_name_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/FW_name/data/FW_name_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions

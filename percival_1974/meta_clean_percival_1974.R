@@ -97,11 +97,8 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/percival_1974")
-# 
 # # Open file
-# percival_1974 <- read.csv2(file = "raw/percival_1974.csv", header = FALSE, sep = ";")
+# percival_1974 <- read.csv2(file = "importation_mangal/percival_1974/raw/percival_1974.csv", header = FALSE, sep = ";")
 # 
 # # Cleaning for melt()
 # ## Get ROW one with Genus_species
@@ -210,7 +207,7 @@ inter <- list(taxon_1_level = "taxon",
 # Set traits table
 #------------------------------
 
-# traits_df <- read.csv2(file = "data/percival_1974_traits.csv", header = TRUE)
+# traits_df <- read.csv2(file = "importation_mangal/percival_1974/data/percival_1974_traits.csv", header = TRUE)
 
 # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # names(traits_df) <- c("taxon", "name", "value")
@@ -219,16 +216,15 @@ inter <- list(taxon_1_level = "taxon",
 # Writing taxon and interaction table
 #------------------------------
 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/percival_1974_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/percival_1974_taxons.csv"), row.names = FALSE)
-# write.csv2(x = percival_1974, file = paste0(getwd(), "/data/percival_1974_inter.csv"), row.names = FALSE)
-# write.csv2(x = traits_df, file = paste0(getwd(), "/data/percival_1974_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/percival_1974/data/percival_1974_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/percival_1974/data/percival_1974_taxons.csv", row.names = FALSE)
+# write.csv2(x = percival_1974, file = "importation_mangal/percival_1974/data/percival_1974_inter.csv", row.names = FALSE)
+# write.csv2(x = traits_df, file = "importation_mangal/percival_1974/data/percival_1974_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/percival_1974")
-taxo_back_df <- read.csv2("data/percival_1974_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/percival_1974_taxons.csv", header = TRUE)
-percival_1974 <- read.csv2("data/percival_1974_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/percival_1974_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/percival_1974/data/percival_1974_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/percival_1974/data/percival_1974_taxons.csv", header = TRUE)
+percival_1974 <- read.csv2("importation_mangal/percival_1974/data/percival_1974_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/percival_1974/data/percival_1974_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions

@@ -109,11 +109,8 @@ inter <- list(taxon_1_level = "individual",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/Test_Hocking_1968")
-# 
 # # Open file
-# hocking_1968 <- read.csv2(file = "raw/hocking_1968.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+# hocking_1968 <- read.csv2(file = "importation_mangal/Test_hocking_1968/raw/hocking_1968.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 # 
 # # Cleaning for melt()
 # ## Merge two first COLUMNS Genus species
@@ -225,7 +222,7 @@ inter <- list(taxon_1_level = "individual",
 # # Set traits table
 # #------------------------------
 # # 
-# # traits_df <- read.csv2(file = "data/hocking_1968_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/Test_hocking_1968/data/hocking_1968_traits.csv", header = TRUE)
 # # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -234,16 +231,15 @@ inter <- list(taxon_1_level = "individual",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/hocking_1968_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = hocking_1968, file = paste0(getwd(), "/data/hocking_1968_inter.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/hocking_1968_taxons.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/hocking_1968_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/Test_hocking_1968/data/hocking_1968_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = hocking_1968, file = "importation_mangal/Test_hocking_1968/data/hocking_1968_inter.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/Test_hocking_1968/data/hocking_1968_taxons.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/Test_hocking_1968/data/hocking_1968_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/Test_Hocking_1968")
-taxo_back_df <- read.csv2("data/hocking_1968_taxo_back.csv", header = TRUE)
-hocking_1968 <- read.csv2("data/hocking_1968_inter.csv", header = TRUE)
-taxons_df <- read.csv2("data/hocking_1968_taxons.csv", header = TRUE)
-# traits_df <- read.csv2("data/hocking_1968_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/Test_hocking_1968/data/hocking_1968_taxo_back.csv", header = TRUE)
+hocking_1968 <- read.csv2("importation_mangal/Test_hocking_1968/data/hocking_1968_inter.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/Test_hocking_1968/data/hocking_1968_taxons.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/Test_hocking_1968/data/hocking_1968_traits.csv", header = TRUE)
 
 #------------------------------
   # Throwing injection functions

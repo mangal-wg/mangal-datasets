@@ -1,12 +1,12 @@
 # # Set libraries
-# library(reshape2)
-# library(tidyr)
-# library(jsonlite)
-# library(httr)
-# library(data.table)
-# library(rcrossref)
-# library(taxize)
-# library(stringr)
+library(reshape2)
+library(tidyr)
+library(jsonlite)
+library(httr)
+library(data.table)
+library(rcrossref)
+library(taxize)
+library(stringr)
 # 
 # library(mangal)
 
@@ -88,11 +88,8 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/roberson_1929")
-# 
 # # Open file
-# data <- read.table(file = "raw/roberson_1929_data.txt", header = FALSE, sep = " ")
+# data <- read.table(file = "importation_mangal/roberson_1929/raw/roberson_1929_data.txt", header = FALSE, sep = " ")
 # 
 # # Set colum's and row's name -> other .txt file
 # ## Add row names
@@ -202,9 +199,10 @@ inter <- list(taxon_1_level = "taxon",
 # 
 # #------------------------------
 # # Set traits table
+
 # #------------------------------
 # 
-# # traits_df <- read.csv2(file = "data/hocking_1968_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/roberson_1929/data/hocking_1968_traits.csv", header = TRUE)
 # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -213,16 +211,15 @@ inter <- list(taxon_1_level = "taxon",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/roberson_1929_taxons.csv"), row.names = FALSE)
-# write.csv2(x = roberson_1929, file = paste0(getwd(), "/data/roberson_1929_inter.csv"), row.names = FALSE)
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/roberson_1929_taxo_back.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/roberson_1929_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/roberson_1929/data/roberson_1929_taxons.csv", row.names = FALSE)
+# write.csv2(x = roberson_1929, file = "importation_mangal/roberson_1929/data/roberson_1929_inter.csv", row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/roberson_1929/data/roberson_1929_taxo_back.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/roberson_1929/data/roberson_1929_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/roberson_1929")
-taxo_back_df <- read.csv2("data/roberson_1929_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/roberson_1929_taxons.csv", header = TRUE)
-roberson_1929 <- read.csv2("data/roberson_1929_inter.csv", header = TRUE)
-# traits_df <- read.csv2("data/roberson_1929_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_taxons.csv", header = TRUE)
+roberson_1929 <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_inter.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_traits.csv", header = TRUE)
 
 #------------------------------
   # Throwing injection functions

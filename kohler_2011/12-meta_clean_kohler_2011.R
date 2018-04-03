@@ -74,13 +74,9 @@ inter <- list(taxon_1_level = "taxon",
 
 #------------------------------
   # Cleaning matrix
-#------------------------------
-
-# # Set WD
-# setwd("importation_mangal/kohler_2011")
 # 
 #   # Open file
-#   kohler_2011_350_600_m <- read.csv2(file = paste0("raw/kohler_2011_350_600_m.csv"), header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+#   kohler_2011_350_600_m <- read.csv2(file = "importation_mangal/kohler_2011/raw/kohler_2011_350_600_m.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 # 
 #   # Cleaning for melt()
 #   ## Get ROW one with Genus_species
@@ -104,7 +100,7 @@ inter <- list(taxon_1_level = "taxon",
 # 
 # # kohler_2011_600_850_m
 # 
-#   kohler_2011_600_850_m <- read.csv2(file = "raw/kohler_2011_600_850_m.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+#   kohler_2011_600_850_m <- read.csv2(file = "importation_mangal/kohler_2011/raw/kohler_2011_600_850_m.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 #   x  <- kohler_2011_600_850_m[1, ]
 #   x[1] <- "species"
 #   colnames(kohler_2011_600_850_m) <- x
@@ -116,7 +112,7 @@ inter <- list(taxon_1_level = "taxon",
 # 
 # # kohler_2011_850_1100_m
 # 
-#   kohler_2011_850_1100_m <- read.csv2(file = "raw/kohler_2011_850_1100_m.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+#   kohler_2011_850_1100_m <- read.csv2(file = "importation_mangal/kohler_2011/raw/kohler_2011_850_1100_m.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 #   x  <- kohler_2011_850_1100_m[1, ]
 #   x[1] <- "species"
 #   colnames(kohler_2011_850_1100_m) <- x
@@ -196,10 +192,9 @@ inter <- list(taxon_1_level = "taxon",
 # }
 # 
 # # Writing taxo_back_df
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/arroyo_taxo_back.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/kohler_2011/data/kohler_2011_taxo_back.csv"), row.names = FALSE)
 
-setwd("importation_mangal/arroyo")
-taxo_back_df <- read.csv2("data/arroyo_taxo_back.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/kohler_2011/data/kohler_2011_taxo_back.csv", header = TRUE)
 
 #------------------------------
   # POST commun table
@@ -259,9 +254,8 @@ enviro1 <- list(name  = "mean altitude",
                 date  = "2011-01-01",
                 value = 475)
 
-setwd("importation_mangal/arroyo")
-taxon_df1 <- read.csv2("data/kohler_2011_350_600_m_taxons.csv", header = TRUE)
-kohler_2011_350_600_m <- read.csv2("data/kohler_2011_350_600_m_inter.csv", header = TRUE)
+taxons_df1 <- read.csv2("importation_mangal/kohler_2011/data/kohler_2011_350_600_m_taxons.csv", header = TRUE)
+kohler_2011_350_600_m <- read.csv2("importation_mangal/kohler_2011/data/kohler_2011_350_600_m_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro1, attr1)
@@ -270,10 +264,8 @@ POST_taxons(taxons_df1)
 POST_interactions(kohler_2011_350_600_m, enviro1, attr = attr_inter)
 
 # # Writing taxon and interaction table
-# write.csv2(x = taxons_df1, file = paste0(getwd(), "/data/kohler_2011_350_600_m_taxons.csv"), row.names = FALSE)
-# write.csv2(x = kohler_2011_350_600_m, file = paste0(getwd(), "/data/kohler_2011_350_600_m_inter.csv"), row.names = FALSE)
-
-
+# write.csv2(x = taxons_df1, file = "importation_mangal/kohler_2011/data/kohler_2011_350_600_m_taxons.csv", row.names = FALSE)
+# write.csv2(x = kohler_2011_350_600_m, file = "importation_mangal/kohler_2011/data/kohler_2011_350_600_m_inter.csv", row.names = FALSE)
 
 # #------------------------------
 # # Arroyo 2
@@ -316,9 +308,8 @@ enviro2 <- list(name  = "mean altitude",
                 date  = "2011-01-01",
                 value = 725)
 
-setwd("importation_mangal/arroyo")
-taxon_df2 <- read.csv2("data/kohler_2011_600_850_m_taxons.csv", header = TRUE)
-kohler_2011_600_850_m <- read.csv2("data/kohler_2011_600_850_m_inter.csv", header = TRUE)
+taxons_df2 <- read.csv2("importation_mangal/kohler_2011/data/kohler_2011_600_850_m_taxons.csv", header = TRUE)
+kohler_2011_600_850_m <- read.csv2("importation_mangal/kohler_2011/data/kohler_2011_600_850_m_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro2, attr1)
@@ -327,9 +318,8 @@ POST_taxons(taxons_df2)
 POST_interactions(kohler_2011_600_850_m, enviro2, attr = attr_inter)
 
 # # Writing taxon and interaction table
-# write.csv2(x = taxons_df2, file = paste0(getwd(), "/data/kohler_2011_600_850_m_taxons.csv"), row.names = FALSE)
-# write.csv2(x = kohler_2011_600_850_m, file = paste0(getwd(), "/data/kohler_2011_600_850_m_inter.csv"), row.names = FALSE)
-
+# write.csv2(x = taxons_df2, file = "importation_mangal/kohler_2011/data/kohler_2011_600_850_m_taxons.csv", row.names = FALSE)
+# write.csv2(x = kohler_2011_600_850_m, file = "importation_mangal/kohler_2011/data/kohler_2011_600_850_m_inter.csv", row.names = FALSE)
 
 # #------------------------------
 # # Arroyo 3
@@ -372,9 +362,8 @@ enviro3 <- list(name  = "mean altitude",
                 date  = "2011-01-01",
                 value = 975)
 
-setwd("importation_mangal/arroyo")
-taxon_df3 <- read.csv2("data/kohler_2011_850_1100_m_taxons.csv", header = TRUE)
-kohler_2011_850_1100_m <- read.csv2("data/kohler_2011_850_1100_m_inter.csv", header = TRUE)
+taxons_df3 <- read.csv2("importation_mangal/kohler_2011/data/kohler_2011_850_1100_m_taxons.csv", header = TRUE)
+kohler_2011_850_1100_m <- read.csv2("importation_mangal/kohler_2011/data/kohler_2011_850_1100_m_inter.csv", header = TRUE)
 
 # POST table
 POST_environments(enviro3, attr1)
@@ -383,7 +372,7 @@ POST_taxons(taxons_df3)
 POST_interactions(kohler_2011_850_1100_m, enviro3, attr = attr_inter)
 
 # # Writing taxon and interaction table
-# write.csv2(x = taxons_df3, file = paste0(getwd(), "/data/kohler_2011_850_1100_m_taxons.csv"), row.names = FALSE)
-# write.csv2(x = kohler_2011_850_1100_m, file = paste0(getwd(), "/data/kohler_2011_850_1100_m_inter.csv"), row.names = FALSE)
+# write.csv2(x = taxons_df3, file = "importation_mangal/kohler_2011/data/kohler_2011_850_1100_m_taxons.csv", row.names = FALSE)
+# write.csv2(x = kohler_2011_850_1100_m, file = "importation_mangal/kohler_2011/data/kohler_2011_850_1100_m_inter.csv", row.names = FALSE)
 
-rm(taxon, lat, lon, srid, attr_inter, attr1, refs, users, enviro1, enviro2, enviro3, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxons_df3, taxo_back_df, kohler_2011_350_600_m, kohler_2011_600_850_m, kohler_2011_850_1100_m)
+rm(lat, lon, srid, attr_inter, attr1, refs, users, enviro1, enviro2, enviro3, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxons_df3, taxo_back_df, kohler_2011_350_600_m, kohler_2011_600_850_m, kohler_2011_850_1100_m)

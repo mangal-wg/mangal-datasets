@@ -47,7 +47,7 @@ enviro <- list(name  = "NAME",
                lat   = lat,
                lon   = lon,
                srid  = srid,
-               date  = "1965-06-31",
+               date  = "1965-07-31",
                value = 0)
 
 
@@ -88,11 +88,8 @@ inter <- list(taxon_1_level = "taxon",
 #   # Cleaning matrix
 # #------------------------------
 # 
-# # Set WD
-# setwd("importation_mangal/Mosquin_Martin_1967")
-# 
 # # Open file
-# Mosquin_Martin_1967 <- read.csv2(file = "raw/Mosquin_Martin_1967.csv", header = FALSE, sep = ",")
+# Mosquin_Martin_1967 <- read.csv2(file = "importation_mangal/Mosquin_Martin_1967/raw/Mosquin_Martin_1967.csv", header = FALSE, sep = ",")
 # 
 # # Cleaning for melt()
 # ## Get ROW one with Genus_species
@@ -201,7 +198,7 @@ inter <- list(taxon_1_level = "taxon",
 # # Set traits table
 # #------------------------------
 # 
-# # traits_df <- read.csv2(file = "data/Mosquin_Martin_1967_traits.csv", header = TRUE)
+# # traits_df <- read.csv2(file = "importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_traits.csv", header = TRUE)
 # 
 # # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # # names(traits_df) <- c("taxon", "name", "value")
@@ -210,16 +207,15 @@ inter <- list(taxon_1_level = "taxon",
 # # Writing taxon and interaction table
 # #------------------------------
 # 
-# write.csv2(x = taxo_back_df, file = paste0(getwd(), "/data/Mosquin_Martin_1967_taxo_back.csv"), row.names = FALSE)
-# write.csv2(x = taxons_df, file = paste0(getwd(), "/data/Mosquin_Martin_1967_taxons.csv"), row.names = FALSE)
-# write.csv2(x = Mosquin_Martin_1967, file = paste0(getwd(), "/data/Mosquin_Martin_1967_inter.csv"), row.names = FALSE)
-# # write.csv2(x = traits_df, file = paste0(getwd(), "/data/Mosquin_Martin_1967_traits.csv"), row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_taxons.csv", row.names = FALSE)
+# write.csv2(x = Mosquin_Martin_1967, file = "importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_inter.csv", row.names = FALSE)
+# # write.csv2(x = traits_df, file = "importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_traits.csv", row.names = FALSE)
 
-setwd("importation_mangal/Mosquin_Martin_1967")
-taxo_back_df <- read.csv2("data/Mosquin_Martin_1967_taxo_back.csv", header = TRUE)
-Mosquin_Martin_1967 <- read.csv2("data/Mosquin_Martin_1967_inter.csv", header = TRUE)
-taxons_df <- read.csv2("data/Mosquin_Martin_1967_taxons.csv", header = TRUE)
-# traits_df <- read.csv2("data/Mosquin_Martin_1967_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_taxo_back.csv", header = TRUE)
+Mosquin_Martin_1967 <- read.csv2("importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_inter.csv", header = TRUE)
+taxons_df <- read.csv2("importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_taxons.csv", header = TRUE)
+# traits_df <- read.csv2("importation_mangal/Mosquin_Martin_1967/data/Mosquin_Martin_1967_traits.csv", header = TRUE)
 
 #------------------------------
   # Throwing injection functions
