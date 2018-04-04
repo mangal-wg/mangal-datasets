@@ -140,53 +140,54 @@ for (i in 1:length(taxa)) {
        str_detect(taxa[i], "n\\.i\\.") ||
        str_detect(taxa[i], "sp$")){
 
-    taxo_back[i] <- word(taxa[i], start = 1)
+    taxa_back[i] <- word(taxa[i], start = 1)
 
   } else {
-    taxo_back[i] <- taxa[i]
+    taxa_back[i] <- taxa[i]
   }
 }
 
-taxo_back <- unique(taxo_back)
+taxa_back <- unique(taxa_back)
 
 
 ## Select only taxa not yet in db
 
-server <- "http://localhost:3000"
+server <- "http://poisotlab.biol.umontreal.ca"
 
-taxo_back_df <- data.frame()
+taxa_back_df <- data.frame()
 
-for (i in 1:length(taxo_back)) {
+for (i in 1:length(taxa_back)) {
 
-  path <- modify_url(server, path = paste0("/api/v0/","taxo_backs/?name=", str_replace(taxo_back[i], " ", "%20")))
+  path <- modify_url(server, path = paste0("/api/v2/","taxa_back/?name=", str_replace(taxa_back[i], " ", "%20")))
 
-  if (length(content(GET(url = path, config = add_headers("Content-type" = "application/json")))) == 0) {
+  if (length(content(GET(url = path, config = add_headers("Content-type" = "application/json", 
+                                                          "Authorization" = paste("bearer", readRDS("importation_mangal/.httr-oauth")))))) == 0) {
 
-    taxo_back_df[nrow(taxo_back_df)+1, 1] <- taxo_back[i]
+    taxa_back_df[nrow(taxa_back_df)+1, 1] <- taxa_back[i]
   }
 }
 
-rm(taxo_back)
-names(taxo_back_df) <- c("name")
+rm(taxa_back)
+names(taxa_back_df) <- c("name")
 
 ## Get code by species
-taxo_back_df[, "bold"] <- NA
-taxo_back_df[, "eol"]  <- NA
-taxo_back_df[, "tsn"]  <- NA
-taxo_back_df[, "ncbi"] <- NA
+taxa_back_df[, "bold"] <- NA
+taxa_back_df[, "eol"]  <- NA
+taxa_back_df[, "tsn"]  <- NA
+taxa_back_df[, "ncbi"] <- NA
 
 ### Encore probleme d"identification avec les api... ###
 
-for (i in 1:nrow(taxo_back_df)) {
-  try (expr = (taxo_back_df[i, 2] <- get_boldid(taxo_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
-  try (expr = (taxo_back_df[i, 3] <- get_eolid(taxo_back_df[i, 1], row = 5, verbose = FALSE, key = 110258)[1]), silent = TRUE)
-  try (expr = (taxo_back_df[i, 4] <- get_tsn(taxo_back_df[i, 1], row = 5, verbose = FALSE, accepted = TRUE)[1]), silent = TRUE)
-  try (expr = (taxo_back_df[i, 5] <- get_uid(taxo_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
+for (i in 1:nrow(taxa_back_df)) {
+  try (expr = (taxa_back_df[i, 2] <- get_boldid(taxa_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
+  try (expr = (taxa_back_df[i, 3] <- get_eolid(taxa_back_df[i, 1], row = 5, verbose = FALSE, key = 110258)[1]), silent = TRUE)
+  try (expr = (taxa_back_df[i, 4] <- get_tsn(taxa_back_df[i, 1], row = 5, verbose = FALSE, accepted = TRUE)[1]), silent = TRUE)
+  try (expr = (taxa_back_df[i, 5] <- get_uid(taxa_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
 }
 
 # Create taxa_df
 
-taxa_df <- data.frame(taxon, NA)
+taxa_df <- data.frame(taxa, NA)
 names(taxa_df) <- c("original_name", "name_clear")
 
 for (i in 1:nrow(taxa_df)) {
@@ -209,19 +210,19 @@ for (i in 1:nrow(taxa_df)) {
 
 # traits_df <- read.csv2(file = "importation_mangal/FW_name/data/FW_name_traits.csv", header = TRUE)
 
-# traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
-# names(traits_df) <- c("taxon", "name", "value")
+# traits_df <- melt(traits_df, id.vars = c("taxa"), na.rm = TRUE)
+# names(traits_df) <- c("taxa", "name", "value")
 
 #------------------------------
-# Writing taxon and interaction table
+# Writing taxa and interaction table
 #------------------------------
 
-write.csv2(x = taxo_back_df, file = "importation_mangal/FW_name/data/FW_name_taxo_back.csv", row.names = FALSE)
+write.csv2(x = taxa_back_df, file = "importation_mangal/FW_name/data/FW_name_taxa_back.csv", row.names = FALSE)
 write.csv2(x = taxa_df, file = "importation_mangal/FW_name/data/FW_name_taxa.csv", row.names = FALSE)
 write.csv2(x = FW_name, file = "importation_mangal/FW_name/data/FW_name_inter.csv", row.names = FALSE)
 # write.csv2(x = traits_df, file = "importation_mangal/FW_name/data/FW_name_traits.csv", row.names = FALSE)
 
-# taxo_back_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxo_back.csv", header = TRUE)
+# taxa_back_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxa_back.csv", header = TRUE)
 # taxa_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxa.csv", header = TRUE)
 # FW_name <- read.csv2("importation_mangal/FW_name/data/FW_name_inter.csv", header = TRUE)
 # traits_df <- read.csv2("importation_mangal/FW_name/data/FW_name_traits.csv", header = TRUE)
@@ -229,17 +230,17 @@ write.csv2(x = FW_name, file = "importation_mangal/FW_name/data/FW_name_inter.cs
 #------------------------------
 # Throwing injection functions
 #------------------------------
-POST_attributes(attr_inter)
-# POST_attributes(attr1)
-# POST_attributes(attr2)
-POST_refs()
-POST_users()
-# POST_environments(enviro, attr_##)
-POST_datasets()
-POST_networks(networks, enviro = enviro)
-POST_taxo_back()
+POST_attribute(attr_inter)
+# POST_attribute(attr1)
+# POST_attribute(attr2)
+POST_ref()
+POST_user()
+# POST_environment(enviro, attr_##)
+POST_datases()
+POST_network(networks, enviro = enviro)
+POST_taxa_back()
 POST_taxon(taxa_df)
-# POST_traits(traits_df)
-POST_interactions(FW_name, enviro = enviro, attr_inter)
+# POST_trait(traits_df)
+POST_interaction(FW_name, enviro = enviro, attr_inter)
 
-rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxa_df, taxo_back_df, FW_name)
+rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxa_df, taxa_back_df, FW_name)
