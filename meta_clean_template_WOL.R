@@ -35,7 +35,7 @@ attr_inter <- list(name        = "meening of the interaction value",
 #               description = "DESCRIPTION",
 #               unit        = "null")
 
-refs <- list(doi       = "NA",
+ref <- list(doi       = "NA",
              jstor     = "NA",
              pmid      = "NA",
              paper_url = "null",
@@ -45,7 +45,7 @@ refs <- list(doi       = "NA",
              bibtex    = "bibtext long format")
 
 
-users <- list(name         = "NAME",
+user <- list(name         = "NAME",
               email        = "null",
               orcid        = "null",
               organization = "null",
@@ -60,16 +60,16 @@ enviro <- list(name  = "attribute name",
                value = 0)
 
 
-datasets <- list(name        = "NAME",
+dataset <- list(name        = "NAME",
                  date        = "1111-11-11",
                  description = "Description of the dataset collected",
                  public      = FALSE)
 
 
-traits <- list(date = "1111-11-11")
+trait <- list(date = "1111-11-11")
 
 
-networks <- list(name             = "NAME",
+network <- list(name             = "NAME",
                  date             = "1111-11-11",
                  lat              = lat,
                  lon              = lon,
@@ -123,7 +123,7 @@ FW_name <- subset(FW_name, FW_name$value != 0)
 # Create taxo_back_df
 
 ## Get Unique taxon of data
-taxon <- c(as.vector(unique(FW_name$sp_taxon_2)), as.vector(unique(FW_name$sp_taxon_1)))
+taxa <- c(as.vector(unique(FW_name$sp_taxon_2)), as.vector(unique(FW_name$sp_taxon_1)))
 
 
 ### Check for spelling mistakes... ###
@@ -131,19 +131,19 @@ taxon <- c(as.vector(unique(FW_name$sp_taxon_2)), as.vector(unique(FW_name$sp_ta
 
 ### Remove sp
 
-taxo_back <- vector()
+taxa_back <- vector()
 
-for (i in 1:length(taxon)) {
+for (i in 1:length(taxa)) {
 
-  if(((str_detect(taxon[i], "[:digit:]") == TRUE || str_detect(taxon[i], "[:punct:]") == TRUE) &
-       str_detect(taxon[i], "sp") == TRUE) ||
-       str_detect(taxon[i], "n\\.i\\.") ||
-       str_detect(taxon[i], "sp$")){
+  if(((str_detect(taxa[i], "[:digit:]") == TRUE || str_detect(taxa[i], "[:punct:]") == TRUE) &
+       str_detect(taxa[i], "sp") == TRUE) ||
+       str_detect(taxa[i], "n\\.i\\.") ||
+       str_detect(taxa[i], "sp$")){
 
-    taxo_back[i] <- word(taxon[i], start = 1)
+    taxo_back[i] <- word(taxa[i], start = 1)
 
   } else {
-    taxo_back[i] <- taxon[i]
+    taxo_back[i] <- taxa[i]
   }
 }
 
@@ -184,22 +184,22 @@ for (i in 1:nrow(taxo_back_df)) {
   try (expr = (taxo_back_df[i, 5] <- get_uid(taxo_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
 }
 
-# Create taxons_df
+# Create taxa_df
 
-taxons_df <- data.frame(taxon, NA)
-names(taxons_df) <- c("original_name", "name_clear")
+taxa_df <- data.frame(taxon, NA)
+names(taxa_df) <- c("original_name", "name_clear")
 
-for (i in 1:nrow(taxons_df)) {
+for (i in 1:nrow(taxa_df)) {
 
-  if(((str_detect(taxons_df[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df[i, 1], "[:punct:]") == TRUE) &
-       str_detect(taxons_df[i, 1], "sp") == TRUE) ||
-       str_detect(taxons_df[i, 1], "n\\.i\\.") == TRUE ||
-      str_detect(taxons_df[i, 1], "sp$") == TRUE){
+  if(((str_detect(taxa_df[i, 1], "[:digit:]") == TRUE || str_detect(taxa_df[i, 1], "[:punct:]") == TRUE) &
+       str_detect(taxa_df[i, 1], "sp") == TRUE) ||
+       str_detect(taxa_df[i, 1], "n\\.i\\.") == TRUE ||
+      str_detect(taxa_df[i, 1], "sp$") == TRUE){
 
-    taxons_df[i, 2] <- word(taxons_df[i, 1], start = 1)
+    taxa_df[i, 2] <- word(taxa_df[i, 1], start = 1)
 
   } else {
-    taxons_df[i, 2] <- as.character(taxons_df[i, 1])
+    taxa_df[i, 2] <- as.character(taxa_df[i, 1])
   }
 }
 
@@ -217,12 +217,12 @@ for (i in 1:nrow(taxons_df)) {
 #------------------------------
 
 write.csv2(x = taxo_back_df, file = "importation_mangal/FW_name/data/FW_name_taxo_back.csv", row.names = FALSE)
-write.csv2(x = taxons_df, file = "importation_mangal/FW_name/data/FW_name_taxons.csv", row.names = FALSE)
+write.csv2(x = taxa_df, file = "importation_mangal/FW_name/data/FW_name_taxa.csv", row.names = FALSE)
 write.csv2(x = FW_name, file = "importation_mangal/FW_name/data/FW_name_inter.csv", row.names = FALSE)
 # write.csv2(x = traits_df, file = "importation_mangal/FW_name/data/FW_name_traits.csv", row.names = FALSE)
 
 # taxo_back_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxo_back.csv", header = TRUE)
-# taxons_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxons.csv", header = TRUE)
+# taxa_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxa.csv", header = TRUE)
 # FW_name <- read.csv2("importation_mangal/FW_name/data/FW_name_inter.csv", header = TRUE)
 # traits_df <- read.csv2("importation_mangal/FW_name/data/FW_name_traits.csv", header = TRUE)
 
@@ -238,8 +238,8 @@ POST_users()
 POST_datasets()
 POST_networks(networks, enviro = enviro)
 POST_taxo_back()
-POST_taxons(taxons_df)
+POST_taxon(taxa_df)
 # POST_traits(traits_df)
 POST_interactions(FW_name, enviro = enviro, attr_inter)
 
-rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxons_df, taxo_back_df, FW_name)
+rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxa_df, taxo_back_df, FW_name)
