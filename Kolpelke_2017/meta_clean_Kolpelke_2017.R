@@ -14,16 +14,19 @@ library(mangal)
   # Metadata
 #------------------------------
 
-lat  <- 0
-lon  <- 0
 srid <- 4326
 
 # Must fill all CAP fields; null fields optional
 
-attr_inter <- list(name        = "meening of the interaction value",
+attr_gall <- list(name        = "Number of galls",
                    table_owner = "interactions",
                    description = "DESCRIPTION",
                    unit        = "NA")
+
+attr_paras <- list(name        = "Number of parasited galls",
+                  table_owner = "interactions",
+                  description = "DESCRIPTION",
+                  unit        = "NA")
 
 
 # attr1 <- list(name        = "name",
@@ -37,7 +40,7 @@ attr_inter <- list(name        = "meening of the interaction value",
 #               unit        = "NA")
 
 
-refs <- list(doi       = "NA",
+ref <- list(doi       = "NA",
              jstor     = "NA",
              pmid      = "NA",
              paper_url = "null",
@@ -47,20 +50,20 @@ refs <- list(doi       = "NA",
              bibtex    = "bibtext long format")
 
 
-users <- list(name         = "name",
+user <- list(name         = "name",
               email        = "null",
               orcid        = "null",
               organization = "null",
               type         = "administrator")
 
 
-datasets <- list(name        = "name",
+dataset <- list(name        = "name",
                  date        = "1111-11-11",
                  description = "Description of the dataset collected",
                  public      = FALSE)
 
 
-traits <- list(date = "1111-11-11")
+trait <- list(date = "1111-11-11")
 
 
 inter <- list(taxon_1_level = "[taxon, population, individual]",
@@ -81,7 +84,6 @@ inter <- list(taxon_1_level = "[taxon, population, individual]",
   # Cleaning matrix
 #------------------------------
 library(magrittr)
-library(tidyr)
 
 unlink("importation_mangal/Kolpelke_2017/reshapeSalix/csv", recursive = TRUE)
 unlink("importation_mangal/Kolpelke_2017/reshapeSalix/rdata", recursive = TRUE)
@@ -118,75 +120,88 @@ inter_para["attr"] <- "Number of parasited galls"
 Kolpelke_2017_inter <- rbind(inter_galler, inter_para)
 rm(inter_galler, inter_para)
 
+# Add localistaiton
+coord <- subset(df_site, select = c("REARING_NUMBER", "NDECDEG", "EDECDEG"))
+names(coord) <- c("REARING_NUMBER", "lat", "lon")
+Kolpelke_2017_inter <- merge(Kolpelke_2017_inter, coord, by = "REARING_NUMBER")
+
+Kolpelke_2017_inter["lat"] <- NA
+Kolpelke_2017_inter["lon"] <- NA
+
+
 
 #------------------------------
-# Set taxo_back and taxon table
+# Set taxa_back and taxa table
 #------------------------------
-# Create taxo_back_df
+# Create taxa_back_df
 
-## Get Unique taxon of data
-taxon <- c(unique(Kolpelke_2017_inter[, "taxon_sp_1"]), 
+## Get Unique taxa of data
+taxa <- c(unique(Kolpelke_2017_inter[, "taxon_sp_1"]), 
            unique(Kolpelke_2017_inter[, "taxon_sp_2"]))
+taxa <- taxa[!is.na(taxa)]
 
 ### Remove sp
 
-taxo_back <- vector()
+taxa_back <- vector()
 
-for (i in 1:length(taxon)) {
+for (i in 1:length(taxa)) {
 
-  if(((str_detect(taxon[i], "[:digit:]") == TRUE || str_detect(taxon[i], "[:punct:]") == TRUE) &
-       str_detect(taxon[i], "sp") == TRUE) ||
-       str_detect(taxon[i], "indet.") == TRUE ||
-       str_detect(taxon[i], "sp$") == TRUE) {
-
-    taxo_back[i] <- word(taxon[i], start = 1)
+  if(((str_detect(taxa[i], "[:digit:]") == TRUE || str_detect(taxa[i], "[:punct:]") == TRUE) == TRUE &
+       str_detect(taxa[i], "sp") == TRUE) ||
+       str_detect(taxa[i], "indet\\.") == TRUE ||
+       str_detect(taxa[i], "sp$") == TRUE ||
+       str_detect(taxa[i], "\\?") == TRUE ||
+       str_detect(taxa[i], "nr\\.") == TRUE){
+    
+    taxa_back[i] <- word(taxa[i], start = 1)
 
   } else {
-    taxo_back[i] <- taxon[i]
+    taxa_back[i] <- taxa[i]
   }
 }
 
-taxo_back <- unique(taxo_back)
+taxa_back <- unique(taxa_back)
 
 
 ## Select only taxa not yet in db
 
-server <- 
+server <- "http://poisotlab.biol.umontreal.ca"
 
-taxo_back_df <- data.frame()
+taxa_back_df <- data.frame()
 
-for (i in 1:length(taxo_back)) {
+for (i in 1:length(taxa_back)) {
 
-  path <- modify_url(server, path = paste0("/api/v0/","taxo_backs/?name=", str_replace(taxo_back[i], " ", "%20")))
+  path <- modify_url(server, path = paste0("/api/v2/","taxa_back/?name=", str_replace(taxa_back[i], " ", "%20")))
 
-  if (length(content(GET(url = path, config = add_headers("Content-type" = "application/json")))) == 0) {
+  if (length(content(GET(url = path, config = add_headers("Content-type" = "application/json", 
+                                                          "Authorization" = paste("bearer", readRDS("importation_mangal/.httr-oauth")))))) == 0) {
 
-    taxo_back_df[nrow(taxo_back_df)+1, 1] <- taxo_back[i]
+    taxa_back_df[nrow(taxa_back_df)+1, 1] <- taxa_back[i]
   }
 }
 
-rm(taxo_back)
-names(taxo_back_df) <- c("name")
+rm(taxa_back)
+names(taxa_back_df) <- c("name")
 
 ## Get code by species
-taxo_back_df[, "bold"] <- NA
-taxo_back_df[, "eol"]  <- NA
-taxo_back_df[, "tsn"]  <- NA
-taxo_back_df[, "ncbi"] <- NA
+taxa_back_df[, "bold"] <- NA
+taxa_back_df[, "eol"]  <- NA
+taxa_back_df[, "tsn"]  <- NA
+taxa_back_df[, "ncbi"] <- NA
 
 ### Encore probleme d"identification avec les api... ###
 
-for (i in 1:nrow(taxo_back_df)) {
-  try (expr = (taxo_back_df[i, 2] <- get_boldid(taxo_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
-  try (expr = (taxo_back_df[i, 3] <- get_eolid(taxo_back_df[i, 1], row = 5, verbose = FALSE, key = 110258)[1]), silent = TRUE)
-  try (expr = (taxo_back_df[i, 4] <- get_tsn(taxo_back_df[i, 1], row = 5, verbose = FALSE, accepted = TRUE)[1]), silent = TRUE)
-  try (expr = (taxo_back_df[i, 5] <- get_uid(taxo_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
+for (i in 1:nrow(taxa_back_df)) {
+  try (expr = (taxa_back_df[i, 2] <- get_boldid(taxa_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
+  try (expr = (taxa_back_df[i, 3] <- get_eolid(taxa_back_df[i, 1], row = 5, verbose = FALSE, key = 110258)[1]), silent = TRUE)
+  try (expr = (taxa_back_df[i, 4] <- get_tsn(taxa_back_df[i, 1], row = 5, verbose = FALSE, accepted = TRUE)[1]), silent = TRUE)
+  try (expr = (taxa_back_df[i, 5] <- get_uid(taxa_back_df[i, 1], row = 5, verbose = FALSE)[1]), silent = TRUE)
 }
 
-# Writing taxo_back_df
-write.csv2(x = taxo_back_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxo_back.csv", row.names = FALSE)
+# Writing taxa_back_df
+write.csv2(x = taxa_back_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", row.names = FALSE)
 
-# taxo_back_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxo_back.csv", header = TRUE)
+# taxa_back_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", header = TRUE, sep = ";")
 
 
 # Cleaning
@@ -204,17 +219,17 @@ write.csv2(x = taxo_back_df, file = "importation_mangal/Kolpelke_2017/data/Kolpe
 #------------------------------
   # POST commun table
 #------------------------------
-POST_attributes(attr_inter)
+POST_attribute(attr_inter)
 
-POST_attributes(attr1)
+POST_attribute(attr1)
 
-POST_refs()
+POST_ref()
 
-POST_users()
+POST_user()
 
-POST_datasets()
+POST_dataset()
 
-POST_taxo_back()
+POST_taxa_back()
 
 # POST_traits(traits_df)
 
@@ -222,28 +237,28 @@ POST_taxo_back()
 # Kolpelke_2017 1
 #------------------------------
 
-# Create taxons_df
-taxon <- c(as.vector(unique(Kolpelke_2017_I$sp_taxon_2)), as.vector(unique(Kolpelke_2017_I$sp_taxon_1)))
+# Create taxa_df
+taxa <- c(as.vector(unique(Kolpelke_2017_I$sp_taxon_2)), as.vector(unique(Kolpelke_2017_I$sp_taxon_1)))
 
-taxons_df1 <- data.frame(taxon, NA)
-names(taxons_df1) <- c("original_name", "name_clear")
+taxa_df1 <- data.frame(taxa, NA)
+names(taxa_df1) <- c("original_name", "name_clear")
 
-for (i in 1:nrow(taxons_df1)) {
+for (i in 1:nrow(taxa_df1)) {
 
-  if(((str_detect(taxons_df1[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df1[i, 1], "[:punct:]") == TRUE) &
-       str_detect(taxons_df1[i, 1], "sp") == TRUE) ||
-       str_detect(taxons_df1[i, 1], "n\\.i\\.") == TRUE ||
-       str_detect(taxons_df1[i, 1], "sp$") == TRUE){
+  if(((str_detect(taxa_df1[i, 1], "[:digit:]") == TRUE || str_detect(taxa_df1[i, 1], "[:punct:]") == TRUE) &
+       str_detect(taxa_df1[i, 1], "sp") == TRUE) ||
+       str_detect(taxa_df1[i, 1], "n\\.i\\.") == TRUE ||
+       str_detect(taxa_df1[i, 1], "sp$") == TRUE){
 
-    taxons_df1[i, 2] <- word(taxons_df1[i, 1], start = 1)
+    taxa_df1[i, 2] <- word(taxa_df1[i, 1], start = 1)
 
   } else {
-    taxons_df1[i, 2] <- as.character(taxons_df1[i, 1])
+    taxa_df1[i, 2] <- as.character(taxa_df1[i, 1])
   }
 }
 
 # Set metadata
-networks <- list(name               = "Kolpelke_2017_I",
+network <- list(name               = "Kolpelke_2017_I",
                    date             = "1111-11-11",
                    lat              = lat,
                    lon              = lon,
@@ -259,17 +274,17 @@ enviro1 <- list(name  = "attribute name",
                 date  = "1111-11-11",
                 value = 0)
 
-# taxon_df1 <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_I_taxons.csv", header = TRUE)
+# taxa_df1 <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_I_taxa.csv", header = TRUE)
 # Kolpelke_2017_I <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_I_inter.csv", header = TRUE)
 
 # POST table
-POST_environments(enviro1, attr1)
-POST_networks(networks, enviro = enviro1)
-POST_taxons(taxons_df1)
-POST_interactions(Kolpelke_2017_I, enviro = enviro1, attr_inter)
+POST_environment(enviro1, attr1)
+POST_network(networks, enviro = enviro1)
+POST_taxon(taxa_df1)
+POST_interaction(Kolpelke_2017_I, enviro = enviro1, attr_inter)
 
-# Writing taxon and interaction table
-write.csv2(x = taxons_df1, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_I_taxons.csv", row.names = FALSE)
+# Writing taxa and interaction table
+write.csv2(x = taxa_df1, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_I_taxa.csv", row.names = FALSE)
 write.csv2(x = Kolpelke_2017_I, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_I_inter.csv", row.names = FALSE)
 
 
@@ -278,28 +293,28 @@ write.csv2(x = Kolpelke_2017_I, file = "importation_mangal/Kolpelke_2017/data/Ko
 # Kolpelke_2017 2
 #------------------------------
 
-# Create taxons_df
-taxon <- c(as.vector(unique(Kolpelke_2017_II$sp_taxon_2)), as.vector(unique(Kolpelke_2017_II$sp_taxon_1)))
+# Create taxa_df
+taxa <- c(as.vector(unique(Kolpelke_2017_II$sp_taxon_2)), as.vector(unique(Kolpelke_2017_II$sp_taxon_1)))
 
-taxons_df2 <- data.frame(taxon, NA)
-names(taxons_df2) <- c("original_name", "name_clear")
+taxa_df2 <- data.frame(taxa, NA)
+names(taxa_df2) <- c("original_name", "name_clear")
 
-for (i in 1:nrow(taxons_df2)) {
+for (i in 1:nrow(taxa_df2)) {
 
-  if(((str_detect(taxons_df2[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df2[i, 1], "[:punct:]") == TRUE) &
-       str_detect(taxons_df2[i, 1], "sp") == TRUE) ||
-       str_detect(taxons_df2[i, 1], "n\\.i\\.") == TRUE ||
-       str_detect(taxons_df2[i, 1], "sp$") == TRUE){
+  if(((str_detect(taxa_df2[i, 1], "[:digit:]") == TRUE || str_detect(taxa_df2[i, 1], "[:punct:]") == TRUE) &
+       str_detect(taxa_df2[i, 1], "sp") == TRUE) ||
+       str_detect(taxa_df2[i, 1], "n\\.i\\.") == TRUE ||
+       str_detect(taxa_df2[i, 1], "sp$") == TRUE){
 
-    taxons_df2[i, 2] <- word(taxons_df2[i, 1], start = 1)
+    taxa_df2[i, 2] <- word(taxa_df2[i, 1], start = 1)
 
   } else {
-    taxons_df2[i, 2] <- as.character(taxons_df2[i, 1])
+    taxa_df2[i, 2] <- as.character(taxa_df2[i, 1])
   }
 }
 
 # Set metadata
-networks <- list(name             = "Kolpelke_2017_II",
+network <- list(name             = "Kolpelke_2017_II",
                  date             = "1111-11-11",
                  lat              = lat,
                  lon              = lon,
@@ -315,17 +330,17 @@ enviro2 <- list(name  = "attribute name",
                 date  = "1111-11-11",
                 value = 0)
 
-# taxon_df2 <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_II_taxons.csv", header = TRUE)
+# taxa_df2 <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_II_taxa.csv", header = TRUE)
 # Kolpelke_2017_II <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_II_inter.csv", header = TRUE)
 
 # POST table
-POST_environments(enviro2, attr1)
-POST_networks(networks, enviro = enviro2)
-POST_taxons(taxons_df2)
-POST_interactions(Kolpelke_2017_II, enviro = enviro2, attr_inter)
+POST_environment(enviro2, attr1)
+POST_network(networks, enviro = enviro2)
+POST_taxon(taxa_df2)
+POST_interaction(Kolpelke_2017_II, enviro = enviro2, attr_inter)
 
-# Writing taxon and interaction table
-write.csv2(x = taxons_df2, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_II_taxons.csv", row.names = FALSE)
+# Writing taxa and interaction table
+write.csv2(x = taxa_df2, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_II_taxa.csv", row.names = FALSE)
 write.csv2(x = Kolpelke_2017_II, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_II_inter.csv", row.names = FALSE)
 
 
@@ -334,28 +349,28 @@ write.csv2(x = Kolpelke_2017_II, file = "importation_mangal/Kolpelke_2017/data/K
 # Kolpelke_2017 3
 #------------------------------
 
-# Create taxons_df
-taxon <- c(as.vector(unique(Kolpelke_2017_III$sp_taxon_2)), as.vector(unique(Kolpelke_2017_III$sp_taxon_1)))
+# Create taxa_df
+taxa <- c(as.vector(unique(Kolpelke_2017_III$sp_taxon_2)), as.vector(unique(Kolpelke_2017_III$sp_taxon_1)))
 
-taxons_df3 <- data.frame(taxon, NA)
-names(taxons_df3) <- c("original_name", "name_clear")
+taxa_df3 <- data.frame(taxa, NA)
+names(taxa_df3) <- c("original_name", "name_clear")
 
-for (i in 1:nrow(taxons_df3)) {
+for (i in 1:nrow(taxa_df3)) {
 
-  if(((str_detect(taxons_df3[i, 1], "[:digit:]") == TRUE || str_detect(taxons_df3[i, 1], "[:punct:]") == TRUE) &
-       str_detect(taxons_df3[i, 1], "sp") == TRUE) ||
-       str_detect(taxons_df3[i, 1], "n\\.i\\.") == TRUE ||
-       str_detect(taxons_df3[i, 1], "sp$") == TRUE){
+  if(((str_detect(taxa_df3[i, 1], "[:digit:]") == TRUE || str_detect(taxa_df3[i, 1], "[:punct:]") == TRUE) &
+       str_detect(taxa_df3[i, 1], "sp") == TRUE) ||
+       str_detect(taxa_df3[i, 1], "n\\.i\\.") == TRUE ||
+       str_detect(taxa_df3[i, 1], "sp$") == TRUE){
 
-    taxons_df3[i, 2] <- word(taxons_df3[i, 1], start = 1)
+    taxa_df3[i, 2] <- word(taxa_df3[i, 1], start = 1)
 
   } else {
-    taxons_df3[i, 2] <- as.character(taxons_df3[i, 1])
+    taxa_df3[i, 2] <- as.character(taxa_df3[i, 1])
   }
 }
 
 # Set metadata
-networks <- list(name             = "Kolpelke_2017_III",
+network <- list(name             = "Kolpelke_2017_III",
                  date             = "1111-11-11",
                  lat              = lat,
                  lon              = lon,
@@ -371,17 +386,17 @@ enviro3 <- list(name  = "attribute name",
                 date  = "1111-11-11",
                 value = 0)
 
-# taxon_df3 <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_III_taxons.csv", header = TRUE)
+# taxa_df3 <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_III_taxa.csv", header = TRUE)
 # Kolpelke_2017_III <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_III_inter.csv", header = TRUE)
 
 # POST table
-POST_environments(enviro3, attr1)
-POST_networks(networks, enviro = enviro3)
-POST_taxons(taxons_df3)
-POST_interactions(Kolpelke_2017_III, enviro = enviro3, attr_inter)
+POST_environment(enviro3, attr1)
+POST_network(networks, enviro = enviro3)
+POST_taxon(taxa_df3)
+POST_interaction(Kolpelke_2017_III, enviro = enviro3, attr_inter)
 
-# Writing taxon and interaction table
-write.csv2(x = taxons_df3, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_III_taxons.csv", row.names = FALSE)
+# Writing taxa and interaction table
+write.csv2(x = taxa_df3, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_III_taxa.csv", row.names = FALSE)
 write.csv2(x = Kolpelke_2017_III, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_III_inter.csv", row.names = FALSE)
 
-rm(taxon, lat, lon, srid, attr_inter, attr1, refs, users, enviro1, enviro2, enviro3, datasets, traits, networks, inter, taxons_df1, taxons_df2, taxons_df3, taxo_back_df, Kolpelke_2017_I, Kolpelke_2017_II, Kolpelke_2017_III)
+rm(taxa, lat, lon, srid, attr_inter, attr1, refs, users, enviro1, enviro2, enviro3, datasets, traits, networks, inter, taxa_df1, taxa_df2, taxa_df3, taxa_back_df, Kolpelke_2017_I, Kolpelke_2017_II, Kolpelke_2017_III)
