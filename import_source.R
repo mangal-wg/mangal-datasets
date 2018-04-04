@@ -11,6 +11,7 @@ library(mangal)
 setwd("to folder root")
 
 # Source data and export
+# IMPORTANT CHANGES OCCURRED FOR THE SCRIPTS AND FUNCTIONS // THE SCRIPTS BELOW WHERE NOT CHANGES
 source("importation_mangal/roberson_1929/1-meta_clean_roberson_1929.R")
 source("importation_mangal/Test_Hocking_1968/2-meta_clean_hocking_1968.R")
 source("importation_mangal/Witt_1998/3-meta_clean_Witt_1998.R")
@@ -28,6 +29,7 @@ source("importation_mangal/bezerra_2009/14-meta_clean_bezerra_2009.R")
 source("importation_mangal/frost_1980/15-meta_clean_frost_1980.R")
 source("importation_mangal/Olesen_al_2002/meta_clean_Olesen_al_2002.R")
 source("importation_mangal/percival_1974/meta_clean_percival_1974.R")
+# SCRIPTS BELOW WERE WRITTEN WITH THE NEW FORMAT
 
 
 
