@@ -124,12 +124,12 @@ names(FW_name) <- c("sp_taxon_1", "sp_taxon_2", "value")
 FW_name <- subset(FW_name, FW_name$value != 0)
 
 #------------------------------
-# Set taxo_back and taxon table
+# Set taxo_back and taxa table
 #------------------------------
 # Create taxo_back_df
 
-## Get Unique taxon of data
-taxon <- c(as.vector(unique(FW_name$sp_taxon_2)), as.vector(unique(FW_name$sp_taxon_1)))
+## Get Unique taxa of data
+taxa <- c(as.vector(unique(FW_name$sp_taxon_2)), as.vector(unique(FW_name$sp_taxon_1)))
 
 
 ### Check for spelling mistakes... ###
@@ -139,17 +139,17 @@ taxon <- c(as.vector(unique(FW_name$sp_taxon_2)), as.vector(unique(FW_name$sp_ta
 
 taxa_back <- vector()
 
-for (i in 1:length(taxon)) {
+for (i in 1:length(taxa)) {
 
-  if(((str_detect(taxon[i], "[:digit:]") == TRUE || str_detect(taxon[i], "[:punct:]") == TRUE) &
-       str_detect(taxon[i], "sp") == TRUE) ||
-       str_detect(taxon[i], "n\\.i\\.") == TRUE ||
-       str_detect(taxon[i], "sp$") == TRUE){
+  if(((str_detect(taxa[i], "[:digit:]") == TRUE || str_detect(taxa[i], "[:punct:]") == TRUE) &
+       str_detect(taxa[i], "sp") == TRUE) ||
+       str_detect(taxa[i], "n\\.i\\.") == TRUE ||
+       str_detect(taxa[i], "sp$") == TRUE){
 
-    taxa_back[i] <- word(taxon[i], start = 1)
+    taxa_back[i] <- word(taxa[i], start = 1)
 
   } else {
-    taxa_back[i] <- taxon[i]
+    taxa_back[i] <- taxa[i]
   }
 }
 
@@ -193,7 +193,7 @@ for (i in 1:nrow(taxa_back_df)) {
 
 # Create taxa_df
 
-taxa_df <- data.frame(taxon, NA)
+taxa_df <- data.frame(taxa, NA)
 names(taxa_df) <- c("original_name", "name_clear")
 
 for (i in 1:nrow(taxa_df)) {
@@ -220,7 +220,7 @@ for (i in 1:nrow(taxa_df)) {
 # names(trait_df) <- c("taxon", "name", "value")
 
 #------------------------------
-# Writing taxon and interaction table
+# Writing taxa and interaction table
 #------------------------------
 
 write.csv2(x = taxa_back_df, file = "importation_mangal/FW_name/data/FW_name_taxa_back.csv", row.names = FALSE)
