@@ -118,22 +118,28 @@ inter_para[, "taxon_sp_2"] <- word(inter_para[, "taxon_sp_2"], start = 1, end = 
 inter_para["attr"] <- "Number of parasited galls"
 
 Kolpelke_2017_inter <- rbind(inter_galler, inter_para)
-rm(inter_galler, inter_para)
+rm(inter_galler, inter_para, site_inter)
 
 # Add localistaiton
 coord <- subset(df_site, select = c("REARING_NUMBER", "NDECDEG", "EDECDEG"))
 names(coord) <- c("REARING_NUMBER", "lat", "lon")
 Kolpelke_2017_inter <- merge(Kolpelke_2017_inter, coord, by = "REARING_NUMBER")
+Kolpelke_2017_inter <- na.omit(Kolpelke_2017_inter)
+rm(coord)
 
-Kolpelke_2017_inter["lat"] <- NA
-Kolpelke_2017_inter["lon"] <- NA
+# Add type of interaction
+Kolpelke_2017_inter[, "type"] <- "parasitism"
+inquiline <- as.vector(t(word(subset(df_parasit, df_parasit$`P/I` == "I" ,select = "FULL_NAME")[, "FULL_NAME"], start = 1, end = 2)))
 
+V <- which(Kolpelke_2017_inter[, "taxon_sp_2"] %in% inquiline)
+Kolpelke_2017_inter[V, "type"] <- "commensalism"
 
+# write interaction table
+write.csv2(x = Kolpelke_2017_inter, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_inter.csv", row.names = FALSE)
 
 #------------------------------
-# Set taxa_back and taxa table
+# Set taxa_back table
 #------------------------------
-# Create taxa_back_df
 
 ## Get Unique taxa of data
 taxa <- c(unique(Kolpelke_2017_inter[, "taxon_sp_1"]), 
@@ -201,17 +207,68 @@ for (i in 1:nrow(taxa_back_df)) {
 # Writing taxa_back_df
 write.csv2(x = taxa_back_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", row.names = FALSE)
 
+#------------------------------
+# Set taxa table
+#------------------------------
+
+taxon_sp_1 <- subset(Kolpelke_2017_inter, select = c("REARING_NUMBER", "taxon_sp_1"))
+taxon_sp_2 <- subset(Kolpelke_2017_inter, select = c("REARING_NUMBER", "taxon_sp_2"))
+colnames(taxon_sp_1) = colnames(taxon_sp_2)
+
+taxa_df <- rbind(taxon_sp_1, taxon_sp_2)
+colnames(taxa_df) <- c("REARING_NUMBER", "original_name")
+taxa_df <- unique(taxa_df)
+taxa_df <- na.omit(taxa_df)
+taxa_df["name_clear"] <- NA
+
+
+
+for (i in 1:nrow(taxa_df)) {
+  
+  if(((str_detect(taxa_df[i, 2], "[:digit:]") == TRUE || str_detect(taxa_df[i, 1], "[:punct:]") == TRUE) &
+       str_detect(taxa_df[i, 2], "sp") == TRUE) ||
+       str_detect(taxa_df[i, 2], "indet\\.") == TRUE ||
+       str_detect(taxa_df[i, 2], "\\.") == TRUE ||
+       str_detect(taxa_df[i, 2], "sp$") == TRUE){
+    
+    taxa_df[i, 3] <- word(taxa_df[i, 2], start = 1)
+    
+  } else {
+    taxa_df[i, 3] <- as.character(taxa_df[i, 2])
+  }
+}
+
+rm(taxon_sp_1, taxon_sp_2)
+
+# Writing taxa_df
+write.csv2(x = taxa_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_df.csv", row.names = FALSE)
+
+#------------------------------
+# Set environment table
+#------------------------------
+
+enviro_df <- df_site[, c(1,3,7,8,9)]
+enviro_df["name"] <- "elevation"
+names(enviro_df) <- c("REARING_NUMBER", "date", "la", "lon", "value", "name")
+  
+# writing enviro_df
+write.csv2(x = enviro_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_enviro_df.csv", row.names = FALSE)
+
+#------------------------------
+# Set traits table
+#------------------------------
+
+trait_df <- df_inter[, c(1, 3, 4)]
+trait_df <- merge(trait_df, df_galler[, c(1, 7)], by = "RGALLER")
+df_parasit <- rbind(df_parasit, rep("none", 10)) # Il faut ajouter la line "none" dans df_parasit parce que certaine interaction n<ont pas de parasitoide, donc on a besoin de ca pouf faire le merge
+trait_df <- merge(trait_df, df_parasit[, c(1, 8, 9, 10)], by = "RPAR") # Quand on merge on perd des donnees
+
+# Next : extraire des tableaux des galleurs et des parasitoides. Il va falloir faire deux tableaux car galleur 1 trait et parasitoide 3 traits. 
+
+# Kolpelke_2017_inter <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_inter.csv", header = TRUE, sep = ";")
 # taxa_back_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", header = TRUE, sep = ";")
-
-
-# Cleaning
-
-
-
-
-# for(i in 1:length(#unique des sites)){
-#
-#}
+# taxa_df <- read.csv2(""importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_df.csv", header = TRUE, sep = ";")
+# enviro_df <- read.csv2(""importation_mangal/Kolpelke_2017/data/Kolpelke_2017_enviro_df.csv", header = TRUE, sep = ";")
 
 
 
