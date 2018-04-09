@@ -2,7 +2,7 @@
 
 # Download mangal package
 GITHUB_PAT <- "e381e60e716f4c5330859f6cbd3f4b22d07359bc"
-devtools::install_github("gabrielbouleau/mangal.package", oauth = GITHUB_PAT)
+devtools::install_github("SteveViss/mangal.package", oauth = GITHUB_PAT)
 
 # Set library
 library(mangal)
