@@ -4,7 +4,6 @@ library(tidyr)
 library(jsonlite)
 library(httr)
 library(data.table)
-library(rcrossref)
 library(taxize)
 library(stringr)
 
@@ -54,6 +53,12 @@ attr_stage <- list(name        = "stage of the host",
                    unit        = "NA")
 
 
+attr_type <- list(name        = "gall type",
+                  table_owner = "traits",
+                  description = "Type of gall done the parasite Salix",
+                  unit        = "NA")
+
+
 ref <- list(doi       = "NA",
              jstor     = "NA",
              pmid      = "NA",
@@ -64,7 +69,7 @@ ref <- list(doi       = "NA",
              bibtex    = "bibtext long format")
 
 
-user <- list(name         = "name",
+users <- list(name         = "name",
               email        = "null",
               orcid        = "null",
               organization = "null",
@@ -107,20 +112,20 @@ site_inter <- merge(site_inter, df_site, by = "REARING_NUMBER")
 
 # Isolate interactions  
 inter_galler <- site_inter[, c(1, 26, 7, 11, 5 )]
-names(inter_galler) <- c("REARING_NUMBER", "date", "taxon_sp_1", "taxon_sp_2", "value")
+names(inter_galler) <- c("REARING_NUMBER", "date", "sp_taxon_1", "sp_taxon_2", "value")
 inter_galler["attr"] <- "Number of galls"
 inter_galler["salix"] <- "Salix "
-inter_galler <- unite(inter_galler, taxon_sp_1, c(salix, taxon_sp_1), sep = "") 
+inter_galler <- unite(inter_galler, sp_taxon_1, c(salix, sp_taxon_1), sep = "") 
 
 inter_para <- site_inter[, c(1, 26, 11, 24, 6)]
-names(inter_para) <- c("REARING_NUMBER", "date", "taxon_sp_1", "taxon_sp_2", "value")
-inter_para[, "taxon_sp_2"] <- word(inter_para[, "taxon_sp_2"], start = 1, end = 2)
+names(inter_para) <- c("REARING_NUMBER", "date", "sp_taxon_1", "sp_taxon_2", "value")
+inter_para[, "sp_taxon_2"] <- word(inter_para[, "sp_taxon_2"], start = 1, end = 2)
 inter_para["attr"] <- "Number of parasited galls"
 
 Kolpelke_2017_inter <- rbind(inter_galler, inter_para)
 rm(inter_galler, inter_para, site_inter)
 
-# Add localistaiton
+# Add localisation
 coord <- subset(df_site, select = c("REARING_NUMBER", "NDECDEG", "EDECDEG"))
 names(coord) <- c("REARING_NUMBER", "lat", "lon")
 Kolpelke_2017_inter <- merge(Kolpelke_2017_inter, coord, by = "REARING_NUMBER")
@@ -131,20 +136,22 @@ rm(coord)
 Kolpelke_2017_inter[, "type"] <- "parasitism"
 inquiline <- as.vector(t(word(subset(df_parasit, df_parasit$`P/I` == "I" ,select = "FULL_NAME")[, "FULL_NAME"], start = 1, end = 2)))
 
-V <- which(Kolpelke_2017_inter[, "taxon_sp_2"] %in% inquiline)
+V <- which(Kolpelke_2017_inter[, "sp_taxon_2"] %in% inquiline)
 Kolpelke_2017_inter[V, "type"] <- "commensalism"
 rm(inquiline, V)
 
 # write interaction table
+Kolpelke_2017_inter <- unique(Kolpelke_2017_inter)
 write.csv2(x = Kolpelke_2017_inter, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_inter.csv", row.names = FALSE)
+
 
 #------------------------------
 # Set taxa_back table
 #------------------------------
 
 ## Get Unique taxa of data
-taxa <- c(unique(Kolpelke_2017_inter[, "taxon_sp_1"]), 
-           unique(Kolpelke_2017_inter[, "taxon_sp_2"]))
+taxa <- c(unique(Kolpelke_2017_inter[, "sp_taxon_1"]), 
+           unique(Kolpelke_2017_inter[, "sp_taxon_2"]))
 taxa <- taxa[!is.na(taxa)]
 
 ### Remove sp
@@ -212,11 +219,11 @@ write.csv2(x = taxa_back_df, file = "importation_mangal/Kolpelke_2017/data/Kolpe
 # Set taxa table
 #------------------------------
 
-taxon_sp_1 <- subset(Kolpelke_2017_inter, select = c("REARING_NUMBER", "taxon_sp_1"))
-taxon_sp_2 <- subset(Kolpelke_2017_inter, select = c("REARING_NUMBER", "taxon_sp_2"))
-colnames(taxon_sp_1) = colnames(taxon_sp_2)
+sp_taxon_1 <- subset(Kolpelke_2017_inter, select = c("REARING_NUMBER", "sp_taxon_1"))
+sp_taxon_2 <- subset(Kolpelke_2017_inter, select = c("REARING_NUMBER", "sp_taxon_2"))
+colnames(sp_taxon_1) = colnames(sp_taxon_2)
 
-taxa_df <- rbind(taxon_sp_1, taxon_sp_2)
+taxa_df <- rbind(sp_taxon_1, sp_taxon_2)
 colnames(taxa_df) <- c("REARING_NUMBER", "original_name")
 taxa_df <- unique(taxa_df)
 taxa_df <- na.omit(taxa_df)
@@ -239,7 +246,7 @@ for (i in 1:nrow(taxa_df)) {
   }
 }
 
-rm(taxon_sp_1, taxon_sp_2)
+rm(sp_taxon_1, sp_taxon_2)
 
 # Writing taxa_df
 write.csv2(x = taxa_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_df.csv", row.names = FALSE)
@@ -252,7 +259,7 @@ write.csv2(x = taxa_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2
 trait_galler <- merge(df_inter[, c(1, 3)], df_galler[, c(1, 4, 7)], by = "RGALLER")
 trait_galler <- trait_galler[, -1]
 trait_galler["name"] <- "gall type"
-names(trait_galler) <- c("REARING_NUMBER", "taxon", "value", "name")
+names(trait_galler) <- c("REARING_NUMBER", "taxa", "value", "name")
 
 # isolate parasite trait
 trait_parasit <- merge(df_inter[, c(1, 4)], df_parasit[, c(1, 8, 9, 10, 11)], by = "RPAR")
@@ -274,7 +281,7 @@ names(trait_parasit) <- c("REARING_NUMBER", "Endo/Ecto", "Koino/Idio", "stage of
 trait_parasit <- melt(trait_parasit, id.vars = c("REARING_NUMBER", "taxon"), na.rm = TRUE)
 trait_parasit[which(trait_parasit$value==""), 4] <- NA
 trait_parasit <- na.omit(trait_parasit)
-names(trait_parasit) <- c("REARING_NUMBER", "taxon", "name", "value")
+names(trait_parasit) <- c("REARING_NUMBER", "taxa", "name", "value")
 
 # write traits df
 write.csv2(x = trait_galler, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_trait_galler.csv", row.names = FALSE)
@@ -323,6 +330,10 @@ enviro_df <- unique(enviro_df)
 write.csv2(x = enviro_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke_2017_enviro_df.csv", row.names = FALSE)
 
 
+#------------------------------
+# Open dataframes
+#------------------------------
+
 Kolpelke_2017_inter <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_inter.csv", header = TRUE, sep = ";")
 taxa_back_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", header = TRUE, sep = ";")
 taxa_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_df.csv", header = TRUE, sep = ";")
@@ -341,6 +352,7 @@ POST_attribute(attr_altitude)
 POST_attribute(attr_Endo_Ecto)
 POST_attribute(attr_Koino_Idio)
 POST_attribute(attr_stage)
+POST_attribute(attr_type)
 
 POST_ref()
 
@@ -353,7 +365,7 @@ POST_taxa_back()
 # GET_fkey for the attribute id in the interaction table
 Kolpelke_2017_inter["attr_id"] <- NA
 for (i in 1:nrow(Kolpelke_2017_inter)) {
-  Kolpelke_2017_inter[i, "attr_id"] <- GET_fkey("attribute", c("name", "unit"), c(Kolpelke_2017_inter[i, "attr"], NA))
+  Kolpelke_2017_inter[i, "attr_id"] <- GET_fkey("attribute", c("name", "unit"), c(as.character(Kolpelke_2017_inter[i, "attr"]), NA))
 }
 
 #------------------------------
@@ -363,35 +375,81 @@ for (i in 1:nrow(Kolpelke_2017_inter)) {
 # First loop
 for (i in 1:max(network_df$number)){
   
+  print("#################   New network   #################")
+  
   # Subset table to select data from i dataset
-  network_temp <- subset(network_df, network_df$number == 1)
+  network_temp <- subset(network_df, network_df$number == i)
       rearing_number <- as.vector(network_temp$REARING_NUMBER)
   network_temp <- network_temp[1, ]
       
-  enviro_temp  <- subset(enviro_df, enviro_df$number == 1)
+  enviro_temp  <- subset(enviro_df, enviro_df$number == i)
   
   # Subset table to match rearing_number of the i dataset
   inter_temp     <- subset(Kolpelke_2017_inter, Kolpelke_2017_inter$REARING_NUMBER %in% rearing_number)
+  inter_temp$sp_taxon_1 <- as.character(inter_temp$sp_taxon_1)
+  inter_temp$sp_taxon_2 <- as.character(inter_temp$sp_taxon_2)
  
   taxa_temp     <- subset(taxa_df, taxa_df$REARING_NUMBER %in% rearing_number)
-  taxa_temp     <- taxon_temp[!duplicated(taxon_temp[,"original_name"]),]
+  taxa_temp     <- taxa_temp[!duplicated(taxa_temp[,"original_name"]),]
+  taxa_temp$original_name <- as.character(taxa_temp$original_name)
    
-  t_galler_temp  <- subset(subset(trait_galler, trait_galler$REARING_NUMBER %in% rearing_number), duplicated(taxon))
+  t_galler_temp  <- subset(subset(trait_galler, trait_galler$REARING_NUMBER %in% rearing_number), duplicated(taxa))
  
   t_parasit_temp <- subset(trait_parasit, trait_parasit$REARING_NUMBER %in% rearing_number)
-  t_parasit_temp <- t_parasit_temp[!duplicated(t_parasit_temp[,c("taxon", "name")]),]
+  t_parasit_temp <- t_parasit_temp[!duplicated(t_parasit_temp[,c("taxa", "name")]),]
+  
 
+  # Search for duplicate in inter_temp -> must create two different taxa
+  
+    # Create counter for all species, assing number 1 to them
+    sp_counter <- data.frame(sp = taxa_temp[, "original_name"], num = rep(1, times = nrow(taxa_temp)))
+
+    # Loop : add a number to the species of a duplicated interaction
+    while(anyDuplicated(inter_temp[, c("sp_taxon_1", "sp_taxon_2")]) >= 1){
+      SP1 <- inter_temp[anyDuplicated(inter_temp[, c("sp_taxon_1", "sp_taxon_2")]), "sp_taxon_1"]
+      SP2 <- inter_temp[anyDuplicated(inter_temp[, c("sp_taxon_1", "sp_taxon_2")]), "sp_taxon_2"]
+      
+      # Add the new taxa to the taxa_temp table
+      taxa_temp <- rbind(taxa_temp, taxa_temp[which(taxa_temp$original_name == SP1),])
+      taxa_temp[nrow(taxa_temp), "original_name"] <- paste(taxa_temp[nrow(taxa_temp), "original_name"], sp_counter[which(sp_counter$sp == SP1), 2])
+      new_SP1 <- taxa_temp[nrow(taxa_temp), 2]
+      
+      taxa_temp <- rbind(taxa_temp, taxa_temp[which(taxa_temp$original_name == SP2),])
+      taxa_temp[nrow(taxa_temp), "original_name"] <- paste(taxa_temp[nrow(taxa_temp), "original_name"], sp_counter[which(sp_counter$sp == SP2), 2])
+      new_SP2 <- taxa_temp[nrow(taxa_temp), 2]
+      
+      # +1 for thoses species in the counter
+      sp_counter[which(sp_counter$sp == SP1), 2] <- sp_counter[which(sp_counter$sp == SP1), 2] + 1
+      sp_counter[which(sp_counter$sp == SP2), 2] <- sp_counter[which(sp_counter$sp == SP2), 2] + 1
+      
+      # Change it in the inter_temp table
+      RN <- as.character(inter_temp[anyDuplicated(inter_temp[, c("sp_taxon_1", "sp_taxon_2")]), "REARING_NUMBER"])
+      for (j in 1:nrow(inter_temp)) {
+        if(inter_temp[j, "REARING_NUMBER"] == RN){
+          if(str_detect(inter_temp[j, "sp_taxon_1"], SP1)) inter_temp[j, "sp_taxon_1"] <- new_SP1
+          if(str_detect(inter_temp[j, "sp_taxon_2"], SP1)) inter_temp[j, "sp_taxon_2"] <- new_SP1
+          
+          if(str_detect(inter_temp[j, "sp_taxon_1"], SP2)) inter_temp[j, "sp_taxon_1"] <- new_SP2
+          if(str_detect(inter_temp[j, "sp_taxon_2"], SP2)) inter_temp[j, "sp_taxon_2"] <- new_SP2
+        }
+        
+      }
+      
+    }
+  
+  
   # Set metadata
   
-  network <- list(date             = as.character(network_temp[1, 7]),
+  network <- list(name             = as.character(network_temp[1, 5]),
+                  date             = as.character(network_temp[1, 7]),
                   lat              = network_temp[1, 3],
                   lon              = network_temp[1, 4],
                   srid             = srid,
                   description      = as.character(network_temp[1, 1]),
                   public           = TRUE,
                   all_interactions = FALSE)
-  
-  enviro <- list(name  = enviro_temp[1, 6],
+
+  enviro <- list(name  = as.character(enviro_temp[1, 6]),
                  lat   = enviro_temp[1, 1],
                  lon   = enviro_temp[1, 2],
                  srid  = srid,
@@ -399,7 +457,7 @@ for (i in 1:max(network_df$number)){
                  value = enviro_temp[1, 3])
   
 
-  inter <- list(taxon_1_level = "population",
+  inter <- list(taxon_1_level = "individual",
                 taxon_2_level = "population",
                 date          = as.character(inter_temp[1, 2]),
                 direction     = "directed",
@@ -411,14 +469,24 @@ for (i in 1:max(network_df$number)){
                 srid          = srid)
 
   # Inject table 
-  
+  print("enviro")
   POST_environment(enviro, attr_altitude)
-  POST_network(network, enviro = enviro)
-  POST_taxon(taxa_temp)
-  POST_trait(t_galler_temp)
-  POST_trait(t_parasit_temp)
-  POST_interaction(inter_temp, enviro = enviro_temp)
   
+  print("network")
+  POST_network(network, enviro = enviro)
+  
+  print("taxa")
+  POST_taxon(taxa_temp)
+  
+  print("trait galler")
+  POST_trait(t_galler_temp, network = network)
+  
+  print("trait parasit")
+  POST_trait(t_parasit_temp, network = network)
+  
+  print("interaction")
+  POST_interaction(inter_temp, enviro = enviro)
+
 }
 
 rm(list = ls())
