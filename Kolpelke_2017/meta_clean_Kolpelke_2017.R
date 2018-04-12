@@ -59,27 +59,27 @@ attr_type <- list(name        = "gall type",
                   unit        = "NA")
 
 
-ref <- list(doi       = "NA",
-             jstor     = "NA",
-             pmid      = "NA",
-             paper_url = "null",
-             data_url  = "URL of the attached data",
-             author    = "firt author name",
-             year      = "NA",
-             bibtex    = "bibtext long format")
+ref <- list(doi       = "10.1002/ecy.1832",
+            jstor     = "NA",
+            pmid      = "NA",
+            paper_url = "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecy.1832",
+            data_url  = "https://github.com/TheoreticalEcosystemEcology/reshapeSalix.git",
+            author    = "kolpelke",
+            year      = "2017",
+            bibtex    = "@article{Kopelke_2017,doi = {10.1002/ecy.1832},url = {https://doi.org/10.1002%2Fecy.1832},year = 2017,month = {may},publisher = {Wiley-Blackwell},volume = {98},number = {6},pages = {1730--1730},author = {Jens-Peter Kopelke and Tommi Nyman and Kevin Cazelles and Dominique Gravel and Steve Vissault and Tomas Roslin},title = {Food-web structure of willow-galling sawflies and their natural enemies across Europe},journal = {Ecology}}")
 
 
-users <- list(name         = "name",
-              email        = "null",
-              orcid        = "null",
-              organization = "null",
+users <- list(name         = "Gabriel Bergeron",
+              email        = "gabriel.bergeron3@usherbrooke.ca",
+              orcid        = "0000-0002-5956-069X",
+              organization = "Universite de Sherbrooke",
               type         = "administrator")
 
 
-dataset <- list(name        = "name",
+dataset <- list(name         = "Salix_Kolpelke",
                  date        = "1111-11-11",
-                 description = "Description of the dataset collected",
-                 public      = FALSE)
+                 description = "Food-web structure of willow-galling sawflies and their natural enemies across Europe.",
+                 public      = TRUE)
 
 
 trait <- list(date = "1111-11-11")
@@ -103,6 +103,8 @@ df_galler  <- readRDS("importation_mangal/Kolpelke_2017/rdata/df_galler.rds")
 df_parasit <- readRDS("importation_mangal/Kolpelke_2017/rdata/df_parasit.rds")
 df_inter   <- readRDS("importation_mangal/Kolpelke_2017/rdata/df_interact.rds")
 
+df_parasit[, "RPAR"] <- as.character(df_parasit[, "RPAR"])
+df_parasit[nrow(df_parasit) +1, ] <- c("none" , rep(NA, time = 10))
 
 # Merging site and interaction
 site_inter <- merge(df_inter, df_salix, by = "RSAL")
@@ -138,7 +140,14 @@ inquiline <- as.vector(t(word(subset(df_parasit, df_parasit$`P/I` == "I" ,select
 
 V <- which(Kolpelke_2017_inter[, "sp_taxon_2"] %in% inquiline)
 Kolpelke_2017_inter[V, "type"] <- "commensalism"
-rm(inquiline, V)
+rm(inquiline)
+
+# Add taxon_level
+Kolpelke_2017_inter[, "taxon_1_level"] <- "population"
+Kolpelke_2017_inter[, "taxon_2_level"] <- "population"
+V <- which(Kolpelke_2017_inter[, "attr"] == "Number of galls")
+Kolpelke_2017_inter[V, "taxon_1_level"] <- "individual"
+rm(V)
 
 # write interaction table
 Kolpelke_2017_inter <- unique(Kolpelke_2017_inter)
@@ -150,8 +159,8 @@ write.csv2(x = Kolpelke_2017_inter, file = "importation_mangal/Kolpelke_2017/dat
 #------------------------------
 
 ## Get Unique taxa of data
-taxa <- c(unique(Kolpelke_2017_inter[, "sp_taxon_1"]), 
-           unique(Kolpelke_2017_inter[, "sp_taxon_2"]))
+taxa <- c(Kolpelke_2017_inter[, "sp_taxon_1"], 
+          Kolpelke_2017_inter[, "sp_taxon_2"])
 taxa <- taxa[!is.na(taxa)]
 
 ### Remove sp
@@ -334,13 +343,13 @@ write.csv2(x = enviro_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke
 # Open dataframes
 #------------------------------
 
-Kolpelke_2017_inter <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_inter.csv", header = TRUE, sep = ";")
-taxa_back_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", header = TRUE, sep = ";")
-taxa_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_df.csv", header = TRUE, sep = ";")
-enviro_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_enviro_df.csv", header = TRUE, sep = ";")
-trait_galler <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_trait_galler.csv", header = TRUE, sep = ";")
-trait_parasit <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_trait_parasit.csv", header = TRUE, sep = ";")
-network_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_network_df.csv", header = TRUE, sep = ";")
+Kolpelke_2017_inter <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_inter.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+taxa_back_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+taxa_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+enviro_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_enviro_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+trait_galler <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_trait_galler.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+trait_parasit <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_trait_parasit.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+network_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_network_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
 
 
 #------------------------------
@@ -373,7 +382,7 @@ for (i in 1:nrow(Kolpelke_2017_inter)) {
 #------------------------------
 
 # First loop
-for (i in 1:max(network_df$number)){
+for (i in 41:max(network_df$number)){
   
   print("#################   New network   #################")
   
@@ -385,18 +394,19 @@ for (i in 1:max(network_df$number)){
   enviro_temp  <- subset(enviro_df, enviro_df$number == i)
   
   # Subset table to match rearing_number of the i dataset
-  inter_temp     <- subset(Kolpelke_2017_inter, Kolpelke_2017_inter$REARING_NUMBER %in% rearing_number)
+  inter_temp <- subset(Kolpelke_2017_inter, Kolpelke_2017_inter$REARING_NUMBER %in% rearing_number)
   inter_temp$sp_taxon_1 <- as.character(inter_temp$sp_taxon_1)
   inter_temp$sp_taxon_2 <- as.character(inter_temp$sp_taxon_2)
  
-  taxa_temp     <- subset(taxa_df, taxa_df$REARING_NUMBER %in% rearing_number)
-  taxa_temp     <- taxa_temp[!duplicated(taxa_temp[,"original_name"]),]
+  taxa_temp <- subset(taxa_df, taxa_df$REARING_NUMBER %in% rearing_number)
+  taxa_temp <- taxa_temp[!duplicated(taxa_temp[,"original_name"]),]
   taxa_temp$original_name <- as.character(taxa_temp$original_name)
    
-  t_galler_temp  <- subset(subset(trait_galler, trait_galler$REARING_NUMBER %in% rearing_number), duplicated(taxa))
+  t_galler_temp <- subset(trait_galler, trait_galler$REARING_NUMBER %in% rearing_number)
+  t_galler_temp <- t_galler_temp[!duplicated(t_galler_temp[, c("taxa", "name")]),]
  
   t_parasit_temp <- subset(trait_parasit, trait_parasit$REARING_NUMBER %in% rearing_number)
-  t_parasit_temp <- t_parasit_temp[!duplicated(t_parasit_temp[,c("taxa", "name")]),]
+  t_parasit_temp <- t_parasit_temp[!duplicated(t_parasit_temp[, c("taxa", "name")]),]
   
 
   # Search for duplicate in inter_temp -> must create two different taxa
@@ -417,6 +427,28 @@ for (i in 1:max(network_df$number)){
       taxa_temp <- rbind(taxa_temp, taxa_temp[which(taxa_temp$original_name == SP2),])
       taxa_temp[nrow(taxa_temp), "original_name"] <- paste(taxa_temp[nrow(taxa_temp), "original_name"], sp_counter[which(sp_counter$sp == SP2), 2])
       new_SP2 <- taxa_temp[nrow(taxa_temp), 2]
+      
+      # Add the new taxa in the traits table
+      if(sum(str_detect(as.character(t_galler_temp[, "taxa"]), SP1)) >= 1){
+        A <- subset(t_galler_temp, subset = t_galler_temp$taxa == SP1)
+        A[, "taxa"] <- new_SP1
+        t_galler_temp <- rbind(t_galler_temp, A)
+      }
+      if(sum(str_detect(as.character(t_parasit_temp[, "taxa"]), SP1)) >= 1){
+        A <- subset(t_parasit_temp, subset = t_parasit_temp$taxa == SP1)
+        A[, "taxa"] <- new_SP1
+        t_parasit_temp <- rbind(t_parasit_temp, A)
+      }
+      if(sum(str_detect(as.character(t_galler_temp[, "taxa"]), SP2)) >= 1){
+        A <- subset(t_galler_temp, subset = t_galler_temp$taxa == SP2)
+        A[, "taxa"] <- new_SP2
+        t_galler_temp <- rbind(t_galler_temp, A)
+      }
+      if(sum(str_detect(as.character(t_parasit_temp[, "taxa"]), SP2)) >= 1){
+        A <- subset(t_parasit_temp, subset = t_parasit_temp$taxa == SP2)
+        A[, "taxa"] <- new_SP2
+        t_parasit_temp <- rbind(t_parasit_temp, A)
+      }
       
       # +1 for thoses species in the counter
       sp_counter[which(sp_counter$sp == SP1), 2] <- sp_counter[which(sp_counter$sp == SP1), 2] + 1
@@ -457,9 +489,7 @@ for (i in 1:max(network_df$number)){
                  value = enviro_temp[1, 3])
   
 
-  inter <- list(taxon_1_level = "individual",
-                taxon_2_level = "population",
-                date          = as.character(inter_temp[1, 2]),
+  inter <- list(date          = as.character(inter_temp[1, 2]),
                 direction     = "directed",
                 method        = "Field observation",
                 description   = "null",
@@ -478,11 +508,15 @@ for (i in 1:max(network_df$number)){
   print("taxa")
   POST_taxon(taxa_temp)
   
+  if((nrow(t_galler_temp) >= 1) == TRUE){
   print("trait galler")
   POST_trait(t_galler_temp, network = network)
+  }
   
+  if((nrow(t_parasit_temp) >= 1) == TRUE){
   print("trait parasit")
   POST_trait(t_parasit_temp, network = network)
+  }
   
   print("interaction")
   POST_interaction(inter_temp, enviro = enviro)
