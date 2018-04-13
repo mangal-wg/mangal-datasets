@@ -382,7 +382,7 @@ for (i in 1:nrow(Kolpelke_2017_inter)) {
 #------------------------------
 
 # First loop
-for (i in 41:max(network_df$number)){
+for (i in 1:max(network_df$number)){
   
   print("#################   New network   #################")
   
@@ -471,7 +471,6 @@ for (i in 41:max(network_df$number)){
   
   
   # Set metadata
-  
   network <- list(name             = as.character(network_temp[1, 5]),
                   date             = as.character(network_temp[1, 7]),
                   lat              = network_temp[1, 3],
