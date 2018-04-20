@@ -218,13 +218,13 @@ POST_attributes(attr_inter)
 
 POST_attributes(attr1)
 
-POST_refs()
+POST_refs(ref)
 
-POST_users()
+POST_users(users)
 
-POST_datasets()
+POST_datasets(dataset = , users = , ref = )
 
-POST_taxo_back()
+POST_taxo_back(taxa_back = )
 
 # POST_traits(traits_df)
 
@@ -274,9 +274,9 @@ enviro1 <- list(name  = "attribute name",
 
 # POST table
 POST_environments(enviro1, attr1)
-POST_networks(networks, enviro = enviro1)
-POST_taxons(taxa_df1)
-POST_interactions(FW_name_I, enviro = enviro1, attr_inter)
+POST_networks(network_lst =, enviro = enviro1)
+POST_taxons(taxa_df = taxa_df1)
+POST_interactions(inter_df = FW_name_I, inter = inter, enviro = enviro1, attr = attr_inter, users = )
 
 # Writing taxa and interaction table
 write.csv2(x = taxa_df1, file = "importation_mangal/FW_name/data/FW_name_I_taxa.csv", row.names = FALSE)
@@ -330,9 +330,9 @@ enviro2 <- list(name  = "attribute name",
 
 # POST table
 POST_environments(enviro2, attr1)
-POST_networks(networks, enviro = enviro2)
-POST_taxons(taxa_df2)
-POST_interactions(FW_name_II, enviro = enviro2, attr_inter)
+POST_networks(network_lst = , enviro = enviro2)
+POST_taxons(taxa_df = taxa_df2)
+POST_interactions(inter_df = FW_name_II, inter = inter, enviro = enviro2, attr = attr_inter, users = )
 
 # Writing taxa and interaction table
 write.csv2(x = taxa_df2, file = "importation_mangal/FW_name/data/FW_name_II_taxa.csv", row.names = FALSE)
@@ -386,9 +386,9 @@ enviro3 <- list(name  = "attribute name",
 
 # POST table
 POST_environments(enviro3, attr1)
-POST_networks(networks, enviro = enviro3)
+POST_networks(network_lst = , enviro = enviro3, dataset =, users=)
 POST_taxons(taxa_df3)
-POST_interactions(FW_name_III, enviro = enviro3, attr_inter)
+POST_interactions(inter_df = FW_name_III, inter = inter, enviro = enviro3, attr = attr_inter, users = users)
 
 # Writing taxa and interaction table
 write.csv2(x = taxa_df3, file = "importation_mangal/FW_name/data/FW_name_III_taxa.csv", row.names = FALSE)
