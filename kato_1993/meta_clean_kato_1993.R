@@ -35,7 +35,7 @@ attr_inter <- list(name        = "Number of visit by a pollinator",
 #               description = "DESCRIPTION",
 #               unit        = "null")
 
-refs <- list(doi       = "NA",
+ref <- list(doi       = "NA",
              jstor     = "NA",
              pmid      = "NA",
              paper_url = "https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/156107/1/cbl02802_119.pdf",
@@ -60,16 +60,16 @@ enviro <- list(name  = "attribute name",
                value = 0)
 
 
-datasets <- list(name        = "kato_1993",
+dataset <- list(name        = "kato_1993",
                  date        = "1991-09-01",
                  description = "Flower and anthophilous insect interactions in the primary cool-temperate subalpine forests and meadows at Mt. Kushigata, Yamanashi Prefecture, Japan",
                  public      = TRUE)
 
 
-traits <- list(date = "1111-11-11")
+trait <- list(date = "1111-11-11")
 
 
-networks <- list(name             = "kato_1993",
+network <- list(name             = "kato_1993",
                  date             = "1991-09-01",
                  lat              = lat,
                  lon              = lon,
@@ -98,7 +98,7 @@ inter <- list(taxon_1_level = "taxon",
 # #------------------------------
 # 
 # # Open file
-# kato_1993 <- read.csv2(file = "importation_mangal/kato_1993/raw/kato_1993.csv", header = FALSE, sep = ",")
+# kato_1993 <- read.csv2(file = "mangal-datasets/kato_1993/raw/kato_1993.csv", header = FALSE, sep = ",")
 # 
 # # Cleaning for melt()
 # ## Get ROW one with Genus_species
@@ -207,7 +207,7 @@ inter <- list(taxon_1_level = "taxon",
 # Set traits table
 #------------------------------
 
-# traits_df <- read.csv2(file = "importation_mangal/kato_1993/data/kato_1993_traits.csv", header = TRUE)
+# traits_df <- read.csv2(file = "mangal-datasets/kato_1993/data/kato_1993_traits.csv", header = TRUE)
 
 # traits_df <- melt(traits_df, id.vars = c("taxon"), na.rm = TRUE)
 # names(traits_df) <- c("taxon", "name", "value")
@@ -216,30 +216,30 @@ inter <- list(taxon_1_level = "taxon",
 # Writing taxon and interaction table
 #------------------------------
 
-# write.csv2(x = taxo_back_df, file = "importation_mangal/kato_1993/data/kato_1993_taxo_back.csv", row.names = FALSE)
-# write.csv2(x = taxons_df, file = "importation_mangal/kato_1993/data/kato_1993_taxons.csv", row.names = FALSE)
-# write.csv2(x = kato_1993, file = "importation_mangal/kato_1993/data/kato_1993_inter.csv", row.names = FALSE)
-# write.csv2(x = traits_df, file = "importation_mangal/kato_1993/data/kato_1993_traits.csv", row.names = FALSE)
+# write.csv2(x = taxo_back_df, file = "mangal-datasets/kato_1993/data/kato_1993_taxo_back.csv", row.names = FALSE)
+# write.csv2(x = taxons_df, file = "mangal-datasets/kato_1993/data/kato_1993_taxons.csv", row.names = FALSE)
+# write.csv2(x = kato_1993, file = "mangal-datasets/kato_1993/data/kato_1993_inter.csv", row.names = FALSE)
+# write.csv2(x = traits_df, file = "mangal-datasets/kato_1993/data/kato_1993_traits.csv", row.names = FALSE)
 
-taxo_back_df <- read.csv2("importation_mangal/kato_1993/data/kato_1993_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("importation_mangal/kato_1993/data/kato_1993_taxons.csv", header = TRUE)
-kato_1993 <- read.csv2("importation_mangal/kato_1993/data/kato_1993_inter.csv", header = TRUE)
-# traits_df <- read.csv2("importation_mangal/kato_1993/data/kato_1993_traits.csv", header = TRUE)
+taxo_back_df <- read.csv2("mangal-datasets/kato_1993/data/kato_1993_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("mangal-datasets/kato_1993/data/kato_1993_taxons.csv", header = TRUE)
+kato_1993 <- read.csv2("mangal-datasets/kato_1993/data/kato_1993_inter.csv", header = TRUE)
+# traits_df <- read.csv2("mangal-datasets/kato_1993/data/kato_1993_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions
 #------------------------------
-POST_attributes(attr_inter)
-# POST_attributes(attr1)
-# POST_attributes(attr2)
-POST_refs()
-POST_users()
-# POST_environments(enviro, attr_##)
-POST_datasets()
-POST_networks(networks, enviro = enviro)
-POST_taxo_back()
-POST_taxons(taxons_df)
-# POST_traits(traits_df)
-POST_interactions(kato_1993, enviro = enviro, attr_inter)
+POST_attribute(attr_inter)
+# POST_attribute(attr1)
+# POST_attribute(attr2)
+POST_ref(ref)
+POST_user(users)
+# POST_environment(enviro, attr_##)
+POST_dataset(dataset, users, ref)
+POST_network(network_lst = network, enviro = enviro, dataset, users)
+POST_taxa_back(taxa_back = taxo_back_df)
+POST_taxon(taxons_df)
+# POST_trait(traits_df)
+POST_interaction(inter_df = kato_1993, inter = inter, enviro = enviro, attr = attr_inter, users)
 
 rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxons_df, taxo_back_df, kato_1993)

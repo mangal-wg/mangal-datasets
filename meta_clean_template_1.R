@@ -45,7 +45,7 @@ ref <- list(doi       = "NA",
              bibtex    = "bibtext long format")
 
 
-user <- list(name         = "NAME",
+users <- list(name         = "NAME",
               email        = "null",
               orcid        = "null",
               organization = "null",
@@ -97,7 +97,7 @@ inter <- list(taxon_1_level = "[taxon, population, individual]",
 #------------------------------
 
 # Open file
-FW_name <- read.csv2(file = "importation_mangal/FW_name/raw/FW_name.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
+FW_name <- read.csv2(file = "mangal-datasets/FW_name/raw/FW_name.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "")
 
 # Cleaning for melt()
 ## Merge two first COLUMNS Genus species
@@ -167,7 +167,7 @@ for (i in 1:length(taxa_back)) {
   path <- modify_url(server, path = paste0("/api/v2/","taxa_backs/?name=", str_replace(taxa_back[i], " ", "%20")))
 
   if (length(content(GET(url = path, config = add_headers("Content-type" = "application/json", 
-                                                          "Authorization" = paste("bearer", readRDS("importation_mangal/.httr-oauth")))))) == 0) {
+                                                          "Authorization" = paste("bearer", readRDS("mangal-datasets/.httr-oauth")))))) == 0) {
 
     taxa_back_df[nrow(taxa_back_df)+1, 1] <- taxa_back[i]
   }
@@ -214,7 +214,7 @@ for (i in 1:nrow(taxa_df)) {
 # Set traits table
 #------------------------------
 
-# trait_df <- read.csv2(file = "importation_mangal/FW_name/data/FW_name_trait.csv", header = TRUE)
+# trait_df <- read.csv2(file = "mangal-datasets/FW_name/data/FW_name_trait.csv", header = TRUE)
 
 # trait_df <- melt(trait_df, id.vars = c("taxon"), na.rm = TRUE)
 # names(trait_df) <- c("taxon", "name", "value")
@@ -223,15 +223,15 @@ for (i in 1:nrow(taxa_df)) {
 # Writing taxa and interaction table
 #------------------------------
 
-write.csv2(x = taxa_back_df, file = "importation_mangal/FW_name/data/FW_name_taxa_back.csv", row.names = FALSE)
-write.csv2(x = taxa_df, file = "importation_mangal/FW_name/data/FW_name_taxa.csv", row.names = FALSE)
-write.csv2(x = FW_name, file = "importation_mangal/FW_name/data/FW_name_inter.csv", row.names = FALSE)
-# write.csv2(x = traits_df, file = "importation_mangal/FW_name/data/FW_name_traits.csv", row.names = FALSE)
+write.csv2(x = taxa_back_df, file = "mangal-datasets/FW_name/data/FW_name_taxa_back.csv", row.names = FALSE)
+write.csv2(x = taxa_df, file = "mangal-datasets/FW_name/data/FW_name_taxa.csv", row.names = FALSE)
+write.csv2(x = FW_name, file = "mangal-datasets/FW_name/data/FW_name_inter.csv", row.names = FALSE)
+# write.csv2(x = traits_df, file = "mangal-datasets/FW_name/data/FW_name_traits.csv", row.names = FALSE)
 
-# taxa_back_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxa_back.csv", header = TRUE)
-# taxa_df <- read.csv2("importation_mangal/FW_name/data/FW_name_taxa.csv", header = TRUE)
-# FW_name <- read.csv2("importation_mangal/FW_name/data/FW_name_inter.csv", header = TRUE)
-# trait_df <- read.csv2("importation_mangal/FW_name/data/FW_name_trait.csv", header = TRUE)
+# taxa_back_df <- read.csv2("mangal-datasets/FW_name/data/FW_name_taxa_back.csv", header = TRUE)
+# taxa_df <- read.csv2("mangal-datasets/FW_name/data/FW_name_taxa.csv", header = TRUE)
+# FW_name <- read.csv2("mangal-datasets/FW_name/data/FW_name_inter.csv", header = TRUE)
+# trait_df <- read.csv2("mangal-datasets/FW_name/data/FW_name_trait.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions
@@ -249,4 +249,4 @@ POST_taxon(taxa_df)
 # POST_traits(trait_df, network)
 POST_interaction(inter_df = FW_name, inter = inter, enviro = enviro, attr = attr_inter, users)
 
-rm(lat, lon, srid, attr_inter, ref, user, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, FW_name)
+rm(lat, lon, srid, attr_inter, ref, users, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, FW_name)
