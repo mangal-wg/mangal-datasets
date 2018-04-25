@@ -2,7 +2,7 @@
 library(reshape2)
 library(tidyr)
 #library(jsonlite)
-library(httr)
+#library(httr)
 library(data.table)
 library(rcrossref)
 library(taxize)
@@ -14,35 +14,35 @@ library(mangal)
   # Metadata
 #------------------------------
 
-lat  <- 10.3
-lon  <- -84.8
+lat  <- 36.075391
+lon  <- -79.001843
 srid <- 4326
 
 # Must fill all CAP fields; null fields optional
 
-attr_inter <- list(name        = "Bird-fruit interaction",
+attr_inter <- list(name        = "Number of pollinator",
                    table_owner = "interactions",
-                   description = "Presence-absence of interaction",
-                   unit        = "NA")
+                   description = "Number of insect captured while pollination",
+                   unit        = "individual captured")
 
 # attr1 <- list(name        = "NAME",
 #               table_owner = "TABLE_OWNER",
 #               description = "DESCRIPTION",
-#               unit        = "null")
+#               unit        = "NA")
 
 # attr2 <- list(name        = "NAME",
 #               table_owner = "TABLE_OWNER",
 #               description = "DESCRIPTION",
-#               unit        = "null")
+#               unit        = "NA")
 
-ref <- list(doi        = "10.2307/2388051",
+ref <- list(doi        = "10.2307/2937269",
              jstor     = "NA",
              pmid      = "NA",
-             paper_url = "http://download.bioon.com.cn/upload/month_0910/20091008_db07aa6c85868f647dc6uVyGu2wEUWil.attach.pdf",
-             data_url  = "http://www.web-of-life.es/map.php?type=5",
-             author    = "wheelwright",
-             year      = "1984",
-             bibtex    = "@article{Wheelwright_1984,doi = {10.2307/2388051},url = {https://doi.org/10.2307%2F2388051},year = 1984,month = {sep},publisher = {{JSTOR}},volume = {16},number = {3},pages = {173},author = {Nathaniel T. Wheelwright and William A. Haber and K. Greg Murray and Carlos Guindon},title = {Tropical Fruit-Eating Birds and Their Food Plants: A Survey of a Costa Rican Lower Montane Forest},journal = {Biotropica}}")
+             paper_url = "https://doi.org/10.2307%2F2937269",
+             data_url  = "https://www.nceas.ucsb.edu/interactionweb/html/motten_1982.html",
+             author    = "motten",
+             year      = "1982",
+             bibtex    = "@article{Motten_1986,doi = {10.2307/2937269},url = {https://doi.org/10.2307%2F2937269},year = 1986,month = {feb},publisher = {Wiley-Blackwell},volume = {56},number = {1},pages = {21--42},author = {Alexander F. Motten},title = {Pollination Ecology of the Spring Wildflower Community of a Temperate Deciduous Forest},journal = {Ecological Monographs}}")
 
 
 users <- list(name         = "Gabriel Bergeron",
@@ -60,37 +60,36 @@ enviro <- list(name  = "attribute name",
                value = 0)
 
 
-dataset <- list(name         = "wheelwringht_1984",
-                 date        = "1978-01-01",
-                 description = "Bird-fruit interaction in the lower montane forests of Monteverde, Costa Rica",
+dataset <- list(name         = "motten_1982",
+                 date        = "1982-01-01",
+                 description = "spring wildflower community of mesic deciduous forests in piedmont North Carolina",
                  public      = TRUE)
 
 
 trait <- list(date = "1111-11-11")
 
 
-network <- list(name             = "wheelwringht_1984",
-                 date             = "1978-01-01",
+network <- list(name              = "motten_1982",
+                 date             = "1982-01-01",
                  lat              = lat,
                  lon              = lon,
                  srid             = srid,
-                 description      = "Bird-fruit interaction in the lower montane forests of Monteverde, Costa Rica",
+                 description      = "spring wildflower community of mesic deciduous forests in piedmont North Carolina",
                  public           = TRUE,
                  all_interactions = FALSE)
 
 
 inter <- list(taxon_1_level = "taxon",
               taxon_2_level = "taxon",
-              date          = "1978-01-01",
+              date          = "1982-01-01",
               direction     = "directed",
               type          = "mutualism",
-              method        = "field observations",
-              description   = "null",
+              method        = "null",
+              description   = "capture",
               public        = TRUE,
               lat           = lat,
               lon           = lon,
               srid          = srid)
-
 
 
 #------------------------------
@@ -98,38 +97,46 @@ inter <- list(taxon_1_level = "taxon",
 #------------------------------
 
 # Open file
-wheelwright_1984 <- read.csv2(file = "mangal-datasets/wheelwright_1984/raw/wheelwright_1984.csv", header = FALSE, sep = ",")
+motten_1982 <- read.csv2(file = "mangal-datasets/motten_1982/raw/motten_1982.csv", header = FALSE, stringsAsFactors = FALSE, na.strings = "", sep = ",")
 
 # Cleaning for melt()
+## Merge two first COLUMNS Genus species
+motten_1982[is.na(motten_1982)] <- "sp."
+motten_1982[, 2] <- word(motten_1982[, 2], -1)
+motten_1982 <- unite(motten_1982, sp1, c(V1, V2), sep = " ", remove = TRUE)
+
+### Si on choisis de retirer les sp, bonne fonction pour unir les 2 colonnes avec
+### un " " sans inclure les NA: str_interp(string, env = parent.frame())
+
 ## Get ROW one with Genus_species
-x  <- unname(unlist(wheelwright_1984[1, ]))
-x[1] <- 1
-colnames(wheelwright_1984) <- unlist(x)
+x  <- paste(motten_1982[1, ], sep =" ", motten_1982[2, ])
+x[1] <- "species"
+colnames(motten_1982) <- x
 rm(x)
 
 ## Delete unused row
-wheelwright_1984 <- wheelwright_1984[-1, ]
+motten_1982 <- motten_1982[-c(1, 2, 3), -2]
 
 # Melt df
-wheelwright_1984 <- melt(wheelwright_1984, id.vars = c(1), na.rm = TRUE)
+motten_1982 <- melt(motten_1982, id.vars = c("species"), na.rm = TRUE)
 
 # Remove interaction value = 0 (no interaction)
-names(wheelwright_1984) <- c("sp_taxon_1", "sp_taxon_2", "value")
-wheelwright_1984 <- subset(wheelwright_1984, wheelwright_1984$value != 0)
+names(motten_1982) <- c("sp_taxon_1", "sp_taxon_2", "value")
+motten_1982 <- subset(motten_1982, motten_1982$value != 0)
 
 #------------------------------
-# Set taxo_back and taxon table
+# Set taxo_back and taxa table
 #------------------------------
 # Create taxo_back_df
 
-## Get Unique taxon of data
-taxa <- c(as.vector(unique(wheelwright_1984$sp_taxon_2)), as.vector(unique(wheelwright_1984$sp_taxon_1)))
+## Get Unique taxa of data
+taxa <- c(as.vector(unique(motten_1982$sp_taxon_2)), as.vector(unique(motten_1982$sp_taxon_1)))
 
 
 ### Check for spelling mistakes... ###
 
 
-### Remove sp
+## Remove sp
 
 taxa_back <- vector()
 
@@ -137,8 +144,8 @@ for (i in 1:length(taxa)) {
 
   if(((str_detect(taxa[i], "[:digit:]") == TRUE || str_detect(taxa[i], "[:punct:]") == TRUE) &
        str_detect(taxa[i], "sp") == TRUE) ||
-       str_detect(taxa[i], "n\\.i\\.") ||
-       str_detect(taxa[i], "sp$")){
+       str_detect(taxa[i], "n\\.i\\.") == TRUE ||
+       str_detect(taxa[i], "sp$") == TRUE){
 
     taxa_back[i] <- word(taxa[i], start = 1)
 
@@ -193,8 +200,8 @@ names(taxa_df) <- c("original_name", "name_clear")
 for (i in 1:nrow(taxa_df)) {
 
   if(((str_detect(taxa_df[i, 1], "[:digit:]") == TRUE || str_detect(taxa_df[i, 1], "[:punct:]") == TRUE) &
-       str_detect(taxa_df[i, 1], "sp") == TRUE) ||
-       str_detect(taxa_df[i, 1], "n\\.i\\.") == TRUE ||
+      str_detect(taxa_df[i, 1], "sp") == TRUE) ||
+      str_detect(taxa_df[i, 1], "n\\.i\\.") == TRUE ||
       str_detect(taxa_df[i, 1], "sp$") == TRUE){
 
     taxa_df[i, 2] <- word(taxa_df[i, 1], start = 1)
@@ -208,24 +215,24 @@ for (i in 1:nrow(taxa_df)) {
 # Set traits table
 #------------------------------
 
-# traits_df <- read.csv2(file = "mangal-datasets/wheelwright_1984/data/wheelwright_1984_traits.csv", header = TRUE)
+# trait_df <- read.csv2(file = "mangal-datasets/motten_1982/data/motten_1982_trait.csv", header = TRUE)
 
-# traits_df <- melt(traits_df, id.vars = c("taxa"), na.rm = TRUE)
-# names(traits_df) <- c("taxa", "name", "value")
+# trait_df <- melt(trait_df, id.vars = c("taxon"), na.rm = TRUE)
+# names(trait_df) <- c("taxon", "name", "value")
 
 #------------------------------
 # Writing taxa and interaction table
 #------------------------------
 
-write.csv2(x = taxa_back_df, file = "mangal-datasets/wheelwright_1984/data/wheelwright_1984_taxa_back.csv", row.names = FALSE)
-write.csv2(x = taxa_df, file = "mangal-datasets/wheelwright_1984/data/wheelwright_1984_taxa.csv", row.names = FALSE)
-write.csv2(x = wheelwright_1984, file = "mangal-datasets/wheelwright_1984/data/wheelwright_1984_inter.csv", row.names = FALSE)
-# write.csv2(x = traits_df, file = "mangal-datasets/wheelwright_1984/data/wheelwright_1984_traits.csv", row.names = FALSE)
+write.csv2(x = taxa_back_df, file = "mangal-datasets/motten_1982/data/motten_1982_taxa_back.csv", row.names = FALSE)
+write.csv2(x = taxa_df, file = "mangal-datasets/motten_1982/data/motten_1982_taxa.csv", row.names = FALSE)
+write.csv2(x = motten_1982, file = "mangal-datasets/motten_1982/data/motten_1982_inter.csv", row.names = FALSE)
+# write.csv2(x = traits_df, file = "mangal-datasets/motten_1982/data/motten_1982_traits.csv", row.names = FALSE)
 
-# taxa_back_df <- read.csv2("mangal-datasets/wheelwright_1984/data/wheelwright_1984_taxa_back.csv", header = TRUE)
-# taxa_df <- read.csv2("mangal-datasets/wheelwright_1984/data/wheelwright_1984_taxa.csv", header = TRUE)
-# wheelwright_1984 <- read.csv2("mangal-datasets/wheelwright_1984/data/wheelwright_1984_inter.csv", header = TRUE)
-# traits_df <- read.csv2("mangal-datasets/wheelwright_1984/data/wheelwright_1984_traits.csv", header = TRUE)
+# taxa_back_df <- read.csv2("mangal-datasets/motten_1982/data/motten_1982_taxa_back.csv", header = TRUE)
+# taxa_df <- read.csv2("mangal-datasets/motten_1982/data/motten_1982_taxa.csv", header = TRUE)
+# motten_1982 <- read.csv2("mangal-datasets/motten_1982/data/motten_1982_inter.csv", header = TRUE)
+# trait_df <- read.csv2("mangal-datasets/motten_1982/data/motten_1982_trait.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions
@@ -241,6 +248,6 @@ POST_network(network_lst = network, enviro = enviro, dataset, users)
 POST_taxa_back(taxa_back = taxa_back_df)
 POST_taxon(taxa_df)
 # POST_traits(trait_df, network)
-POST_interaction(inter_df = wheelwright_1984, inter = inter, enviro = enviro, attr = attr_inter, users)
+POST_interaction(inter_df = motten_1982, inter = inter, enviro = enviro, attr = attr_inter, users)
 
-rm(taxa, lat, lon, srid, attr_inter, ref, users, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, wheelwright_1984)
+rm(lat, lon, srid, attr_inter, ref, users, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, motten_1982)

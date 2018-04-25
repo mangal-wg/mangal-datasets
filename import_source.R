@@ -32,7 +32,12 @@ source("mangal-datasets/percival_1974/meta_clean_percival_1974.R")
 # SCRIPTS BELOW WERE WRITTEN WITH THE NEW FORMAT
 source("mangal-datasets/fautin_1997/meta_clean_fautin_1997.R")
 source("mangal-datasets/mccullen_1993/meta_clean_mccullen_1993.R")
-
+source("mangal-datasets/kato_1993/meta_clean_kato_1993.R")
+source("mangal-datasets/wheelwringth_1984/meta_clean_wheelwringth_1984.R")
+source("mangal-datasets/motten_1982/meta_clean_motten_1982.R")
+source("mangal-datasets/hadfield_2013/meta_clean_hadfield_2013.R")
+source("mangal-datasets/ricciardi_2010/meta_clean_ricciardi_2010.R")
+source("mangal-datasets/olesen/meta_clean_olesen.R")
 
 
 
