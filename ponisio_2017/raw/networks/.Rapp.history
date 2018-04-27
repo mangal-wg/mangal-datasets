@@ -1,0 +1,6 @@
+load("/Users/mariliagaiarsa/Dropbox/hedgerow_assembly/data/networks/specimens.Rdata")
+load('~/Dropbox/hedgerow_assembly/data/networks/networks_years.Rdata')
+ls
+ls()
+head(nets)
+str(nets)
