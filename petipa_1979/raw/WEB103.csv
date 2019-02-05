@@ -1,0 +1,23 @@
+"Petipa, T.S. (1979). Trophic relationships in communities and the functioning of marine ecosystems: I. Studies in trophic relationships in pelagic communities of the southern seas of the USSR and in the tropical Pacific. In: M. J. Dunbar, (ed). Marine Production Mechanisms,  (International Biological Programme Series, no. 20, Cambridge Univ. Press, Cambridge, England), pp. 233-250.",,,,,,,,,,,,,,,,,,,
+Tropical plankton community - Pacific,bacteria,large-size Appendicularia,nauplii of Copepoda,small-size Appendicularia,Infusoria,Radiolaria,copepodites,small-size 'Calanus type',small-size 'Acartia type',small-size 'Oithona-Oncaea type',large-size 'Oithona-Oncaea type',large-size 'Acartia type',large-size 'Calanus type','Euchaeta type','Centropages type','Amphipoda type','Euphausia type',Chaetognatha,Medusae - Ctenophora
+detritus,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1
+small-size phytoplankton,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,0,0
+medium-size phytoplankton,0,1,1,0,0,1,1,1,1,0,0,0,0,0,0,1,1,0,0
+large-size phytoplankton,0,1,0,0,0,0,1,0,0,1,0,1,1,1,1,1,0,0,0
+bacteria,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1
+large-size Appendicularia,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,1,0,0
+nauplii of Copepoda,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,0,1,0,0
+small-size Appendicularia,0,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,1,0,0
+Infusoria,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,1,0,0
+Radiolaria,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,1,0,0,0
+copepodites,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,1,1
+small-size 'Calanus type',0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,1,0,1,1
+small-size 'Acartia type',0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,1,1,0
+small-size 'Oithona-Oncaea type',0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,1
+large-size 'Oithona-Oncaea type',0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1
+large-size 'Acartia type',0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+large-size 'Calanus type',0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1
+'Euchaeta type',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+'Centropages type',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+'Amphipoda type',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+'Euphausia type',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1

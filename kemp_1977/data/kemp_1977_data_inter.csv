@@ -1,0 +1,29 @@
+"sp_taxon_1";"sp_taxon_2";"value"
+"producers";"zooplankton";1
+"detritus";"zooplankton";1
+"detritus";"juvenile penaeid shrimp";1
+"producers";"mullet";1
+"detritus";"mullet";1
+"producers";"benthic invertebrates";1
+"detritus";"benthic invertebrates";1
+"producers";"small fish";1
+"detritus";"small fish";1
+"zooplankton";"small fish";1
+"benthic invertebrates";"small fish";1
+"benthic invertebrates";"blue crabs";1
+"benthic invertebrates";"rays";1
+"benthic invertebrates";"black drum";1
+"producers";"sheepshead";1
+"benthic invertebrates";"sheepshead";1
+"juvenile penaeid shrimp";"trout, jack";1
+"mullet";"trout, jack";1
+"small fish";"trout, jack";1
+"mullet";"red drum";1
+"benthic invertebrates";"red drum";1
+"small fish";"red drum";1
+"blue crabs";"red drum";1
+"juvenile penaeid shrimp";"porpoise shark";1
+"mullet";"porpoise shark";1
+"small fish";"porpoise shark";1
+"rays";"porpoise shark";1
+"sheepshead";"porpoise shark";1

@@ -1,0 +1,20 @@
+"Smith, W.O., Ainley, D.G., and Cattaneo-Vietta, R. (2007). Trophic Interactions within the Ross Sea Continental Shelf Ecosystem. Philosophical Transactions: Biological Sciences. 362, pp. 95-111.",,,,,,,,,,,,,,,,,,,
+Generalised Ross Sea continental shelf food web ,Bacteria,Microzooplankton,Pteropods,Gelatinous zooplankton,Copepods - Meroplankton,Tooth-fish,Killer Whales A,Killer Whales B,Killer Whales C,Squid,Small fish,Crystal Krill,Baleen whales,Leopard seals,Crabeater seals,Weddell seals,Adelie penguins,Emperor penguins,Petrels
+DOM,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bacteria,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Microzooplankton,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Phaeocystis,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Diatoms,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Cryptophytes,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pteropods,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Gelatinous zooplankton,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Copepods - Meroplankton,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Tooth-fish,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+Small fish,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,1,1
+Crystal Krill,0,0,0,0,0,1,0,0,0,1,1,0,1,0,1,0,1,0,1
+Baleen whales,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Ice algae,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Crabeater seals,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Weddell seals,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Adelie penguins,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Emperor penguins,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0

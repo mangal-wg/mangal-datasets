@@ -1,0 +1,20 @@
+"Lin, H-J., Dai, X-X,, Shao, K-T., Su, H-M., Lo, W-T., Hsieh, H-L., Fang, L-S., and Hung, J-J. (2006). Trophic structure and functioning in a eutrophic and poorly flushed lagoon in southwestern Taiwan. Marine Environmental Research. 62, pp. 61-82.",,,,,,,,,,,,,,,
+Tapong Bay - southwestern Taiwan,Herbivorous zooplankton,Carnivorous zooplankton,Oysters,Polychaetes,Gastropods,Bivalves,Barnacles,Amphipods,Crabs,Shrimps,Herbivorous fish,Zooplanktivorous fish,Benthic feeding fish,Detritivorous fish,Piscivorous fish
+Phytoplankton,0.7,0,0.7,0.145,0,0.7,0.55,0,0,0,0,0,0,0.05,0
+Periphyton,0,0,0,0.25,0.45,0,0,0.49,0,0,0.69,0,0.368,0.286,0.078
+Herbivorous zooplankton,0,0.9,0.005,0,0,0.005,0.05,0.01,0,0,0.01,0.51,0,0,0
+Carnivorous zooplankton,0,0,0,0.005,0,0,0,0,0.05,0.02,0.001,0.13,0,0,0
+Oysters,0,0,0,0.02,0.02,0,0,0,0,0.02,0.005,0,0.022,0,0
+Polychaetes,0,0,0,0,0.08,0,0,0,0.1,0.11,0.065,0,0,0.006,0.02
+Gastropods,0,0,0,0.02,0,0,0,0,0.34,0,0.001,0,0.001,0.025,0.001
+Bivalves,0,0,0,0.02,0.03,0,0,0,0.067,0.06,0.006,0,0.027,0,0
+Barnacles,0,0,0,0,0,0,0,0,0,0,0.005,0,0,0,0
+Amphipods,0,0,0,0.02,0.02,0,0,0,0.12,0.09,0.019,0.05,0.2,0.019,0.008
+Crabs,0,0,0,0,0,0,0,0,0,0,0,0,0.089,0,0
+Shrimps,0,0,0,0,0,0,0,0,0.003,0,0,0,0.053,0,0.003
+Herbivorous fish,0,0,0,0,0,0,0,0,0,0.02,0,0,0,0,0.172
+Zooplanktivorous fish,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.034
+Benthic feeding fish,0,0,0,0,0,0,0,0,0,0.02,0,0,0,0,0.131
+Detritivorous fish,0,0,0,0,0,0,0,0,0,0.04,0,0,0,0,0.357
+Piscivorous fish,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.154
+Detritus,0.3,0.1,0.295,0.52,0.4,0.295,0.4,0.5,0.29,0.59,0.198,0.31,0.24,0.614,0.042

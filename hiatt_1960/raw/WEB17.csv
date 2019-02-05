@@ -1,0 +1,14 @@
+"R.W. Hiatt and D.W. Strasburg. (1960). Ecological Relationships of the Fish Fauna on Coral Reefs of the Marshall Islands. Ecological Monographs, 30(1), pp. 65-127.",,,,,,,,,,,
+Coral reefs - Marshall Islands,zooplankton,detritus feeders,algal feeders,small midwater plankton feeders,corals,omnivores,small benthic carnivores,large midwater carnivores,coral feeders,large benthic carnivores,transient carnivores
+detritus,0,1,0,0,0,1,0,0,0,0,0
+phytoplankton,1,0,0,0,0,0,0,0,0,0,0
+benthic algae,0,0,1,0,0,1,0,0,0,0,0
+zooplankton,0,0,0,1,1,1,0,0,0,0,0
+detritus feeders,0,0,0,0,0,1,1,0,0,0,0
+algal feeders,0,0,0,0,0,1,1,0,0,0,0
+small midwater plankton feeders,0,0,0,0,0,0,0,1,0,0,1
+corals,0,0,0,0,0,1,0,0,1,0,0
+omnivores,0,0,0,0,0,0,0,0,0,1,1
+small benthic carnivores,0,0,0,0,0,1,0,0,0,1,1
+large midwater carnivores,0,0,0,0,0,0,0,0,0,0,1
+large benthic carnivores,0,0,0,0,0,0,0,0,0,0,1

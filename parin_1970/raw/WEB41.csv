@@ -1,0 +1,19 @@
+"Parin, N.V. (1970). Ichthyofauna of the epipelagic zone. Israel Program for Scientific Translations, Jerusalem. (U.S. Department of Commerce Clearinghouse for Federal Scientific and Technical Information, Springfield, VA 22151), from p. 154.",,,,,,,,,,,,,,,,,
+Tropical seas - epipelagic zone,euphausiids,copepods,shrimps,vertically migrating mesopelagic fishes,flying fishes,hyperiid amphipods,lanternfish,ocean sunfish,other mesopelagic fishes,snake mackerel,squid,dolphin Coryphaena,tuna 1,tuna 2,marlin,medium-sized sharks,large sharks
+coccolithophores,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dinoflagellates,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+euphausiids,0,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,0
+copepods,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0
+shrimps,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0
+vertically migrating mesopelagic fishes,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0
+flying fishes,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0
+hyperiid amphipods,0,0,0,0,1,0,1,0,1,0,0,0,1,1,0,0,0
+lanternfish,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0
+ocean sunfish,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+other mesopelagic fishes,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0
+snake mackerel,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+squid,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0
+tuna 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+tuna 2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0
+marlin,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+medium-sized sharks,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1

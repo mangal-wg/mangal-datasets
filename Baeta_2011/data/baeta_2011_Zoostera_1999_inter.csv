@@ -1,0 +1,183 @@
+"sp_taxon_1";"sp_taxon_2";"value"
+"Zooplankton";"Phytoplankton";0,98
+"Zooplankton";"Zooplankton";0,02
+"Amphithoe valida";"Microphytobenthos";0,1
+"Amphithoe valida";"Green macroalgae";0,2
+"Amphithoe valida";"Detritus";0,7
+"Melita palmata";"Microphytobenthos";0,1
+"Melita palmata";"Green macroalgae";0,2
+"Melita palmata";"Detritus";0,7
+"Cerastoderma edule";"Phytoplankton";0,8
+"Cerastoderma edule";"Microphytobenthos";0,1
+"Cerastoderma edule";"Detritus";0,1
+"Scrobicularia plana";"Phytoplankton";0,2
+"Scrobicularia plana";"Microphytobenthos";0,2
+"Scrobicularia plana";"Detritus";0,6
+"Carcinus maenas";"Green macroalgae";0,04
+"Carcinus maenas";"Zooplankton";0,06
+"Carcinus maenas";"Ampithoe valida";0,02
+"Carcinus maenas";"Melita palmata";0,005
+"Carcinus maenas";"Cerastoderma edule";0,01
+"Carcinus maenas";"Scrobicularia plana";0,11
+"Carcinus maenas";"Carcinus maenas";0,05
+"Carcinus maenas";"Crangon crangon";0,14
+"Carcinus maenas";"Haminoea hydatis";0,002
+"Carcinus maenas";"Hydrobia ulvae";0,023
+"Carcinus maenas";"Littorina littorea";0,005
+"Carcinus maenas";"Cyathura carinata";0,015
+"Carcinus maenas";"Idotea chelipes";0,001
+"Carcinus maenas";"Chaetozone setosa";0,002
+"Carcinus maenas";"Eteone flava";0,001
+"Carcinus maenas";"Glycera tridactyla";0,005
+"Carcinus maenas";"Hediste diversicolor";0,17
+"Carcinus maenas";"Heteromastus filiformis";0,002
+"Carcinus maenas";"Lagis koreni";0,001
+"Carcinus maenas";"Mista picta";0,001
+"Carcinus maenas";"Nephthys spp.";0,005
+"Carcinus maenas";"Nemertini";0,001
+"Carcinus maenas";"Oligochaets";0,001
+"Carcinus maenas";"Detritus";0,15
+"Carcinus maenas";"Imports";0,18
+"Crangon crangon";"Green macroalgae";0,05
+"Crangon crangon";"Zooplankton";0,08
+"Crangon crangon";"Ampithoe valida";0,02
+"Crangon crangon";"Melita palmata";5e-04
+"Crangon crangon";"Cerastoderma edule";0,001
+"Crangon crangon";"Scrobicularia plana";0,16
+"Crangon crangon";"Carcinus maenas";0,01
+"Crangon crangon";"Crangon crangon";0,01
+"Crangon crangon";"Hydrobia ulvae";0,05
+"Crangon crangon";"Littorina littorea";0,01
+"Crangon crangon";"Cyathura carinata";0,06
+"Crangon crangon";"Idotea chelipes";0,001
+"Crangon crangon";"Alkmaria romijni";0,005
+"Crangon crangon";"Chaetozone setosa";0,002
+"Crangon crangon";"Eteone flava";0,001
+"Crangon crangon";"Glycera tridactyla";0,003
+"Crangon crangon";"Hediste diversicolor";0,14
+"Crangon crangon";"Heteromastus filiformis";0,02
+"Crangon crangon";"Lagis koreni";0,001
+"Crangon crangon";"Mista picta";0,001
+"Crangon crangon";"Nephthys spp.";0,01
+"Crangon crangon";"Nemertini";0,001
+"Crangon crangon";"Oligochaets";0,003
+"Crangon crangon";"Detritus";0,3
+"Crangon crangon";"Imports";0,06
+"Haminoea hydatis";"Microphytobenthos";0,3
+"Haminoea hydatis";"Green macroalgae";0,05
+"Haminoea hydatis";"Detritus";0,65
+"Hydrobia ulvae";"Microphytobenthos";0,45
+"Hydrobia ulvae";"Detritus";0,55
+"Littorina littorea";"Microphytobenthos";0,05
+"Littorina littorea";"Green macroalgae";0,5
+"Littorina littorea";"Zostera noltii";0,2
+"Littorina littorea";"Detritus";0,25
+"Cyathura carinata";"Ampithoe valida";0,006
+"Cyathura carinata";"Melita palmata";0,001
+"Cyathura carinata";"Carcinus maenas";0,04
+"Cyathura carinata";"Idotea chelipes";0,001
+"Cyathura carinata";"Alkmaria romijni";0,001
+"Cyathura carinata";"Capitella capitata";0,001
+"Cyathura carinata";"Glycera tridactyla";0,005
+"Cyathura carinata";"Hediste diversicolor";0,129
+"Cyathura carinata";"Heteromastus filiformis";0,03
+"Cyathura carinata";"Mista picta";0,001
+"Cyathura carinata";"Nemertini";0,005
+"Cyathura carinata";"Oligochaets";0,03
+"Cyathura carinata";"Detritus";0,75
+"Idotea chelipes";"Microphytobenthos";0,1
+"Idotea chelipes";"Green macroalgae";0,2
+"Idotea chelipes";"Zostera noltii";0,05
+"Idotea chelipes";"Heteromastus filiformis";0,1
+"Idotea chelipes";"Oligochaets";0,15
+"Idotea chelipes";"Detritus";0,4
+"Alkmaria romijni";"Phytoplankton";0,1
+"Alkmaria romijni";"Detritus";0,9
+"Capitella capitata";"Detritus";1
+"Chaetozone setosa";"Detritus";1
+"Eteone flava";"Hediste diversicolor";0,66
+"Eteone flava";"Heteromastus filiformis";0,15
+"Eteone flava";"Streblospio shrubsolii";0,04
+"Eteone flava";"Oligochaets";0,05
+"Eteone flava";"Detritus";0,1
+"Glycera tridactyla";"Ampithoe valida";0,03
+"Glycera tridactyla";"Melita palmata";0,001
+"Glycera tridactyla";"Cerastoderma edule";0,005
+"Glycera tridactyla";"Scrobicularia plana";0,14
+"Glycera tridactyla";"Hydrobia ulvae";0,03
+"Glycera tridactyla";"Idotea chelipes";0,01
+"Glycera tridactyla";"Alkmaria romijni";0,005
+"Glycera tridactyla";"Capitella capitata";0,005
+"Glycera tridactyla";"Chaetozone setosa";0,04
+"Glycera tridactyla";"Eteone flava";0,001
+"Glycera tridactyla";"Glycera tridactyla";0,01
+"Glycera tridactyla";"Hediste diversicolor";0,37
+"Glycera tridactyla";"Heteromastus filiformis";0,09
+"Glycera tridactyla";"Lagis koreni";0,001
+"Glycera tridactyla";"Mediomastus fragilis";0,001
+"Glycera tridactyla";"Mista picta";0,01
+"Glycera tridactyla";"Nephthys spp.";0,01
+"Glycera tridactyla";"Streblospio shrubsolii";0,01
+"Glycera tridactyla";"Nemertini";0,001
+"Glycera tridactyla";"Oligochaets";0,03
+"Glycera tridactyla";"Detritus";0,2
+"Hediste diversicolor";"Phytoplankton";0,05
+"Hediste diversicolor";"Microphytobenthos";0,05
+"Hediste diversicolor";"Ampithoe valida";0,001
+"Hediste diversicolor";"Cerastoderma edule";0,001
+"Hediste diversicolor";"Scrobicularia plana";0,069
+"Hediste diversicolor";"Hydrobia ulvae";0,07
+"Hediste diversicolor";"Chaetozone setosa";0,002
+"Hediste diversicolor";"Eteone flava";0,002
+"Hediste diversicolor";"Glycera tridactyla";0,001
+"Hediste diversicolor";"Heteromastus filiformis";0,04
+"Hediste diversicolor";"Mediomastus fragilis";0,001
+"Hediste diversicolor";"Mista picta";0,001
+"Hediste diversicolor";"Nephthys spp.";0,001
+"Hediste diversicolor";"Nemertini";0,001
+"Hediste diversicolor";"Oligochaets";0,01
+"Hediste diversicolor";"Detritus";0,7
+"Heteromastus filiformis";"Detritus";1
+"Lagis koreni";"Detritus";1
+"Mediomastus fragilis";"Detritus";1
+"Mista picta";"Hediste diversicolor";0,7
+"Mista picta";"Heteromastus filiformis";0,15
+"Mista picta";"Oligochaets";0,05
+"Mista picta";"Detritus";0,1
+"Nephthys spp.";"Microphytobenthos";0,05
+"Nephthys spp.";"Ampithoe valida";0,005
+"Nephthys spp.";"Melita palmata";0,001
+"Nephthys spp.";"Cerastoderma edule";0,002
+"Nephthys spp.";"Scrobicularia plana";0,05
+"Nephthys spp.";"Alkmaria romijni";0,001
+"Nephthys spp.";"Capitella capitata";0,001
+"Nephthys spp.";"Chaetozone setosa";0,004
+"Nephthys spp.";"Eteone flava";0,004
+"Nephthys spp.";"Glycera tridactyla";0,01
+"Nephthys spp.";"Hediste diversicolor";0,45
+"Nephthys spp.";"Heteromastus filiformis";0,09
+"Nephthys spp.";"Mista picta";0,001
+"Nephthys spp.";"Nephthys spp.";0,001
+"Nephthys spp.";"Oligochaets";0,03
+"Nephthys spp.";"Detritus";0,3
+"Streblospio shrubsolii";"Detritus";1
+"Nemertini";"Zooplankton";0,005
+"Nemertini";"Ampithoe valida";0,01
+"Nemertini";"Cerastoderma edule";0,005
+"Nemertini";"Scrobicularia plana";0,08
+"Nemertini";"Haminoea hydatis";0,005
+"Nemertini";"Hydrobia ulvae";0,05
+"Nemertini";"Littorina littorea";0,005
+"Nemertini";"Cyathura carinata";0,06
+"Nemertini";"Chaetozone setosa";0,005
+"Nemertini";"Eteone flava";0,005
+"Nemertini";"Glycera tridactyla";0,005
+"Nemertini";"Hediste diversicolor";0,35
+"Nemertini";"Heteromastus filiformis";0,1
+"Nemertini";"Lagis koreni";0,005
+"Nemertini";"Nephthys spp.";0,005
+"Nemertini";"Streblospio shrubsolii";0,005
+"Nemertini";"Nemertini";0,05
+"Nemertini";"Oligochaets";0,05
+"Nemertini";"Detritus";0,2
+"Oligochaets";"Detritus";1

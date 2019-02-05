@@ -1,0 +1,14 @@
+"Mackintosh, N.A. (1964). A survey of antarctic biology up to 1945. In: R. Carrick, M. Holdgate, and J. Prevost, (eds). Biologie antarctique. (Hermann, Paris, France), pp. 3-38.",,,,,,,,,,,,,
+Antarctic seas,Euphausia superba,other herbivorous plankton,carnivorous plankton,baleen whales,birds,fish,squid,crabeater seal,leopard seal,elephant seal,smaller toothed whales,sperm whale,man
+phytoplankton,1,1,0,0,0,0,0,0,0,0,0,0,0
+Euphausia superba,0,0,1,1,1,1,0,1,0,0,0,0,0
+other herbivorous plankton,0,0,1,0,1,1,1,0,0,0,0,0,0
+carnivorous plankton,0,0,0,0,1,1,1,0,0,0,0,0,0
+baleen whales,0,0,0,0,0,0,0,0,0,0,0,0,1
+birds,0,0,0,0,0,0,0,0,1,0,1,0,0
+fish,0,0,0,0,1,0,1,0,1,1,0,0,0
+squid,0,0,0,0,1,1,0,0,1,1,1,1,0
+crabeater seal,0,0,0,0,0,0,0,0,0,0,1,0,0
+leopard seal,0,0,0,0,0,0,0,0,0,0,1,0,0
+elephant seal,0,0,0,0,0,0,0,0,0,0,1,0,1
+sperm whale,0,0,0,0,0,0,0,0,0,0,0,0,1

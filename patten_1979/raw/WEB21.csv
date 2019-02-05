@@ -1,0 +1,11 @@
+"Patten, B.C. and Finn, J.T. (1979). Systems approach to continental shelf ecosystems, In: E. Halfon, (ed). Theoretical systems ecology. (Academic Press, New York, USA), pp. 183-212.",,,,,,,
+Ross sea,ice invertebrates,zooplankton,fish,cephalopods,penguins,seals,whales
+ice algae,1,1,0,0,0,0,0
+phytoplankton,0,1,0,0,0,0,0
+detritus,0,1,0,0,0,0,0
+ice invertebrates,0,1,1,0,0,0,0
+zooplankton,1,0,1,1,1,1,1
+fish,0,0,0,1,1,1,1
+cephalopods,0,0,0,0,1,1,1
+penguins,0,0,0,0,0,1,0
+seals,0,0,0,0,0,0,1

@@ -1,0 +1,15 @@
+"Petipa, T.S., Pavlova, E.V. and Mironov, G.N. (1970). The food web structure, utilization and transport of energy by trophic levels in the planktonic communities. In: J.H. Steele (ed). Marine food chains. (Oliver and Boyd, Edinburgh), pp. 142-167.",,,,,,,,,,,,
+Epiplankton communities - Black Sea,saprophagous plankton,large-sized phytoplankton,Oikopleura,II-III copepodites,IV-VI copepodites of Paracalanus,larvae of molluscs and polychaetes,naupliuses,IV-VI copepodites of Calanus and Pseudocalanus,mixed-food consumers,primary carnivores,secondary carnivores,tertiary carnivores
+detritus,1,1,1,1,1,1,1,1,1,1,0,0
+phytoplankton,0,0,1,1,1,1,1,1,1,0,0,0
+saprophagous plankton,0,0,1,1,0,1,1,1,1,0,0,0
+large-sized phytoplankton,0,0,0,1,0,1,1,1,1,0,0,0
+Oikopleura,0,0,0,0,0,0,0,0,1,1,1,0
+II-III copepodites,0,0,0,0,0,0,0,0,1,1,1,1
+IV-VI copepodites of Paracalanus,0,0,0,0,0,0,0,0,0,1,1,1
+larvae of molluscs and polychaetes,0,0,0,0,0,0,0,0,1,0,1,0
+naupliuses,0,0,0,0,0,0,0,0,1,1,1,0
+IV-VI copepodites of Calanus and Pseudocalanus,0,0,0,0,0,0,0,0,0,0,1,1
+mixed-food consumers,0,0,0,0,0,0,0,0,0,1,1,1
+primary carnivores,0,0,0,0,0,0,0,0,0,0,1,1
+secondary carnivores,0,0,0,0,0,0,0,0,0,0,0,1

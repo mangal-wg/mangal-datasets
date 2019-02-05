@@ -1,0 +1,14 @@
+"T.A. Clarke, A.O. Flechsig, and R.W. Grigg. (1967). Ecological Studies during Project Sealab II. Science, 157(3795), pp. 1381-1389.",,,,,,,,,,,,,,,,,,,,,,,,
+Marine sublittoral - southern California,Pacific bonito,vermilion rockfish,California scorpion fish,California sea lion,cabezon,sand bass,Pacific angel shark,California halibut,squid,octopus,small fishes and invertebrates,Pacific sand dab,pink sea perch,hornyhead turbot,longfin sand dab,ophiuroids,polychaetes,benthic crustacea,hypoplanktonic crustacea,white croaker,jack mackerel,northern anchovy,zooplankton,blacksmith - black perch - rubber lip sea perch - sharpnose sea perch - shiner perch
+squid,0,1,1,1,1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+octopus,0,0,1,0,1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+small fishes and invertebrates,0,0,0,0,0,0,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ophiuroids,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+polychaetes,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+benthic crustacea,0,0,0,0,0,0,0,0,0,0,0,1,-1,1,1,0,0,0,0,0,0,0,0,0
+hypoplanktonic crustacea,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0
+white croaker,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+jack mackerel,-1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+northern anchovy,-1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+zooplankton,0,1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,1,1,-1,0,1
+detritus,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,1,0,1,1,1,0

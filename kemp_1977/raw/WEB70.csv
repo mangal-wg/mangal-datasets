@@ -1,0 +1,12 @@
+"Kemp, W.M., Smith, W.H.B., McKellar, H.N., Lehman, M.E., Homer, M., Young, D.L. and Odum, H.T. (1977). Energy cost-benefit analysis applied to power plants near Crystal River, Florida. In C.A.S. Hall and J.W. Day, Jr. (eds). Ecosystem Modeling in Theory and Practice: An Introduction with Case Histories (Wiley, New York), pp. 507-543.",,,,,,,,,,,,
+Crystal River estuary - Florida,zooplankton,juvenile penaeid shrimp,mullet,benthic invertebrates,small fish,blue crabs,rays,black drum,sheepshead,trout - jack,red drum,porpoise shark
+producers,1,0,1,1,1,0,0,0,1,0,0,0
+detritus,1,1,1,1,1,0,0,0,0,0,0,0
+zooplankton,0,0,0,0,1,0,0,0,0,0,0,0
+juvenile penaeid shrimp,0,0,0,0,0,0,0,0,0,1,0,1
+mullet,0,0,0,0,0,0,0,0,0,1,1,1
+benthic invertebrates,0,0,0,0,1,1,1,1,1,0,1,0
+small fish,0,0,0,0,0,0,0,0,0,1,1,1
+blue crabs,0,0,0,0,0,0,0,0,0,0,1,0
+rays,0,0,0,0,0,0,0,0,0,0,0,1
+sheepshead,0,0,0,0,0,0,0,0,0,0,0,1

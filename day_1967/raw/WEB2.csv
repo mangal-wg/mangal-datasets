@@ -1,0 +1,15 @@
+"Day, J.H. (1967). The biology of Knysna estuary, South Africa, in: Lauff, G.H. (Ed.) (1967). Estuaries. (American Association for the Advancement of Science Publication 83, Washington, DC), pp. 397-407.",,,,,,,,,,,,
+Knysna estuary - South Africa,zooplankton,Hyporhampus,Mugil,Upogebia,Lamya,Solen,Arenicola,Hymenosoma,Johnius,Lithognathus,Rhabdosargus,Hypacanthus
+phytoplankton,1,0,0,0,1,1,0,0,0,0,0,0
+attached plants,0,0,0,0,0,0,0,0,0,0,1,0
+detritus,1,0,1,1,1,1,1,1,0,0,0,0
+zooplankton,0,1,0,0,0,0,0,0,0,0,0,0
+Hyporhampus,0,0,0,0,0,0,0,0,0,0,0,1
+Mugil,0,0,0,0,0,0,0,0,1,0,0,1
+Upogebia,0,0,0,0,0,0,0,0,1,1,0,0
+Lamya,0,0,0,0,0,0,0,0,0,1,1,0
+Solen,0,0,0,0,0,0,0,0,0,1,1,0
+Arenicola,0,0,0,0,0,0,0,0,0,1,0,0
+Hymenosoma,0,0,0,0,0,0,0,0,0,1,1,0
+Lithognathus,0,0,0,0,0,0,0,0,0,0,0,1
+Rhabdosargus,0,0,0,0,0,0,0,0,0,0,0,1

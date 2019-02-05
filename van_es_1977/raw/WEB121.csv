@@ -1,0 +1,13 @@
+"F.B. vanEs. (1977). A preliminary carbon budget for a part of the Ems estuary: The Dollard. Helgolander wiss. Meeresunters. 30, pp. 283-294.",,,,,,,,,
+Ems estuary - Wadden Sea,planktonic bacteria,sediment bacteria,meibenthos,deposit feeders,zooplankton,filter feeders,crustaceans,fishes,birds
+phytoplankton,0,0,0,1,1,1,0,0,0
+planktonic bacteria,0,0,0,1,1,1,0,0,0
+detritus,1,1,1,1,0,1,0,0,0
+sediment bacteria,0,0,1,1,0,0,1,0,0
+phytobenthos,0,0,1,1,0,0,1,0,0
+meibenthos,0,0,0,1,0,0,1,1,1
+deposit feeders,0,0,0,0,0,0,0,1,1
+zooplankton,0,0,0,0,0,1,0,1,0
+filter feeders,0,0,0,0,0,0,0,1,1
+crustaceans,0,0,0,0,0,0,0,1,1
+fishes,0,0,0,0,0,0,0,0,1

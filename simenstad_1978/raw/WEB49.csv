@@ -1,0 +1,12 @@
+"C.A. Simenstad, J.A. Estes, and K.W. Kenyon. (1978). Aleuts, Sea Otters, and Alternate Stable-State Communities. Science. 200(4340), pp. 403-411.",,,,,,,,,
+Nearshore Marine 2 - Aleutian Islands,mussels,chitons - gastropods - limpets,sea urchins,epibenthic crustacea,asteroids,decapods,nearshore fishes,octopuses,prehistoric Aleut man
+detritus,0,0,1,1,0,1,0,0,0
+macroalgae,0,1,1,0,0,0,0,0,0
+nearshore phytoplankton,1,0,1,0,0,0,0,0,0
+mussels,0,0,0,0,1,1,0,0,1
+chitons - gastropods - limpets,0,0,0,0,1,0,1,0,1
+sea urchins,0,0,0,0,0,0,1,0,1
+epibenthic crustacea,0,0,0,0,0,0,1,0,0
+decapods,0,0,0,0,0,0,0,1,1
+nearshore fishes,0,0,0,0,0,0,0,0,1
+octopuses,0,0,0,0,0,0,0,0,1

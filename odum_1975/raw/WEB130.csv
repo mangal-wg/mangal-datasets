@@ -1,0 +1,13 @@
+"Odum, W.E. and Heald, E.J. (1975). The detritus-based food web of an estuarine mangrove community, In: Estuarine Research, Vol. 1, Chemistry, Biology and the Estuarine System, (Academic Press, New York), pp. 265-286.",,,,,,,,,,
+Estuarine mangrove - Everglades,bacteria and fungi associated with detritus,herbivorous terrestrial insects,protozoans,bivalves - nematodes - cumaceans - polychaetes - small crustacea - fish,carnivorous terrestrial insects,nematodes - mosquito fish - least killifish,crabs - shrimps - gold-spotted killifish - crested goby,lower carnivores-various fish - copepods - blue crabs and juvenile of high carnivores,middle carnivores-a variety of fish and wading birds,top carnivores-tarpon - barracuda - bull shark - other fish - American alligator - bald eagle
+mangrove leaves,0,1,0,0,0,0,0,0,0,0
+phytoplankton and benthic algae,0,0,1,1,0,1,0,0,0,0
+mangrove leaf detritus,1,0,0,0,0,0,0,0,0,0
+fecal material,1,0,0,0,0,0,0,0,0,0
+bacteria and fungi associated with detritus,0,0,1,1,0,0,1,0,0,0
+herbivorous terrestrial insects,0,0,0,0,1,0,0,0,0,0
+bivalves - nematodes - cumaceans - polychaetes - small crustacea - fish,0,0,0,0,0,1,1,1,0,0
+nematodes - mosquito fish - least killifish,0,0,0,0,0,0,1,0,0,0
+crabs - shrimps - gold-spotted killifish - crested goby,0,0,0,0,0,0,0,1,0,0
+lower carnivores-various fish - copepods - blue crabs and juvenile of high carnivores,0,0,0,0,0,0,0,0,1,0
+middle carnivores-a variety of fish and wading birds,0,0,0,0,0,0,0,0,0,1
