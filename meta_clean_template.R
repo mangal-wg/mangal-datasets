@@ -27,7 +27,7 @@ food_web_name <- c("") # Name of the dataset in Trophic metacommunities-master/T
 
 name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv",
                       col_type = cols(.default = col_character())) %>%
-  filter( web %in% food_web_name) %>%
+  filter( web %in% paste0(food_web_name, ".csv")) %>%
   split(.$web)
 
 # Must fill all CAP fields; null fields optional
@@ -191,7 +191,7 @@ taxa_back_df <- taxa_df %>%
 taxa_back_df <- taxa_back_df %>%
   enframe(name = NULL, value = "name") %>%
   mutate(bold = as.double(unlist({map(.$name,~get_boldid(.x, row = 5, verbose = FALSE)[1])})),
-         eol = NA_real_, #Add NA in eol column : See taxize issue : #718 EOL: maybe completely remove the data source from taxize
+         eol = as.double(unlist({map(.$name,~get_eolid(.x, row = 5, verbose = FALSE)[1])})),
          tsn = as.double(unlist({map(.$name,~get_tsn(.x, row = 5, verbose = FALSE)[1])})),
          ncbi = as.double(unlist({map(.$name,~get_uid(.x, row = 5, verbose = FALSE)[1])}))) 
 
@@ -211,7 +211,7 @@ if(is.null(names(taxa_df)) == TRUE){
   
   taxa_df %>%
     names() %>%
-    walk(~write.csv2(x = taxa_df[[.]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_", ., "_taxa.csv"), row.names = FALSE))
+    walk(~write.csv2(x = taxa_df[[.]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_", str_replace_all(., "\\s", "_"), "_taxa.csv"), row.names = FALSE))
   
 }
 
@@ -224,33 +224,9 @@ if(is.null(names(FW_name)) == TRUE){
   
   FW_name %>%
     names() %>%
-    walk(~write.csv2(x = FW_name[[.]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_", ., "_inter.csv"), row.names = FALSE))
+    walk(~write.csv2(x = FW_name[[.]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_", str_replace_all(., "\\s", "_"), "_inter.csv"), row.names = FALSE))
 }
 
-# trait_df %>%
-#   names() %>%
-#   walk(~write.csv2(x = trait_df[[.]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_", ., "_trait.csv"), row.names = FALSE))
-# 
-# taxa_back_df <-  paste0("mangal-datasets/", folder_name, "/data/", folder_name, "_taxa_back.csv") %>%
-#   read_csv2(col_types = cols("c", "d", "d", "d", "d"))
-# 
-# taxa_df <-  paste0("mangal-datasets/", folder_name, "/data/") %>%
-#   dir_ls() %>%
-#   as.character() %>%
-#   str_subset(fixed("taxa.csv")) %>%
-#   map(~read_csv2(.x, col_types = cols("c", "c")))
-# 
-# FW_name <-  paste0("mangal-datasets/", folder_name, "/data/") %>%
-#   dir_ls() %>%
-#   as.character() %>%
-#   str_subset(fixed("inter.csv")) %>%
-#   map(~read_csv2(.x, col_types = cols("c", "c", "i")))
-# 
-# trait_df <-  paste0("mangal-datasets/", folder_name, "/data/") %>%
-#   dir_ls() %>%
-#   as.character() %>%
-#   str_subset(fixed("trait.csv")) %>%
-#   map(~read_csv2(.x, col_types = cols("c", "c", "d")))
 
 
 #------------------------------
