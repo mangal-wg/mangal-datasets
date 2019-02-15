@@ -27,7 +27,7 @@ food_web_name <- c("WEB348", "WEB349", "WEB350") # Name of the dataset in Trophi
 
 name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv",
                       col_type = cols(.default = col_character())) %>%
-  filter( web %in% food_web_name) %>%
+  filter( web %in% paste0(food_web_name, ".csv")) %>%
   split(.$web)
 
 # Must fill all CAP fields; null fields optional
@@ -249,7 +249,7 @@ if(is.null(names(taxa_df)) == TRUE){
   
   taxa_df %>%
     names() %>%
-    walk(~write.csv2(x = taxa_df[[.]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_", ., "_taxa.csv"), row.names = FALSE))
+    walk(~write.csv2(x = taxa_df[[.]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_", str_replace_all(., "\\s", "_"), "_taxa.csv"), row.names = FALSE))
   
 }
 

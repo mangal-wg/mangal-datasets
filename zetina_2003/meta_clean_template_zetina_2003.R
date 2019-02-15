@@ -177,7 +177,7 @@ taxa <- FW_name %>%
 ## Checking taxa and creating taxa_df
 
 sp_name_for_this_web <- name_file %>%
-  filter(web == food_web_name) %>%
+  filter(web == paste0(food_web_name, ".csv")) %>%
   select(original_name, scientific_name) %>%
   mutate(scientific_name = if_else(is.na(.$scientific_name), original_name, scientific_name)) %>%
   deframe()

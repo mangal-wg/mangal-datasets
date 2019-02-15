@@ -27,7 +27,7 @@ food_web_name <- "WEB3"
 
 name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv",
                       col_type = cols(.default = col_character())) %>%
-  filter( web %in% food_web_name) %>%
+  filter( web %in% paste0(food_web_name, ".csv")) %>%
   split(.$web)
 # Must fill all CAP fields; null fields optional
 
@@ -253,7 +253,7 @@ taxa_back_df <- taxa_df %>%
   map_chr(~str_replace_all(.x, ".*,%20.*", "_")) %>%
   map_chr(~str_replace_all(.x, ".*%20-%20.*", "-")) %>%
   map_chr(~str_replace_all(.x, "\\.%20", "__")) %>%
-  keep(~length(content((GET(url = .x, config = add_headers("Content-type" = "application/json","Authorization" = paste("bearer", readRDS("mangal-datasets/.httr-oauth"))))))) == 0) %>%
+  keep(~length(content((GET(url = .x, config = add_headers("Content-type" = "application/json","Authorization" = paste("bearer", readRDS("./mangal-datasets/.httr-oauth"))))))) == 0) %>%
   map_chr(~str_remove_all(.x, fixed("http://poisotlab.biol.umontreal.ca/api/v2/taxonomy/?name="))) %>%
   map_chr(~str_replace_all(.x, fixed("%20"), " ")) %>%
   map_chr(~str_replace_all(.x, fixed("__"), ". ")) %>%

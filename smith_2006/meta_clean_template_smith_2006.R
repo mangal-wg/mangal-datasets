@@ -21,12 +21,12 @@ lat  <- -76.000000
 lon  <- -175.000000
 srid <- 4326
 
-folder_name <- "smith_2007"
+folder_name <- "smith_2006"
 food_web_name <- c("WEB340")
 
 name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv",
                       col_type = cols(.default = col_character())) %>%
-  filter( web %in% food_web_name) %>%
+  filter( web %in% paste0(food_web_name, ".csv")) %>%
   split(.$web)
 # Name of the subfolder in mangal-datasets
 
@@ -53,8 +53,8 @@ ref <- list(doi       = "10.1098/rstb.2006.1956",
              paper_url = "https://doi.org/10.1098%2Frstb.2006.1956",
              data_url  = "https://globalwebdb.com/",
              author    = "Walker O Smith",
-             year      = "2007",
-             bibtex    = "@article{Smith_2007, doi = {10.1098/rstb.2006.1956}, url = {https://doi.org/10.1098%2Frstb.2006.1956}, year = 2007, month = {jan}, publisher = {The Royal Society}, volume = {362}, number = {1477}, pages = {95--111}, author = {Walker O Smith and David G Ainley and Riccardo Cattaneo-Vietti}, title = {Trophic interactions within the Ross Sea continental shelf ecosystem}, journal = {Philosophical Transactions of the Royal Society B: Biological Sciences}}")
+             year      = "2006",
+             bibtex    = "@article{Smith_2006, doi = {10.1098/rstb.2006.1956}, url = {https://doi.org/10.1098%2Frstb.2006.1956}, year = 2006, month = {jan}, publisher = {The Royal Society}, volume = {362}, number = {1477}, pages = {95--111}, author = {Walker O Smith and David G Ainley and Riccardo Cattaneo-Vietti}, title = {Trophic interactions within the Ross Sea continental shelf ecosystem}, journal = {Philosophical Transactions of the Royal Society B: Biological Sciences}}")
 
 users <- list(name         = "Clément VIOLET",
               email        = "clement.violet@etudiant.univ-brest.fr",

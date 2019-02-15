@@ -26,7 +26,7 @@ food_web_name <- c("WEB357")
 
 name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv",
                       col_type = cols(.default = col_character())) %>%
-  filter( web %in% food_web_name) %>%
+  filter( web %in% paste0(food_web_name, ".csv")) %>%
   split(.$web)
 # Must fill all CAP fields; null fields optional
 

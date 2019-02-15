@@ -27,7 +27,7 @@ food_web_name <- c("WEB102") # Name of the dataset in Trophic metacommunities-ma
 
 name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv",
                       col_type = cols(.default = col_character())) %>%
-  filter( web %in% food_web_name) %>%
+  filter( web %in% paste0(food_web_name, ".csv")) %>%
   split(.$web)
 
 # Must fill all CAP fields; null fields optional
@@ -164,7 +164,7 @@ taxa_df <- taxa %>%
   map2(sp_name_for_this_web, ~mutate(.x, name_clear = str_replace_all(.x$original_name, .y))) %>%
   map(~mutate(.x, name_clear = paste0(str_to_upper(str_extract(.x$name_clear, ".{1}")), str_remove(.x$name_clear, ".{1}")))) %>%
   map(~mutate(.x, name_clear = str_remove_all(.x$name_clear, "\\s\\(.*\\)$"))) %>%
-  map(~mutate(.x, name_clear = str_remove_all(.x$name_clear, "(\\s[:digit:])")))
+  map(~mutate(.x, name_clear = str_remove_all(.x$name_clear, "(\\s[:digit:])"))) %>%
   map(~mutate(.x, name_clear = str_remove_all(.x$name_clear, "\\s(?=[:digit:])[:digit]*")))
 
 ## Select only taxa not yet in db
