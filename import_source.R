@@ -11,7 +11,7 @@ library(mangal)
 setwd("to folder root")
 
 # Source data and export
-# IMPORTANT CHANGES OCCURRED FOR THE SCRIPTS AND FUNCTIONS // THE SCRIPTS BELOW WHERE NOT CHANGES
+# IMPORTANT CHANGES OCCURRED FOR THE SCRIPTS AND FUNCTIONS // THE SCRIPTS BELOW WERE NOT CHANGES
 source("mangal-datasets/roberson_1929/1-meta_clean_roberson_1929.R")
 source("mangal-datasets/Test_Hocking_1968/2-meta_clean_hocking_1968.R")
 source("mangal-datasets/Witt_1998/3-meta_clean_Witt_1998.R")
