@@ -232,6 +232,6 @@ POST_network(network_lst = network, enviro = enviro, dataset = dataset, users = 
 POST_taxonomy(taxo = taxo_back_df)
 POST_node(node_df = taxons_df, network = network)
 # POST_traits(trait_df)
-POST_interaction(inter_df = roberson_1929, attr = attr_inter, inter = inter, users = users, network = network)
+POST_interaction(inter_df = roberson_1929, attr = attr_inter, inter = inter, network = network, enviro = enviro)
 
 rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxons_df, taxo_back_df, roberson_1929)
