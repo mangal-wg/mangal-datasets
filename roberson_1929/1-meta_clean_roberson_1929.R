@@ -20,13 +20,13 @@ srid <- 4326
 
 # Must fill all CAP fields; null fields optional
 
-attr_inter <- list(name  = "Presence/Absence",
-             table_owner = "interactions",
+attr_inter <- list(name  = "presence/absence",
+             table_owner = "interaction",
              description = "Presence or absence of a recorded interaction",
              unit        = "NA")
 
 
-refs <- list(doi       = "10.5962/bhl.title.11538",
+ref <-  list(doi       = "10.5962/bhl.title.11538",
              jstor     = "NA",
              pmid      = "NA",
              author    = "roberson",
@@ -51,28 +51,26 @@ enviro <- list(name  = "NAME",
                value = 0)
 
 
-datasets <- list(name        = "Roberson_1929",
+dataset <- list(name        = "Roberson_1929",
                  date        = "1899-07-01",
-                 description = "Insects observed to pollinate flowers, ten miles of Carlinville, Illinois, USA",
+                 description = "Insects observed pollinating flowers, ten miles of Carlinville, Illinois, USA",
                  public      = TRUE)
 
 
-traits <- list(date = "1899-07-01")
+trait <- list(date = "1899-07-01")
 
 
-networks <- list(name             = "Roberson_1929",
+network <- list(name             = "Roberson_1929",
                  date             = "1899-07-01",
                  lat              = lat,
                  lon              = lon,
                  srid             = srid,
-                 description      = "Insects observed to pollinate flowers, ten miles of Carlinville, Illinois, USA",
+                 description      = "Insects observed pollinating flowers, ten miles of Carlinville, Illinois, USA",
                  public           = TRUE,
                  all_interactions = FALSE)
 
 
-inter <- list(taxon_1_level = "taxon",
-              taxon_2_level = "taxon",
-              date          = "1899-07-01",
+inter <- list(date          = "1899-07-01",
               direction     = "directed",
               type          = "mutualism",
               method        = "Field observations",
@@ -81,7 +79,6 @@ inter <- list(taxon_1_level = "taxon",
               lat           = lat,
               lon           = lon,
               srid          = srid)
-
 
 
 # #------------------------------
@@ -227,7 +224,7 @@ roberson_1929 <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_
 POST_attributes(attr_inter)
 # POST_attributes(attr1)
 # POST_attributes(attr2)
-POST_refs()
+POST_ref(ref)
 POST_users()
 # POST_environments(enviro, attr_##)
 POST_datasets()
