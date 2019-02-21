@@ -32,7 +32,7 @@ name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-met
 
 # Must fill all CAP fields; null fields optional
 
-attr_inter <- list(name        = "Presence/Absence",
+attr_inter <- list(name        = "",
                    table_owner = "interactions",
                    description = "DESCRIPTION",
                    unit        = "NA")
@@ -80,8 +80,8 @@ dataset <- list(name        = "",
 # trait <- list(date = "1111-11-11")
 
 
-network <- list(name        = "",
-                date        = "dd-mm-yy",
+network <- list(name             = "",
+                date             = "dd-mm-yy",
                 lat              = lat,
                 lon              = lon,
                 srid             = srid,
@@ -90,9 +90,7 @@ network <- list(name        = "",
                 all_interactions = FALSE)
 
 
-inter <- list(taxon_1_level = "taxon",
-              taxon_2_level = "taxon",
-              date          = "dd-mm-yy",
+inter <- list(date          = "dd-mm-yy",
               direction     = "directed",
               method        = "null",
               description   = "null",
@@ -132,17 +130,18 @@ FW_name <- data_matrice %>% # Construct the Food Web matric to inject
   map2(modify(data_row_name, ~.x), ~mutate(.x, sp_id = .y)) %>%
   map(~column_to_rownames(.x, "sp_id")) %>% # Store sp name as row name
   map2(modify(data_col_name, ~.x), ~{`names<-`(.x, .y)}) %>%
-  map(~rownames_to_column(.x, "sp_taxon_1")) %>%
-  map(~gather(.x, "sp_taxon_2", "value", -sp_taxon_1)) %>% #Convert large df to long format
-  map(~filter(.x, value != 0)) %>% # Remove 0 interaction
-  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_1, "(.*[Pp]lant.*)|(.*[Aa]lgae.*)|(.*[Pp]hyto.*)|(.*[Dd]iatoms.*)|(.*[Dd]inofl.*)|(.*[Ss]ilicoflag.*)|
+  map(~rownames_to_column(.x, "sp_taxon_2")) %>%
+  map(~gather(.x, "sp_taxon_1", "value", -sp_taxon_2)) %>% #Convert large df to long format
+  map(~select(.x, sp_taxon_1, sp_taxon_2, value)) %>%
+  map(~filter(.x, value != 0)) %>%# Remove 0 interaction
+  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Pp]lant.*)|(.*[Aa]lgae.*)|(.*[Pp]hyto.*)|(.*[Dd]iatoms.*)|(.*[Dd]inofl.*)|(.*[Ss]ilicoflag.*)|
                                            (.*[Pp]roducers.*)|(.*[Mm]acrocystis.*)|(.*[Pp]terygophora.*)|(.*[Ss]eaweed.*)|(Micro-epiphytes)|
                                            (Macro-epiphytes)|(.*[Aa]scophyllum).*|(.*[Ee]nteromorpha.*)|(.*[Ff]ucus.*)|(.*[Uu]lva.*)|
                                            (.*[Zz]ostera.*)|(.*[Cc]occolitho.*)|(.*[Ll]eave.*)"), "herbivory", "predation"))) %>% # Add type interaction
-  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_1, "(.*[Dd]etritu.*)|(.*[Dd]etritu.*(?!.*))|(DOM)|(Discard)|([Dd]issolved.*organic.*)|(.*[Ff]ecal.*)")
+  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Dd]etritu.*)|(.*[Dd]etritu.*(?!.*))|(DOM)|(Discard)|([Dd]issolved.*organic.*)|(.*[Ff]ecal.*)")
                                 ,"commensalism", .x$type))) %>%
-  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_1, "(.*[Cc]arcasse.*)"), "scavenger", .x$type))) %>%
-  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_1, "(.*[Ii]mport.*)|(.*basic\\sfood.*)"), "unknown", .x$type)))
+  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Cc]arcasse.*)"), "scavenger", .x$type))) %>%
+  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Ii]mport.*)|(.*basic\\sfood.*)"), "unknown", .x$type)))
 
 #------------------------------
 # Set taxo_back and taxa table
@@ -176,16 +175,15 @@ taxa_back_df <- taxa_df %>%
   map(~unname(.x)) %>%
   flatten_chr() %>%
   unique() %>%
-  map_chr(~{modify_url(server, path = paste0("/api/v2/","taxonomy/?name=", str_replace_all(.x, " ", "%20")))}) %>%
-  map_chr(~str_replace_all(.x, ",%20", "_")) %>%
-  map_chr(~str_replace_all(.x, "%20-%20", "-")) %>%
+  map_chr(~{modify_url(server, path = paste0("/api/v2/","taxonomy?name=", str_replace_all(.x, " ", "%20")))}) %>%
+  map_chr(~str_replace_all(.x, ".*,%20.*", "_")) %>%
+  map_chr(~str_replace_all(.x, ".*%20-%20.*", "-")) %>%
   map_chr(~str_replace_all(.x, "\\.%20", "__")) %>%
-  keep(~length(content((GET(url = .x, config = add_headers("Content-type" = "application/json","Authorization" = paste("bearer", readRDS("mangal-datasets/.httr-oauth"))))))) == 0) %>%
-  map_chr(~str_remove_all(.x, fixed("http://poisotlab.biol.umontreal.ca/api/v2/taxonomy/?name="))) %>%
+  keep(~length(content((GET(url = .x, config = add_headers("Content-type" = "application/json","Authorization" = paste("bearer", readRDS(".httr-oauth"))))))) == 0) %>%
+  map_chr(~str_remove_all(.x, fixed("http://poisotlab.biol.umontreal.ca/api/v2/taxonomy?name="))) %>%
   map_chr(~str_replace_all(.x, fixed("%20"), " ")) %>%
   map_chr(~str_replace_all(.x, fixed("__"), ". ")) %>%
-  map_chr(~str_replace_all(.x, fixed("_"), ", ")) %>%
-  map_chr(~str_replace_all(.x, fixed("-"), " - "))
+  map_chr(~str_replace_all(.x, fixed("_"), ", "))
 
 
 taxa_back_df <- taxa_back_df %>%
