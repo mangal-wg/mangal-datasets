@@ -21,7 +21,7 @@ srid <- 4326
 # Must fill all CAP fields; null fields optional
 
 attr_inter <- list(name  = "presence/absence",
-             table_owner = "interaction",
+             table_owner = "interactions",
              description = "Presence or absence of a recorded interaction",
              unit        = "NA")
 
@@ -213,9 +213,9 @@ inter <- list(date          = "1899-07-01",
 # write.csv2(x = taxo_back_df, file = "importation_mangal/roberson_1929/data/roberson_1929_taxo_back.csv", row.names = FALSE)
 # # write.csv2(x = traits_df, file = "importation_mangal/roberson_1929/data/roberson_1929_traits.csv", row.names = FALSE)
 
-taxo_back_df <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_taxons.csv", header = TRUE)
-roberson_1929 <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_inter.csv", header = TRUE)
+taxo_back_df <- read.csv2("mangal-datasets/roberson_1929/data/roberson_1929_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("mangal-datasets/roberson_1929/data/roberson_1929_taxons.csv", header = TRUE)
+roberson_1929 <- read.csv2("../mangal-datasets/roberson_1929/data/roberson_1929_inter.csv", header = TRUE)
 # traits_df <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_traits.csv", header = TRUE)
 
 #------------------------------
@@ -227,11 +227,11 @@ POST_attribute(attr = attr_inter)
 POST_ref(ref = ref)
 POST_users(users = users)
 # POST_environment(enviro, attr_##)
-POST_dataset()
-POST_network(network, enviro = enviro)
-POST_taxonomy()
-POST_node(taxons_df)
+POST_dataset(dataset = dataset, users = users, ref = ref)
+POST_network(network_lst = network, enviro = enviro, dataset = dataset, users = users)
+POST_taxonomy(taxo = taxo_back_df)
+POST_node(node_df = taxons_df, network = network)
 # POST_traits(trait_df)
-POST_interaction(roberson_1929, enviro = enviro, attr_inter)
+POST_interaction(inter_df = roberson_1929, attr = attr_inter, inter = inter, users = users, network = network)
 
 rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxons_df, taxo_back_df, roberson_1929)
