@@ -221,17 +221,17 @@ roberson_1929 <- read.csv2("importation_mangal/roberson_1929/data/roberson_1929_
 #------------------------------
   # Throwing injection functions
 #------------------------------
-POST_attributes(attr_inter)
+POST_attribute(attr = attr_inter)
 # POST_attributes(attr1)
 # POST_attributes(attr2)
-POST_ref(ref)
-POST_users()
-# POST_environments(enviro, attr_##)
-POST_datasets()
-POST_networks(networks, enviro = enviro)
-POST_taxo_back()
-POST_taxons(taxons_df)
+POST_ref(ref = ref)
+POST_users(users = users)
+# POST_environment(enviro, attr_##)
+POST_dataset()
+POST_network(network, enviro = enviro)
+POST_taxonomy()
+POST_node(taxons_df)
 # POST_traits(trait_df)
-POST_interactions(roberson_1929, enviro = enviro, attr_inter)
+POST_interaction(roberson_1929, enviro = enviro, attr_inter)
 
 rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxons_df, taxo_back_df, roberson_1929)
