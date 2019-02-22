@@ -17,31 +17,31 @@ srid <- 4326
 
 # Must fill all CAP fields; null fields optional
 
-attr_gall <- list(name         = "Number of galls",
+attr_gall <- list(name         = "number of galls",
                    table_owner = "interactions",
                    description = "Number of galls",
                    unit        = "NA")
 
 
-attr_paras <- list(name       = "Number of parasited galls",
+attr_paras <- list(name       = "number of parasited galls",
                   table_owner = "interactions",
                   description = "Number of parasited galls",
                   unit        = "NA")
 
 
-attr_altitude <- list(name        = "Altitude of the site",
+attr_altitude <- list(name        = "altitude of the site",
                       table_owner = "environments",
                       description = "Altitude of the site",
                       unit        = "meters") 
 
 
-attr_Endo_Ecto <- list(name       = "Endo/Ecto",
+attr_Endo_Ecto <- list(name       = "endo/ecto",
                       table_owner = "traits",
                       description = "Type of parasitism (Endoparasitisim or Ectoparasitism",
                       unit        = "NA")
 
 
-attr_Koino_Idio <- list(name      = "Koino/Idio",
+attr_Koino_Idio <- list(name      = "koino/idio",
                       table_owner = "traits",
                       description = "Is the parasite Koinobiont or Idiobiont",
                       unit        = "NA")
@@ -77,12 +77,12 @@ users <- list(name         = "Gabriel Bergeron",
 
 
 dataset <- list(name         = "Salix_Kolpelke",
-                 date        = "1111-11-11",
+                 # date        = NULL,
                  description = "Food-web structure of willow-galling sawflies and their natural enemies across Europe.",
                  public      = TRUE)
 
 
-trait <- list(date = "1111-11-11")
+trait <- list()
 
 
 #------------------------------
@@ -343,38 +343,38 @@ write.csv2(x = enviro_df, file = "importation_mangal/Kolpelke_2017/data/Kolpelke
 # Open dataframes
 #------------------------------
 
-Kolpelke_2017_inter <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_inter.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
-taxa_back_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
-taxa_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_taxa_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
-enviro_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_enviro_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
-trait_galler <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_trait_galler.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
-trait_parasit <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_trait_parasit.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
-network_df <- read.csv2("importation_mangal/Kolpelke_2017/data/Kolpelke_2017_network_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+Kolpelke_2017_inter <- read.csv2("mangal-datasets/Kolpelke_2017/data/Kolpelke_2017_inter.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+taxa_back_df <- read.csv2("mangal-datasets/Kolpelke_2017/data/Kolpelke_2017_taxa_back.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+taxa_df <- read.csv2("mangal-datasets/Kolpelke_2017/data/Kolpelke_2017_taxa_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+enviro_df <- read.csv2("mangal-datasets/Kolpelke_2017/data/Kolpelke_2017_enviro_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+trait_galler <- read.csv2("mangal-datasets/Kolpelke_2017/data/Kolpelke_2017_trait_galler.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+trait_parasit <- read.csv2("mangal-datasets/Kolpelke_2017/data/Kolpelke_2017_trait_parasit.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+network_df <- read.csv2("mangal-datasets/Kolpelke_2017/data/Kolpelke_2017_network_df.csv", header = TRUE, sep = ";", stringsAsFactors = FALSE)
 
 
 #------------------------------
   # POST commun table
 #------------------------------
-POST_attribute(attr_gall)
-POST_attribute(attr_paras)
-POST_attribute(attr_altitude)
-POST_attribute(attr_Endo_Ecto)
-POST_attribute(attr_Koino_Idio)
-POST_attribute(attr_stage)
-POST_attribute(attr_type)
+POST_attribute(attr = attr_gall)
+POST_attribute(attr = attr_paras)
+POST_attribute(attr = attr_altitude)
+POST_attribute(attr = attr_Endo_Ecto)
+POST_attribute(attr = attr_Koino_Idio)
+POST_attribute(attr = attr_stage)
+POST_attribute(attr = attr_type)
 
-POST_ref()
+POST_ref(ref = ref)
 
-POST_user()
+POST_users(users = users)
 
-POST_dataset()
+POST_dataset(dataset = dataset, users = users, ref = ref)
 
-POST_taxa_back()
+POST_taxonomy(taxo = taxa_back_df)
 
 # GET_fkey for the attribute id in the interaction table
-Kolpelke_2017_inter["attr_id"] <- NA
+Kolpelke_2017_inter[,"attr_id"] <- NA
 for (i in 1:nrow(Kolpelke_2017_inter)) {
-  Kolpelke_2017_inter[i, "attr_id"] <- GET_fkey("attribute", c("name", "unit"), c(as.character(Kolpelke_2017_inter[i, "attr"]), NA))
+  Kolpelke_2017_inter[i, "attr_id"] <- GET_fkey(table = "attribute", attribute = "name", value = tolower(Kolpelke_2017_inter[i, "attr"]))
 }
 
 #------------------------------
@@ -403,10 +403,10 @@ for (i in 1:max(network_df$number)){
   taxa_temp$original_name <- as.character(taxa_temp$original_name)
    
   t_galler_temp <- subset(trait_galler, trait_galler$REARING_NUMBER %in% rearing_number)
-  t_galler_temp <- t_galler_temp[!duplicated(t_galler_temp[, c("taxa", "name")]),]
+  t_galler_temp <- t_galler_temp[!duplicated(t_galler_temp[, c("taxon", "name")]),]
  
   t_parasit_temp <- subset(trait_parasit, trait_parasit$REARING_NUMBER %in% rearing_number)
-  t_parasit_temp <- t_parasit_temp[!duplicated(t_parasit_temp[, c("taxa", "name")]),]
+  t_parasit_temp <- t_parasit_temp[!duplicated(t_parasit_temp[, c("taxon", "name")]),]
   
 
   # Search for duplicate in inter_temp -> must create two different taxa
@@ -429,24 +429,24 @@ for (i in 1:max(network_df$number)){
       new_SP2 <- taxa_temp[nrow(taxa_temp), 2]
       
       # Add the new taxa in the traits table
-      if(sum(str_detect(as.character(t_galler_temp[, "taxa"]), SP1)) >= 1){
+      if(sum(str_detect(as.character(t_galler_temp[, "taxon"]), SP1)) >= 1){
         A <- subset(t_galler_temp, subset = t_galler_temp$taxa == SP1)
-        A[, "taxa"] <- new_SP1
+        A[, "taxon"] <- new_SP1
         t_galler_temp <- rbind(t_galler_temp, A)
       }
-      if(sum(str_detect(as.character(t_parasit_temp[, "taxa"]), SP1)) >= 1){
+      if(sum(str_detect(as.character(t_parasit_temp[, "taxon"]), SP1)) >= 1){
         A <- subset(t_parasit_temp, subset = t_parasit_temp$taxa == SP1)
-        A[, "taxa"] <- new_SP1
+        A[, "taxon"] <- new_SP1
         t_parasit_temp <- rbind(t_parasit_temp, A)
       }
-      if(sum(str_detect(as.character(t_galler_temp[, "taxa"]), SP2)) >= 1){
+      if(sum(str_detect(as.character(t_galler_temp[, "taxon"]), SP2)) >= 1){
         A <- subset(t_galler_temp, subset = t_galler_temp$taxa == SP2)
-        A[, "taxa"] <- new_SP2
+        A[, "taxon"] <- new_SP2
         t_galler_temp <- rbind(t_galler_temp, A)
       }
-      if(sum(str_detect(as.character(t_parasit_temp[, "taxa"]), SP2)) >= 1){
+      if(sum(str_detect(as.character(t_parasit_temp[, "taxon"]), SP2)) >= 1){
         A <- subset(t_parasit_temp, subset = t_parasit_temp$taxa == SP2)
-        A[, "taxa"] <- new_SP2
+        A[, "taxon"] <- new_SP2
         t_parasit_temp <- rbind(t_parasit_temp, A)
       }
       
@@ -471,7 +471,7 @@ for (i in 1:max(network_df$number)){
   
   
   # Set metadata
-  network <- list(name             = as.character(network_temp[1, 5]),
+  network <- list(name             = tolower(as.character(network_temp[1, 5])),
                   date             = as.character(network_temp[1, 7]),
                   lat              = network_temp[1, 3],
                   lon              = network_temp[1, 4],
@@ -498,27 +498,27 @@ for (i in 1:max(network_df$number)){
                 srid          = srid)
 
   # Inject table 
-  print("enviro")
-  POST_environment(enviro, attr_altitude)
+  # print("enviro")
+  # POST_environment(enviro = enviro, attr = attr_altitude, network = network)
   
   print("network")
-  POST_network(network, enviro = enviro)
+  POST_network(network_lst = network, enviro = enviro, dataset = dataset, users = users)
   
-  print("taxa")
-  POST_taxon(taxa_temp)
+  print("node")
+  POST_node(node_df = taxa_temp, network = network)
   
   if((nrow(t_galler_temp) >= 1) == TRUE){
   print("trait galler")
-  POST_trait(t_galler_temp, network = network)
+  POST_trait(trait_df = t_galler_temp, network = network)
   }
   
   if((nrow(t_parasit_temp) >= 1) == TRUE){
   print("trait parasit")
-  POST_trait(t_parasit_temp, network = network)
+  POST_trait(trait_df = t_parasit_temp, network = network)
   }
   
   print("interaction")
-  POST_interaction(inter_temp, enviro = enviro)
+  POST_interaction(inter_df = inter_temp, enviro = enviro, inter = inter, attr = NULL, users = users, network = network_temp)
 
 }
 
