@@ -26,7 +26,7 @@ attr_inter <- list(name  = "Presence/Absence",
              unit        = "NA")
 
 
-refs <- list(doi       = "10.1079/9780851995250.0423",
+ref <- list(doi       = "10.1079/9780851995250.0423",
              jstor     = "NA",
              pmid      = "NA",
              paper_url = "https://www.researchgate.net/publication/237371343_Patterns_of_Fruit-Frugivore_Interactions_in_Two_Atlantic_Forest_Bird_Communities_of_South-eastern_BrazilImplications_for_Conservation",
@@ -51,16 +51,16 @@ enviro <- list(name  = "NAME",
                value = 0)
 
 
-datasets <- list(name        = "Silva_2002",
+dataset <- list(name        = "silva_2002",
                  date        = "2000-03-01",
                  description = "Fruit-bird interaction at the Intervales State Park, Brazil",
                  public      = TRUE)
 
 
-traits <- list(date = "2000-03-01")
+trait <- list(date = "2000-03-01")
 
 
-networks <- list(name             = "Silva_2002",
+network <- list(name             = "silva_2002",
                  date             = "2000-03-01",
                  lat              = lat,
                  lon              = lon,
@@ -70,9 +70,7 @@ networks <- list(name             = "Silva_2002",
                  all_interactions = FALSE)
 
 
-inter <- list(taxon_1_level = "taxon",
-              taxon_2_level = "taxon",
-              date          = "1111-11-11",
+inter <- list(date          = "2000-03-01",
               direction     = "directed",
               type          = "mutualism",
               method        = "Field observation/fecal analysis",
@@ -216,25 +214,25 @@ inter <- list(taxon_1_level = "taxon",
 # write.csv2(x = traits_df, file = paste0(getwd(), "/data/Silva_De_Marco_Hasui_Gomes_2002_traits.csv"), row.names = FALSE)
 
 setwd("importation_mangal/Silva_De_Marco_Hasui_Gomes_2002")
-taxo_back_df <- read.csv2("data/Silva_De_Marco_Hasui_Gomes_2002_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("data/Silva_De_Marco_Hasui_Gomes_2002_taxons.csv", header = TRUE)
-Silva_De_Marco_Hasui_Gomes_2002 <- read.csv2("data/Silva_De_Marco_Hasui_Gomes_2002_inter.csv", header = TRUE)
+taxo_back_df <- read.csv2("mangal-datasets/data/Silva_De_Marco_Hasui_Gomes_2002/Silva_De_Marco_Hasui_Gomes_2002_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("mangal-datasets/Silva_De_Marco_Hasui_Gomes_2002/data/Silva_De_Marco_Hasui_Gomes_2002_taxons.csv", header = TRUE)
+Silva_De_Marco_Hasui_Gomes_2002 <- read.csv2("mangal-datasets/Silva_De_Marco_Hasui_Gomes_2002/data/Silva_De_Marco_Hasui_Gomes_2002_inter.csv", header = TRUE)
 # traits_df <- read.csv2("data/Silva_De_Marco_Hasui_Gomes_2002_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions
 #------------------------------
-POST_attributes(attr_inter)
+POST_attribute(attr_inter)
 # POST_attributes(attr1)
 # POST_attributes(attr2)
-POST_refs()
-POST_users()
+POST_ref(ref = ref)
+POST_users(users = users)
 # POST_environments(enviro, attr_##)
-POST_datasets()
-POST_networks(networks, enviro = enviro)
-POST_taxo_back()
-POST_taxons(taxons_df)
+POST_dataset(dataset = dataset, users = users, ref = ref)
+POST_network(network_lst = network, enviro = enviro, dataset = dataset, users = users)
+# POST_taxonomy()
+POST_node(node_df = taxons_df, network = network)
 # POST_traits(traits_df)
-POST_interactions(Silva_De_Marco_Hasui_Gomes_2002, enviro = enviro, attr = attr_inter)
+POST_interaction(inter_df = Silva_De_Marco_Hasui_Gomes_2002, enviro = enviro, attr = attr_inter, inter = inter, users = users, network = network)
 
 rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxons_df, taxo_back_df, Silva_De_Marco_Hasui_Gomes_2002)

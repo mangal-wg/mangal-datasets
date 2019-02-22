@@ -1,12 +1,12 @@
 # # Set libraries
 # library(reshape2)
 # library(tidyr)
-# library(jsonlite)
-# library(httr)
+library(jsonlite)
+library(httr)
 # library(data.table)
 # library(rcrossref)
-# library(taxize)
-# library(stringr)
+library(taxize)
+library(stringr)
 # 
 # library(mangal)
 
@@ -21,7 +21,7 @@ srid <- 4326
 # Must fill all CAP fields; null fields optional
 
 attr_inter <- list(name        = "Presence/Absence",
-                   table_owner = "interactions",
+                   table_owner = "interaction",
                    description = "Presence or absence of a recorded interaction",
                    unit        = "NA")
 
@@ -35,7 +35,7 @@ attr_inter <- list(name        = "Presence/Absence",
 #               description = "DESCRIPTION",
 #               unit        = "null")
 
-refs <- list(doi       = "NA",
+ref <- list(doi       = "NA",
              jstor     = "NA",
              pmid      = "NA",
              paper_url = "null",
@@ -60,16 +60,16 @@ enviro <- list(name  = "NAME",
                value = 0)
 
 
-datasets <- list(name        = "Witt_1998",
+dataset <- list(name        = "Witt_1998",
                  date        = "1998-01-01",
                  description = "Unknown",
                  public      = TRUE)
 
 
-traits <- list(date = "1998-01-01")
+trait <- list(date = "1998-01-01")
 
 
-networks <- list(name             = "Witt_1998",
+network <- list(name             = "witt_1998",
                  date             = "1998-01-01",
                  lat              = lat,
                  lon              = lon,
@@ -79,9 +79,7 @@ networks <- list(name             = "Witt_1998",
                  all_interactions = FALSE)
 
 
-inter <- list(taxon_1_level = "taxon",
-              taxon_2_level = "taxon",
-              date          = "1998-01-01",
+inter <- list(date          = "1998-01-01",
               direction     = "unknown",
               type          = "unknown",
               method        = "null",
@@ -221,25 +219,25 @@ inter <- list(taxon_1_level = "taxon",
 # write.csv2(x = Witt_1998, file = "importation_mangal/Witt_1998/data/Witt_1998_inter.csv", row.names = FALSE)
 # # write.csv2(x = traits_df, file = "importation_mangal/Witt_1998/data/Witt_1998_traits.csv", row.names = FALSE)
 # 
-taxo_back_df <- read.csv2("importation_mangal/Witt_1998/data/Witt_1998_taxo_back.csv", header = TRUE)
-taxons_df <- read.csv2("importation_mangal/Witt_1998/data/Witt_1998_taxons.csv", header = TRUE)
-Witt_1998 <- read.csv2("importation_mangal/Witt_1998/data/Witt_1998_inter.csv", header = TRUE)
+taxo_back_df <- read.csv2("mangal-datasets/Witt_1998/data/Witt_1998_taxo_back.csv", header = TRUE)
+taxons_df <- read.csv2("mangal-datasets/Witt_1998/data/Witt_1998_taxons.csv", header = TRUE)
+Witt_1998 <- read.csv2("mangal-datasets/Witt_1998/data/Witt_1998_inter.csv", header = TRUE)
 # traits_df <- read.csv2("importation_mangal/Witt_1998/data/Witt_1998_traits.csv", header = TRUE)
 
 #------------------------------
 # Throwing injection functions
 #------------------------------
-POST_attributes(attr_inter)
+POST_attribute(attr = attr_inter)
 # POST_attributes(attr1)
 # POST_attributes(attr2)
-POST_refs()
-POST_users()
+POST_ref(ref = ref)
+POST_users(users = users)
 # POST_environments(enviro, attr_##)
-POST_datasets()
-POST_networks(networks, enviro = enviro)
-POST_taxo_back()
-POST_taxons(taxons_df)
+POST_dataset(dataset = dataset, users = users, ref = ref)
+POST_network(network_lst = network, enviro = enviro, dataset = dataset, users = users)
+# POST_taxonomy()
+POST_node(node_df = taxons_df, network = network)
 # POST_traits(traits_df)
-POST_interactions(Witt_1998, enviro = enviro, attr = attr_inter)
+POST_interaction(inter_df = Witt_1998, enviro = enviro, attr = attr_inter, inter = inter, users = users, network = network)
 
 rm(lat, lon, srid, attr_inter, refs, users, enviro, datasets, traits, networks, inter, taxons_df, taxo_back_df, Witt_1998)
