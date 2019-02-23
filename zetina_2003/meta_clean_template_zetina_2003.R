@@ -24,13 +24,15 @@ srid <- 4326
 folder_name <- "zetina_2003" # Name of the subfolder in mangal-datasets
 food_web_name <- "WEB267"
 
-name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv", 
-                      col_type = cols(.default = col_character()))
+name_file <- read_csv("./Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv", 
+                      col_type = cols(.default = col_character())) %>%
+  filter(web %in% paste0(food_web_name, ".csv")) %>%
+  split(.$web)
 # Must fill all CAP fields; null fields optional
 
 attr_inter <- list(name        = "Dietary matrix",
                    table_owner = "interactions",
-                   description = "Proportions of the consumer diets (sp_name_1) made up by the prey (sp_name_2)",
+                   description = "Proportions of the consumer diets made up by the prey.",
                    unit        = "NA")
 
 # attr1 <- list(name        = "NAME",
@@ -50,7 +52,7 @@ ref <- list(doi       = "10.1016/s0272-7714(02)00410-9",
              data_url  = "https://globalwebdb.com/",
              author    = "Manuel J. Zetina-Rejon",
              year      = "2003",
-             bibtex    = "@article{Zetina_Rej_n_2003, doi = {10.1016/s0272-7714(02)00410-9}, url = {https://doi.org/10.1016%2Fs0272-7714%2802%2900410-9}, year = 2003, month = {aug}, publisher = {Elsevier {BV}}, volume = {57}, number = {5-6}, pages = {803--815}, author = {Manuel J. Zetina-Rej{\'{o}}n and Francisco Arregu{\i}{\'}n-S{\'{a}}nchez and Ernesto A. Ch{\'{a}}vez}, title = {Trophic structure and flows of energy in the Huizache{\textendash}Caimanero lagoon complex on the Pacific coast of Mexico},journal = {Estuarine, Coastal and Shelf Science}}")
+             bibtex    = "@article{Zetina_Rej_n_2003, doi = {10.1016/s0272-7714(02)00410-9}, url = {https://doi.org/10.1016%2Fs0272-7714%2802%2900410-9}, year = 2003, month = {aug}, publisher = {Elsevier {BV}}, volume = {57}, number = {5-6}, pages = {803--815}, author = {Manuel J. Zetina-Rejón and Francisco Arreguí-Sánchez and Ernesto A. Chávez}, title = {Trophic structure and flows of energy in the Huizache{\textendash}Caimanero lagoon complex on the Pacific coast of Mexico},journal = {Estuarine, Coastal and Shelf Science}}")
 
 users <- list(name         = "Clément VIOLET",
               email        = "clement.violet@etudiant.univ-brest.fr",
@@ -89,8 +91,7 @@ network <- list(name        = "zetina_2003",
 inter <- list(taxon_1_level = "taxon",
               taxon_2_level = "taxon",
               date          = "2003-01-01",
-              direction     = "direct",
-              # type          = "predation",
+              direction     = "directed",
               method        = "null",
               description   = "null",
               public        = TRUE,
@@ -105,33 +106,17 @@ inter <- list(taxon_1_level = "taxon",
 
 # Open file
 
-## Species file
-# data_file <- paste0("mangal-datasets/", folder_name, "/raw/") %>% #Getting all the file into one list
-#   dir_ls() %>%
-#   as.character() %>%
-#   map(~read_csv(.x, skip  = 1, col_names = FALSE, col_type = cols(.default = col_character()), na = "")) #Read all file
-
 data_file <- paste0("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/interaction matrices/",
                        food_web_name, ".csv") %>%
   map(~read_csv(.x, skip  = 1, col_names = FALSE, col_type = cols(.default = col_character()), na = "")) %>%
   map(~rename(.x, sp_id = X1))
 data_file[[1]][1,1] <- NA # Remove file identifier use  NA value
 
-# file_col_name <- data_file %>% # Saving column sp name of all file
-#   map(~slice(.x,1)) %>% # Select first line of each df to create column with name of species
-#   map(~select(.x, -1)) %>% # Remove the column sp id to convert
-#   map(~unname(unlist(.x))) 
-
 file_col_name <- data_file %>%
   map(~slice(.x,1)) %>% # Select first line of each df to create column with name of species
   modify(~select(.x, -1)) %>% # Remove the column sp id to convert
   map(~unlist(.x)) %>% # Breaking each df into vector
   map(~unname(.x))
-
-# file_row_name <- data_file %>%
-#   map(~select(.x, 1)) %>%
-#   map(~slice(.x, 2:nrow(.x))) %>%
-#   map(~unname(unlist(.x)))
 
 file_row_name <- data_file %>%
   map(~filter(.x, !is.na(select(.x,1)))) %>% # Remove the line containing all sp id
@@ -154,18 +139,11 @@ map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Pp]lant.*)|(.*[Aa]l
                               , "herbivory", "predation"))) %>% # Add type interaction
   map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Dd]ebris.*)|(.*[Dd]etri*)"), "commensalism", .x$type))) %>%
   map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Cc]arcasse.*)"), "scavenger", .x$type)))
+
 #------------------------------
 # Set taxo_back and taxa table
 #------------------------------
 # Create taxo_back_df
-
-## Get Unique taxa of data
-# taxa <- FW_name %>%
-#   map(~select(.x, sp_taxon_1, sp_taxon_2)) %>%
-#   map(~gather(.x, id, sp)) %>%
-#   modify(~deframe(.x)) %>%
-#   map(~unique(.x)) %>%
-#   map(~enframe(.x, name = NULL, value = "original_name"))
 
 taxa <- FW_name %>%
   map(~select(.x, sp_taxon_1, sp_taxon_2)) %>%
@@ -177,56 +155,14 @@ taxa <- FW_name %>%
 ## Checking taxa and creating taxa_df
 
 sp_name_for_this_web <- name_file %>%
-  filter(web == paste0(food_web_name, ".csv")) %>%
-  select(original_name, scientific_name) %>%
-  mutate(scientific_name = if_else(is.na(.$scientific_name), original_name, scientific_name)) %>%
-  deframe()
+  map(~select(.x, original_name, scientific_name)) %>%
+  map(~mutate(.x, scientific_name = if_else(is.na(.x$scientific_name), original_name, scientific_name))) %>%
+  map(~deframe(.x))
 
 taxa_df <- taxa %>%
-  map(~mutate(.x, name_clear = str_replace_all(.x$original_name, sp_name_for_this_web))) %>%
+  map2(sp_name_for_this_web, ~mutate(.x, name_clear = str_replace_all(.x$original_name, .y))) %>%
   map(~mutate(.x, name_clear = paste0(str_to_upper(str_extract(.x$name_clear, ".{1}")), str_remove(.x$name_clear, ".{1}")))) %>%
   map(~mutate(.x, name_clear = str_remove_all(.x$name_clear, "\\s\\(.*\\)$")))
-
-# sp_name <- FW_name %>%
-#   map(~select(.x, sp_taxon_1, sp_taxon_2)) %>%
-#   map(~gather(.x, id, sp)) %>%
-#   map(~select(.x, -1)) %>%
-#   unlist() %>%
-#   unname() %>%
-#   unique() %>%
-#   str_replace_all(c("Scianids" = "Cynoscion xanthulum", "Elopids" = "Elops affinis", "Lutjanids" = "Lutjanus novemfasciatus",
-#                     "Carangids" = "Carangidae", "Centropomids" = "Centropomidae", "Ariids" = "Arius guatemalensis", 
-#                     "Haemulids" = "Haemulidae", "Pleuronectoids" = "Cynoglossus zanzibarensis", "Callinectes" = "Callinectes arcuatus",
-#                     "Belonoids" = "Belonoidei", "Clupeoids" = "Clupeoidei", "Gerreids" = "Gerreidae", "Poeciliids" = "Poeciliidae",
-#                     "Gobioids" = "Dormitator latrifons", "Mugilids" = "Mugil cephalus", "Palaemonids" = "Macrobranchium",
-#                     "Litopenaeus" = "Penaeus", "Bivalves" = "Bivalvia", "Chanids" = "Chanos chanos", "Polychaetes" = "Polychaeta",
-#                     "Gastropods" = "Gastropoda"))
-# 
-# sp_name_checked <- sp_name %>%
-#   gnr_resolve(canonical = FALSE, best_match_only = T)
-# 
-# sp_name_not_known <- attributes(sp_name_checked)$not_known %>% # Names not recognized by Global Names Recognition and Discovery.
-#   enframe(name = NULL, value = "user_supplied_name") %>% # Create a df simillar to sp_name_cleaned to bind it whith sp_name_cleaned
-#   mutate(., submitted_name = paste0(str_to_upper(str_extract(.$user_supplied_name, ".{1}")), str_remove(.$user_supplied_name, ".{1}"))) %>%
-#   mutate(matched_name = submitted_name,
-#          data_source_title = NA_character_,
-#          score = NA_real_)
-# 
-# taxa_df_global <- sp_name_checked %>% # Taxa resolved
-#   bind_rows(sp_name_not_known) %>% # Taxa not resolved
-#   select(user_supplied_name, matched_name) %>% # Select only two column of interest
-#   left_join(enframe(sp_name, name = NULL, value = "sp"), by = c("user_supplied_name" = "sp")) %>% # Join the table without taxa resolved
-#   `names<-`(c("original_name", "name_clear"))
-# 
-# taxa_df_global$name_clear <- taxa_df_global$name_clear %>%
-#   str_remove_all("\\ssp.*$") %>%
-#   str_replace_all(fixed(". "), "_") %>%
-#   str_remove_all(fixed("."))
-# 
-# taxa_df_global$name_clear[14] <- "Dormitator latrifons"
-# 
-# taxa_df <- taxa %>%
-#   modify(~inner_join(.x, taxa_df_global, by = "original_name"))
 
 ## Select only taxa not yet in db
 
@@ -241,7 +177,7 @@ taxa_back_df <- taxa_df %>%
   map_chr(~str_replace_all(.x, ".*,%20.*", "_")) %>%
   map_chr(~str_replace_all(.x, ".*%20-%20.*", "-")) %>%
   map_chr(~str_replace_all(.x, "\\.%20", "__")) %>%
-  keep(~length(content((GET(url = .x, config = add_headers("Content-type" = "application/json","Authorization" = paste("bearer", readRDS("mangal-datasets/.httr-oauth"))))))) == 0) %>%
+  keep(~length(content((GET(url = .x, config = add_headers("Content-type" = "application/json","Authorization" = paste("bearer", readRDS(".httr-oauth"))))))) == 0) %>%
   map_chr(~str_remove_all(.x, fixed("http://poisotlab.biol.umontreal.ca/api/v2/taxonomy/?name="))) %>%
   map_chr(~str_replace_all(.x, fixed("%20"), " ")) %>%
   map_chr(~str_replace_all(.x, fixed("__"), ". ")) %>%
@@ -249,10 +185,10 @@ taxa_back_df <- taxa_df %>%
 
 taxa_back_df <- taxa_back_df %>%
   enframe(name = NULL, value = "name") %>%
-  mutate(bold = as.double(unlist({map(.$name,~get_boldid(.x, row = 5, verbose = FALSE)[1])})),
-         eol = NA_real_, #Add NA in eol column : See taxize issue : #718 EOL: maybe completely remove the data source from taxize
-         tsn = as.double(unlist({map(.$name,~get_tsn(.x, row = 5, verbose = FALSE)[1])})),
-         ncbi = as.double(unlist({map(.$name,~get_uid(.x, row = 5, verbose = FALSE, key = "679d0a26947d9b6432371b268ec0c7b39b08")[1])}))) # Add API KEy for NCBI
+  mutate(bold = as.double(unlist({map(.$name, ~get_boldid(.x, row = 5, verbose = FALSE)[1])})),
+         eol = as.double(unlist({map(.$name, ~get_eolid(.x, row = 5, verbose = FALSE, key = 110258)[1])})),
+         tsn = as.double(unlist({map(.$name, ~get_tsn(.x, row = 5, verbose = FALSE)[1])})),
+         ncbi = as.double(unlist({map(.$name, ~get_uid(.x, row = 5, verbose = FALSE, key = "679d0a26947d9b6432371b268ec0c7b39b08")[1])}))) # Add API KEy for NCBI
 
 #------------------------------
 # Set traits table
@@ -267,30 +203,94 @@ taxa_back_df <- taxa_back_df %>%
 # Writing taxa and interaction table
 #------------------------------
 
-write.csv2(x = taxa_back_df, file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_taxa_back.csv"), row.names = FALSE)
-write.csv2(x = taxa_df[[1]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_taxa.csv"), row.names = FALSE)
-write.csv2(x = FW_name[[1]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_inter.csv"), row.names = FALSE)
-# write.csv2(x = traits_df, file = "mangal-datasets/FW_name/data/FW_name_traits.csv", row.names = FALSE)
+# write.csv2(x         = taxa_back_df,
+#            file      = paste0(getwd(), "/", folder_name, "/data/", folder_name, "_taxonomy.csv"),
+#            row.names = FALSE)
 
-# taxa_back_df <- read.csv2("mangal-datasets/FW_name/data/FW_name_taxa_back.csv", header = TRUE)
-# taxa_df <- read.csv2("mangal-datasets/FW_name/data/FW_name_taxa.csv", header = TRUE)
-# FW_name <- read.csv2("mangal-datasets/FW_name/data/FW_name_inter.csv", header = TRUE)
-# trait_df <- read.csv2("mangal-datasets/FW_name/data/FW_name_trait.csv", header = TRUE)
+if(is.null(names(taxa_df)) == TRUE){ # Control flow statement if there is multiple dataset in this paper.
+  
+  taxa_df %>%
+    walk(~write.csv2(.x, 
+                     file      = paste0(getwd(), "/", folder_name, "/data/", folder_name, "_node.csv"), 
+                     row.names = FALSE))
+  
+  
+}else{
+  
+  taxa_df %>%
+    names() %>%
+    walk(~write.csv2(x         = taxa_df[[.]],
+                     file      = paste0(getwd(), "/", folder_name, "/data/", folder_name, "_", ., "_node.csv"),
+                     row.names = FALSE))
+  
+}
+
+if(is.null(names(FW_name)) == TRUE){
+  
+  FW_name %>%
+    walk(~write.csv2(.x, 
+                     file      = paste0(folder_name,"/data/",folder_name, "_inter.csv"), 
+                     row.names = FALSE))
+  
+}else{
+  
+  FW_name %>%
+    names() %>%
+    walk(~write.csv2(FW_name[[.]], 
+                     file      = paste0(folder_name,"/data/",folder_name, "_", ., "_inter.csv"),
+                     row.names = FALSE))
+}
+
+
+# trait_df %>%
+#   names() %>%
+#   walk(~write.csv2(x = trait_df[[.]], file = paste0("mangal-datasets/", folder_name,"/data/",folder_name, "_", ., "_trait.csv"), row.names = FALSE))
+# 
+# taxa_back_df <-  paste0("mangal-datasets/", folder_name, "/data/", folder_name, "_taxa_back.csv") %>%
+#   read_csv2(col_types = cols("c", "d", "d", "d", "d"))
+# 
+# taxa_df <-  paste0("mangal-datasets/", folder_name, "/data/") %>%
+#   dir_ls() %>%
+#   as.character() %>%
+#   str_subset(fixed("taxa.csv")) %>%
+#   map(~read_csv2(.x, col_types = cols("c", "c")))
+# 
+# FW_name <-  paste0("mangal-datasets/", folder_name, "/data/") %>%
+#   dir_ls() %>%
+#   as.character() %>%
+#   str_subset(fixed("inter.csv")) %>%
+#   map(~read_csv2(.x, col_types = cols("c", "c", "i")))
+# 
+# trait_df <-  paste0("mangal-datasets/", folder_name, "/data/") %>%
+#   dir_ls() %>%
+#   as.character() %>%
+#   str_subset(fixed("trait.csv")) %>%
+#   map(~read_csv2(.x, col_types = cols("c", "c", "d")))
+
 
 #------------------------------
 # Throwing injection functions
 #------------------------------
+
+## Metadata
 POST_attribute(attr_inter)
 # POST_attribute(attr1)
 # POST_attribute(attr2)
 POST_ref(ref)
-POST_user(users)
+POST_users(users)
 # POST_environment(enviro, attr_##)
 POST_dataset(dataset, users, ref)
-POST_network(network_lst = , enviro = enviro, dataset, users)
-POST_taxa_back(taxa_back)
-POST_taxon(taxa_df)
-# POST_traits(trait_df, network)
-POST_interaction(inter_df = FW_name[[1]], inter = inter, enviro = enviro, attr = attr_inter, users)
+
+## Network
+POST_network(network_lst = network, dataset = dataset, users = users, enviro = NULL)
+## Taxonomy
+POST_taxonomy(taxa_back_df)
+
+## Node
+map(taxa_df, ~POST_node(.x, network))
+
+
+## Interaction
+map(FW_name, ~POST_interaction(.x, inter = inter, enviro = NULL, attr = attr_inter, users, network = network))
 
 rm(lat, lon, srid, attr_inter, ref, users, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, FW_name)

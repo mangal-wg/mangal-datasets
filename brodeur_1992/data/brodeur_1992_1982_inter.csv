@@ -1,0 +1,99 @@
+"sp_taxon_1";"sp_taxon_2";"value"
+"Sockeye Salmon juvenile";"Polychaetes Tomopteris sp.";1,3
+"Sockeye Salmon juvenile";"Pelagagobia sp.";1,3
+"Coho salmon juvenile";"Polychaetes Tomopteris sp.";0,2
+"Coho salmon juvenile";"Pelagagobia sp.";0,2
+"Sockeye Salmon juvenile";"Pteropods Limacina helicina";3,2
+"Sockeye Salmon juvenile";"Clionidae";3,2
+"Coho salmon juvenile";"Pteropods Limacina helicina";0,3
+"Coho salmon juvenile";"Clionidae";0,3
+"Coho salmon adult";"Pteropods Limacina helicina";0,3
+"Coho salmon adult";"Clionidae";0,3
+"Chinook salmon juvenile";"Pteropods Limacina helicina";0,2
+"Chinook salmon juvenile";"Clionidae";0,2
+"Chinook salmon adult";"Pteropods Limacina helicina";0,2
+"Chinook salmon adult";"Clionidae";0,2
+"Jack mackerel";"Pteropods Limacina helicina";1
+"Jack mackerel";"Clionidae";1
+"Black rockfish";"Pteropods Limacina helicina";0,2
+"Black rockfish";"Clionidae";0,2
+"Spiny dogfish";"Cephalopods Loligo opalescens";0,3
+"Coho salmon adult";"Cephalopods Loligo opalescens";3,2
+"Chinook salmon juvenile";"Cephalopods Loligo opalescens";0,5
+"Chinook salmon adult";"Cephalopods Loligo opalescens";0,6
+"Sockeye Salmon juvenile";"Copepods Neocalanus cristatus";4,9
+"Sockeye Salmon juvenile";"N. plumchrus";4,9
+"Chum salmon juvenile";"Copepods Neocalanus cristatus";34,6
+"Chum salmon juvenile";"N. plumchrus";34,6
+"Coho salmon juvenile";"Copepods Neocalanus cristatus";0,9
+"Coho salmon juvenile";"N. plumchrus";0,9
+"Pacific herring";"Amphipods";4,1
+"Sockeye Salmon juvenile";"Amphipods";4,6
+"Chum salmon juvenile";"Amphipods";6,9
+"Coho salmon juvenile";"Amphipods";3,3
+"Coho salmon adult";"Amphipods";0,1
+"Chinook salmon juvenile";"Amphipods";0,1
+"Cutthroat trout";"Amphipods";0,1
+"Steelhead trout";"Amphipods";2,6
+"Pacific hake";"Amphipods";0,3
+"Jack mackerel";"Amphipods";0,1
+"Spiny dogfish";"Ephausiids";0,1
+"Pacific herring";"Ephausiids";95,5
+"Sockeye Salmon juvenile";"Ephausiids";15,5
+"Chum salmon juvenile";"Ephausiids";48,8
+"Coho salmon juvenile";"Ephausiids";13,8
+"Coho salmon adult";"Ephausiids";59,8
+"Chinook salmon juvenile";"Ephausiids";9
+"Chinook salmon adult";"Ephausiids";46,7
+"Cutthroat trout";"Ephausiids";1,3
+"Steelhead trout";"Ephausiids";61,7
+"Pacific hake";"Ephausiids";23,7
+"Jack mackerel";"Ephausiids";14,1
+"Black rockfish";"Ephausiids";74,4
+"Pacific herring";"Decapods";0,4
+"Sockeye Salmon juvenile";"Decapods";1,2
+"Chum salmon juvenile";"Decapods";8,9
+"Coho salmon juvenile";"Decapods";5,3
+"Coho salmon adult";"Decapods";5,8
+"Chinook salmon juvenile";"Decapods";3,1
+"Chinook salmon adult";"Decapods";0,6
+"Cutthroat trout";"Decapods";0,4
+"Steelhead trout";"Decapods";1,2
+"Pacific hake";"Decapods";0,3
+"Black rockfish";"Decapods";10,4
+"Coho salmon juvenile";"Insects";0,3
+"Cutthroat trout";"Insects";0,3
+"Spiny dogfish";"Clupeids";1
+"Sockeye Salmon juvenile";"Clupeids";4,3
+"Coho salmon juvenile";"Clupeids";6,7
+"Coho salmon adult";"Clupeids";23,1
+"Chinook salmon juvenile";"Clupeids";23,4
+"Chinook salmon adult";"Clupeids";31,8
+"Cutthroat trout";"Clupeids";1
+"Steelhead trout";"Clupeids";2,8
+"Pacific hake";"Clupeids";55,4
+"Jack mackerel";"Clupeids";70,6
+"Coho salmon juvenile";"Scorpaenids";14,5
+"Coho salmon adult";"Scorpaenids";5,2
+"Chinook salmon juvenile";"Scorpaenids";23,9
+"Chinook salmon adult";"Scorpaenids";0,5
+"Cutthroat trout";"Scorpaenids";13,2
+"Steelhead trout";"Scorpaenids";4,6
+"Pacific hake";"Scorpaenids";0,4
+"Jack mackerel";"Scorpaenids";0,7
+"Black rockfish";"Scorpaenids";1,7
+"Spiny dogfish";"Pleuronectids";12,3
+"Coho salmon juvenile";"Pleuronectids";1
+"Chinook salmon juvenile";"Pleuronectids";2,5
+"Black rockfish";"Pleuronectids";2
+"Spiny dogfish";"Other fishes";86,3
+"Sockeye Salmon juvenile";"Other fishes";65
+"Coho salmon juvenile";"Other fishes";54,2
+"Coho salmon adult";"Other fishes";2,6
+"Chinook salmon juvenile";"Other fishes";37,2
+"Chinook salmon adult";"Other fishes";19,6
+"Cutthroat trout";"Other fishes";83,8
+"Steelhead trout";"Other fishes";27,1
+"Pacific hake";"Other fishes";19,9
+"Jack mackerel";"Other fishes";13,6
+"Black rockfish";"Other fishes";11,3

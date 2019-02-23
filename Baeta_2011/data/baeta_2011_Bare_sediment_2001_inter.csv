@@ -1,84 +1,104 @@
-"sp_taxon_1";"sp_taxon_2";"value"
-"Zooplankton";"Phytoplankton";0,98
-"Zooplankton";"Zooplankton";0,02
-"Corophium multisetosum";"Microphytobenthos";0,75
-"Corophium multisetosum";"Detritus";0,25
-"Melita palmata";"Microphytobenthos";0,15
-"Melita palmata";"Green macroalgae";0,45
-"Melita palmata";"Detritus";0,4
-"Cerastoderma edule";"Phytoplankton";0,85
-"Cerastoderma edule";"Microphytobenthos";0,05
-"Cerastoderma edule";"Detritus";0,1
-"Scrobicularia plana";"Phytoplankton";0,3
-"Scrobicularia plana";"Microphytobenthos";0,4
-"Scrobicularia plana";"Detritus";0,3
-"Carcinus maenas";"Green macroalgae";0,04
-"Carcinus maenas";"Zooplankton";0,06
-"Carcinus maenas";"Corophium multisetosum";0,005
-"Carcinus maenas";"Melita palmata";0,005
-"Carcinus maenas";"Cerastoderma edule";0,001
-"Carcinus maenas";"Scrobicularia plana";0,12
-"Carcinus maenas";"Carcinus maenas";0,06
-"Carcinus maenas";"Crangon crangon";0,14
-"Carcinus maenas";"Hydrobia ulvae";0,008
-"Carcinus maenas";"Cyathura carinata";0,03
-"Carcinus maenas";"Glycera tridactyla";0,001
-"Carcinus maenas";"Hediste diversicolor";0,184
-"Carcinus maenas";"Detritus";0,15
-"Carcinus maenas";"Imports";0,2
-"Crangon crangon";"Green macroalgae";0,05
-"Crangon crangon";"Zooplankton";0,1
-"Crangon crangon";"Melita palmata";0,025
-"Crangon crangon";"Cerastoderma edule";0,001
-"Crangon crangon";"Scrobicularia plana";0,13
-"Crangon crangon";"Carcinus maenas";0,01
-"Crangon crangon";"Crangon crangon";0,01
-"Crangon crangon";"Hydrobia ulvae";0,02
-"Crangon crangon";"Cyathura carinata";0,05
-"Crangon crangon";"Alkmaria romijni";0,005
-"Crangon crangon";"Glycera tridactyla";0,005
-"Crangon crangon";"Hediste diversicolor";0,155
-"Crangon crangon";"Heteromastus filiformis";0,001
-"Crangon crangon";"Streblospio shrubsolii";0,007
-"Crangon crangon";"Oligochaets";0,001
-"Crangon crangon";"Detritus";0,35
-"Crangon crangon";"Imports";0,08
-"Hydrobia ulvae";"Microphytobenthos";0,75
-"Hydrobia ulvae";"Detritus";0,25
-"Cyathura carinata";"Carcinus maenas";0,001
-"Cyathura carinata";"Alkmaria romijni";0,002
-"Cyathura carinata";"Hediste diversicolor";0,045
-"Cyathura carinata";"Heteromastus filiformis";0,001
-"Cyathura carinata";"Oligochaets";0,001
-"Cyathura carinata";"Detritus";0,95
-"Alkmaria romijni";"Phytoplankton";0,1
-"Alkmaria romijni";"Detritus";0,9
-"Capitella capitata";"Detritus";1
-"Glicera tridactyla";"Corophium multisetosum";0,01
-"Glicera tridactyla";"Melita palmata";0,01
-"Glicera tridactyla";"Cerastoderma edule";0,002
-"Glicera tridactyla";"Scrobicularia plana";0,06
-"Glicera tridactyla";"Hydrobia ulvae";0,02
-"Glicera tridactyla";"Alkmaria romijni";0,12
-"Glicera tridactyla";"Capitella capitata";0,04
-"Glicera tridactyla";"Glycera tridactyla";0,04
-"Glicera tridactyla";"Hediste diversicolor";0,29
-"Glicera tridactyla";"Heteromastus filiformis";0,14
-"Glicera tridactyla";"Streblospio shrubsolii";0,05
-"Glicera tridactyla";"Oligochaets";0,018
-"Glicera tridactyla";"Detritus";0,2
-"Hediste diversicolor";"Phytoplankton";0,05
-"Hediste diversicolor";"Microphytobenthos";0,08
-"Hediste diversicolor";"Cerastoderma edule";0,001
-"Hediste diversicolor";"Scrobicularia plana";0,05
-"Hediste diversicolor";"Hydrobia ulvae";0,01
-"Hediste diversicolor";"Cyathura carinata";0,004
-"Hediste diversicolor";"Alkmaria romijni";0,001
-"Hediste diversicolor";"Capitella capitata";0,001
-"Hediste diversicolor";"Heteromastus filiformis";0,001
-"Hediste diversicolor";"Streblospio shrubsolii";0,001
-"Hediste diversicolor";"Oligochaets";0,001
-"Hediste diversicolor";"Detritus";0,8
-"Heteromastus filiformis";"Detritus";1
-"Streblospio shrubsolii";"Detritus";1
-"Oligochaets";"Detritus";1
+"sp_taxon_1";"sp_taxon_2";"value";"type"
+"Zooplankton";"Phytoplankton";0,98;"herbivory"
+"Zooplankton";"Zooplankton";0,02;"predation"
+"Amphithoe valida";"Microphytobenthos";0,1;"predation"
+"Amphithoe valida";"Green macroalgae";0,15;"herbivory"
+"Amphithoe valida";"Detritus";0,75;"commensalism"
+"Melita palmata";"Microphytobenthos";0,1;"predation"
+"Melita palmata";"Green macroalgae";0,15;"herbivory"
+"Melita palmata";"Detritus";0,75;"commensalism"
+"Cerastoderma edule";"Phytoplankton";0,8;"herbivory"
+"Cerastoderma edule";"Microphytobenthos";0,1;"predation"
+"Cerastoderma edule";"Detritus";0,1;"commensalism"
+"Scrobicularia plana";"Phytoplankton";0,2;"herbivory"
+"Scrobicularia plana";"Microphytobenthos";0,2;"predation"
+"Scrobicularia plana";"Detritus";0,6;"commensalism"
+"Carcinus maenas";"Green macroalgae";0,04;"herbivory"
+"Carcinus maenas";"Zooplankton";0,06;"predation"
+"Carcinus maenas";"Ampithoe valida";0,001;"predation"
+"Carcinus maenas";"Melita palmata";0,001;"predation"
+"Carcinus maenas";"Cerastoderma edule";0,01;"predation"
+"Carcinus maenas";"Scrobicularia plana";0,11;"predation"
+"Carcinus maenas";"Carcinus maenas";0,06;"predation"
+"Carcinus maenas";"Crangon crangon";0,14;"predation"
+"Carcinus maenas";"Hydrobia ulvae";0,02;"predation"
+"Carcinus maenas";"Littorina littorea";0,002;"predation"
+"Carcinus maenas";"Cyathura carinata";0,01;"predation"
+"Carcinus maenas";"Idotea chelipes";0,001;"predation"
+"Carcinus maenas";"Hediste diversicolor";0,26;"predation"
+"Carcinus maenas";"Heteromastus filiformis";0,001;"predation"
+"Carcinus maenas";"Lagis koreni";0,001;"predation"
+"Carcinus maenas";"Mista picta";0,002;"predation"
+"Carcinus maenas";"Oligochaets";0,001;"predation"
+"Carcinus maenas";"Detritus";0,1;"commensalism"
+"Carcinus maenas";"Imports";0,18;"predation"
+"Crangon crangon";"Green macroalgae";0,05;"herbivory"
+"Crangon crangon";"Zooplankton";0,08;"predation"
+"Crangon crangon";"Ampithoe valida";0,001;"predation"
+"Crangon crangon";"Melita palmata";0,001;"predation"
+"Crangon crangon";"Cerastoderma edule";0,005;"predation"
+"Crangon crangon";"Scrobicularia plana";0,14;"predation"
+"Crangon crangon";"Carcinus maenas";0,01;"predation"
+"Crangon crangon";"Crangon crangon";0,01;"predation"
+"Crangon crangon";"Hydrobia ulvae";0,05;"predation"
+"Crangon crangon";"Littorina littorea";0,001;"predation"
+"Crangon crangon";"Cyathura carinata";0,04;"predation"
+"Crangon crangon";"Idotea chelipes";0,001;"predation"
+"Crangon crangon";"Alkmaria romijni";0,001;"predation"
+"Crangon crangon";"Capitella capitata";0,011;"predation"
+"Crangon crangon";"Hediste diversicolor";0,23;"predation"
+"Crangon crangon";"Heteromastus filiformis";0,005;"predation"
+"Crangon crangon";"Lagis koreni";0,001;"predation"
+"Crangon crangon";"Oligochaets";0,003;"predation"
+"Crangon crangon";"Detritus";0,3;"commensalism"
+"Crangon crangon";"Imports";0,06;"predation"
+"Hydrobia ulvae";"Microphytobenthos";0,32;"predation"
+"Hydrobia ulvae";"Detritus";0,68;"commensalism"
+"Littorina littorea";"Microphytobenthos";0,05;"predation"
+"Littorina littorea";"Green macroalgae";0,4;"herbivory"
+"Littorina littorea";"Zostera noltii";0,2;"predation"
+"Littorina littorea";"Detritus";0,35;"commensalism"
+"Cyathura carinata";"Ampithoe valida";0,001;"predation"
+"Cyathura carinata";"Melita palmata";0,001;"predation"
+"Cyathura carinata";"Carcinus maenas";0,07;"predation"
+"Cyathura carinata";"Idotea chelipes";0,001;"predation"
+"Cyathura carinata";"Alkmaria romijni";0,001;"predation"
+"Cyathura carinata";"Capitella capitata";0,007;"predation"
+"Cyathura carinata";"Hediste diversicolor";0,161;"predation"
+"Cyathura carinata";"Heteromastus filiformis";0,005;"predation"
+"Cyathura carinata";"Streblospio shrubsolii";0,001;"predation"
+"Cyathura carinata";"Oligochaets";0,002;"predation"
+"Cyathura carinata";"Detritus";0,75;"commensalism"
+"Idotea chelipes";"Microphytobenthos";0,1;"predation"
+"Idotea chelipes";"Green macroalgae";0,15;"herbivory"
+"Idotea chelipes";"Zostera noltii";0,05;"predation"
+"Idotea chelipes";"Heteromastus filiformis";0,1;"predation"
+"Idotea chelipes";"Oligochaets";0,15;"predation"
+"Idotea chelipes";"Detritus";0,45;"commensalism"
+"Alkmaria romijni";"Phytoplankton";0,1;"herbivory"
+"Alkmaria romijni";"Detritus";0,9;"commensalism"
+"Capitella capitata";"Detritus";1;"commensalism"
+"Hediste diversicolor";"Phytoplankton";0,05;"herbivory"
+"Hediste diversicolor";"Microphytobenthos";0,04;"predation"
+"Hediste diversicolor";"Ampithoe valida";0,001;"predation"
+"Hediste diversicolor";"Melita palmata";0,001;"predation"
+"Hediste diversicolor";"Cerastoderma edule";0,002;"predation"
+"Hediste diversicolor";"Scrobicularia plana";0,055;"predation"
+"Hediste diversicolor";"Hydrobia ulvae";0,095;"predation"
+"Hediste diversicolor";"Alkmaria romijni";0,001;"predation"
+"Hediste diversicolor";"Capitella capitata";0,005;"predation"
+"Hediste diversicolor";"Heteromastus filiformis";0,005;"predation"
+"Hediste diversicolor";"Mista picta";0,001;"predation"
+"Hediste diversicolor";"Streblospio shrubsolii";0,002;"predation"
+"Hediste diversicolor";"Oligochaets";0,002;"predation"
+"Hediste diversicolor";"Detritus";0,74;"commensalism"
+"Heteromastus filiformis";"Detritus";1;"commensalism"
+"Lagis koreni";"Detritus";1;"commensalism"
+"Mista picta";"Capitella capitata";0,02;"predation"
+"Mista picta";"Hediste diversicolor";0,86;"predation"
+"Mista picta";"Heteromastus filiformis";0,01;"predation"
+"Mista picta";"Streblospio shrubsolii";0,005;"predation"
+"Mista picta";"Oligochaets";0,005;"predation"
+"Mista picta";"Detritus";0,1;"commensalism"
+"Streblospio shrubsolii";"Detritus";1;"commensalism"
+"Oligochaets";"Detritus";1;"commensalism"
