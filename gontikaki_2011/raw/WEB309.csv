@@ -1,0 +1,20 @@
+"Gontikaki, E., van Oevelen, D., Soetaert, K., and Witte, U. (2011). Food web flows through a sub-arctic deep-sea benthic community. Progress in Oceanography. 91, pp. 245-259.",,,,,,,,,,,,,,,,,,
+Sub-arctic deep-sea benthic community - Faroe-Shetland Channel - NE Atlantic Ocean,water column labile detritus,water column refractory detritus,dissolved inorganic carbon,water column dissolved organic carbon,sedimentary labile detritus,sedimentary refractory detritus,pore-water dissolved organic carbon,bacteria,meiofaunal-size nematodes,macrofaunal-size nematodes,surface deposit-feeding polychaetes,sub-surface deposit-feeding polychaetes,filter-feeding polychaetes,omnivore polychaetes,carnivore polychaetes,Sipuncula,Porifera,other macrofauna
+water column labile detritus,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1
+water column refractory detritus,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1
+dissolved inorganic carbon,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+water column dissolved organic carbon,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sedimentary labile detritus,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,0,1
+sedimentary refractory detritus,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,0,1
+pore-water dissolved organic carbon,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+bacteria,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,0,1
+meiofaunal-size nematodes,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,1
+macrofaunal-size nematodes,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,0,1
+surface deposit-feeding polychaetes,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+sub-surface deposit-feeding polychaetes,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+filter-feeding polychaetes,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+omnivore polychaetes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+carnivore polychaetes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sipuncula,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+Porifera,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+other macrofauna,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0

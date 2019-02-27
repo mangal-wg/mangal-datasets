@@ -1,0 +1,17 @@
+"M.E. Vinogradov and E.A, Shushkina. (1978). Some Development Patterns of Plankton Communities in the Upwelling Areas of the Pacific Ocean. Marine Biology, 48, pp. 357-366.",,,,,,,,,,,
+Upwelling areas - Pacific Ocean,bacteria,zooflagellates,ciliates,meroplankton - appendicularians - doliolids,small calanoids,medium-sized calanoids,juvenile euphausiids,cyclopoids,calanoids - small tomopterids - small coelenterates,chaetognaths - polychaetes,anchovy
+small phytoplankton,0,0,1,1,1,1,1,0,0,0,0
+medium phytoplankton,0,0,0,0,0,1,1,0,0,0,1
+arge phytoplankton,0,0,0,0,0,0,1,0,0,0,1
+detritus,1,0,0,0,0,0,0,0,0,0,0
+dissolved organic matter,1,1,0,0,0,0,0,0,0,0,0
+bacteria,0,1,1,1,1,0,0,0,0,0,0
+zooflagellates,0,0,1,1,1,0,0,0,0,0,0
+ciliates,0,0,0,1,1,1,1,1,1,0,0
+meroplankton - appendicularians - doliolids,0,0,0,0,0,0,0,1,1,1,1
+small calanoids,0,0,0,0,0,0,0,1,1,1,1
+medium-sized calanoids,0,0,0,0,0,0,0,0,1,1,1
+juvenile euphausiids,0,0,0,0,0,0,0,0,0,1,0
+cyclopoids,0,0,0,0,0,0,0,0,1,1,1
+calanoids - small tomopterids - small coelenterates,0,0,0,0,0,0,0,0,0,1,1
+chaetognaths - polychaetes,0,0,0,0,0,0,0,0,0,0,1

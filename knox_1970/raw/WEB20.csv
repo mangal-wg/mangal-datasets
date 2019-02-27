@@ -1,0 +1,16 @@
+"Knox, G.A. (1970). Antarctic marine ecosystems, In: M. W. Holdgate, (ed). Antarctic ecology. (Academic Press, New York, USA), pp. 69-96. ",,,,,,,,,,,,,,,,
+Antarctic pack ice zone,copepods - Orchomonopsis,bottom notothenids - fry of Trematomus,phytoplankton filter feeders,Euphasia superba - E. crystallorophias,benthic filter feeding invertebrates,Trematomus borchgrevinki - Pleurogramma antarctica,predatory planktonic invertebrates,predatory cephalopods,whales - crabeater seals,penguins - petrels,pycnogonids - polychaetes - Glyptonotus - Lineus - Odonaster,predatory fishes,Weddel seals,toothed whales,leopard seals,predatory benthic fishes
+epontic microalgae,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+planktonic microalgae,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+detritus,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+copepods - Orchomonopsis,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+bottom notothenids - fry of Trematomus,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+phytoplankton filter feeders,0,1,0,0,1,0,1,1,0,0,0,0,0,0,0,0
+Euphasia superba - E. crystallorophias,0,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0
+benthic filter feeding invertebrates,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
+Trematomus borchgrevinki - Pleurogramma antarctica,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+predatory planktonic invertebrates,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+predatory cephalopods,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+penguins - petrels,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+pycnogonids - polychaetes - Glyptonotus - Lineus - Odonaster,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+predatory fishes,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0

@@ -1,0 +1,8 @@
+"Milne, H. and Dunnet, G.M., (1972). Standing crop, productivity and trophic relations of the fauna of the Ythan estuary. In: R.S.K. Barnes, and J. Green, (eds). The Estuarine Environment, (Applied Science Publications, Edinburgh, Scotland), pp. 86-106.",,,,,,,,,,,
+Mussel bed - Ythan estuary - Scotland,Mytilus,Carcinus,Corophium,gammarids,oystercatcher,eider,turnstone,butterfish,blenny,goby,gulls
+detritus,1,1,1,1,0,0,0,0,0,0,0
+Mytilus,0,0,0,0,1,1,0,0,0,0,1
+Carcinus,0,0,0,0,0,1,1,0,0,0,1
+Corophium,0,0,0,0,0,0,1,0,0,0,0
+gammarids,0,0,0,0,0,0,1,1,1,1,0
+eider,0,0,0,0,0,0,0,0,0,0,1

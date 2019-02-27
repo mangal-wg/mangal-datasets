@@ -1,0 +1,13 @@
+"M.J. Dunbar. (1954). Arctic and Subarctic Marine Ecology: Immediate Problems. Arctic, 6, pp. 75-90.",,,,,,,,,,,,,,,,,,,,
+Arctic seas,smaller zooplankton,larger zooplankton,bacteria,benthonic invertebrates,right whales,clupeid fishes,rorquals,arctic char,caplin,cod,benthonic vertebrates,bearded seals,beluga,narwhal,walrus,harp seal,harbour seal,ringed seal,killer whale,Greenland shark
+phytoplankton,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+detritus,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+smaller zooplankton,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+larger zooplankton,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,1,1,1,0,0
+benthonic invertebrates,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,1
+caplin,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0
+cod,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+benthonic vertebrates,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1
+harp seal,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+harbour seal,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+ringed seal,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
