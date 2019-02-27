@@ -25,7 +25,7 @@ srid <- 4326
 folder_name <- "" # Name of the subfolder in mangal-datasets
 food_web_name <- c("") # Name of the dataset in Trophic metacommunities-master/Trophic_metacom_meta_analysis/Data
 
-name_file <- read_csv("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv",
+name_file <- read_csv("Trophic-metacommunities-master/Trophic_metacom_meta_analysis/Data/name_dictionary.csv",
                       col_type = cols(.default = col_character())) %>%
   filter( web %in% paste0(food_web_name, ".csv")) %>%
   split(.$web)
@@ -106,7 +106,7 @@ inter <- list(date          = "dd-mm-yy",
 
 # Open file
 
-data_matrice <- paste0("~/Documents/UBO/Cours/Semestre 8/Stage/Mangal/Trophic-metacommunities-master/Trophic_metacom_meta_analysis/interaction matrices/",
+data_matrice <- paste0("Trophic-metacommunities-master/Trophic_metacom_meta_analysis/interaction matrices/",
                        food_web_name, ".csv") %>%
   map(~read_csv(.x, skip  = 1, col_names = FALSE, col_type = cols(.default = col_character()), na = "")) %>%
   map(~rename(.x, sp_id = X1)) %>%
@@ -229,32 +229,62 @@ if(is.null(names(FW_name)) == TRUE){
 
 #------------------------------
 # Throwing injection functions
+# Unique network
 #------------------------------
-
+## Metadata
 POST_attribute(attr_inter)
-
 # POST_attribute(attr1)
 # POST_attribute(attr2)
-
 POST_ref(ref)
-POST_user(users)
-
+POST_users(users)
 # POST_environment(enviro, attr_##)
-
 POST_dataset(dataset, users, ref)
 
-# POST_network(network_lst = , enviro = enviro, dataset, users)
-# POST_network(network_lst = inter, dataset, users) # Work
-map(network, ~POST_network(network_lst = .x, dataset = dataset, users = users))
+## Network
+POST_network(network_lst = network, dataset = dataset, users = users, enviro = NULL)
+## Taxonomy
+# POST_taxonomy(taxa_back_df)
+
+## Node
+map(taxa_df, ~POST_node(.x, network))
 
 
-POST_taxa_back(taxa_back_df)
-# POST_taxon(taxa_df) # Work
-map(taxa_df, ~POST_taxon)
+## Interaction
+map(FW_name, ~POST_interaction(.x, inter = inter, enviro = NULL, attr = attr_inter, users, network = network))
 
-# POST_traits(trait_df, network)
+#------------------------------
+# Throwing injection functions
+# Multiple network
+#------------------------------
 
-# POST_interaction(inter_df = FW_name[[1]], inter = inter, enviro = enviro, attr = attr_inter, users)
-# POST_interaction(inter_df = FW_name[[1]], inter = inter, attr = attr_inter, users) # work
-map2(FW_name, inter, ~POST_interaction(inter_df = .x, inter = .y, attr = attr_inter, users))
+## Metadata
+POST_attribute(attr_inter)
+# POST_attribute(attr1)
+# POST_attribute(attr2)
+POST_ref(ref)
+POST_users(users)
+# POST_environment(enviro, attr_##)
+POST_dataset(dataset, users, ref)
+
+## Network
+map(network,~POST_network(network_lst = .x, dataset = dataset, users = users, enviro = NULL))
+
+## Taxonomy
+#POST_taxonomy(taxa_back_df)
+
+## Node
+map2(taxa_df, network, ~POST_node(.x, .y))
+
+
+## Interaction
+# map(FW_name, ~POST_interaction(.x, inter = inter, enviro = NULL, attr = attr_inter, users, network = network))
+# l <- list(FW_name, inter, network)
+# pmap(list(FW_name, inter, network), ~POST_interaction(inter_df = ..1, inter = ..2, enviro = NULL, attr = attr_inter, users = users, network = ..3))
+for(i in 1:length(FW_name)){
+  
+  POST_interaction(inter_df = FW_name[[i]], inter = inter[[i]], attr = attr_inter, users = users, network = network[[i]])
+  
+}
+
 rm(lat, lon, srid, attr_inter, ref, users, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, FW_name)
+
