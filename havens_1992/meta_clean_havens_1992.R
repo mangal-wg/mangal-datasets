@@ -22,18 +22,17 @@ library(mangal)
 srid <- 4326
 folder_name <- "havens_1992"
 
+lake_localisation <- read.csv2(paste0(folder_name, "/Raw/Havens_localisation.csv"),
+                               header = TRUE, stringsAsFactors = FALSE) %>%
+  mutate(Latitude = conv_unit(.$Latitude, "deg_min_sec", "dec_deg"),
+         Longitude = conv_unit(.$Longitude, "deg_min_sec", "dec_deg"))
+
 lake_properties <- read_table2(paste0(folder_name, "/Raw/Havens_data.txt"),
                                col_type = cols(.default = col_double(), Lake = col_character(),
                                                Latitude = col_character(), Longitude = col_character())) %>%
-  select(1:2, Latitude:DOC) %>%
-  mutate(Latitude = str_replace_all(.$Latitude, "\\.", " "),
-         Longitude = str_replace_all(.$Longitude, "\\.", " ")) %>%
-  mutate(Latitude = paste(.$Latitude, "00"),
-         Longitude = paste(.$Longitude, "00")) %>%
-  mutate(Latitude = round(as.numeric(conv_unit(.$Latitude, from = "deg_min_sec", to = "dec_deg")),5),
-         Longitude = conv_unit(.$Longitude, from = "deg_min_sec", to = "dec_deg")) %>%
-  mutate(Longitude = as.numeric(paste0("-", .$Longitude), length = 5)) %>%
+  select(1:2, Elevation:DOC) %>%
   arrange(Lake_nb) %>%
+  right_join(lake_localisation, by = "Lake") %>%
   select(-1) %>%
   split(.$Lake) %>%
   map(~select(.x, -1))
@@ -252,7 +251,7 @@ network <- list(`Alford Lake` = list(name             = "Alford_Lake_havens_1992
                                      lat              = lake_properties$ChubLake$Latitude[1],
                                      lon              = lake_properties$ChubLake$Longitude[1],
                                      srid             = srid,
-                                     description      = "Food web of pelagic communities of small lakes and ponds of the .",
+                                     description      = "Food web of pelagic communities of small lakes and ponds of the Chub Lake.",
                                      public           = TRUE,
                                      all_interactions = TRUE),
                   `Chub Pond` = list(name             = "Chub_Pond_havens_1992",
@@ -420,7 +419,7 @@ network <- list(`Alford Lake` = list(name             = "Alford_Lake_havens_1992
                                      lat              = lake_properties$LostLakeEast$Latitude[1],
                                      lon              = lake_properties$LostLakeEast$Longitude[1],
                                      srid             = srid,
-                                     description      = "Food web of pelagic communities of small lakes and ponds of the .",
+                                     description      = "Food web of pelagic communities of small lakes and ponds of the Lost Lake East.",
                                      public           = TRUE,
                                      all_interactions = TRUE),
         `Little Rainbow Lake` = list(name             = "Little_Rainbow_Lake_havens_1992",
@@ -664,7 +663,7 @@ inter <- list(`Alford Lake` = list(name             = "Alford_Lake_havens_1992",
                                  lat              = lake_properties$ChubLake$Latitude[1],
                                  lon              = lake_properties$ChubLake$Longitude[1],
                                  srid             = srid,
-                                 description      = "Food web of pelagic communities of small lakes and ponds of the .",
+                                 description      = "Food web of pelagic communities of small lakes and ponds of the Chub Lake.",
                                  public           = TRUE,
                                  method           = "biblio",
                                  directed         = "directed"),
@@ -853,7 +852,7 @@ inter <- list(`Alford Lake` = list(name             = "Alford_Lake_havens_1992",
                                       lat              = lake_properties$LostLakeEast$Latitude[1],
                                       lon              = lake_properties$LostLakeEast$Longitude[1],
                                       srid             = srid,
-                                      description      = "Food web of pelagic communities of small lakes and ponds of the .",
+                                      description      = "Food web of pelagic communities of small lakes and ponds of the Lost Lake East.",
                                       public           = TRUE,
                                       method           = "biblio",
                                       directed         = "directed"),
@@ -1438,4 +1437,43 @@ for(i in 1:length(FW_name)){
   cat(paste0(round(i/length(FW_name)*100, 2), " % terminé\n"))
 }
 
-Frm(lat, lon, srid, attr_inter, ref, users, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, FW_name)
+# Updating information
+## updating localisaion of the networks
+
+request_url <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","network"), query="q=%havens_1992")
+
+responses <- httr::GET(url = request_url, config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))))
+
+havens_net_def <- fromJSON(content(responses, "text"))
+
+resp <- list()
+for(r in 1:nrow(havens_net_def)){
+  uri <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/network/", havens_net_def$id[r]))
+
+  resp[[r]] <- PUT(uri,
+                   body   = list(localisation = list(type = "Point",
+                                                     coordinates = c(lake_localisation$Longitude[r], lake_localisation$Latitude[r]))),
+                   config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
+                   encode = "json")
+}
+
+## updating network description
+network_ids <- c("1247", "1226") # Id of the network to update
+uri <- character(length = 2)
+description <- c("Food web of pelagic communities of small lakes and ponds of the Lost Lake East.",
+                 "Food web of pelagic communities of small lakes and ponds of the Chub Lake.")
+resp <- list()
+
+for(id in 1:length(network_ids)){
+  uri[id] <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","network/", network_ids[id]))
+}
+
+for (modif in 1:length(uri)){  
+  resp[[modif]] <- httr::PUT(url = uri[modif], 
+                    body = list(description = description[modif]),
+                    config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))))
+}
+
+
+rm(lat, lon, srid, attr_inter, ref, users, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, FW_name)
+
