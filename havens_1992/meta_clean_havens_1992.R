@@ -1077,7 +1077,7 @@ sp_name <- sp_name_PRN %>%
 data_file <- paste0(folder_name, "/raw/Food_Web") %>% #Getting all the file into one list
   dir_ls() %>%
   as.character() %>%
-  discard(str_detect(., "TAXCODES.PRN")) %>% # This file containt only info about taxa, remove it
+  discard(str_detect(., "TAXCODES")) %>% # This file containt only info about taxa, remove it
   map(~read_table(.x, skip  = 1, col_names = FALSE, col_type = cols(.default = col_character()), na = "")) %>% #Read all file
   map(~unite(.x, sp_id, "X1":"X3", sep = "")) %>% #Merged the col 1:3 because sp id is split on three column
   set_names(paste0("FW_", name_lake)) #Each ellement of the list has the name of the file
@@ -1440,40 +1440,165 @@ for(i in 1:length(FW_name)){
 # Updating information
 ## updating localisaion of the networks
 
-request_url <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","network"), query="q=%havens_1992")
+# request_url <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","network"), query="q=%havens_1992")
+# 
+# responses <- httr::GET(url = request_url, config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))))
+# 
+# havens_net_def <- fromJSON(content(responses, "text"))
+# 
+# resp <- list()
+# for(r in 1:nrow(havens_net_def)){
+#   uri <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/network/", havens_net_def$id[r]))
+# 
+#   resp[[r]] <- PUT(uri,
+#                    body   = list(localisation = list(type = "Point",
+#                                                      coordinates = c(lake_localisation$Longitude[r], lake_localisation$Latitude[r]))),
+#                    config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
+#                    encode = "json")
+# }
+# 
+# ## updating network description
+# network_ids <- c("1247", "1226") # Id of the network to update
+# uri <- character(length = 2)
+# description <- c("Food web of pelagic communities of small lakes and ponds of the Lost Lake East.",
+#                  "Food web of pelagic communities of small lakes and ponds of the Chub Lake.")
+# resp <- list()
+# 
+# for(id in 1:length(network_ids)){
+#   uri[id] <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","network/", network_ids[id]))
+# }
+# 
+# for (modif in 1:length(uri)){  
+#   resp[[modif]] <- httr::PUT(url = uri[modif], 
+#                     body = list(description = description[modif]),
+#                     config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))))
+# }
 
-responses <- httr::GET(url = request_url, config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))))
-
-havens_net_def <- fromJSON(content(responses, "text"))
-
-resp <- list()
-for(r in 1:nrow(havens_net_def)){
-  uri <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/network/", havens_net_def$id[r]))
-
-  resp[[r]] <- PUT(uri,
-                   body   = list(localisation = list(type = "Point",
-                                                     coordinates = c(lake_localisation$Longitude[r], lake_localisation$Latitude[r]))),
-                   config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
-                   encode = "json")
-}
-
-## updating network description
-network_ids <- c("1247", "1226") # Id of the network to update
-uri <- character(length = 2)
-description <- c("Food web of pelagic communities of small lakes and ponds of the Lost Lake East.",
-                 "Food web of pelagic communities of small lakes and ponds of the Chub Lake.")
-resp <- list()
-
-for(id in 1:length(network_ids)){
-  uri[id] <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","network/", network_ids[id]))
-}
-
-for (modif in 1:length(uri)){  
-  resp[[modif]] <- httr::PUT(url = uri[modif], 
-                    body = list(description = description[modif]),
-                    config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))))
-}
-
-
-rm(lat, lon, srid, attr_inter, ref, users, enviro, dataset, trait, network, inter, taxa_df, taxa_back_df, FW_name)
-
+## updating taxonomy.
+### Getting the cleaned names
+# taxonomy_clean <- read.csv2(paste0(folder_name, "/Raw/TAXCODES_propre.csv"), stringsAsFactors = FALSE) %>%
+#   select(Identification, Identification_clean) %>%
+#   filter(str_detect(Identification, "^[:alpha:]{1}\\.\\s") | str_detect(Identification, fixed("Salvelinus fontinalis x S. namaycush"))) %>%
+#   mutate(Identification = str_trim(.$Identification, side = "both"),
+#           Identification_clean = str_trim(.$Identification_clean, side = "both")) #%>%
+#   # mutate(Identification = str_replace_all(.$Identification, "\\s", "%20%"))
+# 
+# correct_name <- deframe(taxonomy_clean)
+# 
+# taxonomy_mangal <- list()
+# 
+# ### Updating info for the taxon already in Mangal
+# for(name in 1:nrow(taxonomy_clean)){
+#   request_url <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","taxonomy"), query= list(name= taxonomy_clean$Identification[name]))
+#   taxonomy_mangal[[name]] <- content(httr::GET(url = request_url, 
+#                                        config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth")))))
+# }
+# 
+# taxonomy_mangal_clean <- taxonomy_mangal %>%
+#   compact() %>%
+#   modify_depth(.depth = 2, ~compact(.x)) %>%
+#   map_dfr(~flatten_dfc(.x)) %>%
+#   select(1:2) %>%
+#   mutate(name = str_replace_all(.$name, correct_name)) %>%
+#   mutate(bold = as.numeric(map(.$name, ~get_boldid(.x, row = 5, verbose = FALSE)[1])),
+#          eol = as.numeric(map(.$name,~get_eolid(.x, row = 5, verbose = FALSE, key = 110258)[1])),
+#          tsn = as.numeric(map(.$name, ~get_tsn(.x, row = 5, verbose = FALSE)[1])),
+#          ncbi = as.numeric(map(.$name, ~get_uid(.x, row = 5, verbose = FALSE, key = "679d0a26947d9b6432371b268ec0c7b39b08")[1]))) # Add API KEy for NCBI
+# 
+# res_name <- list()
+# res_bold <- list()
+# res_eol  <- list()
+# res_tsn  <- list()
+# res_ncbi <- list()
+# 
+# for(id in 1:nrow(taxonomy_mangal_clean)){
+#   uri <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","taxonomy/", taxonomy_mangal_clean[id,1]))
+# 
+#   temp <- apply(taxonomy_mangal_clean[id,], 2, list)
+#   temp <- discard(temp, is.na)
+#   
+#   res_name[[id]] <- httr::PUT(url    = uri,
+#                         body   = list(name = taxonomy_mangal_clean$name[id]),
+#                         config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
+#                         encode = "json")
+#   if(!is.null(temp$bold)){
+#     res_bold[[id]] <- httr::PUT(url    = uri,
+#                                 body   = list(bold = taxonomy_mangal_clean$bold[id]),
+#                                 config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
+#                                 encode = "json")
+#   }
+#     if(!is.null(temp$eol)){
+#       res_eol[[id]] <- httr::PUT(url    = uri,
+#                                   body   = list(eol = taxonomy_mangal_clean$eol[id]),
+#                                   config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
+#                                   encode = "json")
+#     }
+#     if(!is.null(temp$tsn)){
+#       res_tsn[[id]] <- httr::PUT(url    = uri,
+#                                   body   = list(tsn = taxonomy_mangal_clean$tsn[id]),
+#                                   config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
+#                                   encode = "json")
+#     }
+#     if(!is.null(temp$ncbi)){
+#       res_ncbi[[id]] <- httr::PUT(url    = uri,
+#                                   body   = list(ncbi = taxonomy_mangal_clean$ncbi[id]),
+#                                   config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
+#                                   encode = "json")
+#     }
+# 
+# }
+# 
+# ### Upload taxon which were not in Mangal
+# taxo<- taxonomy_clean %>%
+#        select(2) %>%
+#        deframe() %>%
+#        map_chr(~{modify_url(server, path = paste0("/api/v2/","taxonomy?name=", str_replace_all(.x, " ", "%20")))})
+# taxo[47] <- "http://poisotlab.biol.umontreal.ca/api/v2/taxonomy?name=Tetraëdron%20caudatum"
+# taxo[48] <- "http://poisotlab.biol.umontreal.ca/api/v2/taxonomy?name=Tetraëdron"
+# 
+# taxo_df <- taxo %>%
+#   keep(~length(content((GET(url = .x, config = add_headers("Content-type" = "application/json","Authorization" = paste("bearer", readRDS(".httr-oauth"))))))) == 0) %>%
+#   map_chr(~str_remove_all(.x, fixed("http://poisotlab.biol.umontreal.ca/api/v2/taxonomy?name="))) %>%
+#   map_chr(~str_replace_all(.x, fixed("%20"), " ")) %>%
+#   map_chr(~str_replace_all(.x, fixed("__"), ". ")) %>%
+#   map_chr(~str_replace_all(.x, fixed("_"), ". ")) %>%
+#   enframe(name = NULL, value = "name") %>%
+#   mutate(bold = as.double(unlist({map(.$name, ~get_boldid(.x, row = 5, verbose = FALSE)[1])})),
+#          eol = as.double(unlist({map(.$name, ~get_eolid(.x, row = 5, verbose = FALSE, key = 110258)[1])})),
+#          tsn = as.double(unlist({map(.$name, ~get_tsn(.x, row = 5, verbose = FALSE)[1])})),
+#          ncbi = as.double(unlist({map(.$name, ~get_uid(.x, row = 5, verbose = FALSE, key = "679d0a26947d9b6432371b268ec0c7b39b08")[1])}))) # Add API KEy for NCBI
+# 
+# POST_taxonomy(taxo_df)
+# 
+# 
+# ##### Taxon added into Mangal : c("Diaptomus leptomus", "Ceriodaphnia reticulata", "Tetraëdron caudatum", "Tetraëdron", "Quadrigula lacustris", "Cyclotella michiganiana", "Fragillaria", "Mallamonas acaroides", "Mallamonas hindonii", "Mallamonas akrokomos", "Mallamonas", "Rhabdoderma")
+# #1216
+# ### Updating node with taxonomy ids of the taxon recently uploaded
+# node <- tibble(node_id      = c(18573, 18493, 18492, 18482, 18470, 18414, 18320, 18302, 18225, 18221, 18142, 18118, 18087, 18078, 18075, 18072, 18061, 18037, 17982, 17960, 17907, 17847, 17672, 17668, 17661, 17610, 17608, 17587, 17567, 17531, 17469),
+#                node_name    = c("T. multicrinis", "G. hyptopus", "T. porcellus", "D. sicilis", "R. gorksii", "T. multicrinis", "T. multicrinis", "K. serrulata", "P. wisconsinense", "G. hyptopus", "D. sicilis", "E. triquetra", "E. acus", "P. wisconsinense", "L. cristata", "E. calpidia", "T. multicrinis", "S. arcuatus", "D. sicilis", "P. wisconsinense", "E. triquetra", "T. multicrinis", "P. wisconsinense", "T. multicrinis", "D. sicilis", "G. hyptopus", "T. multicrinis", "S. serratus", "T. multicrinis", "F. intermedia", "T. multicrinis"),
+#                taxo_id      = c(4088, 4247, 4275, 4217, 4183, 4088, 4088, 4220, 4102, 4247, 4217, 4266, 4273, 4102, 4272, 4270, 4088, 4269, 4217, 4102, 4266, 4088, 4102, 4088, 4217, 4247, 4088, 4245, 4088, 4241, 4088))
+# 
+# node_name <- character(length = nrow(node))
+# taxo_name <- character(length = nrow(node))
+# 
+# for(name in 1:nrow(node)){
+#   uri_node <- modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","node/", node$node_id[name]))
+#   uri_taxo <- modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","taxonomy/", node$taxo_id[name]))
+#   
+#   node_name[name] <- content(GET(url = uri_node))$original_name
+#   taxo_name[name] <- content(GET(url = uri_taxo))$name
+# }
+# 
+# node <- node %>%
+#   mutate(node_name2 = node_name,taxo_name = taxo_name) %>%
+#   select(node_id, node_name, node_name2, taxo_name, taxo_id)
+# 
+# resp <- list()
+# for(id in 1:nrow(node)){
+#   uri <- httr::modify_url(url = "http://poisotlab.biol.umontreal.ca", path = paste0("/api/v2/","node/", node$node_id[id]))
+#   
+#   resp[[id]] <- httr::PUT(url    = uri,
+#                           body   = list(taxonomy_id = node$taxo_id[id]),
+#                           config = httr::add_headers(Authorization = paste("Bearer", readRDS(".httr-oauth"))),
+#                           encode = "json")
+# }
