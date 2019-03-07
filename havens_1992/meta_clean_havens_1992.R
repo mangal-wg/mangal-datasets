@@ -1572,7 +1572,6 @@ for(i in 1:length(FW_name)){
 # 
 # 
 # ##### Taxon added into Mangal : c("Diaptomus leptomus", "Ceriodaphnia reticulata", "Tetraëdron caudatum", "Tetraëdron", "Quadrigula lacustris", "Cyclotella michiganiana", "Fragillaria", "Mallamonas acaroides", "Mallamonas hindonii", "Mallamonas akrokomos", "Mallamonas", "Rhabdoderma")
-# #1216
 # ### Updating node with taxonomy ids of the taxon recently uploaded
 # node <- tibble(node_id      = c(18573, 18493, 18492, 18482, 18470, 18414, 18320, 18302, 18225, 18221, 18142, 18118, 18087, 18078, 18075, 18072, 18061, 18037, 17982, 17960, 17907, 17847, 17672, 17668, 17661, 17610, 17608, 17587, 17567, 17531, 17469),
 #                node_name    = c("T. multicrinis", "G. hyptopus", "T. porcellus", "D. sicilis", "R. gorksii", "T. multicrinis", "T. multicrinis", "K. serrulata", "P. wisconsinense", "G. hyptopus", "D. sicilis", "E. triquetra", "E. acus", "P. wisconsinense", "L. cristata", "E. calpidia", "T. multicrinis", "S. arcuatus", "D. sicilis", "P. wisconsinense", "E. triquetra", "T. multicrinis", "P. wisconsinense", "T. multicrinis", "D. sicilis", "G. hyptopus", "T. multicrinis", "S. serratus", "T. multicrinis", "F. intermedia", "T. multicrinis"),
