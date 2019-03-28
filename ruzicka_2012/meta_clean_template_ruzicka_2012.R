@@ -209,25 +209,25 @@ file_row_name <- data_matrice %>%
 FW_name <- data_matrice %>%
   map(~select(.x, -1)) %>%
   map(~slice(.x, 2:nrow(.x))) %>%
-  map2(file_row_name, ~mutate(.x, sp_taxon_1 = .y)) %>%
-  map(~column_to_rownames(.x, "sp_taxon_1")) %>%
+  map2(file_row_name, ~mutate(.x, sp_taxon_2 = .y)) %>%
+  map(~column_to_rownames(.x, "sp_taxon_2")) %>%
   modify_depth(~as.numeric(.x), .depth = 2) %>%
   map2(file_col_name, ~`names<-`(.x, .y)) %>%
-  map(~rownames_to_column(.x, "sp_taxon_1")) %>%
-  map(~gather(.x, "sp_taxon_2", "value", -sp_taxon_1)) %>%
+  map(~rownames_to_column(.x, "sp_taxon_2")) %>%
+  map(~gather(.x, "sp_taxon_1", "value", -sp_taxon_2)) %>%
   map(~select(.x, sp_taxon_1, sp_taxon_2, value)) %>%
   map(~filter(.x, !sp_taxon_1 %in% c("(1 - Sum)", "Sum"), !sp_taxon_2 %in% c("(1 - Sum)", "Sum"))) %>%
   map(~filter(.x, value != 0)) %>%
   map(~mutate(.x, sp_taxon_1 = str_replace_all(.x$sp_taxon_1, "&", "and"),
                   sp_taxon_2 = str_replace_all(.x$sp_taxon_2, "&", "and"))) %>%
-  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_1, "(.*[Pp]lant.*)|(.*[Aa]lgae.*)|(.*[Pp]hyto.*)|(.*[Dd]iatoms.*)|(.*[Dd]inofl.*)|(.*[Ss]ilicoflag.*)|
+  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Pp]lant.*)|(.*[Aa]lgae.*)|(.*[Pp]hyto.*)|(.*[Dd]iatoms.*)|(.*[Dd]inofl.*)|(.*[Ss]ilicoflag.*)|
                                                            (.*[Pp]roducers.*)|(.*[Mm]acrocystis.*)|(.*[Pp]terygophora.*)|(.*[Ss]eaweed.*)|(Micro-epiphytes)|
                                                            (Macro-epiphytes)|(.*[Aa]scophyllum).*|(.*[Ee]nteromorpha.*)|(.*[Ff]ucus.*)|(.*[Uu]lva.*)|
                                                            (.*[Zz]ostera.*)"), "herbivory", "predation"))) %>% # Add type interaction
-  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_1, "(.*[Dd]ebris.*)|(.*[Dd]etritu*.(?!.*fish.*))|(DOM)|(Discard)|([Dd]issolved.*organic.*)"),
+  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Dd]ebris.*)|(.*[Dd]etritu*.(?!.*fish.*))|(DOM)|(Discard)|([Dd]issolved.*organic.*)"),
                                                           "commensalism", .x$type))) %>%
-  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_1, "(.*[Cc]arcasse.*)"), "scavenger", .x$type))) %>%
-  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_1, "(.*[Ii]mport.*)"), "unknown", .x$type)))
+  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Cc]arcasse.*)"), "scavenger", .x$type))) %>%
+  map(~mutate(.x, type = ifelse(str_detect(.x$sp_taxon_2, "(.*[Ii]mport.*)"), "unknown", .x$type)))
 
 #------------------------------
 # Set taxo_back and taxa table
