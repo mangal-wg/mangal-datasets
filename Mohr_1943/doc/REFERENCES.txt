@@ -1,0 +1,13 @@
+@article{Mohr_1943,
+	doi = {10.2307/1943223},
+	url = {https://doi.org/10.2307%2F1943223},
+	year = 1943,
+	month = {feb},
+	publisher = {Wiley},
+	volume = {13},
+	number = {3},
+	pages = {275--298},
+	author = {Carl O. Mohr},
+	title = {Cattle Droppings as Ecological Units},
+	journal = {Ecological Monographs}
+}

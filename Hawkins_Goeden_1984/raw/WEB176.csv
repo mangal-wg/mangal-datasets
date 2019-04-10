@@ -1,0 +1,13 @@
+"B.A. Hawkins, and R.D. Goeden. (1984). Organization of a parasitoid community associated with a complex of galls on Atriplex spp. in Southern California. Ecological Entemology, 9, pp. 271-292.",,,,,,,,,,,,,,,,,,
+Tumour stem galls of Asphondylia on A. canescens - S. California - USA,Phyllobaenus atriplexus,Eupelmid n. genus,Torymus c. capillaceus,Rileya tegularis,Tenuipetiolus medicaginus,Torymus atriplicis,Torymus umbilicatus,Tetrastichus sp. B,Galeopsomyia sp. A,Tetrastichus cecidobroter,Acarid sp.,Gelechiid sp. B,Arthrocnodax sp.,Anystid sp.,Goniozus sp. A,Goniozus sp. B,Chelonus sp.,Asphondylia sp. E
+Eupelmid n. genus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Torymus c. capillaceus,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rileya tegularis,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tenuipetiolus medicaginus,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Torymus atriplicis,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Torymus umbilicatus,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tetrastichus sp. B,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acarid sp.,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0
+Gelechiid sp. B,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0
+Asphondylia sp. E,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+gall tissue (Atriplex canescens),0,0,1,1,0,0,0,0,1,1,1,1,0,0,0,0,0,1

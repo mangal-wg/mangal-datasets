@@ -1,0 +1,13 @@
+@article{Richards_1926,
+	doi = {10.2307/2256021},
+	url = {https://doi.org/10.2307%2F2256021},
+	year = 1926,
+	month = {aug},
+	publisher = {{JSTOR}},
+	volume = {14},
+	number = {2},
+	pages = {244},
+	author = {O. W. Richards},
+	title = {Studies on the Ecology of English Heaths: {III}. Animal Communities of the Felling and Burn Successions at Oxshott Heath, Surrey},
+	journal = {The Journal of Ecology}
+}

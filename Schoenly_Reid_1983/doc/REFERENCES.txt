@@ -1,0 +1,13 @@
+@article{Schoenly_1983,
+	doi = {10.1016/s0140-1963(18)31510-6},
+	url = {https://doi.org/10.1016%2Fs0140-1963%2818%2931510-6},
+	year = 1983,
+	month = {sep},
+	publisher = {Elsevier {BV}},
+	volume = {6},
+	number = {3},
+	pages = {253--263},
+	author = {Kenneth Schoenly and William Reid},
+	title = {Community structure of carrion arthropods in the Chihuahuan Desert},
+	journal = {Journal of Arid Environments}
+}

@@ -1,0 +1,7 @@
+day	localisation	lat	lon
+(day 2)	Aden Crater, New Mexico, USA	32.06945	-107.058216
+(day 11)	Aden Crater, New Mexico, USA	32.06945	-107.058216
+(day 9)	Hueco Mountains, Texas, USA	31.945278	-105.97
+(day 25)	Hueco Tanks, Texas, USA	31.920385	-106.0385877
+(day 8)	White Sands, New Mexico, USA	32.3837754	-106.4966154
+(day 79)	White sands, New Mexico, USA	32.3837754	-106.4966154

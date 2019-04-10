@@ -1,0 +1,10 @@
+@incollection{Alcorlo_2001,
+	doi = {10.1007/978-94-017-2934-5_28},
+	url = {https://doi.org/10.1007%2F978-94-017-2934-5_28},
+	year = 2001,
+	publisher = {Springer Netherlands},
+	pages = {307--316},
+	author = {Paloma Alcorlo and Angel Baltan{\'{a}}s and Carlos Montes},
+	title = {Food-web structure in two shallow salt lakes in Los Monegros ({NE} Spain): energetic vs dynamic constraints},
+	booktitle = {Saline Lakes}
+}

@@ -1,0 +1,13 @@
+@article{Huang_2008,
+	doi = {10.1080/02705060.2008.9664219},
+	url = {https://doi.org/10.1080%2F02705060.2008.9664219},
+	year = 2008,
+	month = {sep},
+	publisher = {Informa {UK} Limited},
+	volume = {23},
+	number = {3},
+	pages = {421--427},
+	author = {Ying Huang and Yunjun Yan and Xiaoyu Li},
+	title = {Food Web Structure of Benthic Macrolnvertebrates in a Second Order Stream of the Hanjiang River Basin in Middle China},
+	journal = {Journal of Freshwater Ecology}
+}

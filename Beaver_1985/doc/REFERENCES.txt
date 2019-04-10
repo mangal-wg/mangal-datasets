@@ -1,0 +1,13 @@
+@article{BEAVER_1985,
+	doi = {10.1111/j.1365-2311.1985.tb00720.x},
+	url = {https://doi.org/10.1111%2Fj.1365-2311.1985.tb00720.x},
+	year = 1985,
+	month = {aug},
+	publisher = {Wiley},
+	volume = {10},
+	number = {3},
+	pages = {241--248},
+	author = {R. A. BEAVER},
+	title = {Geographical variation in food web structure in Nepenthes pitcher plants},
+	journal = {Ecological Entomology}
+}

@@ -1,0 +1,15 @@
+@article{Kaiser_Bunbury_2010,
+	doi = {10.1111/j.1461-0248.2009.01437.x},
+	url = {https://doi.org/10.1111%2Fj.1461-0248.2009.01437.x},
+	year = 2010,
+	month = {apr},
+	publisher = {Wiley},
+	volume = {13},
+	number = {4},
+	pages = {442--452},
+	author = {Christopher N. Kaiser-Bunbury and Stefanie Muff and Jane Memmott and Christine B. Müller and Amedeo Caflisch},
+	title = {The robustness of pollination networks to the loss of species and interactions: a quantitative approach incorporating pollinator behaviour},
+	journal = {Ecology Letters}
+}
+
+Feedback: support@crossref.org

@@ -1,0 +1,13 @@
+@article{Jones_1950,
+	doi = {10.2307/1525},
+	url = {https://doi.org/10.2307%2F1525},
+	year = 1950,
+	month = {nov},
+	publisher = {{JSTOR}},
+	volume = {19},
+	number = {2},
+	pages = {159},
+	author = {J. R. Erichsen Jones},
+	title = {A Further Ecological Study of the River Rheidol: The Food of the Common Insects of the Main-Stream},
+	journal = {The Journal of Animal Ecology}
+}

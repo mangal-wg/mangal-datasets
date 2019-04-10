@@ -1,0 +1,13 @@
+@article{Stewart_2011,
+	doi = {10.1016/j.ecolmodel.2010.10.024},
+	url = {https://doi.org/10.1016%2Fj.ecolmodel.2010.10.024},
+	year = 2011,
+	month = {feb},
+	publisher = {Elsevier {BV}},
+	volume = {222},
+	number = {3},
+	pages = {692--708},
+	author = {Thomas. J. Stewart and W. Gary Sprules},
+	title = {Carbon-based balanced trophic structure and flows in the offshore Lake Ontario food web before (1987{\textendash}1991) and after (2001{\textendash}2005) invasion-induced ecosystem change},
+	journal = {Ecological Modelling}
+}

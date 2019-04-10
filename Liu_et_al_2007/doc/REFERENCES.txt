@@ -1,0 +1,13 @@
+@article{Liu_2007,
+	doi = {10.1016/j.ecolmodel.2006.11.028},
+	url = {https://doi.org/10.1016%2Fj.ecolmodel.2006.11.028},
+	year = 2007,
+	month = {may},
+	publisher = {Elsevier {BV}},
+	volume = {203},
+	number = {3-4},
+	pages = {279--289},
+	author = {Qi-Gen Liu and Yong Chen and Jia-Le Li and Li-Qiao Chen},
+	title = {The food web structure and ecosystem properties of a filter-feeding carps dominated deep reservoir ecosystem},
+	journal = {Ecological Modelling}
+}

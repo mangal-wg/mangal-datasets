@@ -1,0 +1,13 @@
+@article{Savely_1939,
+	doi = {10.2307/1943233},
+	url = {https://doi.org/10.2307%2F1943233},
+	year = 1939,
+	month = {feb},
+	publisher = {Wiley},
+	volume = {9},
+	number = {3},
+	pages = {321--385},
+	author = {Harvey Epperson Savely},
+	title = {Ecological Relations of Certain Animals in Dead Pine and Oak Logs},
+	journal = {Ecological Monographs}
+}

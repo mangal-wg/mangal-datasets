@@ -1,0 +1,10 @@
+date_word	date_number
+(general)	1985-10-01
+(October 1985)	1985-10-01
+(December 1985)	1985-12-01
+(February 1986)	1986-02-01
+(April 1986)	1986-04-01
+(June 1986)	1986-06-01
+(August 1986)	1986-08-01
+(October 1986)	1986-10-01
+

@@ -1,0 +1,13 @@
+@article{REJM_NEK_1979,
+	doi = {10.1038/280311a0},
+	url = {https://doi.org/10.1038%2F280311a0},
+	year = 1979,
+	month = {jul},
+	publisher = {Springer Nature},
+	volume = {280},
+	number = {5720},
+	pages = {311--313},
+	author = {M. REJM{\'{A}}NEK and P. STAR{\'{Y}}},
+	title = {Connectance in real biotic communities and critical values for stability of model ecosystems},
+	journal = {Nature}
+}

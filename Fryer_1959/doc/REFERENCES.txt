@@ -1,0 +1,13 @@
+@article{FRYER_1959,
+	doi = {10.1111/j.1469-7998.1959.tb05521.x},
+	url = {https://doi.org/10.1111%2Fj.1469-7998.1959.tb05521.x},
+	year = 1959,
+	month = {aug},
+	publisher = {Wiley},
+	volume = {132},
+	number = {2},
+	pages = {153--281},
+	author = {GEOFFREY FRYER},
+	title = {{THE} {TROPHIC} {INTERRELATIONSHIPS} {AND} {ECOLOGY} {OF} {SOME} {LITTORAL} {COMMUNITIES} {OF} {LAKE} {NYASA} {WITH} {ESPECIAL} {REFERENCE} {TO} {THE} {FISHES}, {AND} A {DISCUSSION} {OF} {THE} {EVOLUTION} {OF} A {GROUP} {OF} {ROCK}-{FREQUENTING} {CICHLIDAE}},
+	journal = {Proceedings of the Zoological Society of London}
+}

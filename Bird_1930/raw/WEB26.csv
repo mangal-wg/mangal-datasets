@@ -1,0 +1,29 @@
+"R.D. Bird. (1930). Biotic Communities of the Aspen Parkland of Central Canada. Ecology. 11(2), pp. 356-442.",,,,,,,,,,,,,,,,,,,,,,,,,
+Aspen forest - Manitoba,Baltimore oriole - chickadee - least flycatcher - rosebreasted grosbeak - willow thrush,canker - fomes,hairy and downy woodpeckers,Dicera - Saperda,insects,spiders,Cooper's and sharpshinned hawks,crow,ruffed grouse,man,goshawk,rabbit,great horned owl,flicker,Maryland yellowthroat - yellow warbler - songsparrow,Galerucella decora,red squirrel,yellow warbler - redwinged blackbird - bronze grackle,Rana pipiens,garter snake,fish,coyote - weasel - skunk,prairie vole,pocket gophers - ground squirrels,cutworms - grasshoppers - clickbeetles
+Baltimore oriole - chickadee - least flycatcher - rosebreasted grosbeak - willow thrush,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Dicera - Saperda,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+insects,1,0,0,0,0,1,0,-1,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+spiders,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0
+Populus - Cornus - Corylus - Pryola - Aralia,0,1,0,1,1,0,0,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+crow,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+ruffed grouse,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+rabbit,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0
+flicker,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Maryland yellowthroat - yellow warbler - songsparrow,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Salix longifolia,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0
+Salix discolor,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+red squirrel,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Salix petiolaris,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0
+yellow warbler - redwinged blackbird - bronze grackle,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rana pipiens,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0
+garter snake,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+fish,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+coots,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+ducks,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+coyote - weasel - skunk,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+prairie vole,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0
+pocket gophers - ground squirrels,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0
+Agrostis - Agropyron - Stipa - Helianthus,0,0,0,0,0,0,0,-1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1
+mice,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+cutworms - grasshoppers - clickbeetles,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+ants,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0

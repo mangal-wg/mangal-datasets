@@ -1,0 +1,5 @@
+river	date
+Ivishak Spring Stream	2002-07-25
+Ivishak Mountain Stream	2002-07-25
+Ivishak Spring Stream	2002-08-04
+Ivishak Mountain Stream	2002-08-04

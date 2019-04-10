@@ -1,0 +1,19 @@
+"Patten, B.C. and 40 co-authors, (1975). Total ecosystem model for a cove in Lake Texoma. In: B.C. Patten, (ed) Systems Analysis and Simulation in Ecology Vol. 3, (Academic Press, New York), pp. 205–421.",,,,,,,,,,,,
+Lake Texoma - Texas,small zooplankton,herbivorous vertebrate harvesters,turtles,medium zooplankton,suspension-feeding invertebrates,fish larvae,invertebrate predators,fingerling fishes,filter-feeding - minnow-like fishes,bottom-feeding fishes,carnivorous fishes,carnivorous vertebrate harvesters
+small phytoplankton,1,0,0,0,1,1,0,1,1,1,0,0
+medium phytoplankton,0,0,0,1,0,1,0,1,1,1,0,0
+large phytoplankton,0,0,0,0,0,1,0,1,1,1,0,0
+algal mats - crusts,0,1,1,0,0,1,0,1,1,1,1,0
+submergent vascular plants,0,1,1,0,0,1,0,1,0,1,1,0
+emergent vascular plants,0,1,1,0,0,0,0,0,0,0,0,0
+animal carcasses,0,0,1,0,0,0,0,0,0,0,0,0
+small zooplankton,0,0,0,1,1,1,1,1,1,1,1,0
+turtles,0,0,0,0,0,0,0,0,0,0,1,0
+medium zooplankton,0,0,0,0,0,1,1,1,1,1,0,0
+suspension-feeding invertebrates,0,0,0,0,0,0,0,1,1,1,1,1
+fish larvae,0,0,0,0,0,0,1,1,1,1,1,0
+invertebrate predators,0,0,0,0,0,0,0,1,1,1,1,1
+fingerling fishes,0,0,0,0,0,0,0,0,1,1,1,0
+filter-feeding - minnow-like fishes,0,0,0,0,0,0,0,0,0,0,1,1
+bottom-feeding fishes,0,0,0,0,0,0,0,0,0,0,1,1
+carnivorous fishes,0,0,0,0,0,0,0,0,0,0,0,1

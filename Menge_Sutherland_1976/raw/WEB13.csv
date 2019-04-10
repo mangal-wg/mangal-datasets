@@ -1,0 +1,13 @@
+"B.A. Menge and J.P. Sutherland. Species Diversity Gradients: Synthesis of the Roles of Predation, Competition, and Temporal Heterogeneity. The American Naturalist, 110(973), pp. 351-369.",,,,,,,,,,
+Protected rocky shore - Washington,acorn barnacles,limpets,other herbivorous gastropods,Mytilus edulis,chitons,Littorina,Thais,Seariesia,Pisaster,Leptasterias
+detritus,1,0,0,1,0,0,0,0,0,0
+plankton,1,0,0,1,0,0,0,0,0,0
+algae,0,1,1,0,1,1,0,0,0,0
+acorn barnacles,0,0,0,0,0,0,1,1,1,1
+limpets,0,0,0,0,0,0,0,1,1,1
+other herbivorous gastropods,0,0,0,0,0,0,0,0,1,1
+Mytilus edulis,0,0,0,0,0,0,1,0,1,1
+chitons,0,0,0,0,0,0,0,1,1,1
+Littorina,0,0,0,0,0,0,0,0,1,1
+Thais,0,0,0,0,0,0,0,0,1,1
+Seariesia,0,0,0,0,0,0,0,0,1,1

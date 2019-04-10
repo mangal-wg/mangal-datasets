@@ -1,0 +1,13 @@
+@article{Zaret_1973,
+	doi = {10.1126/science.182.4111.449},
+	url = {https://doi.org/10.1126%2Fscience.182.4111.449},
+	year = 1973,
+	month = {nov},
+	publisher = {American Association for the Advancement of Science ({AAAS})},
+	volume = {182},
+	number = {4111},
+	pages = {449--455},
+	author = {T. M. Zaret and R. T. Paine},
+	title = {Species Introduction in a Tropical Lake: A newly introduced piscivore can produce population changes in a wide range of trophic levels},
+	journal = {Science}
+}

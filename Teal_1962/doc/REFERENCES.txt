@@ -1,0 +1,13 @@
+@article{Teal_1962,
+	doi = {10.2307/1933451},
+	url = {https://doi.org/10.2307%2F1933451},
+	year = 1962,
+	month = {oct},
+	publisher = {Wiley},
+	volume = {43},
+	number = {4},
+	pages = {614--624},
+	author = {John M. Teal},
+	title = {Energy Flow in the Salt Marsh Ecosystem of Georgia},
+	journal = {Ecology}
+}

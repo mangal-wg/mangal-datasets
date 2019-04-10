@@ -1,0 +1,13 @@
+@article{Percival_1929,
+	doi = {10.2307/2256044},
+	url = {https://doi.org/10.2307%2F2256044},
+	year = 1929,
+	month = {aug},
+	publisher = {{JSTOR}},
+	volume = {17},
+	number = {2},
+	pages = {282},
+	author = {E. Percival and H. Whitehead},
+	title = {A Quantitative Study of the Fauna of Some Types of Stream-Bed},
+	journal = {The Journal of Ecology}
+}

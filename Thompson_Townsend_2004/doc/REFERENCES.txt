@@ -1,0 +1,13 @@
+@article{Thompson_2004,
+	doi = {10.1080/00288330.2004.9517265},
+	url = {https://doi.org/10.1080%2F00288330.2004.9517265},
+	year = 2004,
+	month = {sep},
+	publisher = {Informa {UK} Limited},
+	volume = {38},
+	number = {4},
+	pages = {595--608},
+	author = {R. M. Thompson and C. R. Townsend},
+	title = {Land-use influences on New Zealand stream communities: Effects on species composition, functional organisation, and food-web structure},
+	journal = {New Zealand Journal of Marine and Freshwater Research}
+}

@@ -1,0 +1,13 @@
+@article{Menge_1976,
+	doi = {10.1086/283073},
+	url = {https://doi.org/10.1086%2F283073},
+	year = 1976,
+	month = {may},
+	publisher = {University of Chicago Press},
+	volume = {110},
+	number = {973},
+	pages = {351--369},
+	author = {Bruce A. Menge and John P. Sutherland},
+	title = {Species Diversity Gradients: Synthesis of the Roles of Predation, Competition, and Temporal Heterogeneity},
+	journal = {The American Naturalist}
+}

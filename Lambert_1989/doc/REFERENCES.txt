@@ -1,0 +1,1 @@
+@article{Lambert_1989, doi = {10.1017/s0266467400003850}, url = {https://doi.org/10.1017%2Fs0266467400003850}, year = 1989, month = {nov}, publisher = {Cambridge University Press ({CUP})}, volume = {5}, number = {04}, pages = {401--412}, author = {Frank Lambert}, title = {Fig-eating by birds in a Malaysian lowland rain forest}, journal = {Journal of Tropical Ecology}}

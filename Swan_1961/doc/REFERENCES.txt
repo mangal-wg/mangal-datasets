@@ -1,0 +1,13 @@
+@article{Swan_1961,
+	doi = {10.1038/scientificamerican1061-68},
+	url = {https://doi.org/10.1038%2Fscientificamerican1061-68},
+	year = 1961,
+	month = {oct},
+	publisher = {Springer Nature},
+	volume = {205},
+	number = {4},
+	pages = {68--78},
+	author = {Lawrence W. Swan},
+	title = {The Ecology of the High Himalayas},
+	journal = {Scientific American}
+}

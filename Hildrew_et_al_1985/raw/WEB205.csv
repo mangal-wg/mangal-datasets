@@ -1,0 +1,22 @@
+"A.G. Hildrew, C.R. Townsend, and A. Hasham. (1985). The predatory Chironomidae of an iron-rich stream: feeding ecology and food web structure. Ecological Entomology, 10, 403-413.",,,,,,,,,,,,,,,,,,,,
+Iron-rich stream - River Medway - England,Sialis fuliginosa,Plectrocnemia conspersa,Macropelopia goetghebueri,Trissopelopia longimana,Zavrelimyia barbatipes,Pisidium sp.,simuliids (unspec.),Niphargus aquilex,microcrustacea (unspec.),other microinvertebrates,Heterotrissocladius marcidus,Micropsectra bidentata,Prodiamesa olivacea,Oligochaeta (unspec.),Leuctra nigra,Nemurella picteti,Brillia modesta,Polypedilum albicornis,tipulids (unspec.),Potamophylax cingulatus
+Plectrocnemia conspersa,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Macropelopia goetghebueri,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Trissopelopia longimana,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Zavrelimyia barbatipes,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+simuliids (unspec.),0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Niphargus aquilex,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+microcrustacea (unspec.),1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+other microinvertebrates,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heterotrissocladius marcidus,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Micropsectra bidentata,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prodiamesa olivacea,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Oligochaeta (unspec.),0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Leuctra nigra,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nemurella picteti,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Brillia modesta,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Polypedilum albicornis,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+iron bacteria,0,0,0,0,0,0,1,1,0,0,1,1,1,1,1,1,0,1,0,0
+fine particulate organic matter,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0
+coarse particulate organic matter,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1
+terrestrial invertebrates,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1

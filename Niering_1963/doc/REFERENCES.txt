@@ -1,0 +1,13 @@
+@article{Niering_1963,
+	doi = {10.2307/1948559},
+	url = {https://doi.org/10.2307%2F1948559},
+	year = 1963,
+	month = {feb},
+	publisher = {Wiley},
+	volume = {33},
+	number = {2},
+	pages = {131--160},
+	author = {William A. Niering},
+	title = {Terrestrial Ecology of Kapingamarangi Atoll, Caroline Islands},
+	journal = {Ecological Monographs}
+}

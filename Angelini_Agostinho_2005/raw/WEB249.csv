@@ -1,0 +1,42 @@
+"Angelini, R., Agostinho, A.A. (2005). Food web model of the Upper Paran´a River Floodplain: description and aggregation effects. Ecological Modelling. 181, pp. 109-121.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Upper Parana River Floodplain - Brazil,Benthos,Insects,Zooplankton,Hypostomus spp.,P. maculatus,Schizodon borelii,Loricariichthys platymetopon,Prochilodus lineatus,Cyphocharax modesta,Steindachnerina insculpta,Iheringichthys labrosus,Schizodon altoparanae,Hypophthalmus edentatus,Trachydoras paraguayensis,Hoplosternum littorale,Leporinus friderici,Leporinus obtusidens,Parauchenipterus galeatus,Pterodoras granulosus,Astyanax altiparanae,Auchenipterus nuchalis,Brycon orbignyamus,Acestrorhyncus lacustris,Hoplias malabaricus,Plagioscion squamosissimus,Pseudoplatystoma corruscans,Rhaphiodon vulpinus,Serrasalmus marginatus,Hemisorubin platyrhynchos,Salminus brasiliensis,Serrasalmus spilopleura,Other benthos feeders,Other detritus feeders,Other insectivores,Other piscivores,Other omnivores
+Phytoplankton,0,0,0.5,0.2,0.05,0.3,0.1,0.15,0.35,0.35,0,0.3,0.3,0,0,0.05,0.05,0,0.1,0.1,0,0,0,0,0,0,0,0,0,0,0,0.05,0.1,0,0,0.1
+Aquatic macrophytes,0,0.3,0,0,0.05,0.7,0,0,0,0,0,0.7,0,0,0.1,0.3,0.3,0.4,0.5,0.2,0,0.3,0,0,0,0,0,0,0,0,0,0.1,0,0.2,0,0.15
+Periphyton,0.5,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1
+Benthos,0,0,0,0,0.25,0,0.1,0.15,0.1,0.1,0.35,0,0,0,0.2,0.05,0.05,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0.35,0.1,0,0,0.15
+Insects,0,0,0,0,0.1,0,0.2,0,0,0,0.2,0,0,0.15,0.2,0.2,0.2,0.6,0.1,0.3,0.7,0.55,0,0,0,0,0,0,0,0,0,0.1,0.1,0.6,0,0.3
+Zooplankton,0,0,0,0,0.1,0,0,0,0,0,0.1,0,0.7,0.3,0.2,0,0,0,0.1,0.1,0.2,0,0,0,0,0,0,0,0,0,0,0.1,0,0.1,0,0.1
+Hypostomus spp.,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0
+P. maculatus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,0,0,0,0,0,0
+Schizodon borelii,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0.1,0
+Loricariichthys platymetopon,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.15,0,0,0,0,0,0
+Prochilodus lineatus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0.3,0,0.2,0.1,0,0.15,0.1,0,0,0,0.2,0
+Cyphocharax modesta,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Steindachnerina insculpta,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0,0
+Iheringichthys labrosus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Schizodon altoparanae,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0
+Hypophthalmus edentatus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0.1,0
+Trachydoras paraguayensis,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0
+Hoplosternum littorale,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,0,0,0,0,0
+Leporinus friderici,0,0,0,0,0.05,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0
+Leporinus obtusidens,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0.2,0,0.1,0,0,0,0,0,0,0,0,0,0
+Parauchenipterus galeatus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.15,0,0.2,0,0,0,0,0,0,0,0,0
+Pterodoras granulosus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0.1,0,0,0.1,0,0,0,0,0
+Astyanax altiparanae,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0.1,0.1,0,0,0,0,0.1,0.2,0,0.15,0.2,0.2,0.1,0.15,0.1,0.1,0,0,0.1,0.2,0
+Auchenipterus nuchalis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0.1,0,0,0,0,0.1,0,0,0,0,0
+Brycon orbignyamus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0.1,0,0,0,0,0,0,0
+Acestrorhyncus lacustris,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0.1,0,0,0,0,0,0,0,0,0
+Hoplias malabaricus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0.2,0,0,0,0,0,0
+Plagioscion squamosissimus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0.2,0,0,0,0,0
+Pseudoplatystoma corruscans,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.05,0,0,0,0,0,0,0.05,0
+Rhaphiodon vulpinus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0
+Serrasalmus marginatus,0,0,0,0,0.05,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0.1,0,0.1,0.1,0,0,0,0,0,0,0
+Hemisorubin platyrhynchos,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0
+Salminus brasiliensis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.05,0
+Serrasalmus spilopleura,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0
+Other benthos feeders,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0.1,0.1,0,0,0.1,0,0,0,0,0
+Other detritus feeders,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0.1,0.1,0,0.1,0,0,0,0,0
+Other insectivores,0,0,0,0,0.05,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.05,0.1,0.1,0.1,0,0,0.1,0.1,0,0,0,0,0,0,0
+Other piscivores,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0.1,0,0,0,0.1,0
+Other omnivores,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0.1,0,0,0.1,0,0,0.1,0,0,0,0,0,0,0.1,0,0,0,0,0.2,0
+Detritus,0.5,0.7,0.5,0.8,0.1,0,0.6,0.7,0.55,0.55,0.25,0,0,0.55,0.3,0.2,0.2,0,0.1,0.1,0,0,0,0,0,0,0,0.05,0,0,0,0.3,0.7,0,0,0.1

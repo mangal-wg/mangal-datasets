@@ -1,0 +1,9 @@
+@article{glynn1965community,
+  title={Community composition, structure, and interrelationships in the marine intertidal Endocladia muricata--Balanus glandula association in Monterey Bay, California},
+  author={Glynn, Peter W},
+  journal={Beaufortia},
+  volume={12},
+  number={148},
+  pages={1--198},
+  year={1965}
+}

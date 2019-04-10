@@ -1,0 +1,13 @@
+@article{Hopkins_1993,
+	doi = {10.1007/bf01681980},
+	url = {https://doi.org/10.1007%2Fbf01681980},
+	year = 1993,
+	month = {jun},
+	publisher = {Springer Nature},
+	volume = {13},
+	number = {6},
+	pages = {389--397},
+	author = {Thomas L. Hopkins and David G. Ainley and Jos{\'{e}} J. Torres and Thomas M. Lancraft},
+	title = {Trophic structure in open waters of the marginal ice zone in the Scotia-Weddell confluence region during spring (1983)},
+	journal = {Polar Biology}
+}

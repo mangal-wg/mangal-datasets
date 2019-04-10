@@ -1,0 +1,10 @@
+@incollection{Askew_1975,
+	doi = {10.1007/978-1-4615-8732-3_7},
+	url = {https://doi.org/10.1007%2F978-1-4615-8732-3_7},
+	year = 1975,
+	publisher = {Springer {US}},
+	pages = {130--153},
+	author = {R. R. Askew},
+	title = {The Organisation of Chalcid-Dominated Parasitoid Communities Centred upon Endophytic Hosts},
+	booktitle = {Evolutionary Strategies of Parasitic Insects and Mites}
+}

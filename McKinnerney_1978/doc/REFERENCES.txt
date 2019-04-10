@@ -1,0 +1,13 @@
+@article{McKinnerney_1978,
+	doi = {10.2307/3671178},
+	url = {https://doi.org/10.2307%2F3671178},
+	year = 1978,
+	month = {dec},
+	publisher = {{JSTOR}},
+	volume = {23},
+	number = {4},
+	pages = {563},
+	author = {Marsha McKinnerney},
+	title = {Carrion Communities in the Northern Chihuahuan Desert},
+	journal = {The Southwestern Naturalist}
+}

@@ -1,0 +1,13 @@
+stream	lat	lon
+Venlaw stream (1 year post harvest)	NA	NA
+Catlins stream (1 year post harvest)	-46.4785010707853	169.5786916945326
+Berwick stream (1 year post harvest)	NA	NA
+Akatore A Creek (1 year post harvest)	-46.10679529086476	170.1715770604785
+Akatore B Creek (1 year post harvest)	-46.10679529086476	170.1715770604785
+Control pine stream (1 year post harvest)	NA	NA
+Venlaw stream (2 years post harvest)	NA	NA
+Catlins stream (2 years post harvest)	-46.4785010707853	169.5786916945326
+Berwick stream (2 years post harvest)	NA	NA
+Akatore A Creek (2 years post harvest)	-46.10679529086476	170.1715770604785
+Akatore B Creek (2 years post harvest)	-46.10679529086476	170.1715770604785
+Control pine stream (2 years post harvest)	NA	NA

@@ -1,0 +1,13 @@
+@article{Schneider_1997,
+	doi = {10.1007/s004420050197},
+	url = {https://doi.org/10.1007%2Fs004420050197},
+	year = 1997,
+	month = {may},
+	publisher = {Springer Nature},
+	volume = {110},
+	number = {4},
+	pages = {567--575},
+	author = {Daniel W. Schneider},
+	title = {Predation and food web structure along a habitat duration gradient},
+	journal = {Oecologia}
+}

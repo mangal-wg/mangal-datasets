@@ -1,0 +1,13 @@
+@article{Feroz_Khan_2009,
+	doi = {10.1016/j.ecolmodel.2009.05.020},
+	url = {https://doi.org/10.1016%2Fj.ecolmodel.2009.05.020},
+	year = 2009,
+	month = {sep},
+	publisher = {Elsevier {BV}},
+	volume = {220},
+	number = {18},
+	pages = {2281--2290},
+	author = {M. Feroz Khan and Preetha Panikkar},
+	title = {Assessment of impacts of invasive fishes on the food web structure and ecosystem properties of a tropical reservoir in India},
+	journal = {Ecological Modelling}
+}

@@ -1,0 +1,10 @@
+@article{tutin1997primate,
+  title={The primate community of the Lop{\'e} Reserve, Gabon: diets, responses to fruit scarcity, and effects on biomass},
+  author={Tutin, Caroline EG and Ham, Rebecca M and White, Lee JT and Harrison, Michael JS},
+  journal={American Journal of Primatology},
+  volume={42},
+  number={1},
+  pages={1--24},
+  year={1997},
+  publisher={Wiley Online Library}
+}

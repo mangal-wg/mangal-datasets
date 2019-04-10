@@ -1,0 +1,13 @@
+@article{Kaiser_Bunbury_2014,
+	doi = {10.1890/14-0024.1},
+	url = {https://doi.org/10.1890%2F14-0024.1},
+	year = 2014,
+	month = {dec},
+	publisher = {Wiley},
+	volume = {95},
+	number = {12},
+	pages = {3314--3324},
+	author = {Christopher N. Kaiser-Bunbury and Diego P. V{\'{a}}zquez and Martina Stang and Jaboury Ghazoul},
+	title = {Determinants of the microstructure of plant{\textendash}pollinator networks},
+	journal = {Ecology}
+}

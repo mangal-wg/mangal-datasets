@@ -1,0 +1,8 @@
+@article{jones1949further,
+  title={A Further Ecological Study of Calcareous Streams in theBlack Mountain'District of South Wales},
+  author={Jones, JR Erichsen},
+  journal={The Journal of Animal Ecology},
+  pages={142--159},
+  year={1949},
+  publisher={JSTOR}
+}

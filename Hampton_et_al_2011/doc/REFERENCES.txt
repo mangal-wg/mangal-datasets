@@ -1,0 +1,12 @@
+@article{Hampton_2011,
+	doi = {10.1071/mf10229},
+	url = {https://doi.org/10.1071%2Fmf10229},
+	year = 2011,
+	publisher = {{CSIRO} Publishing},
+	volume = {62},
+	number = {4},
+	pages = {350},
+	author = {Stephanie E. Hampton and Steven C. Fradkin and Peter R. Leavitt and Elizabeth E. Rosenberger},
+	title = {Disproportionate importance of nearshore habitat for the food web of a deep oligotrophic lake},
+	journal = {Marine and Freshwater Research}
+}

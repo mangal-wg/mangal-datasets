@@ -1,0 +1,11 @@
+"D.C. Edwards, D.O. Conover, and F. Sutter III. Mobile Predators and the Structure of Marine Intertidal Communities. Ecology, 63(4), pp. 1175-1180.",,,,,,,,
+Rocky shore - Gulf of Maine - USA,Mytilus,Balanus,Littorina,Acmaea,Thais,Carcinus,Tautogolabrus,fish - birds - mammals
+plankton - detritus,1,1,0,0,0,0,0,0
+algae,0,0,1,1,0,0,0,0
+Mytilus,0,0,0,0,1,1,1,1
+Balanus,0,0,0,0,1,1,1,0
+Littorina,0,0,0,0,1,1,1,1
+Acmaea,0,0,0,0,1,0,0,1
+Thais,0,0,0,0,0,1,1,0
+Carcinus,0,0,0,0,0,0,1,1
+Tautogolabrus,0,0,0,0,0,0,0,1

@@ -1,0 +1,13 @@
+@article{Bird_1930,
+	doi = {10.2307/1930270},
+	url = {https://doi.org/10.2307%2F1930270},
+	year = 1930,
+	month = {apr},
+	publisher = {Wiley},
+	volume = {11},
+	number = {2},
+	pages = {356--442},
+	author = {Ralph D. Bird},
+	title = {Biotic Communities of the Aspen Parkland of Central Canada},
+	journal = {Ecology}
+}

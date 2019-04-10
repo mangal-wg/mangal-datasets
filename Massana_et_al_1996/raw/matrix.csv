@@ -1,0 +1,43 @@
+sp_taxon_1;sp_taxon_2;value
+Coleps sp.;Cryptomonas;1
+Prorodon sp.;Cryptomonas;1
+Anuraeopsis fissa;Colorless bacteria;1
+Nauplii sp.;Colorless bacteria;1
+Vorticella sp.;Colorless bacteria;1
+Paramecium sp.;Colorless bacteria;1
+Cyclidium sp.;Colorless bacteria;1
+Strombidium sp.;Colorless bacteria;1
+Anuraeopsis fissa;Chromatium sp.;1
+Nauplii sp.;Chromatium sp.;1
+Vorticella sp.;Chromatium sp.;1
+Paramecium sp.;Chromatium sp.;1
+Cyclidium sp.;Chromatium sp.;1
+Strombidium sp.;Chromatium sp.;1
+Anuraeopsis fissa;Amoebobacter sp.;1
+Nauplii sp.;Amoebobacter sp.;1
+Vorticella sp.;Amoebobacter sp.;1
+Paramecium sp.;Amoebobacter sp.;1
+Cyclidium sp.;Amoebobacter sp.;1
+Strombidium sp.;Amoebobacter sp.;1
+Anuraeopsis fissa;Other algae;1
+Nauplii sp.;Other algae;1
+Vorticella sp.;Other algae;1
+Paramecium sp.;Other algae;1
+Cyclidium sp.;Other algae;1
+Strombidium sp.;Other algae;1
+Polyarthra sp.;Cryptomonas;1
+Keratella sp.;Cryptomonas;1
+Polyarthra sp.;Other algae;1
+Keratella sp.;Other algae;1
+Thermocyclops dybowskii;Cryptomonas;1
+Thermocyclops dybowskii;Other algae;1
+Thermocyclops dybowskii;Coleps sp.;1
+Thermocyclops dybowskii;Prorodon sp.;1
+Thermocyclops dybowskii;Anuraeopsis fissa;1
+Thermocyclops dybowskii;Nauplii sp.;1
+Thermocyclops dybowskii;Vorticella sp.;1
+Thermocyclops dybowskii;Paramecium sp.;1
+Thermocyclops dybowskii;Cyclidium sp.;1
+Thermocyclops dybowskii;Strombidium sp.;1
+Thermocyclops dybowskii;Polyarthra sp.;1
+Thermocyclops dybowskii;Keratella sp.;1

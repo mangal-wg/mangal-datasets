@@ -1,0 +1,25 @@
+"Boit, A., Martinez, N.D., Williams, R.J., and Gaedke, U. (2012). Mechanistic theory and modelling of complex food-web dynamics in Lake Constance. Ecology Letters. 15, pp. 594-602.",,,,,,,,,,,,,,,,,,,,,,,
+Lake Constance (German: Bodensee) - Central Europe,Adult piscivorous fish,Adult planktivorous fish,Juvenile fish,Fish larvae,Large carnivorous cladocerans,Cyclopoid copepods,Mostly cladocerans (daphnids),Large rotifers (carnivore),Large rotifers (omnivore),Medium-sized rotifers (herbivore),Small rotifers (bacterivore - herbivore),Larger ciliates (omnivore),Medium-sized ciliates (herbivore),Small ciliates (bacterivore - omnivore),Small ciliates (bacterivore),Heterotrophic nanoflagellates,Heterotrophic bacteria,Autotrophic picoplankton,Small coccal algae,Diatoms - algal colonies,Filamentous blue and green algae,Large single-cell algae or colonies,Single-cell algae
+Single-cell algae,0,0,0,0,0,0,1,0,0,1,1,0,0,1,1,0,0,0,1,0,0,0,0
+Large single-cell algae or colonies,0,0,0,0,0,0,1,0,0,1,1,0,0,1,1,0,0,0,1,0,0,0,0
+Filamentous blue and green algae,0,0,0,0,0,1,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0
+Diatoms - algal colonies,0,0,0,0,0,1,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0
+Small coccal algae,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0
+Autotrophic picoplankton,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heterotrophic bacteria,0,0,0,0,0,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Heterotrophic nanoflagellates,0,0,0,0,0,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Small ciliates (bacterivore),0,0,0,0,0,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Small ciliates (bacterivore - omnivore),0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Medium-sized ciliates (herbivore),0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Larger ciliates (omnivore),0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Small rotifers (bacterivore - herbivore),0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Medium-sized rotifers (herbivore),0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Large rotifers (omnivore),0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Large rotifers (carnivore),0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mostly cladocerans (daphnids),1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cyclopoid copepods,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Large carnivorous cladocerans,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fish larvae,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Juvenile fish,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Adult planktivorous fish,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Adult piscivorous fish,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

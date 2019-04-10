@@ -1,0 +1,13 @@
+@article{Whittaker_1984,
+	doi = {10.2307/3670996},
+	url = {https://doi.org/10.2307%2F3670996},
+	year = 1984,
+	month = {nov},
+	publisher = {{JSTOR}},
+	volume = {29},
+	number = {4},
+	pages = {435},
+	author = {Paul L. Whittaker},
+	title = {The Insect Fauna of Mistletoe (Phoradendron tomentosum, Loranthaceae) in Southern Texas},
+	journal = {The Southwestern Naturalist}
+}

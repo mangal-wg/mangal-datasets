@@ -1,0 +1,10 @@
+@article{brown1964food,
+  title={Food relationships on the intertidal sandy beaches of the Cape Peninsula},
+  author={Brown, AC},
+  journal={South African Journal of Science},
+  volume={60},
+  number={2},
+  pages={35--41},
+  year={1964},
+  publisher={Academy of Science for South Africa (ASSAf)}
+}

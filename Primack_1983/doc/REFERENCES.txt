@@ -1,0 +1,13 @@
+@article{Primack_1983,
+	doi = {10.1080/0028825x.1983.10428561},
+	url = {https://doi.org/10.1080%2F0028825x.1983.10428561},
+	year = 1983,
+	month = {jul},
+	publisher = {Informa {UK} Limited},
+	volume = {21},
+	number = {3},
+	pages = {317--333},
+	author = {Richard B. Primack},
+	title = {Insect pollination in the New Zealand mountain flora},
+	journal = {New Zealand Journal of Botany}
+}

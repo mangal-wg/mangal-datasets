@@ -1,0 +1,13 @@
+@article{Mayse_1978,
+	doi = {10.1016/0304-3746(78)90004-5},
+	url = {https://doi.org/10.1016%2F0304-3746%2878%2990004-5},
+	year = 1978,
+	month = {may},
+	publisher = {Elsevier {BV}},
+	volume = {4},
+	number = {3},
+	pages = {387--405},
+	author = {Mark A. Mayse and Peter W. Price},
+	title = {Seasonal development of soybean arthropod communities in east central Illinois},
+	journal = {Agro-Ecosystems}
+}

@@ -1,0 +1,12 @@
+"R.D. Bird. (1930). Biotic Communities of the Aspen Parkland of Central Canada. Ecology. 11(2), pp. 356-442.",,,,,,,,,,,,,,
+Prairie - Manitoba,Richardson spermophile (ground squirrel),marsh hawk - coyote - red-tailed hawk - weasel,badger,vole (Microtus),13-striped spermophile (ground squirrel),pocket gopher (Thomomys),great horned owl,insects in herb and surface stratum - Diptera - Hemiptera - grasshoppers - etc.,spiders,insects in soil stratum - wire worms - cutworms - white grubs - etc.,meadow lark - chipping sparrow - clay-colored sparrow - vesper sparrow - horned lark - upland plover,crow,frog,garter snake
+Richardson spermophile (ground squirrel),0,1,1,0,0,0,0,0,0,0,0,0,0,0
+vole (Microtus),0,1,0,0,1,0,1,0,0,0,0,0,0,0
+13-striped spermophile (ground squirrel),0,1,1,0,0,0,0,0,0,0,0,0,0,0
+pocket gopher (Thomomys),0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"Agropyron, Stipa, Helianthus",1,0,0,1,1,1,0,1,0,1,-1,-1,0,0
+insects in herb and surface stratum - Diptera - Hemiptera - grasshoppers - etc.,0,0,0,0,1,0,0,0,1,0,1,1,1,1
+spiders,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+insects in soil stratum - wire worms - cutworms - white grubs - etc.,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+crow,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+frog,0,0,0,0,0,0,0,0,0,0,0,0,0,1

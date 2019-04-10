@@ -1,0 +1,10 @@
+"R.D. Bird. (1930). Biotic Communities of the Aspen Parkland of Central Canada. Ecology. 11(2), pp. 356-442.",,,,,,,,
+Willow forest - Manitoba,Galerucella decora,redwinged blackbird - bronze grackle - song sparrow,Maryland yellowthroat - yellow warbler - song sparrow,spiders,insects - Pontania petiolaridis - Collembola,insects - Disyonicha quinquevitata - Collembola,Rana pipiens,garter snake
+Salix discolor,1,0,0,0,0,-1,0,0
+Salix petiolaris,1,0,0,0,1,-1,0,0
+Salix longifolia,1,0,0,0,0,1,0,0
+spiders,0,1,1,0,0,0,-1,0
+insects - Pontania petiolaridis - Collembola,0,-1,0,1,0,0,1,0
+insects - Disyonicha quinquevitata - Collembola,0,0,1,1,0,0,1,0
+Rana pipiens,0,0,0,0,0,0,0,1
+snails,0,0,0,0,0,0,1,0

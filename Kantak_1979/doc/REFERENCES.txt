@@ -1,0 +1,10 @@
+@article{kantak1979observations,
+  title={Observations on some fruit-eating birds in Mexico},
+  author={Kantak, Gail E},
+  journal={The Auk},
+  volume={96},
+  number={1},
+  pages={183--186},
+  year={1979},
+  publisher={JSTOR}
+}

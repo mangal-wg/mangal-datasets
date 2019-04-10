@@ -1,0 +1,14 @@
+"M. Rejmanek, and P. Stary. (1979). Connectance in real biotic communities and critical values for stability of model ecosystems. Nature letters. 280, pp. 311-313.",,,,,,,,,,,,,,,,,,,,,,,
+Aphid-parasitoid system on oak and birch - Central Europe,Lysiphlebus thelaxis,Protaphidius wissmanii,Trioxys pallidus,T. curvicaudus,T. tenuicaudus,Aphidencyrtus aphidivorus,A. quercicola,Praon flavinode,Aphelinus chaonia,Trioxys betulae,T. compressicornis,Aphidius aquilus,Calaphidius elegans,Thelaxes dryophila,Stomaphis quercus,Tuberculoides annulatus,Myzocallis castanicola,Symydobius oblongus,Euceraphis betulae,Betulaphis quadrituberculata,Calaphis betulicola,Betulaphis brevipilosa,Hamamelistes betulinus
+Thelaxes dryophila,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stomaphis quercus,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tuberculoides annulatus,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Myzocallis castanicola,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Symydobius oblongus,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Euceraphis betulae,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Betulaphis quadrituberculata,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Calaphis betulicola,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Betulaphis brevipilosa,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Hamamelistes betulinus,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Quercus robur,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0
+Betula pendula,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1

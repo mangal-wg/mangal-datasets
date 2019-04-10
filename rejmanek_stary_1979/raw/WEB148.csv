@@ -1,0 +1,7 @@
+"M. Rejmanek, and P. Stary. (1979). Connectance in real biotic communities and critical values for stability of model ecosystems. Nature letters. 280, pp. 311-313.",,,,,,,,,,,,
+Aphid-parasitoid system on Quercus robur - Central Europe,Lysiphlebus thelaxis,Protophidius wissmanii,Trioxys pallidus,T. curvicaudus,T. tenvicaudus,Aphidencyrtus aphidivorus,A. quercicola,Praon flavinode,Thelaxes dryophila,Stomaphis quercus,Tuberculoides annulatus,Myzocallis castanicola
+Thelaxes dryophila,1,0,0,0,0,0,0,0,0,0,0,0
+Stomaphis quercus,0,1,0,0,0,0,0,0,0,0,0,0
+Tuberculoides annulatus,0,0,1,1,1,1,1,1,0,0,0,0
+Myzocallis castanicola,0,0,0,0,0,0,0,1,0,0,0,0
+Quercus robur,0,0,0,0,0,0,0,0,1,1,1,1

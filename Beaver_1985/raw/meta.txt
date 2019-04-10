@@ -1,0 +1,6 @@
+network	lat	lon
+N. albomarginata in West Malaysia	2.974709	103.122705
+N. ampullaria in West Malaysia	2.974709	103.122705
+N. distillatoria in Sri Lanka 	7.862065	80.812428
+N. madagascarensis in Madagascar	-19	46.37211
+N. pervillei in Seychelles	-4.677263	55.461923

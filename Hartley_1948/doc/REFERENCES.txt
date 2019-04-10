@@ -1,0 +1,13 @@
+@article{Hartley_1948,
+	doi = {10.2307/1604},
+	url = {https://doi.org/10.2307%2F1604},
+	year = 1948,
+	month = {may},
+	publisher = {{JSTOR}},
+	volume = {17},
+	number = {1},
+	pages = {1},
+	author = {P. H. T. Hartley},
+	title = {Food and Feeding Relationships in a Community of Fresh-Water Fishes},
+	journal = {The Journal of Animal Ecology}
+}

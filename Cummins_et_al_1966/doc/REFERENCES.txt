@@ -1,0 +1,13 @@
+@article{Cummins_1966,
+	doi = {10.1080/03680770.1965.11895740},
+	url = {https://doi.org/10.1080%2F03680770.1965.11895740},
+	year = 1966,
+	month = {jun},
+	publisher = {Informa {UK} Limited},
+	volume = {16},
+	number = {2},
+	pages = {627--638},
+	author = {Kenneth W. Cummins and William P. Coffman and Peter A. Roff},
+	title = {Trophic relationships in a small woodland stream},
+	journal = {{SIL} Proceedings, 1922-2010}
+}

@@ -1,0 +1,715 @@
+species.code,genus.species,Kingdom,Phylum,Class,Order,Family,Genus,Species,trophic.group,resolution,size,vertical.stratum,feeding.reference.supplemental.table.2,link.type
+S0001,microbes,resource,resource,resource,resource,resource,resource,microbes,resource,static,NA,g,1; 2; 3,3
+S0002,fungi,Fungi,resource,resource,resource,resource,resource,fungi,resource,static,NA,g,NA,NA
+S0003,carrion,Animalia,resource,resource,resource,resource,resource,carrion,resource,static,NA,g,NA,NA
+S0004,dung,resource,resource,resource,resource,resource,resource,dung,resource,static,NA,g,NA,NA
+S0005,algae,Plantae,resource,resource,resource,resource,resource,algae,resource,static,NA,g,NA,NA
+S0006,litter,Plantae,Angiosperm,resource,resource,resource,resource,litter,resource,static,NA,g,NA,NA
+S0007,moss,Plantae,resource,resource,resource,resource,resource,moss,resource,static,NA,g,NA,NA
+S0008,Anthriscus_sylvestris,Plantae,Angiosperm,Eudicot,Apiales,Apiaceae,Anthriscus,sylvestris,plant,static,NA,p,NA,NA
+S0009,Carum_carvi,Plantae,Angiosperm,Eudicot,Apiales,Apiaceae,Carum,carvi,plant,static,NA,p,NA,NA
+S0010,Daucus_carota,Plantae,Angiosperm,Eudicot,Apiales,Apiaceae,Daucus,carota,plant,static,NA,p,NA,NA
+S0011,Heracleum_sphondylium,Plantae,Angiosperm,Eudicot,Apiales,Apiaceae,Heracleum,sphondylium,plant,static,NA,p,NA,NA
+S0012,Pastinaca_sativa,Plantae,Angiosperm,Eudicot,Apiales,Apiaceae,Pastinaca,sativa,plant,static,NA,p,NA,NA
+S0013,Pimpinella_major,Plantae,Angiosperm,Eudicot,Apiales,Apiaceae,Pimpinella,major,plant,static,NA,p,NA,NA
+S0014,Achillea_millefolium,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Achillea,millefolium,plant,static,NA,p,NA,NA
+S0015,Bellis_perennis,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Bellis,perennis,plant,static,NA,p,NA,NA
+S0016,Centaurea_jacea,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Centaurea,jacea,plant,static,NA,p,NA,NA
+S0017,Cirsium_oleraceum,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Cirsium,oleraceum,plant,static,NA,p,NA,NA
+S0018,Crepis_biennis,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Crepis,biennis,plant,static,NA,p,NA,NA
+S0019,Leontodon_autumnalis,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Leontodon,autumnalis,plant,static,NA,p,NA,NA
+S0020,Leontodon_hispidus,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Leontodon,hispidus,plant,static,NA,p,NA,NA
+S0021,Leucanthemum_vulgare,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Leucanthemum,vulgare,plant,static,NA,p,NA,NA
+S0022,Taraxacum_officinale,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Taraxacum,officinale,plant,static,NA,p,NA,NA
+S0023,Tragopogon_pratensis,Plantae,Angiosperm,Eudicot,Asterales,Asteraceae,Tragopogon,pratensis,plant,static,NA,p,NA,NA
+S0024,Campanula_patula,Plantae,Angiosperm,Eudicot,Asterales,Campanulaceae,Campanula,patula,plant,static,NA,p,NA,NA
+S0025,Cardamine_pratensis,Plantae,Angiosperm,Eudicot,Brassicales,Brassicaceae,Cardamine,pratensis,plant,static,NA,p,NA,NA
+S0026,Rumex_acetosa,Plantae,Angiosperm,Eudicot,Caryophyllales,Polygonaceae,Rumex,acetosa,plant,static,NA,p,NA,NA
+S0027,Knautia_arvensis,Plantae,Angiosperm,Eudicot,Dipsacales,Caprifoliaceae,Knautia,arvensis,plant,static,NA,p,NA,NA
+S0028,Primula_veris,Plantae,Angiosperm,Eudicot,Ericales,Primulaceae,Primula,veris,plant,static,NA,p,NA,NA
+S0029,Lathyrus_pratensis,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Lathyrus,pratensis,plant,static,NA,p,NA,NA
+S0030,Lotus_corniculatus,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Lotus,corniculatus,plant,static,NA,p,NA,NA
+S0031,Medicago_lupulina,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Medicago,lupulina,plant,static,NA,p,NA,NA
+S0032,Medicago_x,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Medicago,x,plant,static,NA,p,NA,NA
+S0033,Onobrychis_viciifolia,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Onobrychis,viciifolia,plant,static,NA,p,NA,NA
+S0034,Trifolium_campestre,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Trifolium,campestre,plant,static,NA,p,NA,NA
+S0035,Trifolium_dubium,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Trifolium,dubium,plant,static,NA,p,NA,NA
+S0036,Trifolium_fragiferum,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Trifolium,fragiferum,plant,static,NA,p,NA,NA
+S0037,Trifolium_hybridum,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Trifolium,hybridum,plant,static,NA,p,NA,NA
+S0038,Trifolium_pratense,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Trifolium,pratense,plant,static,NA,p,NA,NA
+S0039,Trifolium_repens,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Trifolium,repens,plant,static,NA,p,NA,NA
+S0040,Vicia_cracca,Plantae,Angiosperm,Eudicot,Fabales,Fabaceae,Vicia,cracca,plant,static,NA,p,NA,NA
+S0041,Galium_album,Plantae,Angiosperm,Eudicot,Gentianales,Rubiaceae,Galium,album,plant,static,NA,p,NA,NA
+S0042,Geranium_pratense,Plantae,Angiosperm,Eudicot,Geraniales,Geraniaceae,Geranium,pratense,plant,static,NA,p,NA,NA
+S0043,Ajuga_reptans,Plantae,Angiosperm,Eudicot,Lamiales,Lamiaceae,Ajuga,reptans,plant,static,NA,p,NA,NA
+S0044,Glechoma_hederacea,Plantae,Angiosperm,Eudicot,Lamiales,Lamiaceae,Glechoma,hederacea,plant,static,NA,p,NA,NA
+S0045,Prunella_vulgaris,Plantae,Angiosperm,Eudicot,Lamiales,Lamiaceae,Prunella,vulgaris,plant,static,NA,p,NA,NA
+S0046,Plantago_lanceolata,Plantae,Angiosperm,Eudicot,Lamiales,Plantaginaceae,Plantago,lanceolata,plant,static,NA,p,NA,NA
+S0047,Plantago_media,Plantae,Angiosperm,Eudicot,Lamiales,Plantaginaceae,Plantago,media,plant,static,NA,p,NA,NA
+S0048,Veronica_chamaedrys,Plantae,Angiosperm,Eudicot,Lamiales,Plantaginaceae,Veronica,chamaedrys,plant,static,NA,p,NA,NA
+S0049,Ranunculus_acris,Plantae,Angiosperm,Eudicot,Ranunulales,Ranunculaceae,Ranunculus,acris,plant,static,NA,p,NA,NA
+S0050,Ranunculus_repens,Plantae,Angiosperm,Eudicot,Ranunulales,Ranunculaceae,Ranunculus,repens,plant,static,NA,p,NA,NA
+S0051,Sanguisorba_officinalis,Plantae,Angiosperm,Eudicot,Rosales,Rosaceae,Sanguisorba,officinalis,plant,static,NA,p,NA,NA
+S0052,Luzula_campestris,Plantae,Angiosperm,Monocot,Poales,Juncaceae,Luzula,campestris,plant,static,NA,p,NA,NA
+S0053,Alopecurus_pratensis,Plantae,Angiosperm,Monocot,Poales,Poaceae,Alopecurus,pratensis,plant,static,NA,p,NA,NA
+S0054,Anthoxanthum_odoratum,Plantae,Angiosperm,Monocot,Poales,Poaceae,Anthoxanthum,odoratum,plant,static,NA,p,NA,NA
+S0055,Arrhenatherum_elatius,Plantae,Angiosperm,Monocot,Poales,Poaceae,Arrhenatherum,elatius,plant,static,NA,p,NA,NA
+S0056,Avenula_pubescens,Plantae,Angiosperm,Monocot,Poales,Poaceae,Avenula,pubescens,plant,static,NA,p,NA,NA
+S0057,Bromus_erectus,Plantae,Angiosperm,Monocot,Poales,Poaceae,Bromus,erectus,plant,static,NA,p,NA,NA
+S0058,Bromus_hordeaceus,Plantae,Angiosperm,Monocot,Poales,Poaceae,Bromus,hordeaceus,plant,static,NA,p,NA,NA
+S0059,Cynosurus_cristatus,Plantae,Angiosperm,Monocot,Poales,Poaceae,Cynosurus,cristatus,plant,static,NA,p,NA,NA
+S0060,Dactylis_glomerata,Plantae,Angiosperm,Monocot,Poales,Poaceae,Dactylis,glomerata,plant,static,NA,p,NA,NA
+S0061,Festuca_pratensis,Plantae,Angiosperm,Monocot,Poales,Poaceae,Festuca,pratensis,plant,static,NA,p,NA,NA
+S0062,Festuca_rubra,Plantae,Angiosperm,Monocot,Poales,Poaceae,Festuca,rubra,plant,static,NA,p,NA,NA
+S0063,Holcus_lanatus,Plantae,Angiosperm,Monocot,Poales,Poaceae,Holcus,lanatus,plant,static,NA,p,NA,NA
+S0064,Phleum_pratense,Plantae,Angiosperm,Monocot,Poales,Poaceae,Phleum,pratense,plant,static,NA,p,NA,NA
+S0065,Poa_pratensis,Plantae,Angiosperm,Monocot,Poales,Poaceae,Poa,pratensis,plant,static,NA,p,NA,NA
+S0066,Poa_trivialis,Plantae,Angiosperm,Monocot,Poales,Poaceae,Poa,trivialis,plant,static,NA,p,NA,NA
+S0067,Trisetum_flavescens,Plantae,Angiosperm,Monocot,Poales,Poaceae,Trisetum,flavescens,plant,static,NA,p,NA,NA
+S0068,Discus_ruderatus,Animalia,Mollusca,Gastropoda,Pulmonata/Stylommatophora,Discidae,Discus,ruderatus,herbivore,species,6.25,g,1,2
+S0069,Geophilus_flavus,Animalia,Arthropoda,Chilopoda,Geophilomorpha,Geophilidae,Geophilus,flavus,predator,species,30,g,1,2; 5.1
+S0070,Geophilus_longicornis,Animalia,Arthropoda,Chilopoda,Geophilomorpha,Geophilidae,Geophilus,longicornis,predator,species,45,g,1,2; 5.1
+S0071,Blaniulus_guttulatus,Animalia,Arthropoda,Diplopoda,Julida,Blaniulidae,Blaniulus,guttulatus,detritivore,species,12,i,1; 5,1
+S0072,Boreoiulus_tenuis,Animalia,Arthropoda,Diplopoda,Julida,Blaniulidae,Boreoiulus,tenuis,detritivore,species,16,g,1; 5,1
+S0073,Cylindroiulus_caeruleocinctus,Animalia,Arthropoda,Diplopoda,Julida,Julidae,Cylindroiulus,caeruleocinctus,detritivore,species,26.5,g,1; 4; 5,1; 2
+S0074,Julus_scandinavius,Animalia,Arthropoda,Diplopoda,Julida,Julidae,Julus,scandinavius,detritivore,species,27,g,1; 5,1
+S0075,Kryphoiulus_occultus,Animalia,Arthropoda,Diplopoda,Julida,Julidae,Kryphoiulus,occultus,detritivore,species,27,g,1; 5,1
+S0076,Ophyiulus_pilosus,Animalia,Arthropoda,Diplopoda,Julida,Julidae,Ophyiulus,pilosus,detritivore,species,28.25,g,1; 5,1
+S0077,Tachypodoiulus_niger,Animalia,Arthropoda,Diplopoda,Julida,Julidae,Tachypodoiulus,niger,detritivore,species,34,g,1; 5,1
+S0078,Unciger_foetidus,Animalia,Arthropoda,Diplopoda,Julida,Julidae,Unciger,foetidus,detritivore,species,23.25,g,1; 5,1
+S0079,Polydesmus_angustus,Animalia,Arthropoda,Diplopoda,Polydesmida,Polydesmidae,Polydesmus,angustus,detritivore,species,20.75,g,1; 5,1
+S0080,Polydesmus_inconstans,Animalia,Arthropoda,Diplopoda,Polydesmida,Polydesmidae,Polydesmus,inconstans,detritivore,species,13,g,1; 5,1
+S0081,Polydesmus_superus,Animalia,Arthropoda,Diplopoda,Polydesmida,Polydesmidae,Polydesmus,superus,detritivore,species,9,g,1; 5,2
+S0082,Propolydesmus_testaceus,Animalia,Arthropoda,Diplopoda,Polydesmida,Polydesmidae,Propolydesmus,testaceus,detritivore,species,15.375,g,1; 5,1
+S0083,Lamyctes_emarginatus,Animalia,Arthropoda,Chilopoda,Lithobiomorpha,Henicopidae,Lamyctes,emarginatus,predator,species,9,g,1; 6,2; 5.1
+S0084,Lamyctes_fulvicornis,Animalia,Arthropoda,Chilopoda,Lithobiomorpha,Henicopidae,Lamyctes,fulvicornis,predator,species,9,g,1; 6,2; 5.1
+S0085,Lithobius_aeruginosus,Animalia,Arthropoda,Chilopoda,Lithobiomorpha,Lithobiidae,Lithobius,aeruginosus,predator,species,7.5,g,1; 6,2; 5.1
+S0086,Lithobius_forficatus,Animalia,Arthropoda,Chilopoda,Lithobiomorpha,Lithobiidae,Lithobius,forficatus,predator,species,26,g,1; 6,2; 5.1
+S0087,Lithobius_microps,Animalia,Arthropoda,Chilopoda,Lithobiomorpha,Lithobiidae,Lithobius,microps,predator,species,7.5,g,1; 6,2; 5.1
+S0088,Lithobius_piceus,Animalia,Arthropoda,Chilopoda,Lithobiomorpha,Lithobiidae,Lithobius,piceus,predator,species,17,g,1; 6,1; 5.1
+S0089,Armadillidium_vulgare,Animalia,Arthropoda,Malacostraca,Isopoda,Armadillidiidae,Armadillidium,vulgare,detritivore,species,15,g,1; 7,1
+S0090,Oniscus_asellus,Animalia,Arthropoda,Malacostraca,Isopoda,Oniscidae,Oniscus,asellus,detritivore,species,16.5,g,1; 7,1
+S0091,Lepidoniscus_hypnorum,Animalia,Arthropoda,Malacostraca,Isopoda,Philosciidae,Lepidoniscus,hypnorum,detritivore,species,9,g,1; 7,1
+S0092,Philoscia_muscorum,Animalia,Arthropoda,Malacostraca,Isopoda,Philosciidae,Philoscia,muscorum,detritivore,species,11,g,1; 7,1
+S0093,Porcellio_scaber,Animalia,Arthropoda,Malacostraca,Isopoda,Porcellionidae,Porcellio,scaber,detritivore,species,16,g,1; 7,1
+S0094,Trachelipus_rathkii,Animalia,Arthropoda,Malacostraca,Isopoda,Trachelipodidae,Trachelipus,rathkii,detritivore,species,15,g,1; 7,1
+S0095,Hyloniscus_riparius,Animalia,Arthropoda,Malacostraca,Isopoda,Trichoniscidae,Hyloniscus,riparius,detritivore,species,6,g,1; 8,1
+S0096,Forficula_auricularia,Animalia,Arthropoda,Insecta,Dermaptera,Forficulidae,Forficula,auricularia,omnivore,species,14,g,1; 10,1; 5.1
+S0097,Chorthippus_albomarginatus,Animalia,Arthropoda,Insecta,Orthoptera,Acrididae,Chorthippus,albomarginatus,herbivore,species,17.125,h,11; 12,1; 2
+S0098,Chorthippus_apricarius,Animalia,Arthropoda,Insecta,Orthoptera,Acrididae,Chorthippus,apricarius,herbivore,species,16.625,h,11; 12,1; 2
+S0099,Chorthippus_biguttulus,Animalia,Arthropoda,Insecta,Orthoptera,Acrididae,Chorthippus,biguttulus,herbivore,species,17,h,11; 12,1; 2
+S0100,Chorthippus_dorsatus,Animalia,Arthropoda,Insecta,Orthoptera,Acrididae,Chorthippus,dorsatus,herbivore,species,19,h,11; 12,1; 2
+S0101,Chorthippus_parallelus,Animalia,Arthropoda,Insecta,Orthoptera,Acrididae,Chorthippus,parallelus,herbivore,species,17.25,h,11; 12; 13,1; 2
+S0102,Stenobothrus_lineatus,Animalia,Arthropoda,Insecta,Orthoptera,Acrididae,Stenobothrus,lineatus,herbivore,species,20.5,i,11; 12,2
+S0103,Acheta_domesticus,Animalia,Arthropoda,Insecta,Orthoptera,Gryllidae,Acheta,domesticus,detritivore,species,18,g,11,1
+S0104,Tetrix_subulata,Animalia,Arthropoda,Insecta,Orthoptera,Tetrigidae,Tetrix,subulata,herbivore,species,14,i,11,1
+S0105,Tetrix_tenuicornis,Animalia,Arthropoda,Insecta,Orthoptera,Tetrigidae,Tetrix,tenuicornis,herbivore,species,9.5,g,11,1
+S0106,Orius_minutus,Animalia,Arthropoda,Insecta,Hemiptera,Anthocoridae,Orius,minutus,omnivore,species,2.35,h,14; 15; 16,3; 5.4
+S0107,Orius_niger,Animalia,Arthropoda,Insecta,Hemiptera,Anthocoridae,Orius,niger,omnivore,species,2.05,h,15,3; 5.4
+S0108,Neophilaenus_campestris,Animalia,Arthropoda,Insecta,Hemiptera,Aphrophoridae,Neophilaenus,campestris,herbivore,species,5.35,h,17,1
+S0109,Berytinus_clavipes,Animalia,Arthropoda,Insecta,Hemiptera,Berytidae,Berytinus,clavipes,herbivore,species,6,h,19,2
+S0110,Philaenus_spumarius,Animalia,Arthropoda,Insecta,Hemiptera,Cercopidae,Philaenus,spumarius,herbivore,species,5.9,h,17; 18; 19,1; 2
+S0111,Agallia_brachyptera,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Agallia,brachyptera,herbivore,species,3,h,17; 18; 19,2
+S0112,Anaceratagallia_ribauti,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Anaceratagallia,ribauti,herbivore,species,3,h,17; 18; 19,1
+S0113,Anoscopus_flavostriatus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Anoscopus,flavostriatus,herbivore,species,3.45,h,17; 18; 19,1
+S0114,Anoscopus_serratulae,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Anoscopus,serratulae,herbivore,species,3.93,h,17; 18; 19,1
+S0115,Aphrodes_bicincta,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Aphrodes,bicincta,herbivore,species,6.05,h,17; 18; 19,1; 2
+S0116,Aphrodes_makarovi,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Aphrodes,makarovi,herbivore,species,6.625,h,17; 18; 19,2
+S0117,Arthaldeus_pascuellus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Arthaldeus,pascuellus,herbivore,species,3.425,h,17; 18; 19,1; 2
+S0118,Athysanus_argentarius,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Athysanus,argentarius,herbivore,species,7.3,h,17; 18; 19,1
+S0119,Chlorita_paolii,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Chlorita,paolii,herbivore,species,2.825,h,17; 18; 19,1
+S0120,Cicadella_viridis,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Cicadella,viridis,herbivore,species,3,h,17; 18; 19,1; 2
+S0121,Cicadula_persimilis,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Cicadula,persimilis,herbivore,species,4.6,h,17; 18; 19,1
+S0122,Conosanus_obsoletus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Conosanus,obsoletus,herbivore,species,5.5,h,17; 18; 19,1; 2
+S0123,Deltocephalus_pulicaris,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Deltocephalus,pulicaris,herbivore,species,2.675,h,17; 18; 19,1; 2
+S0124,Doratura_stylata,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Doratura,stylata,herbivore,species,3.675,h,17; 18; 19,1; 2
+S0125,Elymana_sulphurella,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Elymana,sulphurella,herbivore,species,4.75,h,17; 18; 19,1; 2
+S0126,Emelyanoviana_mollicula,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Emelyanoviana,mollicula,herbivore,species,3.4,h,17; 18; 19,1; 2
+S0127,Empoasca_decipiens,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Empoasca,decipiens,herbivore,species,3.5,h,17; 18; 19,2
+S0128,Empoasca_pteridis,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Empoasca,pteridis,herbivore,species,4.5,h,17; 18; 19,2
+S0129,Errastunus_ocellaris,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Errastunus,ocellaris,herbivore,species,3.325,h,17; 18; 19,1
+S0130,Eupteryx_atropunctata,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Eupteryx,atropunctata,herbivore,species,3.6,h,17; 18; 19,1; 2
+S0131,Eupteryx_calcarata,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Eupteryx,calcarata,herbivore,species,3,h,17; 18; 19,2
+S0132,Eupteryx_notata,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Eupteryx,notata,herbivore,species,2.9,h,17; 18; 19,1; 2
+S0133,Eupteryx_vittata,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Eupteryx,vittata,herbivore,species,3.4,h,17; 18; 19,1; 2
+S0134,Euscelis_incisus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Euscelis,incisus,herbivore,species,3.825,h,17; 18; 19,1; 2
+S0135,Graphocraerus_ventralis,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Graphocraerus,ventralis,herbivore,species,5.45,h,17; 18; 19,1; 2
+S0136,Macrosteles_cristatus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Macrosteles,cristatus,herbivore,species,3.5,h,17; 18; 19,1; 2
+S0137,Macrosteles_laevis,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Macrosteles,laevis,herbivore,species,3.5,h,17; 18; 19,1; 2
+S0138,Macrosteles_maculosus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Macrosteles,maculosus,herbivore,species,3.5,h,17; 18; 19,
+S0139,Macrosteles_sexnotatus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Macrosteles,sexnotatus,herbivore,species,3.5,h,17; 18; 19,1; 2
+S0140,Megadelphax_sordidula,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Megadelphax,sordidula,herbivore,species,4.15,h,17; 18; 19,1; 2
+S0141,Megophthalmus_scanicus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Megophthalmus,scanicus,herbivore,species,3.2,h,17; 18; 19,1; 2
+S0142,Mocydia_crocea,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Mocydia,crocea,herbivore,species,4.85,h,17; 18; 19,1; 2
+S0143,Neoaliturus_fenestratus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Neoaliturus,fenestratus,herbivore,species,4.2,h,17; 18; 19,1
+S0144,Ophiola_decumana,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Ophiola,decumana,herbivore,species,3,h,17; 18; 19,1
+S0145,Psammotettix_alienus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Psammotettix,alienus,herbivore,species,3.2,h,17; 18; 19,1; 2
+S0146,Psammotettix_confinis,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Psammotettix,confinis,herbivore,species,3.5,h,17; 18; 19,1; 2
+S0147,Psammotettix_helvolus,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Psammotettix,helvolus,herbivore,species,3.2,h,17; 18; 19,1; 2
+S0148,Verdanus_abdominalis,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Verdanus,abdominalis,herbivore,species,4.15,h,17; 18; 19,1
+S0149,Zyginidia_scutellaris,Animalia,Arthropoda,Insecta,Hemiptera,Cicadellidae,Zyginidia,scutellaris,herbivore,species,3,h,17; 18; 19,1
+S0150,Bathysolen_nubilis,Animalia,Arthropoda,Insecta,Hemiptera,Coreidae,Bathysolen,nubilis,herbivore,species,5.85,g,19; 20,2
+S0151,Coriomeris_denticulatus,Animalia,Arthropoda,Insecta,Hemiptera,Coreidae,Coriomeris,denticulatus,herbivore,species,8.75,h,20; 21,1; 2
+S0152,Acanthodelphax_spinosa,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Acanthodelphax,spinosa,herbivore,species,2,h,17; 18,1
+S0153,Dicranotropis_hamata,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Dicranotropis,hamata,herbivore,species,2.85,h,17; 18,1; 2
+S0154,Ditropsis_flavipes,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Ditropsis,flavipes,herbivore,species,2.45,h,17; 18,1
+S0155,Javesella_pellucida,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Javesella,pellucida,herbivore,species,3.55,h,17; 18,1; 2
+S0156,Kosswigianella_exigua,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Kosswigianella,exigua,herbivore,species,2.5,h,17; 18,1
+S0157,Laodelphax_striatella,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Laodelphax,striatella,herbivore,species,1.5,h,17; 18,1
+S0158,Ribautodelphax_albostriata,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Ribautodelphax,albostriata,herbivore,species,3.55,h,17; 18,1
+S0159,Ribautodelphax_angulosa,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Ribautodelphax,angulosa,herbivore,species,3,h,17; 18,1
+S0160,Stenocranus_minutus,Animalia,Arthropoda,Insecta,Hemiptera,Delphacidae,Stenocranus,minutus,herbivore,species,5.5,h,17; 18,1
+S0161,Drymus_ryei,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Drymus,ryei,herbivore,species,5,i,22; 23,2; 3
+S0162,Drymus_sylvaticus,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Drymus,sylvaticus,herbivore,species,4.5,i,22; 23,1; 3
+S0163,Megalonotus_chiragra,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Megalonotus,chiragra,herbivore,species,5.95,g,23,3
+S0164,Megalonotus_emarginatus,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Megalonotus,emarginatus,herbivore,species,4,g,23,3
+S0165,Metopoplax_origani,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Metopoplax,origani,herbivore,species,3,i,20; 23,2
+S0166,Nysius_ericae,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Nysius,ericae,herbivore,species,4,h,23,1; 2
+S0167,Nysius_senecionis,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Nysius,senecionis,herbivore,species,4.5,h,20; 23; 24,2
+S0168,Peritrechus_geniculatus,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Peritrechus,geniculatus,herbivore,species,5.5,i,23,3
+S0169,Peritrechus_nubilus,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Peritrechus,nubilus,herbivore,species,5.5,i,23,3
+S0170,Sphragisticus_nebulosus,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Sphragisticus,nebulosus,herbivore,species,5,g,23,3
+S0171,Stygnocoris_rusticus,Animalia,Arthropoda,Insecta,Hemiptera,Lygaeidae,Stygnocoris,rusticus,herbivore,species,3.75,i,20; 23,1; 2; 3
+S0172,Gargara_genistae,Animalia,Arthropoda,Insecta,Hemiptera,Membracidae,Gargara,genistae,herbivore,species,4.8,h,17,1; 2
+S0173,Adelphocoris_lineolatus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Adelphocoris,lineolatus,herbivore,species,8.45,h,20,2
+S0174,Adelphocoris_quadripunctatus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Adelphocoris,quadripunctatus,herbivore,species,8.9,h,20,1; 2
+S0175,Adelphocoris_seticornis,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Adelphocoris,seticornis,omnivore,species,7.5,h,20,2
+S0176,Amblytylus_nasutus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Amblytylus,nasutus,herbivore,species,4.25,h,20,2
+S0177,Campylomma_verbasci,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Campylomma,verbasci,omnivore,species,3,h,20,2; 5.4
+S0178,Charagochilus_gyllenhallii,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Charagochilus,gyllenhalii,herbivore,species,3,i,20,1
+S0179,Chlamydatus_pulicarius,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Chlamydatus,pulicarius,herbivore,species,2.91,h,19,2
+S0180,Chlamydatus_pullus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Chlamydatus,pullus,omnivore,species,2.35,g,20; 25,2
+S0181,Chlamydatus_saltitans,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Chlamydatus,saltitans,omnivore,species,2.5,g,20; 25,2
+S0182,Dicyphus_globulifer,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Dicyphus,globulifer,herbivore,species,3.75,h,20; 25,2
+S0183,Halticus_apterus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Halticus,apterus,herbivore,species,2.65,h,20; 26,2
+S0184,Lygus_gemellatus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Lygus,gemellatus,herbivore,species,5.75,h,20,2
+S0185,Lygus_pratensis,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Lygus,pratensis,herbivore,species,6.55,h,20; 26,2
+S0186,Lygus_rugulipennis,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Lygus,rugulipennis,omnivore,species,5.2,h,20; 26,2
+S0187,Melanotrichus_flavosarsus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Melanotrichus,flavosparsus,herbivore,species,3.6,h,,
+S0188,Notostira_elongata,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Notostira,elongata,herbivore,species,7.35,h,,1; 2
+S0189,Orthocephalus_saltator,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Orthocephalus,saltator,herbivore,species,4.55,h,,2
+S0190,Orthops_basalis,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Orthops,basalis,herbivore,species,5,h,26,2
+S0191,Orthops_kalmii,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Orthops,kalmii,herbivore,species,4.4,h,,1; 2
+S0192,Pachytomella_arallela,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Pachytomella,parallela,herbivore,species,4,h,20; 26,1; 2; 3
+S0193,Plagiognathus_arbustorum,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Plagiognathus,arbustorum,omnivore,species,4,h,,2; 5.4
+S0194,Plagiognathus_chrysanthemi,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Plagiognathus,chrysanthemi,omnivore,species,3.6,h,20; 26,1; 2
+S0195,Polymerus_nigrita,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Polymerus,nigrita,herbivore,species,4.5,h,20; 26,1
+S0196,Polymerus_unifasciatus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Polymerus,unifasciatus,herbivore,species,5.9,h,20; 26,1
+S0197,Stenodema_calcaratum,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Stenodema,calcaratum,herbivore,species,7.5,h,20; 26,2
+S0198,Stenodema_laevigata,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Stenodema,laevigata,herbivore,species,8.4,h,20; 26,1; 2
+S0199,Trigonotylus_caelestialium,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Trigonotylus,caelestialium,herbivore,species,7,h,27,1; 2
+S0200,Tytthus_ygmaeus,Animalia,Arthropoda,Insecta,Hemiptera,Miridae,Tytthus,pygmaeus,predator,species,2.7,g,20,5.4
+S0201,Himacerus_major,Animalia,Arthropoda,Insecta,Hemiptera,Nabidae,Himacerus,major,predator,species,8.25,i,28,5.4
+S0202,Himacerus_mirmicoides,Animalia,Arthropoda,Insecta,Hemiptera,Nabidae,Himacerus,mirmicoides,predator,species,7,g,28,5.4
+S0203,Nabis_,Animalia,Arthropoda,Insecta,Hemiptera,Nabidae,Nabis,0,predator,species,8,i,28,5.4
+S0204,Nabis_brevis,Animalia,Arthropoda,Insecta,Hemiptera,Nabidae,Nabis,brevis,predator,species,6.2,i,28,5.4
+S0205,Nabis_ferus,Animalia,Arthropoda,Insecta,Hemiptera,Nabidae,Nabis,ferus,predator,species,8,i,28,5.4
+S0206,Nabis_pseudoferus,Animalia,Arthropoda,Insecta,Hemiptera,Nabidae,Nabis,pseudoferus,predator,species,7.5,i,28,5.4
+S0207,Carpocoris_fuscispinus,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Carpocoris,fuscispinus,herbivore,species,11,h,24; 27,2
+S0208,Carpocoris_purpureipennis,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Carpocoris,purpureipennis,herbivore,species,11,h,20; 24; 27,2
+S0209,Dolycoris_baccarum,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Dolycoris,baccarum,herbivore,species,11,h,20; 24; 30; 27,2
+S0210,Eurydema_olecareum,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Eurydema,olecareaoleracea,omnivore,species,6.5,h,30; 27,2
+S0211,Graphosoma_lineatum,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Graphosoma,lineatum,herbivore,species,9.5,h,20; 27,2
+S0212,Holcostethus_strictus,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Holcostethus,strictus,herbivore,species,9.5,h,27,2
+S0213,Palomena_viridissima,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Palomena,viridissima,herbivore,species,12,h,20; 27; 30,2
+S0214,Peribalus_vernalis,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Peribalus,vernalis,herbivore,species,10.25,h,27,2
+S0215,Piezodorus_lituratus,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Piezodorus,lituratus,herbivore,species,11,i,19; 20; 27; 30; 31,2
+S0216,Podops_inuncta,Animalia,Arthropoda,Insecta,Hemiptera,Pentatomidae,Podops,inuncta,omnivore,species,5,g,19; 20; 27,2
+S0217,Corizus_hyoscyami,Animalia,Arthropoda,Insecta,Hemiptera,Rhopalidae,Corizus,hyoscyami,herbivore,species,9.4,h,20,2
+S0218,Rhopalus_parumpunctatus,Animalia,Arthropoda,Insecta,Hemiptera,Rhopalidae,Rhopalus,parumpunctatus,herbivore,species,6.85,h,20,1; 2
+S0219,Stictopleurus_abutilon,Animalia,Arthropoda,Insecta,Hemiptera,Rhopalidae,Stictopleurus,abutilon,herbivore,species,7.85,h,20,1; 2
+S0220,Stictopleurus_unctatonervosus,Animalia,Arthropoda,Insecta,Hemiptera,Rhopalidae,Stictopleurus,punctatonervosus,herbivore,species,7.5,h,19,1; 2
+S0221,Rhyparochromus_pini,Animalia,Arthropoda,Insecta,Hemiptera,Rhyparochromidae,Rhyparochromus,pini,herbivore,species,7.45,g,20; 32,3
+S0222,Rhyparochromus_vulgaris,Animalia,Arthropoda,Insecta,Hemiptera,Rhyparochromidae,Rhyparochromus,vulgaris,herbivore,species,7.5,g,24; 32,3
+S0223,Scolopostethus_affinis,Animalia,Arthropoda,Insecta,Hemiptera,Rhyparochromidae,Scolopostethus,affinis,detritivore,species,3.55,i,20; 22; 32,1; 2
+S0224,Eurygaster_maura,Animalia,Arthropoda,Insecta,Hemiptera,Scutelleridae,Eurygaster,maura,herbivore,species,9.5,h,19; 20,2
+S0225,Eurygaster_testudinaria,Animalia,Arthropoda,Insecta,Hemiptera,Scutelleridae,Eurygaster,testudinaria,herbivore,species,10,h,19; 20,2
+S0226,Acalypta_carinata,Animalia,Arthropoda,Insecta,Hemiptera,Tingidae,Acalypta,carinata,herbivore,species,3,g,19; 20; 27,1
+S0227,Acalypta_marginata,Animalia,Arthropoda,Insecta,Hemiptera,Tingidae,Acalypta,marginata,herbivore,species,2.05,i,19; 20; 27,2
+S0228,Acalypta_nigrina,Animalia,Arthropoda,Insecta,Hemiptera,Tingidae,Acalypta,nigrina,herbivore,species,2.6,g,19; 20; 27,1
+S0229,Catoplatus_fabricii,Animalia,Arthropoda,Insecta,Hemiptera,Tingidae,Catoplatus,fabricii,herbivore,species,4.1,g,27,1; 2
+S0230,Kalama_tricornis,Animalia,Arthropoda,Insecta,Hemiptera,Tingidae,Kalama,tricornis,herbivore,species,3.15,g,27,1
+S0231,Aeolothrips_intermedius,Animalia,Arthropoda,Insecta,Thysanoptera,Aeolothripidae,Aeolothrips,intermedius,predator,species,2.5,h,19; 33,2
+S0232,Haplothrips_aculeatus,Animalia,Arthropoda,Insecta,Thysanoptera,Phlaeothripidae,Haplothrips,aculeatus,herbivore,species,1.5,h,19; 33,2
+S0233,Frankliniella_intonsa,Animalia,Arthropoda,Insecta,Thysanoptera,Thripidae,Frankliniella,intonsa,herbivore,species,1.6,h,19; 33,2
+S0234,Frankliniella_tenuicornis,Animalia,Arthropoda,Insecta,Thysanoptera,Thripidae,Frankliniella,tenuicornis,herbivore,species,1.6,h,19; 33,2
+S0235,Limothrips_cerealium,Animalia,Arthropoda,Insecta,Thysanoptera,Thripidae,Limothrips,cerealium,herbivore,species,1.1,h,19; 33,2
+S0236,Limothrips_denticornis,Animalia,Arthropoda,Insecta,Thysanoptera,Thripidae,Limothrips,denticornis,herbivore,species,1.5,h,19; 33,2
+S0237,Odontothrips_loti,Animalia,Arthropoda,Insecta,Thysanoptera,Thripidae,Odontothrips,loti,herbivore,species,1.55,h,19; 33,2
+S0238,Odontothrips_phaleratus,Animalia,Arthropoda,Insecta,Thysanoptera,Thripidae,Odontothrips,phaleratus,herbivore,species,7,h,19; 33,2
+S0239,Thrips_sp1-angusticeps,Animalia,Arthropoda,Insecta,Thysanoptera,Thripidae,Thrips,angusticeps,herbivore,species,1.5,h,19; 33,2
+S0240,Anthicus_antherinus,Animalia,Arthropoda,Insecta,Coleoptera,Anthicidae,Anthicus,antherinus,omnivore,species,2.8,g,34,1; 3
+S0241,Apion_cruentatum,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Apion,cruentatum,herbivore,species,3,h,35,1
+S0242,Apion_frumentarium,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Apion,frumentarium,herbivore,species,2.65,h,19; 35,1
+S0243,Catapion_pubescens,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Catapion,pubescens,herbivore,species,1.75,h,19; 35,2
+S0244,Catapion_seniculus,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Catapion,seniculus,herbivore,species,1.8,h,36,2
+S0245,Cerapion_onopordi,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,CeratapionAcanephodus,onopordi,herbivore,species,3.5,h,35; 36,1; 2
+S0246,Diplapion_confluens,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Diplapion,confluens,herbivore,species,2.05,h,37,1; 2
+S0247,Holotrichapion_aethiops,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Holotrichapion,aethiops,herbivore,species,2.7,h,35,1
+S0248,Apion_pisi,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Holotrichapion,pisi,herbivore,species,3,h,36,1
+S0249,Ischnopterapion_loti,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Ischnopterapion,loti,herbivore,species,2.16,h,36; 38,1; 2
+S0250,Ischnopterapion_modestum,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Ischnopterapion,modestum,herbivore,species,2.12,h,35,2
+S0251,Ischnopterapion_virens,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Ischnopterapion,virens,herbivore,species,1.7,h,35,1; 2
+S0252,Apion_semivittatum,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Kalcapion Kalcapion,semivittatum,herbivore,species,2.1,h,35,2
+S0253,Apion_violaceum,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Perapion,violaceum,herbivore,species,5,h,35; 36,1
+S0254,Protapion_apricans,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Protapion,apricans,herbivore,species,2.45,h,19; 35; 39,1
+S0255,Protapion_assimile,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Protapion,assimile,herbivore,species,2.05,h,35,1; 2
+S0256,Protapion_fulvipes,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Protapion,fulvipes,herbivore,species,2,h,35; 36,1; 2
+S0257,Protapion_nigritarse,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Protapion,nigritarse,herbivore,species,1.75,h,35,1
+S0258,Protapion_trifolii,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Protapion,trifolii,herbivore,species,1.9,h,19; 35; 39,1; 2
+S0259,Squamapion_cineraceum,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Squamapion,cineraceum,herbivore,species,2,h,35,1
+S0260,Stenopterapion_tenue,Animalia,Arthropoda,Insecta,Coleoptera,Apionidae,Stenopterapion,tenue,herbivore,species,1.95,h,35,1; 2
+S0261,Eutrichapion_punctigerum,Animalia,Arthropoda,Insecta,Coleoptera,Brentidae,Eutrichapion,punctigerum,herbivore,species,2.7,h,35; 40,1; 2
+S0262,Bruchus_luteicornis,Animalia,Arthropoda,Insecta,Coleoptera,Bruchidae,Bruchus,luteicornis,herbivore,species,2.15,h,41; 42; 43; 44,1; 2
+S0263,Trachys_scrobiculatus,Animalia,Arthropoda,Insecta,Coleoptera,Buprestidae,Trachys,scrobiculatus,herbivore,species,2,h,45,2
+S0264,Byrrhus_pilula,Animalia,Arthropoda,Insecta,Coleoptera,Byrrhidae,Byrrhus,pilula,herbivore,species,8,g,46,1
+S0265,Lamprobyrrhulus_nitidus,Animalia,Arthropoda,Insecta,Coleoptera,Byrrhidae,Lamprobyrrhulus,nitidus,herbivore,species,3,g,46,1
+S0266,Simplocaria_semistriata,Animalia,Arthropoda,Insecta,Coleoptera,Byrrhidae,Simplocaria,semistriata,herbivore,species,2.75,g,46,1
+S0267,Cantharis_fusca,Animalia,Arthropoda,Insecta,Coleoptera,Cantharidae,Cantharis,fusca,predator,species,12.5,i,36; 48,2; 3; 5.3
+S0268,Cantharis_lateralis,Animalia,Arthropoda,Insecta,Coleoptera,Cantharidae,Cantharis,lateralis,predator,species,6,i,36; 48,2; 3; 5.3
+S0269,Cantharis_rufa,Animalia,Arthropoda,Insecta,Coleoptera,Cantharidae,Cantharis,rufa,predator,species,7.5,i,36; 48,2; 3; 5.3
+S0270,Rgonycha_fulva,Animalia,Arthropoda,Insecta,Coleoptera,Cantharidae,RgonychaRhagonycha,fulva,omnivore,species,8.5,i,36; 48,1; 3; 5.3
+S0271,Acupalpus_meridianus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Acupalpus,meridianus,predator,species,3.5,g,8; 49; 50; 51,1; 2; 5.2
+S0272,Agonum_mülleri,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Agonum,mülleri,predator,species,7.95,i,36,1; 2; 3; 5.2
+S0273,Amara_aenea,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,aenea,omnivore,species,7.5,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0274,Amara_aulica,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,aulica,omnivore,species,12.8,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0275,Amara_bifrons,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,bifrons,omnivore,species,6.5,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0276,Amara_communis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,communis,predator,species,7,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0277,Amara_consularis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,consularis,predator,species,8.25,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0278,Amara_convexior,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,convexior,omnivore,species,8,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0279,Amara_equestris,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,equestris,omnivore,species,11.3,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0280,Amara_eurynota,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,eurynota,omnivore,species,11,i,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0281,Amara_familiaris,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,familiaris,omnivore,species,6.5,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0282,Amara_lunicollis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,lunicollis,omnivore,species,7.5,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0283,Amara_montivaga,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,montivaga,omnivore,species,8.5,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0284,Amara_nitida,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,nitida,omnivore,species,8,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0285,Amara_ovata,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,ovata,omnivore,species,8.8,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0286,Amara_plebeja,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,plebeja,omnivore,species,7,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0287,Amara_quenseli,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,quenseli,omnivore,species,9.4,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0288,Amara_similata,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Amara,similata,omnivore,species,8.25,g,8; 49; 50; 51; 52,1; 2; 3; 5.2
+S0289,Anchomenus_dorsalis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Anchomenus,dorsalis,predator,species,6.8,g,49,2; 5.2
+S0290,Anisodactylus_binotatus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Anisodactylus,binotatus,omnivore,species,11,g,49; 52,1; 2; 3; 5.2
+S0291,Asaphidion_flavipes,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Asaphidion,flavipes,predator,species,4.65,g,49,2; 5.1
+S0292,Asaphidion_pallipes,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Asaphidion,pallipes,predator,species,4.85,g,49,2; 5.1
+S0293,Badister_bullatus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Badister,bullatus,predator,species,5.7,g,1; 49,1; 2; 5.1
+S0294,Bembidion_lampros,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Bembidion,lampros,predator,species,3.5,g,1; 49,2; 5.1
+S0295,Bembidion_obtusum,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Bembidion,obtusum,predator,species,3.2,g,1; 49,2; 5.1
+S0296,Bembidion_properans,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Bembidion,properans,predator,species,3.75,g,1; 49,2; 5.1
+S0297,Bembidion_quadrimaculatum,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Bembidion,quadrimaculatum,omnivore,species,3.1,g,1; 49,2; 5.1
+S0298,Brachinus_explodens,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Brachinus,explodens,predator,species,6,g,1; 49,2; 5.1
+S0299,Calathus_erratus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Calathus,erratus,predator,species,10,g,1; 49,2; 5.1
+S0300,Calathus_fuscipes,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Calathus,fuscipes,predator,species,12.3,g,1; 49,2; 5.1
+S0301,Calathus_melanocephalus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Calathus,melanocephalus,omnivore,species,7.5,g,1; 49,2; 5.1
+S0302,Carabus_auratus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Carabus,auratus,omnivore,species,23.5,g,1; 49,2; 5.1
+S0303,Carabus_granulatus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Carabus,granulatus,predator,species,20,g,1; 49,2; 5.1
+S0304,Carabus_nemoralis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Carabus,nemoralis,predator,species,23,g,1; 49,2; 5.1
+S0305,Cicindela_campestris,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Cicindela,campestris,predator,species,12.5,g,1; 49,2; 5.1
+S0306,Clivina_fossor,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Clivina,fossor,omnivore,species,6.25,g,1; 49,2; 5.1
+S0307,Diachromus_germanus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Diachromus,germanus,herbivore,species,9,h,1; 49,1; 2; 3; 5.2
+S0308,Dyschirius_globosus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Dyschirius,globosus,predator,species,2.4,g,1; 49,2; 5.1
+S0309,Harpalus_affinis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Harpalus,affinis,omnivore,species,10.5,i,1; 8; 49; 50,1; 2; 3; 5.2
+S0310,Harpalus_distinguendus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Harpalus,distinguendus,omnivore,species,9.6,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0311,Harpalus_griseus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Harpalus,griseus,omnivore,species,10,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0312,Harpalus_latus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Harpalus,latus,herbivore,species,9.5,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0313,Harpalus_rubripes,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Harpalus,rubripes,herbivore,species,10,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0314,Harpalus_rufipes,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Harpalus,rufipes,omnivore,species,13.5,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0315,Leistus_ferrugineus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Leistus,ferrugineus,predator,species,7,g,1; 49,2; 5.1
+S0316,Limodromus_assimilis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Limodromus,assimilis,predator,species,11,g,1; 49,2; 5.1
+S0317,Loricera_pilicornis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Loricera,pilicornis,predator,species,5.21,g,1; 49,2; 5.1
+S0318,Microlestes_maurus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Microlestes,maurus,predator,species,3,g,1; 49,2; 5.1
+S0319,Microlestes_minutulus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Microlestes,minutulus,predator,species,3.1,g,1; 49,2; 5.1
+S0320,Nebria_brevicollis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Nebria,brevicollis,predator,species,12,g,1; 49,2; 5.1
+S0321,Notiophilus_aestuans,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Notiophilus,aestuans,predator,species,4.7,g,1; 49,2; 5.1
+S0322,Notiophilus_aquaticus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Notiophilus,aquaticus,predator,species,4.7,h,1; 49,2; 5.1
+S0323,Notiophilus_palustris,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Notiophilus,palustris,predator,species,4.5,g,1; 49,1; 2; 5.2
+S0324,Ophonus_ardosiacus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Ophonus,ardosiacus,herbivore,species,13.5,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0325,Ophonus_azureus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Ophonus,azureus,herbivore,species,7.5,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0326,Ophonus_laticollis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Ophonus,laticollis,herbivore,species,9.75,i,1; 8; 49; 50,1; 2; 3; 5.2
+S0327,Ophonus_puncticeps,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Ophonus,puncticeps,herbivore,species,8.3,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0328,Harpalus_seladon,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Ophonus,rufibarbis,herbivore,species,8,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0329,Ophonus_schaubergerianus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Ophonus,schaubergerianus,herbivore,species,7.5,g,1; 8; 49; 50,1; 2; 3; 5.2
+S0330,Ophonus_stictus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Ophonus,stictus,herbivore,species,13,i,1; 49,1; 2; 3; 5.2
+S0331,Paratachys_bistriatus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Paratachys,bistriatus,predator,species,1.9,g,1; 49,2; 5.1
+S0332,Poecilus_cupreus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Poecilus,cupreus,omnivore,species,11,g,1; 49,1; 2; 3; 5.2
+S0333,Poecilus_versicolor,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Poecilus,versicolor,predator,species,9.8,g,1; 49,2; 5.1
+S0334,Pseudophonus_rufipes,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Pseudophonus,rufipes,predator,species,13.27,g,1; 49,1; 2; 3; 5.2
+S0335,Pterostichus_melanarius,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Pterostichus,melanarius,predator,species,15,i,1; 4; 49; 53,2; 5.1
+S0336,Pterostichus_minor,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Pterostichus,minor,predator,species,7,i,1; 4; 49; 53,2; 5.1
+S0337,Pterostichus_strenuus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Pterostichus,strenuus,predator,species,6,g,1; 4; 49; 53,2; 5.1
+S0338,Pterostichus_vernalis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Pterostichus,vernalis,predator,species,6.85,i,1; 4; 49; 53,2; 5.1
+S0339,Stomis_pumicatus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Stomis,pumicatus,predator,species,7.4,g,1; 49,2; 5.1
+S0340,Syntomus_truncatellus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Syntomus,truncatellus,predator,species,3.15,i,1; 49,2; 5.1
+S0341,Synuchus_vivalis,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Synuchus,vivalis,predator,species,7.4,g,1; 49,2; 5.1
+S0342,Trechus_quadristriatus,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Trechus,quadristriatus,omnivore,species,4,g,1; 49,1; 2; 3; 5.2
+S0343,Aphthona_pallida,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Aphthona,pallida,herbivore,species,1.65,h,54,1; 2
+S0344,Asiorestia_ferruginea,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Asiorestia,ferruginea,herbivore,species,3.1,h,55,1; 2
+S0345,Cassida_sanguinosa,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Cassida,sanguinosa,herbivore,species,4.75,h,56,2
+S0346,Cassida_vibex,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Cassida,vibex,herbivore,species,6.25,h,44,2
+S0347,Chaetocnema_concinna,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Chaetocnema,concinna,herbivore,species,1.9,h,36; 57,2
+S0348,Chaetocnema_hortensis,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Chaetocnema,hortensis,herbivore,species,1.9,h,36; 55,1; 2
+S0349,Chaetocnema_laevicollis,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Chaetocnema,laevicollis,herbivore,species,2,h,36; 55; 57,1; 2
+S0350,Chrysolina_haemoptera,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Chrysolina,haemoptera,herbivore,species,7,h,55; 58,1; 2
+S0351,Chrysolina_oricalcia,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Chrysolina,oricalcia,herbivore,species,7.5,h,55,2
+S0352,Chrysolina_staphylaea,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Chrysolina,staphylaea,herbivore,species,7.75,h,19; 72,1; 2
+S0353,Chrysolina_sturmi,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Chrysolina,sturmi,herbivore,species,8,h,54; 55; 73,1; 2
+S0354,Epithrix_pubescens,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Epitrix,pubescens,herbivore,species,1.75,h,54,2
+S0355,Gastrophysa_viridula,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Gastrophysa,viridula,herbivore,species,5.5,h,55; 74,1; 2
+S0356,Longitarsus_atricillus,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,atricillus,herbivore,species,2.5,h,55; 58,1; 2
+S0357,Longitarsus_luridus,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,luridus,herbivore,species,1.85,h,55; 58,1; 2
+S0358,Longitarsus_lycopi,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,lycopi,herbivore,species,1.75,h,55; 58,1; 2
+S0359,Longitarsus_melanocephalus,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,melanocephalus,herbivore,species,2.5,h,55; 58,1; 2
+S0360,Longitarsus_noricus,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,noricus,herbivore,species,2.85,h,55; 58,1; 2
+S0361,Longitarsus_parvulus,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,parvulus,herbivore,species,1.4,h,55; 58,2
+S0362,Longitarsus_pratensis,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,pratensis,herbivore,species,1.6,h,54; 55; 59,1; 2
+S0363,Longitarsus_reichei,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,reichei,herbivore,species,1.75,h,60,2
+S0364,Longitarsus_succineus,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Longitarsus,succineus,herbivore,species,1.95,h,55; 58,2
+S0365,Phyllotreta_atra,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Phyllotreta,atra,herbivore,species,2.5,h,55,2; 8
+S0366,Phyllotreta_nigripes,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Phyllotreta,nigripes,herbivore,species,3,i,55,2; 8
+S0367,Phyllotreta_vittula,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae,Phyllotreta,vittula,herbivore,species,2,i,55,2; 8
+S0368,Cassida_panzeri,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae ,Cassida,panzeri,herbivore,species,6.5,h,55,2
+S0369,Cassida_rubiginosa,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae ,Cassida,rubiginosa,herbivore,species,7.25,h,55,2
+S0370,Oulema (Lema)_duftschmidi,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae ,Oulema (Lema),duftschmidi,herbivore,species,4.25,h,44,2
+S0371,Oulema (Lema)_gallaeciana,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae ,Oulema (Lema),gallaeciana,herbivore,species,3.5,h,44,2
+S0372,Phyllotreta_undulata,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae ,Phyllotreta,undulata,herbivore,species,1.5,i,61,2
+S0373,Timarcha (Chrysomela)_goettingensis,Animalia,Arthropoda,Insecta,Coleoptera,Chrysomelidae ,Timarcha (Chrysomela),goettingensis,herbivore,species,9.5,h,62,2
+S0374,Coccinella_quinquepunctata,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Coccinella,quinquepunctata,predator,species,4,h,63,5.3
+S0375,Coccinella_septempunctata,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Coccinella,septempunctata,predator,species,6.6,h,36; 46; 63; 64,5.3
+S0376,Adonia_variegata,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Hippodamia,variegata,predator,species,4.5,h,46,5.3
+S0377,Hyperaspis_campestris,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Hyperaspis,campestris,predator,species,3.25,h,46,5.3
+S0378,Platynaspis_luteorubra,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Platynaspis,luteorubra,predator,species,3.15,i,46,5.3
+S0379,Propylea_quatuordecimpunctata,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Propylea,quatuordecimpunctata,predator,species,4,i,63; 65,5.3
+S0380,Psyllobora_vigintiduopunctata,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Psyllobora,vigintiduopunctata,omnivore,species,3.75,h,46,1
+S0381,Scymnus_frontalis,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Scymnus,frontalis,predator,species,2.5,h,36; 63,5.3
+S0382,Scymnus_haemorrhoidalis,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Scymnus,haemorrhoidalis,predator,species,1.5,h,46,5.3
+S0383,Tytthaspis_sedecimpunctata,Animalia,Arthropoda,Insecta,Coleoptera,Coccinellidae,Tytthaspis,sedecimpunctata,omnivore,species,3,h,35; 63,3; 5.3
+S0384,Corylophus_cassidioides,Animalia,Arthropoda,Insecta,Coleoptera,Corylophidae,Corylophus,cassidioides,detritivore,species,0.75,g,46; 66,1
+S0385,Sericoderus_lateralis,Animalia,Arthropoda,Insecta,Coleoptera,Corylophidae,Sericoderus,lateralis,detritivore,species,1.05,g,46; 66,1
+S0386,Atomaria_analis,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Atomaria,analis,omnivore,species,1.75,i,46; 67,1
+S0387,Atomaria_atricapilla,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Atomaria,atricapilla,omnivore,species,1.45,i,46; 67,1
+S0388,Atomaria_basalis,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Atomaria,basalis,omnivore,species,1.6,g,46; 67,1
+S0389,Atomaria_fuscata,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Atomaria,fuscata,detritivore,species,1.65,g,46; 67,1
+S0390,Atomaria_linearis,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Atomaria,linearis,detritivore,species,1.35,g,46; 67,1
+S0391,Atomaria_nigriventris,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Atomaria,nigriventris,omnivore,species,1.3,i,46; 67,1
+S0392,Atomaria_sp1,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Atomaria,sp1,omnivore,species,1.55,g,46; 67,1
+S0393,Atomaria_sp2,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Atomaria,sp2,omnivore,species,1.55,g,46; 67,1
+S0394,Cryptophagus_pilosus,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Cryptophagus,pilosus,detritivore,species,2.75,g,46; 67,1
+S0395,Cryptophagus_schmidti,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae,Cryptophagus,schmidti,detritivore,species,2.65,g,46; 67,1
+S0396,Atomaria_punctithorax,Animalia,Arthropoda,Insecta,Coleoptera,Cryptophagidae ,Atomaria,punctithorax,detritivore,species,1.65,g,46; 67,1
+S0397,Baris_lepidii,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Baris,lepidii,herbivore,species,3.5,h,46,2
+S0398,Barypeithes_pellucidus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Barypeithes,pellucidus,herbivore,species,3.75,i,46,1; 2
+S0399,Barypeithes_trichopterus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Barypeithes,trichopterus,herbivore,species,3.05,g,46,3
+S0400,Ceutorhynchus_erysimi,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Ceutorhynchus,erysimi,herbivore,species,2.3,h,46; 68; 69,2
+S0401,Ceutorhynchus_floralis,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Ceutorhynchus,typhae,herbivore,species,2.85,h,46; 68; 69,2
+S0402,Coryssomerus_capucinus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Coryssomerus,capucinus,herbivore,species,3,h,37; 46,1; 2
+S0403,Eusomus_ovulum,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Eusomus,ovulum,herbivore,species,5.75,h,19; 39; 46,1; 2
+S0404,Glocianus_punctiger,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Glocianus,punctiger,herbivore,species,2.8,h,75,1
+S0405,Alophus_triguttatus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Graptus,triguttatus,herbivore,species,7.5,h,19; 39,1; 2
+S0406,Hypera_meles,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Hypera,meles,herbivore,species,4.4,h,19; 39; 40; 68,1
+S0407,Hypera_nigrirostris,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Hypera,nigrirostris,herbivore,species,3.5,h,19; 39; 40; 68,1; 2
+S0408,Hypera_plantaginis,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Hypera,plantaginis,herbivore,species,4.4,h,19; 39; 40; 68,1
+S0409,Hypera_postica,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Hypera,postica,herbivore,species,4.65,h,19; 39; 40; 68,1; 2
+S0410,Hypera_suspiciosa,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Hypera,suspiciosa,herbivore,species,5.3,h,19; 39; 68,1; 2
+S0411,Hypera_venusta,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Hypera,venusta,herbivore,species,3.3,h,19; 39; 40; 68,1; 2
+S0412,Hypera_zoilus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Hypera,zoilus,herbivore,species,7.5,h,19; 39; 40; 68,2
+S0413,Lepyrus_capucinus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Lepyrus,capucinus,herbivore,species,10,h,19; 39; 68,2
+S0414,Limobius_borealis,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Limobius,borealis,herbivore,species,2.75,h,19; 40; 68,1
+S0415,Liophloeus_tessulatus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Liophloeus,tessulatus,herbivore,species,9,i,19; 68; 70,1; 2
+S0416,Liparus_coronatus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Liparus,coronatus,herbivore,species,10.75,h,19; 39; 68,1; 2
+S0417,Mecinus_collaris,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Mecinus,collaris,herbivore,species,3.25,h,19; 39; 46,1
+S0418,Gymnetron_labile,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Mecinus,labilis,herbivore,species,1.95,h,19; 39; 46,2
+S0419,Gymnetron_pascuorum,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Mecinus,pascuorum,herbivore,species,1.8,h,19; 39; 46,2
+S0420,Mecinus_pyraster,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Mecinus,pyraster,herbivore,species,3.4,h,19; 39; 46,1
+S0421,Otiorhynchus_ligustici,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Otiorhynchus,ligustici,herbivore,species,10,i,19; 39; 40,1; 2
+S0422,Otiorhynchus_raucus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Otiorhynchus,raucus,herbivore,species,6.5,i,19; 39; 40,2; 3
+S0423,Phyllobius_betulinus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Phyllobius,betulinus,herbivore,species,5,i,19; 40; 68; 70,2
+S0424,Phyllobius_roboretanus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Phyllobius,roboretanus,herbivore,species,4.5,i,19; 68; 71,2
+S0425,Phyllobius_viridicollis,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Phyllobius,viridicollis,herbivore,species,5,i,19; 40; 68; 70,1; 2
+S0426,Rhinoncus_castor,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Rhinoncus,castor,herbivore,species,3,h,9; 46,1; 2
+S0427,Rhinoncus_pericarpius,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Rhinoncus,pericarpius,herbivore,species,2.95,h,9; 46,1
+S0428,Sciaphilus_asperatus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sciaphilus,asperatus,herbivore,species,5,h,19; 39; 70,2
+S0429,Sitona_hispidulus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,hispidulus,herbivore,species,4,i,9; 47; 76,1
+S0430,Sitona_humeralis,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,humeralis,herbivore,species,4.25,i,19; 35; 39; 72; 76,1
+S0431,Sitona_languidus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,languidus,herbivore,species,3.75,i,19; 76,1; 2
+S0432,Sitona_lepidus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,lepidus,herbivore,species,5.25,h,19; 39; 68; 76,1; 2
+S0433,Sitona_lineatus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,lineatus,herbivore,species,4,h,19; 39; 70; 76,1; 2
+S0434,Sitona_crinitus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,macularius,herbivore,species,3.75,i,19; 35; 70,1; 2
+S0435,Sitona_sulcifrons,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,sulcifrons,herbivore,species,3.5,h,19; 76,1; 2
+S0436,Sitona_suturalis,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,suturalis,herbivore,species,4.25,h,19; 39; 68; 70; 76,1; 2
+S0437,Sitona_waterhousei,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Sitona,waterhousei,herbivore,species,4,h,19; 39; 68; 70; 76,1; 2
+S0438,Tanymecus_palliatus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Tanymecus,palliatus,herbivore,species,12,h,19; 35; 39; 68,1; 2
+S0439,Trachyphloeus_aristatus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Trachyphloeus,aristatus,herbivore,species,2.75,i,19; 39; 70,1; 2
+S0440,Trichosirocalus_troglodytes,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Trichosirocalus,troglodytes,herbivore,species,2.6,h,19; 49,1
+S0441,Tychius_junceus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Tychius,junceus,herbivore,species,2.15,h,19; 39; 46; 76,1; 2
+S0442,Tychius_picirostris,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Tychius,picirostris,herbivore,species,2.15,h,19; 39; 46; 76,1; 2
+S0443,Tychius_pusillus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Tychius,pusillus,herbivore,species,2,h,19; 39; 46; 76,1; 2
+S0444,Tychius_stephensi,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Tychius,stephensi,herbivore,species,2.25,h,19; 39; 46; 76,1; 2
+S0445,Zacladus_geranii,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae,Zacladus,geranii,herbivore,species,2.85,h,68; 77,1
+S0446,Hadroplontus_litura,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae ,Hadroplontus,litura,herbivore,species,3.35,h,19; 35; 46; 76,2
+S0447,Phyllobius (Subphyllobius)_parvulus,Animalia,Arthropoda,Insecta,Coleoptera,Curculionidae ,Phyllobius,parvulus,herbivore,species,4.5,h,19; 40; 68; 70,2; 3
+S0448,Dermestes_laniarius,Animalia,Arthropoda,Insecta,Coleoptera,Dermestidae,Dermestes,laniarius,detritivore,species,7.25,g,34; 46,1
+S0449,Adrastus_rachifer,Animalia,Arthropoda,Insecta,Coleoptera,Elateridae,Adrastus,rachifer,herbivore,species,3.6,h,46,1; 3
+S0450,Agriotes_obscurus,Animalia,Arthropoda,Insecta,Coleoptera,Elateridae,Agriotes,obscurus,omnivore,species,8.75,h,46,2; 1; 3
+S0451,Agriotes_sputator,Animalia,Arthropoda,Insecta,Coleoptera,Elateridae,Agriotes,sputator,omnivore,species,7.25,h,46,2; 1; 3
+S0452,Agrypnus_murinus,Animalia,Arthropoda,Insecta,Coleoptera,Elateridae,Agrypnus,murinus,omnivore,species,14.5,g,46,1; 3; 5.1
+S0453,Athous_bicolor,Animalia,Arthropoda,Insecta,Coleoptera,Elateridae,Athous,bicolor,herbivore,species,9.5,g,46,1; 3
+S0454,Hemicrepidius_hirtus,Animalia,Arthropoda,Insecta,Coleoptera,Elateridae,Hemicrepidius,hirtus,herbivore,species,12.25,g,46,1; 3
+S0455,Hemicrepidius_niger,Animalia,Arthropoda,Insecta,Coleoptera,Elateridae,Hemicrepidius,niger,herbivore,species,12,i,46,1; 3
+S0456,Oedostethus_quadripustulatus,Animalia,Arthropoda,Insecta,Coleoptera,Elateridae,Oedostethus,quadripustulatus,omnivore,species,3.25,i,46,1
+S0457,Odonteus_armiger,Animalia,Arthropoda,Insecta,Coleoptera,Geotrupidae,Odontaeus,armiger,omnivore,species,8.5,g,46,1
+S0458,Margarinotus_carbonarius,Animalia,Arthropoda,Insecta,Coleoptera,Histeridae,Margarinotus,carbonarius,predator,species,4.5,g,47,2
+S0459,Margarinotus_purpurascens,Animalia,Arthropoda,Insecta,Coleoptera,Histeridae,Margarinotus,purpurascens,predator,species,4.5,g,47,2
+S0460,Helophorus_griseus,Animalia,Arthropoda,Insecta,Coleoptera,Hydrophilidae,Helophorus,griseus,omnivore,species,2.95,g,47,2; 3; 5.1
+S0461,Helophorus_nubilus,Animalia,Arthropoda,Insecta,Coleoptera,Hydrophilidae,Helophorus,nubilus,omnivore,species,3.5,g,47,2; 3; 5.1
+S0462,Megasternum_boletophagum,Animalia,Arthropoda,Insecta,Coleoptera,Hydrophilidae,Megasternum,boletophagum,detritivore,species,2,g,47,1; 5.1
+S0463,Megasternum_obscurum,Animalia,Arthropoda,Insecta,Coleoptera,Hydrophilidae,Megasternum,obscurum,omnivore,species,1.95,g,47,1; 2; 5.1
+S0464,Brachypterus_glaber,Animalia,Arthropoda,Insecta,Coleoptera,Kateretidae,Brachypterus,glaber,omnivore,species,2.1,h,47,1
+S0465,Corticarina_fuscula,Animalia,Arthropoda,Insecta,Coleoptera,Latridiidae,Corticarina,fuscula,detritivore,species,1.65,g,47,1
+S0466,Cortinicara_gibbosa,Animalia,Arthropoda,Insecta,Coleoptera,Latridiidae,Cortinicara,gibbosa,detritivore,species,1.3,g,47,1
+S0467,Enicmus_histrio,Animalia,Arthropoda,Insecta,Coleoptera,Latridiidae,Enicmus,histrio,detritivore,species,1.75,g,47,1
+S0468,Enicmus_transversus,Animalia,Arthropoda,Insecta,Coleoptera,Latridiidae,Enicmus,transversus,detritivore,species,2,g,47,1
+S0469,Lathridius_lardarius,Animalia,Arthropoda,Insecta,Coleoptera,Latridiidae,Stephostethus,lardarius,detritivore,species,2.55,g,47,1
+S0470,Catops_nigriclavis,Animalia,Arthropoda,Insecta,Coleoptera,Leiodidae,Catops,nigriclavis,omnivore,species,4,g,19; 34; 68,1
+S0471,Choleva_oblonga,Animalia,Arthropoda,Insecta,Coleoptera,Leiodidae,Choleva,oblonga,omnivore,species,5,g,19; 34; 68,1
+S0472,Liocyrtusa_minuta,Animalia,Arthropoda,Insecta,Coleoptera,Leiodidae,Liocyrtusa,minuta,detritivore,species,2,g,19; 34; 68,1
+S0473,Liocyrtusa_pauxilla,Animalia,Arthropoda,Insecta,Coleoptera,Leiodidae,Liocyrtusa,pauxilla,omnivore,species,2,i,19; 34; 68,1
+S0474,Ptomaphagus_sericatus,Animalia,Arthropoda,Insecta,Coleoptera,Leiodidae,Ptomaphagus,sericatus,detritivore,species,2.85,g,19; 34; 68,1
+S0475,Ptomaphagus_subvillosus,Animalia,Arthropoda,Insecta,Coleoptera,Leiodidae,Ptomaphagus,subvillosus,omnivore,species,3.15,g,19; 34; 68,1
+S0476,Ptomaphagus_varicornis,Animalia,Arthropoda,Insecta,Coleoptera,Leiodidae,Ptomaphagus,varicornis,omnivore,species,2.85,g,19; 34; 68,1
+S0477,Sciodrepoides_watsoni,Animalia,Arthropoda,Insecta,Coleoptera,Leiodidae,Sciodrepoides,watsoni,omnivore,species,3.05,g,19; 34; 68,1
+S0478,Malachius_bipustulatus,Animalia,Arthropoda,Insecta,Coleoptera,Malachiidae,Malachius,bipustulatus,omnivore,species,5.5,h,34; 46,2; 5.2
+S0479,Malachius_viridis,Animalia,Arthropoda,Insecta,Coleoptera,Malachiidae,Malachius,viridis,omnivore,species,4.5,h,34; 46,2; 5.2
+S0480,Mordellistena_falsoparvula,Animalia,Arthropoda,Insecta,Coleoptera,Mordellidae,Mordellistena,falsoparvula,omnivore,species,6,i,19; 34; 46,1; 2
+S0481,Mordellistena_parvula,Animalia,Arthropoda,Insecta,Coleoptera,Mordellidae,Mordellistena,parvula,omnivore,species,6,i,19; 34; 46,1; 2
+S0482,Meligethes_erythropus,Animalia,Arthropoda,Insecta,Coleoptera,Nitidulidae,Genistogethes,carinulatus,herbivore,species,2.2,h,19; 34; 46; 79,1; 2
+S0483,Glischrochilus_quadrisignatus,Animalia,Arthropoda,Insecta,Coleoptera,Nitidulidae,Glischrochilus,quadrisignatus,herbivore,species,6,i,46,2
+S0484,Meligethes_aeneus,Animalia,Arthropoda,Insecta,Coleoptera,Nitidulidae,Meligethes,aeneus,herbivore,species,2.1,h,36; 46; 79; 80; 81,1; 2
+S0485,Meligethes_nigrescens,Animalia,Arthropoda,Insecta,Coleoptera,Nitidulidae,Meligethes,nigrescens,herbivore,species,2.1,h,19; 46; 79,1; 2
+S0486,Oedemera_lurida,Animalia,Arthropoda,Insecta,Coleoptera,Oedemeridae,Oedemera,lurida,herbivore,species,6,h,46; 82,2
+S0487,Oedemera_virescens,Animalia,Arthropoda,Insecta,Coleoptera,Oedemeridae ,Oedemera,virescens,herbivore,species,9.5,h,46; 82,2
+S0488,Olibrus_affinis,Animalia,Arthropoda,Insecta,Coleoptera,Phalacridae,Olibrus,affinis,herbivore,species,2.2,h,34; 46; 75,1; 2
+S0489,Olibrus_bicolor,Animalia,Arthropoda,Insecta,Coleoptera,Phalacridae,Olibrus,bicolor,herbivore,species,2.75,h,34; 46; 75,1; 2
+S0490,Acrotrichis_fascicularis,Animalia,Arthropoda,Insecta,Coleoptera,Ptiliidae,Acrotrichis,fascicularis,omnivore,species,0.9,g,34; 46,1
+S0491,Acrotrichis_sitkaensis,Animalia,Arthropoda,Insecta,Coleoptera,Ptiliidae,Acrotrichis,sitkaensis,omnivore,species,1,g,34; 46,1
+S0492,Amphimallon_solstitiale,Animalia,Arthropoda,Insecta,Coleoptera,Scarabaeidae,Amphimallon,solstitiale,herbivore,species,16,i,34; 46,3
+S0493,Onthophagus_ovatus,Animalia,Arthropoda,Insecta,Coleoptera,Scarabaeidae,Onthophagus,ovatus,omnivore,species,5,g,34; 46; 83,1
+S0494,Hylastinus_obscurus,Animalia,Arthropoda,Insecta,Coleoptera,Scolytidae,Hylastinus,obscurus,herbivore,species,2.25,h,34; 47; 73,1; 2
+S0495,Nicrophorus_vespillo,Animalia,Arthropoda,Insecta,Coleoptera,Siliphidae,Nicrophorus,vespillo,omnivore,species,17,g,34; 47,1
+S0496,Silpha_obscura,Animalia,Arthropoda,Insecta,Coleoptera,Siliphidae,Silpha,obscura,predator,species,15,g,34; 47,1
+S0497,Silpha_tristis,Animalia,Arthropoda,Insecta,Coleoptera,Siliphidae,Silpha,tristis,omnivore,species,15,g,34; 47,1
+S0498,Acrotona_parvula,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Acronota,parvula,detritivore,species,2,g,34; 47,1; 5.1
+S0499,Aleochara_bilineata,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Aleochara,bilineata,omnivore,species,4,g,34; 47,1; 2
+S0500,Aleochara_bipustulata,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Aleochara,bipustulata,predator,species,3.25,g,34; 47,1; 2
+S0501,Aleochara_curtula,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Aleochara,curtula,predator,species,6,g,34; 47,1; 2
+S0502,Aleochara_ruficornis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Aleochara,ruficornis,omnivore,species,4.5,g,34; 47,1; 2
+S0503,Aleuonota_gracilenta,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Aleuonota,gracilenta,predator,species,2.6,g,34; 47,1; 5.1
+S0504,Aloconota_gregaria,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Aloconota,gregaria,predator,species,3.25,g,34; 47,1; 5.1
+S0505,Amischa_analis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Amischa,analis,predator,species,2.25,g,34; 47,1; 5.1
+S0506,Amischa_decipiens,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Amischa,decipiens,predator,species,2.1,g,34; 47,1; 5.1
+S0507,Anaulacaspis_nigra,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Anaulacaspis,nigra,predator,species,2.75,g,34; 47,1; 5.1
+S0508,Anotylus_hamatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Anotylus,hamatus,omnivore,species,1.5,g,34; 47,2; 5.1
+S0509,Anotylus_insecatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Anotylus,insecatus,omnivore,species,4.25,g,34; 47,2; 5.1
+S0510,Anotylus_inustus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Anotylus,inustus,omnivore,species,3.5,g,34; 47,2; 5.1
+S0511,Anotylus_rugosus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Anotylus,rugosus,omnivore,species,5,g,34; 47,2; 5.1
+S0512,Anotylus_sculpturatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Anotylus,sculpturatus,omnivore,species,4,g,34; 47,2; 5.1
+S0513,Anotylus_tetracarinatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Anotylus,tetracarinatus,omnivore,species,2.95,g,34; 47,2; 5.1
+S0514,Atheta_amicula,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,amicula,omnivore,species,1.8,h,34; 47; 84,2; 5.1
+S0515,Atheta_cauda,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,cauta,detritivore,species,3.5,g,34; 47; 84,2; 5.1
+S0516,Atheta_crassicornis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,crassicornis,predator,species,3.5,i,34; 47; 84,2; 5.1
+S0517,Atheta_elongatula,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,elongatula,detritivore,species,3.25,g,34; 47; 84,2; 5.1
+S0518,Atheta_fungi,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,fungi,detritivore,species,2.6,g,34; 47; 84,2; 5.1
+S0519,Atheta_fungicola,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,fungicola,predator,species,3.5,i,34; 47; 84,2; 5.1
+S0520,Atheta_laticollis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,laticollis,detritivore,species,2.5,g,34; 47; 84,2; 5.1
+S0521,Atheta_myrmecobia,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,myrmecobia,detritivore,species,2.4,g,34; 47; 84,2; 5.1
+S0522,Atheta_oblita,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,oblita,detritivore,species,2.2,g,34; 47; 84,2; 5.1
+S0523,Atheta_orbata,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,orbata,detritivore,species,2.5,g,34; 47; 84,2; 5.1
+S0524,Atheta_palustris,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,palustris,predator,species,3.5,i,34; 47; 84,2; 5.1
+S0525,Atheta_triangulum,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Atheta,triangulum,detritivore,species,3.14,g,34; 47; 84,2; 5.1
+S0526,Bledius_erraticus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Bledius,erraticus,omnivore,species,3.3,g,34; 47,2
+S0527,Bledius_gallicus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Bledius,gallicus,herbivore,species,4.25,g,34; 47,1; 2
+S0528,Bolitobius_castaneus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Bolitobius,castaneus,predator,species,6.5,g,34; 47,1; 5.1
+S0529,Callicerus_rigidicornis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Callicerus,rigidicornis,predator,species,5,g,34; 47; 85; 86,2; 5.1
+S0530,Carpelimus_punctatellus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Carpelimus,punctatellus,herbivore,species,1.5,g,34; 47; 85; 86,1
+S0531,Dinaraea_angustula,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Dinaraea,angustula,predator,species,3.35,g,34; 47; 84,2; 5.1
+S0532,Drusilla_canaliculata,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Drusilla,canaliculata,detritivore,species,4.25,g,34; 47; 87,2; 5.1
+S0533,Eusphalerum_ophthalmicum,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Eusphalerum,luteum,omnivore,species,2.75,h,34; 47; 84,2
+S0534,Falagria_thoracica,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Falagria,thoracica,predator,species,2.7,g,34; 47; 84,2; 5.1
+S0535,Falagrioma_thoracica,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Falagrioma,thoracica,predator,species,2.7,g,34; 47; 84,2; 5.1
+S0536,Gabrius_osseticus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Gabrius,osseticus,omnivore,species,6.25,g,34; 47; 86,1; 5.1
+S0537,Gyrohypnus_angustatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Gyrohypnus,angustatus,predator,species,7.5,g,34; 47; 86,1; 5.1
+S0538,Hypocyphthus_longicornis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Hypocyphthus,longicornis,omnivore,species,1.2,g,34; 47,2; 5.1
+S0539,Ilyobates_bennetti,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Ilyobates,bennetti,predator,species,4.25,g,34; 47,2; 5.1
+S0540,Ischnosoma_splendidum,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Ischnosoma,splendidum,detritivore,species,4.25,g,34; 47,1; 5.1
+S0541,Lathrobium_dilutum,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Lathrobium,dilutum,predator,species,6.75,g,4; 34; 47; 88,5.1
+S0542,Lathrobium_fulvipenne,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Lathrobium,fulvipenne,predator,species,8.25,g,4; 34; 47; 88,1; 2; 5.1
+S0543,Lathrobium_pallidum,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Lathrobium,pallidum,predator,species,5.5,g,4; 34; 47; 88,1; 2; 5.1
+S0544,Liogluta_alpestris,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Liogluta,alpestris,predator,species,3.75,g,34; 47,1; 2; 5.1
+S0545,Mycetoporus_splendens,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Mycetoporus,nigricollis,detritivore,species,5.25,g,34; 47,1; 5.1
+S0546,Ocypus_aeneocephalus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Ocypus,aeneocephalus,predator,species,13,g,1; 34; 47; 86,1; 2; 5.1
+S0547,Ocypus_brunnipes,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Ocypus,brunnipes,predator,species,13.5,g,1; 34; 47; 86,1; 2; 5.1
+S0548,Ocypus_nitens,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Ocypus,nitens,predator,species,16,g,1; 34; 47; 86,1; 2; 5.1
+S0549,Ocypus_olens,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Ocypus,olens,omnivore,species,27,g,1; 34; 47; 86,1; 2; 5.1
+S0550,Oligota_pumilio,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Oligota,pumilio,predator,species,1.1,g,1; 34; 47; 86; 89,2; 4; 5.1
+S0551,Oligota_pusillima,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Oligota,pusillima,predator,species,1.15,g,1; 34; 47; 86; 89,2; 4; 5.1
+S0552,Omalium_caesum,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Omalium,caesum,omnivore,species,3,g,1; 34; 47; 86; 47; 90,1
+S0553,Oxypoda_brachyptera,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Oxypoda,brachyptera,omnivore,species,2.1,g,34; 47; 86; 91,2; 5.1
+S0554,Oxypoda_brevicornis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Oxypoda,brevicornis,predator,species,2.85,g,34; 47; 86,2; 5.1
+S0555,Oxypoda_exoleta,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Oxypoda,exoleta,omnivore,species,2.3,g,34; 47; 86,2; 5.1
+S0556,Oxypoda_formiceticola,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Oxypoda,formiceticola,predator,species,2.4,g,34; 47; 86,2; 5.1
+S0557,Oxypoda_longipes,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Oxypoda,longipes,predator,species,4.9,g,34; 47; 86,2; 5.1
+S0558,Paederus_littoralis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Paederus,littoralis,predator,species,8,g,34; 47; 86,2; 5.1
+S0559,Zyras_limbatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Pella,limbatus,predator,species,5,g,34; 47; 86; 92,2; 5.1
+S0560,Philonthus_atratus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Philonthus,atratus,predator,species,8,g,1; 34; 47; 93,1; 2; 5.1
+S0561,Philonthus_carbonarius,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Philonthus,carbonarius,predator,species,12.5,g,1; 34; 47; 93,1; 2; 5.1
+S0562,Philonthus_cognatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Philonthus,cognatus,predator,species,9.75,g,1; 34; 47; 93,1; 2; 5.1
+S0563,Philonthus_concinnus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Philonthus,concinnus,omnivore,species,10,g,1; 34; 47; 93,1; 2; 5.1
+S0564,Philonthus_laminatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Philonthus,laminatus,predator,species,9,g,1; 34; 47; 93,1; 2; 5.1
+S0565,Philonthus_lepidus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Philonthus,lepidus,omnivore,species,10,g,1; 34; 47; 93,1; 2; 5.1
+S0566,Philonthus_rotundicollis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Philonthus,rotundicollis,predator,species,9.5,g,1; 34; 47; 93,1; 2; 5.1
+S0567,Philonthus_succicola,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Philonthus,succicola,predator,species,12,g,1; 34; 47; 93,1; 2; 5.1
+S0568,Platydracus_stercorarius,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Platydracus,stercorarius,predator,species,13.5,g,1; 34; 47,2; 5.1
+S0569,Platystethus_nitens,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Platystethus,nitens,omnivore,species,4.105,g,1; 34; 47,2; 5.1
+S0570,Pycnota_paradoxa,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Pycnota,paradoxa,predator,species,2.25,g,1; 34; 47,2
+S0571,Quedius_boops,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Quedius,boops,omnivore,species,9,g,1; 34; 47,1; 2; 5.1
+S0572,Quedius_curtipennis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Quedius,curtipennis,predator,species,12.5,g,1; 34; 47,2; 5.1
+S0573,Quedius_ochripennis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Quedius,ochripennis,predator,species,9.5,g,1; 34; 47,2; 5.1
+S0574,Rheochara_spadicea,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Rheochara,spadicea,predator,species,5.25,g,1; 34; 47,2
+S0575,Scopaeus_minutus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Scopaeus,minutus,predator,species,3.05,g,1; 34; 47,2; 5.1
+S0576,Sepedophilus_marshami,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Sepedophilus,marshami,detritivore,species,4.75,g,1; 34; 47,1; 5.1
+S0577,Conosoma_testaceum,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Sepedophilus,testacaeus,detritivore,species,4.25,g,1; 34; 47,1; 2; 5.1
+S0578,Stenus_clavicornis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Stenus,clavicornis,predator,species,5.25,g,1; 34; 47; 94,1
+S0579,Stenus_humilis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Stenus,humilis,predator,species,3.15,g,1; 34; 47; 94,1; 2; 5.1
+S0580,Stenus_nanus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Stenus,nanus,predator,species,2,g,1; 34; 47; 94,1
+S0581,Stenus_similis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Stenus,similis,predator,species,5.25,g,1; 34; 47; 94,1
+S0582,Sunius_bicolor,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Sunius,bicolor,predator,species,3.75,g,1; 34; 47; 94,2; 5.1
+S0583,Tachinus_signatus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachinus,signatus,omnivore,species,5.75,g,1; 34; 47,1; 5.1
+S0584,Tachyporus_atriceps,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,atriceps,predator,species,2.65,g,1; 34; 47; 95,1; 5.1
+S0585,Tachyporus_chrysomelinus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,chrysomelinus,omnivore,species,3.75,i,1; 10; 34; 47; 95,1; 5.1
+S0586,Tachyporus_dispar,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,dispar,predator,species,4,g,1; 34; 47; 95,1; 5.1
+S0587,Tachyporus_hypnorum,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,hypnorum,omnivore,species,3,i,1; 10; 34; 47; 95; 96,1; 5.1
+S0588,Tachyporus_nitidulus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,nitidulus,omnivore,species,3.5,g,1; 34; 47; 95,1; 5.1
+S0589,Tachyporus_obtusus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,obtusus,omnivore,species,4.5,g,1; 34; 47; 95,1; 5.1
+S0590,Tachyporus_pulchellus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,pulchellus,predator,species,3.15,g,1; 34; 47; 95,1; 5.1
+S0591,Tachyporus_pusillus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,pusillus,omnivore,species,3.5,g,1; 34; 47; 95,1; 5.1
+S0592,Tachyporus_solutus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,solutus,omnivore,species,3.5,g,1; 34; 47; 95,1; 5.1
+S0593,Tachyporus_tersus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tachyporus,tersus,omnivore,species,2.5,g,1; 34; 47; 95,1; 5.1
+S0594,Ocypus_melanarius,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tasgius,melanarius,predator,species,15,g,1; 34; 47,1; 2; 5.1
+S0595,Tasgius_melanarius,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tasgius,melanarius,predator,species,16.5,g,1; 34; 47,1; 2; 5.1
+S0596,Ocypus_pedator,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Tasgius,pedator,predator,species,17.5,g,1; 34; 47,1; 2; 5.1
+S0597,Trogophloeus_punctatellus,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Trogophloeus,punctatellus,predator,species,8,g,1; 34; 47; 84; 86,2; 5.1
+S0598,Xantholinus_dvoraki,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Xantholinus,dvoraki,omnivore,species,9,g,1; 34; 47,1; 2; 5.1
+S0599,Xantholinus_linearis,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Xantholinus,linearis,predator,species,7.5,g,1; 34; 47,1; 5.1
+S0600,Xantholinus_longiventris,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Xantholinus,longiventris,predator,species,8,g,1; 34; 47,1; 5.1
+S0601,Zyras_lugens,Animalia,Arthropoda,Insecta,Coleoptera,Staphylinidae,Zyras,lugens,detritivore,species,5,g,1; 34; 47; 86,2
+S0602,Mitostoma_chrysomelas,Animalia,Arthropoda,Arachnida,Opiliones,Nemastomatidae,Mitostoma,chrysomelas,predator,species,1.7,g,97; 98; 100; 102,1
+S0603,Nemastoma_dentigerum,Animalia,Arthropoda,Arachnida,Opiliones,Nemastomidae,Nemastoma,dentigerum,predator,species,2,g,97; 98; 100; 102,2; 5.1
+S0604,Nemastoma_lugubre,Animalia,Arthropoda,Arachnida,Opiliones,Nemastomidae,Nemastoma,lugubre,predator,species,2.25,g,97; 98; 100; 102,2; 5.1
+S0605,Oligolophus_tridens,Animalia,Arthropoda,Arachnida,Opiliones,Phalangiidae,Oligolophus,tridens,predator,species,4.6,g,97; 98; 99; 100; 101; 102,2; 5.1
+S0606,Opilio_canestrinii,Animalia,Arthropoda,Arachnida,Opiliones,Phalangiidae,Opilio,canestrinii,predator,species,5.45,h,97; 98; 99; 100; 101; 102,2; 5.1
+S0607,Phalangium_opilio,Animalia,Arthropoda,Arachnida,Opiliones,Phalangiidae,Phalangium,opilio,predator,species,5.575,h,97; 98; 99; 100; 101; 102,2; 5.1
+S0608,Rilaena_triangularis,Animalia,Arthropoda,Arachnida,Opiliones,Phalangiidae,Rilaena,triangularis,predator,species,5.25,g,97; 98; 99; 100; 101; 102,2; 5.1
+S0609,Nelima_sempronii,Animalia,Arthropoda,Arachnida,Opiliones,Sclerosomatidae,Nelima,sempronii,predator,species,4.25,g,97; 98; 99; 100; 101; 102,2; 5.1
+S0610,Trogulus_closanicus,Animalia,Arthropoda,Arachnida,Opiliones,Trogulidae,Trogulus,closanicus,predator,species,6.45,g,97; 98; 99; 100; 101; 102,2; 5.1
+S0611,Allagelena_gracilens,Animalia,Arthropoda,Arachnida,Araneae,Agelenidae,Allagelena,gracilens,predator,species,8.75,h,99; 100; 101; 102,4
+S0612,Coelotes_terrestris,Animalia,Arthropoda,Arachnida,Araneae,Amaurobiidae,Coelotes,terrestris,predator,species,10.25,g,99; 100; 101; 102,4
+S0613,Aculepeira_ceropegia,Animalia,Arthropoda,Arachnida,Araneae,Araneidae,Aculepeira,ceropegia,predator,species,10.5,h,99; 100; 101; 102,4
+S0614,Agalenatea_redii,Animalia,Arthropoda,Arachnida,Araneae,Araneidae,Agalenatea,redii,predator,species,6,i,99; 100; 101; 102,4
+S0615,Araniella_cucurbitina,Animalia,Arthropoda,Arachnida,Araneae,Araneidae,Araniella,cucurbitina,predator,species,5,h,99; 100; 101; 102,4
+S0616,Larinioides_cornutus,Animalia,Arthropoda,Arachnida,Araneae,Araneidae,Larinioides,cornutus,predator,species,9.5,g,99; 100; 101; 102,4
+S0617,Mangora_acalypha,Animalia,Arthropoda,Arachnida,Araneae,Araneidae,Mangora,acalypha,predator,species,4.5,i,99; 100; 101; 102,4
+S0618,Singa_hamata,Animalia,Arthropoda,Arachnida,Araneae,Araneidae,Singa,hamata,predator,species,3.5,g,99; 100; 101; 102,4
+S0619,Argiope_bruennichi,Animalia,Arthropoda,Arachnida,Araneae,ArgiopidaeAraneidae,Argiope,bruennichi,predator,species,10,h,100; 101; 102,2; 4
+S0620,Clubiona_brevipes,Animalia,Arthropoda,Arachnida,Araneae,Clubionidae,Clubiona,brevipes,predator,species,5.5,i,100; 101; 102,5.1
+S0621,Clubiona_reclusa,Animalia,Arthropoda,Arachnida,Araneae,Clubionidae,Clubiona,reclusa,predator,species,4,g,100; 101; 102,5.1
+S0622,Argenna_subnigra,Animalia,Arthropoda,Arachnida,Araneae,Dictynidae,Argenna,subnigra,predator,species,2.25,i,100; 101; 102; 103; 104,4
+S0623,Cicurina_cicur,Animalia,Arthropoda,Arachnida,Araneae,Dictynidae,Cicurina,cicur,predator,species,6,i,100; 101; 102; 103; 104,4
+S0624,Drassyllus_lutetianus,Animalia,Arthropoda,Arachnida,Araneae,Gnaphosidae,Drassyllus,lutetianus,predator,species,5,g,100; 101,5.1
+S0625,Drassyllus_pusillus,Animalia,Arthropoda,Arachnida,Araneae,Gnaphosidae,Drassyllus,pusillus,predator,species,4,g,100; 101,5.1
+S0626,Haplodrassus_minor,Animalia,Arthropoda,Arachnida,Araneae,Gnaphosidae,Haplodrassus,minor,predator,species,3.5,g,100; 101,5.1
+S0627,Haplodrassus_signifer,Animalia,Arthropoda,Arachnida,Araneae,Gnaphosidae,Haplodrassus,signifer,predator,species,7,g,100; 101,5.1
+S0628,Micaria_pulicaria,Animalia,Arthropoda,Arachnida,Araneae,Gnaphosidae,Micaria,pulicaria,predator,species,3.5,i,100; 101,5.1
+S0629,Trachyzelotes_pedestris,Animalia,Arthropoda,Arachnida,Araneae,Gnaphosidae,Trachyzelotes,pedestris,predator,species,5,g,100; 101,5.1
+S0630,Zelotes_latreillei,Animalia,Arthropoda,Arachnida,Araneae,Gnaphosidae,Zelotes,latreillei,predator,species,6.75,g,100; 101,5.1
+S0631,Hahnia_nava,Animalia,Arthropoda,Arachnida,Araneae,Hahniidae,Hahnia,nava,predator,species,1.75,g,100; 101,4
+S0632,Araeoncus_humilis,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Araeoncus,humilis,predator,species,1.55,g,100; 101; 102; 103; 104,4
+S0633,Asthenargus_paganus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Asthenargus,paganus,predator,species,1.6,i,100; 101; 102; 103; 104,4
+S0634,Bathyphantes_gracilis,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Bathyphantes,gracilis,predator,species,1.75,i,100; 101; 102; 103; 104,4
+S0635,Bathyphantes_parvulus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Bathyphantes,parvulus,predator,species,2.15,i,100; 101; 102; 103; 104,4
+S0636,Centromerita_bicolor,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Centromerita,bicolor,predator,species,3.25,i,100; 101; 102; 103; 104,4
+S0637,Centromerus_sylvaticus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Centromerus,sylvaticus,predator,species,2.975,g,100; 101; 102; 103; 104,4
+S0638,Collinsia_inerrans,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Collinsia,inerrans,predator,species,2.25,i,100; 101; 102; 103; 104,4
+S0639,Dicymbium_nigrum,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Dicymbium,nigrum,predator,species,2.25,g,100; 101; 102; 103; 104,4
+S0640,Diplocephalus_cristatus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Diplocephalus,cristatus,predator,species,2,g,100; 101; 102; 103; 104,4
+S0641,Diplocephalus_latifrons,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Diplocephalus,latifrons,predator,species,1.65,g,100; 101; 102; 103; 104,4
+S0642,Diplocephalus_picinus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Diplocephalus,picinus,predator,species,1.825,g,100; 101; 102; 103; 104,4
+S0643,Diplostyla_concolor,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Diplostyla,concolor,predator,species,2.75,i,100; 101; 102; 103; 104,4
+S0644,Dismodicus_bifrons,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Dismodicus,bifrons,predator,species,4.35,h,100; 101; 102; 103; 104,4
+S0645,Erigone_atra,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Erigone,atra,predator,species,2.325,g,100; 101; 102; 103; 104,4
+S0646,Erigone_dentipalpis,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Erigone,dentipalpis,predator,species,2.3,g,100; 101; 102; 103; 104,4
+S0647,Erigonella_hiemalis,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Erigonella,hiemalis,predator,species,1.675,g,100; 101; 102; 103; 104,4
+S0648,Latithorax_faustus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Latithorax,faustus,predator,species,2.3,g,100; 101; 102; 103; 104,4
+S0649,Leptorhoptrum_robustum,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Leptorhoptrum,robustum,predator,species,3.8,g,100; 101; 102; 103; 104,4
+S0650,Meioneta_rurestris,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Meioneta,rurestris,predator,species,1.95,g,100; 101; 102; 103; 104,4
+S0651,Meioneta_affinis,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Meioneta/Agrypnus,affinis,predator,species,1.75,g,100; 101; 102; 103; 104,4
+S0652,Mermessus_trilobatus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Mermessus,trilobatus,predator,species,5.4,i,100; 101; 102; 103; 104,4
+S0653,Micrargus_herbigradus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Micrargus,herbigradus,predator,species,2,g,100; 101; 102; 103; 104,4
+S0654,Micrargus_subaequalis,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Micrargus,subaequalis,predator,species,1.675,i,100; 101; 102; 103; 104,4
+S0655,Microlinyphia_pusilla,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Microlinyphia,pusilla,predator,species,4,h,100; 101; 102; 103; 104,4
+S0656,Oedothorax_apicatus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Oedothorax,apicatus,predator,species,2.425,g,100; 101; 102; 103; 104,4
+S0657,Oedothorax_fuscus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Oedothorax,fuscus,predator,species,2.5,i,100; 101; 102; 103; 104,4
+S0658,Oedothorax_retusus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Oedothorax,retusus,predator,species,2.375,g,100; 101; 102; 103; 104,4
+S0659,Pelecopsis_parallela,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Pelecopsis,parallela,predator,species,1.5,i,100; 101; 102; 103; 104,4
+S0660,Pocadicnemis_juncea,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Pocadicnemis,juncea,predator,species,1.9,g,100; 101; 102; 103; 104,4
+S0661,Porrhomma_errans,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Porrhomma,errans,predator,species,2.4,i,100; 101; 102; 103; 104,4
+S0662,Porrhomma_microphthalmum,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Porrhomma,microphthalmum,predator,species,1.85,i,100; 101; 102; 103; 104,4
+S0663,Porrhomma_microps,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Porrhomma,microps,predator,species,2.35,i,100; 101; 102; 103; 104,4
+S0664,Tenuiphantes_tenuis,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Tenuiphantes,tenuis,predator,species,2.625,g,100; 101; 102; 103; 104,4
+S0665,Tiso_vagans,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Tiso,vagans,predator,species,1.9,i,100; 101; 102; 103; 104,4
+S0666,Troxochrus_scabriculus,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Troxochrus,scabriculus,predator,species,1.425,g,100; 101; 102; 103; 104,4
+S0667,Walckenaeria_atrotibialis,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Walckenaeria,atrotibialis,predator,species,2.25,i,100; 101; 102; 103; 104,4
+S0668,Walckenaeria_vigilax,Animalia,Arthropoda,Arachnida,Araneae,Linyphiidae,Walckenaeria,vigilax,predator,species,3,g,100; 101; 102; 103; 104,4
+S0669,Phrurolithus_festivus,Animalia,Arthropoda,Arachnida,Araneae,Liocranidae,Phrurolithus,festivus,predator,species,2.5,g,100; 101; 102,5.1
+S0670,Alopecosa_cuneata,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Alopecosa,cuneata,predator,species,6.875,g,100; 101; 102,5.1
+S0671,Alopecosa_pulverulenta,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Alopecosa,pulverulenta,predator,species,7.625,g,100; 101; 102,5.1
+S0672,Arctosa_lutetiana,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Arctosa,lutetiana,predator,species,7.5,g,100; 101; 102,5.1
+S0673,Aulonia_albimana,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Aulonia,albimana,predator,species,3.75,g,100; 101; 102,5.1
+S0674,Pardosa_agrestis,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Pardosa,agrestis,predator,species,6.625,g,100; 101; 102,5.1
+S0675,Pardosa_amentata,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Pardosa,amentata,predator,species,6.25,i,100; 101; 102,5.1
+S0676,Pardosa_hortensis,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Pardosa,hortensis,predator,species,5,g,100; 101; 102,5.1
+S0677,Pardosa_lugubris,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Pardosa,lugubris,predator,species,5.5,g,100; 101; 102,5.1
+S0678,Pardosa_palustris,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Pardosa,palustris,predator,species,5.125,g,100; 101; 102,5.1
+S0679,Pardosa_prativaga,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Pardosa,prativaga,predator,species,4.75,g,100; 101; 102,5.1
+S0680,Pardosa_pullata,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Pardosa,pullata,predator,species,4.75,g,100; 101; 102,5.1
+S0681,Pirata_latitans,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Pirata,latitans,predator,species,4,g,100; 101; 102,5.1
+S0682,Trochosa_ruricola,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Trochosa,ruricola,predator,species,9.75,g,100; 101; 102,5.1
+S0683,Trochosa_terricola,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Trochosa,terricola,predator,species,9.25,g,100; 101; 102,5.1
+S0684,Xerolycosa_miniata,Animalia,Arthropoda,Arachnida,Araneae,Lycosidae,Xerolycosa,miniata,predator,species,6,g,100; 101; 102,5.1
+S0685,Tibellus_oblongus,Animalia,Arthropoda,Arachnida,Araneae,Philodromidae,Tibellus,oblongus,predator,species,10,h,100; 101; 102,5.1
+S0686,Pisaura_mirabilis,Animalia,Arthropoda,Arachnida,Araneae,Pisauridae,Pisaura,mirabilis,predator,species,12.5,i,97; 100; 101; 102,2; 5.1
+S0687,Bianor_aurocinctus,Animalia,Arthropoda,Arachnida,Araneae,Salticidae,Bianor,aurocinctus,predator,species,4.8,i,100; 101; 102,5.1
+S0688,Euophrys_frontalis,Animalia,Arthropoda,Arachnida,Araneae,Salticidae,Euophrys,frontalis,predator,species,3.5,g,100; 101; 102,5.1
+S0689,Myrmarachne_formicaria,Animalia,Arthropoda,Arachnida,Araneae,Salticidae,Myrmarachne,formicaria,predator,species,5.75,h,100; 101; 102,5.1
+S0690,Phlegra_fasciata,Animalia,Arthropoda,Arachnida,Araneae,Salticidae,Phlegra,fasciata,predator,species,6.4,g,100; 101; 102,5.1
+S0691,Salticus_scenicus,Animalia,Arthropoda,Arachnida,Araneae,Salticidae,Salticus,scenicus,predator,species,5.5,h,100; 101; 102,5.1
+S0692,Synageles_venator,Animalia,Arthropoda,Arachnida,Araneae,Salticidae,Synageles,venator,predator,species,3.5,g,100; 101; 102,5.1
+S0693,Talavera_aequipes,Animalia,Arthropoda,Arachnida,Araneae,Salticidae,Talavera,aequipes,predator,species,2.5,g,100; 101; 102,5.1
+S0694,Pachygnatha_clercki,Animalia,Arthropoda,Arachnida,Araneae,Tetragnathidae,Pachygnatha,clercki,predator,species,5.25,g,97; 99; 100; 101; 102,2; 5.1
+S0695,Pachygnatha_degeeri,Animalia,Arthropoda,Arachnida,Araneae,Tetragnathidae,Pachygnatha,degeeri,predator,species,3.55,g,97; 99; 100; 101; 102,2; 5.1
+S0696,Tetragnatha_extensa,Animalia,Arthropoda,Arachnida,Araneae,Tetragnathidae,Tetragnatha,extensa,predator,species,9.5,i,97; 99; 100; 101; 102,2; 5.1
+S0697,Tetragnatha_pinicola,Animalia,Arthropoda,Arachnida,Araneae,Tetragnathidae,Tetragnatha,pinicola,predator,species,5.5,h,97; 99; 100; 101; 102,2; 5.1
+S0698,Cryptachaea_riparia,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,Cryptachaea,riparia,predator,species,3.5,i,100; 101; 102,4
+S0699,Dipoena_melanogaster,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,Dipoena,melanogaster,predator,species,3,h,100; 101; 102,4
+S0700,Enoplognatha_ovata,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,Enoplognatha,ovata,predator,species,6,i,100; 101; 102,4
+S0701,Enoplognatha_thoracica,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,Enoplognatha,thoracica,predator,species,3.75,g,100; 101; 102,4
+S0702,Robertus_arundineti,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,Robertus,arundineti,predator,species,2.25,i,100; 101; 102,4
+S0703,Robertus_lividus,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,Robertus,lividus,predator,species,4,i,100; 101; 102,4
+S0704,Robertus_neglectus,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,Robertus,neglectus,predator,species,2.25,i,100; 101; 102,4
+S0705,Phylloneta_impressa,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,Theridion,impressum,predator,species,4,i,100; 101; 102,4
+S0706,Neottiura_bimaculata,Animalia,Arthropoda,Arachnida,Araneae,Theridiidae,TheridionNeottiura,bimaculatum,predator,species,2.5,h,100; 101; 102,4
+S0707,Misumenops_tricuspidatus,Animalia,Arthropoda,Arachnida,Araneae,Thomisidae,Misumenops/Ebrechtella,tricuspidatustricuspidata,predator,species,2.5,h,100; 101; 102,5.1
+S0708,Ozyptila_claveata,Animalia,Arthropoda,Arachnida,Araneae,Thomisidae,Ozyptila,claveata,predator,species,3,g,100; 101; 102,5.1
+S0709,Ozyptila_simplex,Animalia,Arthropoda,Arachnida,Araneae,Thomisidae,Ozyptila,simplex,predator,species,3.5,g,100; 101; 102,5.1
+S0710,Xysticus_acerbus,Animalia,Arthropoda,Arachnida,Araneae,Thomisidae,Xysticus,acerbus,predator,species,6,g,100; 101; 102,4; 5.1
+S0711,Xysticus_cristatus,Animalia,Arthropoda,Arachnida,Araneae,Thomisidae,Xysticus,cristatus,predator,species,5.75,i,100; 101; 102,4; 5.1
+S0712,Xysticus_kochi,Animalia,Arthropoda,Arachnida,Araneae,Thomisidae,Xysticus,kochi,predator,species,5.75,i,100; 101; 102,4; 5.1
+S0713,Xysticus_ulmi,Animalia,Arthropoda,Arachnida,Araneae,Thomisidae,Xysticus,ulmi,predator,species,5,h,100; 101; 102,4; 5.1
+S0714,Zora_spinimana,Animalia,Arthropoda,Arachnida,Araneae,Zoridae,Zora,spinimana,predator,species,5.25,i,100; 101; 102,5.1

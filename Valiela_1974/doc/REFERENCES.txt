@@ -1,0 +1,13 @@
+@article{Valiela_1974,
+	doi = {10.2307/2424302},
+	url = {https://doi.org/10.2307%2F2424302},
+	year = 1974,
+	month = {oct},
+	publisher = {{JSTOR}},
+	volume = {92},
+	number = {2},
+	pages = {370},
+	author = {Ivan Valiela},
+	title = {Composition, Food Webs and Population Limitation in Dung Arthropod Communities During Invasion and Succession},
+	journal = {American Midland Naturalist}
+}

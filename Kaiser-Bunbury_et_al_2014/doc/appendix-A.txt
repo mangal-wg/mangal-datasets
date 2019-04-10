@@ -1,0 +1,843 @@
+34 
+Ecological Archives E095-287-A1 
+Christopher N. Kaiser-Bunbury, Diego P. Vázquez, Martina Stang, and Jaboury Ghazoul. 2014. 
+Determinants of the microstructure of plant-pollinator networks. Ecology 95:3314-3324. 
+Appendix A: Detailed supplementary information on the methods describing data collection, 
+transformation and analysis, including a model justification table, lists of plant and pollinator 
+species, a floral complexity scoring table, goodness-of-fit indices table, path diagrams (model B 
+and C) and bivariate correlation plots. 
+A.1 Plant–pollinator networks 
+In total, 97 flower visitor taxa were recorded, of which 14 taxa, belonging to the groups of 
+spiders, crickets, true bugs (hemiptera) and ants, were excluded from the networks as they were 
+not considered pollinators of the inselberg plants. Pollinators were identified to species level for 
+28 taxa (34%) and to morpho-species level for the remaining 55 taxa (66%; hereafter all 
+pollinator taxa are referred to as ‘pollinator species’). Morpho-species were not pooled based on 
+morphological traits such as size, but they were distinguished at the smallest possible level 
+without taxonomic determination and assigned a species code. Flower visitors were recorded as 
+pollinators when they touched the sexual parts of flowers. Sampling of interactions was 
+conducted by the same three observers throughout the 8-month flowering season and sampling 
+was standardized between observers fortnightly. We used equal observation periods for all plant 
+species to reduce sampling bias and to collect data on interaction frequency independent of size 
+constraints and flower abundance (Ollerton and Cranmer 2002). 
+To assess the effect of sampling on network dissimilarities we conducted a rarefaction 
+analysis (Hurlbert 1971, Heck et al. 1975). We calculated Bray-Curtis dissimilarities (see Section 
+D below for a detailed description on dissimilarity matrices) between rarefied interaction 
+matrices sampled at four different proportions (0.8, 0.6, 0.4 and 0.2) and compared the resulting 
+mean ± 95% CI dissimilarities of the rarefied matrices to the dissimilarity between the original 
+matrices. Sampling simulation was carried out with the function rarefmat in R (the code of the 
+function is provided as a supplement). Interaction matrices consisted of all plant and animal 
+species in rows and columns, respectively. Cells contained a normalized measure of interaction 
+frequency, which was rounded up to the next integer to allow for rarefaction. Dissimilarities 
+were calculated based on relative frequencies in the rarefied and observed matrices. We ran a 
+subsample (N = 86) of all possible pairwise matrix comparisons within and across sites and time 
+periods. All comparisons showed similar results: None of the rarefied matrices were significantly 
+more or less dissimilar than the observed matrices even at low sampling proportions, and the 
+overall differences in dissimilarities between rarefied and observed matrices were relatively 
+small (Fig. B4). These findings suggest that the comparison of dissimilarities between interaction 
+matrices is robust to sampling effects. 
+
+35 
+A.2 Plant traits – floral complexity and exotic plants 
+To quantify floral complexity, we identified a priori four flower traits to describe a gradient of 
+increasing floral restrictiveness and handling complexity: (1) floral symmetry and pollen 
+presentation patterns within the flower, (2) flower dimensionality, (3) accessibility of nectar, and 
+(4) flower orientation (Table A5). Scores from 0–5 were assigned to each trait reflecting an 
+increasing degree of handling complexity, and added up to one single value per plant species, 
+reflecting its total floral complexity. Plants with total scores close to 20 were considered 
+extremely complex, restricting flower access to a small group of specialized pollinator species. 
+In contrast, plants with scores close to 0 presented flowers accessible to a large variety of 
+pollinator species. Pollinator species richness decreased significantly with increasing floral 
+complexity (Fig. B5; linear regression: R2 = 0.198, df = 36, P = 0.0052). The species included in 
+this study were scored independently by three people based on photographs and handling 
+experience of the flowers, and the assigned scores differed only minimally in two of 37 plant 
+species (scores in Table A3). To assess the influence of the category size on the model fit, we 
+conducted the same analysis with five and seven equally-sized categories which generated 
+comparable statistical models. The model with five categories (width of categories: 0–3, 4–7, 8– 
+11, 12–15, =16 complexity scores) had the better overall fit and we therefore used only the 
+model with five categories in the analysis. 
+The proportion of exotic flowers in the communities was included as an independent 
+predictor variable in our models for two reasons: (1) exotic flowers have been shown to be 
+particularly attractive to pollinators as a result of their high energy nectar and attractive flowers 
+(e.g., Chittka and Schürkens 2001), and (2) the attractiveness of exotic plants can be unevenly 
+distributed within the pollinator community (e.g., exotic pollinators are more frequently attracted 
+to exotic plants than native pollinators; Aizen et al. 2008, Kaiser-Bunbury et al. 2011). These 
+properties of exotic plants are not part of plant abundance and trait variables and thus warrant 
+independent inclusion in the model. 
+A.3 Pollinator traits – body size 
+We used body dimensions of pollinators to define functional groups of pollinator traits. We 
+recorded thorax width and total body length of invertebrates, head width and body length 
+(without tail) of birds, and head width and snout to vent length of geckos (Table A4) as proxy for 
+pollinator functional diversity (Stang et al. 2006). Total body length (head, thorax and abdomen) 
+was recorded on straightened insects, and we used calipers to measure body dimensions to the 
+nearest 0.1 mm. Thorax width and body length were highly correlated (log-transformed; r = 0.80, 
+P . 0.001, N = 83). To determine the optimal number of size classes, we plotted a histogram of 
+thorax width (log-transformed) and selected the lowest number of equal size categories which 
+created a good fit to the normal distribution. We tested the robustness of the classification by 
+running the same analysis with seven, eight and nine categories, both with thorax width and body 
+size. All possible combinations generated similar qualitative effects but the best fit showed the 
+
+36 
+model with thorax width and eight size classes. Thus, we used eight size classes of pollinator 
+functional groups in the analysis. 
+A.4 Dissimilarity variables 
+We created 48 interaction matrices consisting of 37 plant species in rows and 83 pollinator 
+species in columns. Interaction frequency between two mutualistic partners was normalized by 
+dividing by total interaction frequency in the network. We computed Bray-Curtis dissimilarity 
+values for all pair-wise combinations of the interaction matrices. The output was a 48 × 48 lower 
+triangular matrix with cells containing interaction dissimilarities quantifying the degree of 
+dissimilarity between every pair of interaction matrices (Dx,y). Following a similar procedure, we 
+created dissimilarity matrices for all observed indicator variables. Dissimilarity matrices were 
+calculated from the following matrices with 48 networks in rows: Floral and pollinator 
+abundance contained plant and animal species, respectively, in columns ordered by decreasing 
+relative abundance in each network, independent of species identity, and relative floral 
+abundance in cells; floral composition and pollinator composition contained plant and pollinator 
+species in columns and sum of floral abundance and mean interaction frequency in cells, 
+respectively; the proportion of exotic flowers in each network contained the proportion of exotic 
+flowers in communities +1 in one row—1 was added to avoid zero in the denominator when 
+calculating dissimilarities of communities without exotic flowering plants; and plant and 
+pollinator trait matrices had categories in columns and the sum of floral abundance and mean 
+interaction frequency in cells, respectively. Bray-Curtis dissimilarities index ranges from 1 to 0, 
+where values close to 0 are relatively similar and values close to 1 are highly dissimilar. 
+All variables except time of year and geographic location were normalized prior to 
+calculating dissimilarity values by dividing each cell by the marginal sums of the rows. For time 
+of year and location we calculated Euclidean distances with unnormalized number of days and 
+distance in meters between network pairs, respectively. To account for a weak seasonality effect 
+of species richness and abundance, we used periodic instead of a linear temporal distance 
+between networks fitted to an annual cycle. That is, the maximum temporal distance between 
+two networks was 182 days. 
+A.5 Model fit and analysis quality 
+We employed goodness-of-fit indices using discrepancy functions, comparisons with null 
+models, and information theory to assess model fit, including chi-square tests (compared to 
+hypothesized and null model), adjusted goodness-of-fit index, root mean square error of 
+approximation (RMSEA), Tucker-Lewis non-normed fit index (NNFI), Bentler-Bonnett normed 
+fit index (NFI), Bentler comparative fit index (CFI) and standardized root mean square residual 
+(SRMR). Index criteria, model fit thresholds, and index values for all three models are 
+summarized in Table A6. 
+Using a correlation matrix in structural equation modelling instead of a covariance matrix 
+can result in incorrect standard errors of the coefficients as they fail to take account of sampling 
+
+37 
+variance in the standard deviations (Cudeck 1989, Grace 2006). Given the large sample size of 
+our data sets and the normalized dissimilarity matrices, however, we believe that any potential 
+inaccuracy in the calculation of the standard errors is of little biological relevance. The author of 
+the sem library in R provided specific examples on building structural equation models on 
+correlation matrices (Duncan et al. 1968 in manual to the R library ‘sem’, Fox 2012) and 
+confirmed the use of Wald tests as appropriate tools to determine the statistical significance of 
+model coefficients (J. Fox, pers. comm.). Further, to verify the results of our path analysis in R, 
+we ran the same full model with Reticular Action Model or Near Approximation (RAMONA) 
+implemented in the statistical package SYSTAT 12. Both sem and RAMONA use reticular 
+action model notation (McArdle and McDonald 1984). RAMONA, however, accounts for the 
+correlation matrix when fitting path analysis models and thereby avoids the potential errors 
+associated to path analysis that treat a correlation matrix as if it were a covariance matrix. The 
+results of the RAMONA model were comparable to those generated in R, suggesting that the 
+influence of the correlation matrix on the standard errors of the coefficients was negligible. 
+The correlation between floral composition and floral complexity was non-linear and 
+showed a triangular pattern (Fig. A2). The pattern arises because networks that are similar in 
+floral trait composition can be similar or dissimilar in plant species composition, networks that 
+are very dissimilar in flower trait composition can only be dissimilar in plant species 
+composition. To address this constraint, we developed a null-model to calculate Spearman 
+correlation coefficients .... of randomly generated data (999 iterations) that were restricted by the 
+limits of the observed data (the R code of the null model is provided as a Supplement). We 
+evaluated the statistical significance of ..¯.. 
+by calculating its 97.5% confidence intervals. To test 
+the effect of the randomised ..¯.. 
+on our SEM, we fixed the path between floral composition and 
+floral complexity to ..¯.. 
+(Fox 2006) and compared this model, following the model simplification 
+procedure described above, to the model in which the path between floral composition and floral 
+complexity is allowed to vary randomly (Shipley 2000). The model with the fixed parameter had 
+a significantly worse model fit (.BIC = 13.9; likelihood ratio test: .2 = 20.9, P . 0.0001); we 
+thus present here results on the original model with free parameter estimates only. 
+
+38 
+TABLE A1. Relationships between ecological variables that justify paths between dissimilarity variables shown in the hypothesized models (Fig. 1 
+and A1). In the hypothesized models there are directed paths from dissimilarities in variable 1 to dissimilarities in variable 2. While the justifications 
+are based on ecological relationships they take into account that dissimilarities of the variables are used in the models. For definitions and detailed 
+explanations on the variables see Appendix A.2-4. 
+Variable 1 Variable 2 Justification Reference 
+Time Pollinator abundance 
+distribution 
+Species abundance and composition of 
+a community are determined by 
+species' phenophases. Networks that 
+are closer in time are more likely to 
+share the same species, their relative 
+and total abundances, and, 
+consequently, pairwise interactions 
+than networks that are temporally 
+further apart. 
+Alarcón, R., N. M. Waser, and J. Ollerton. 2008. Year-to-year 
+variation in the topology of a plant-pollinator interaction network. 
+Oikos 117:1796-1807. 
+Herrera, J. 1988. Pollination relationships in southern Spanish 
+Mediterranean shrublands. Journal of Ecology 76:274-287. 
+Olesen, J. M., J. Bascompte, H. Elberling, and P. Jordano. 2008. 
+Temporal dynamics in a pollination network. Ecology 89:1573- 
+1582. 
+Olesen, J. M., Y. L. Dupont, E. J. O'Gorman, T. C. Ings, K. Layer, 
+C. J. Melian, K. Trojelsgaard, D. E. Pichler, C. Rasmussen, and G. 
+Woodward. 2010. From Broadstone to Zackenberg: Space, Time 
+and Hierarchies in Ecological Networks. Pages 1-69 in G. 
+Woodward, editor. Advances in Ecological Research: Ecological 
+Networks, Vol 42. 
+Petanidou, T., A. S. Kallimanis, J. Tzanopoulos, S. P. Sgardelis, and 
+J. D. Pantis. 2008. Long-term observation of a pollination network: 
+fluctuation in species and interactions, relative invariance of 
+network structure and implications for estimates of specialization. 
+Ecology Letters 11:564-575. 
+Rasmussen, C., Y. L. Dupont, J. B. Mosbacher, K. Trøjelsgaard, 
+and J. M. Olesen. 2013. Strong impact of temporal resolution on the 
+structure of an ecological network. PLoS ONE 8:e81694. 
+Pollinator 
+composition 
+Interaction pattern 
+Floral composition 
+Floral abundance 
+distribution 
+Exotics dominance 
+Location Pollinator abundance 
+distribution 
+Spatial distance refers to the distance in 
+meters between two communities. 
+Within habitat types, the similarity of 
+communities in terms of species 
+Bronstein, J. L. 1994. Our current understanding of mutualism. 
+Quarterly Review of Biology 69:31-51. 
+Burkle, L. and R. Irwin. 2009. The importance of interannual 
+variation and bottom–up nitrogen enrichment for plant–pollinator 
+Pollinator 
+composition 
+
+39 
+Interaction pattern abundance and composition and exotic 
+species dominance decreases with 
+spatial distance. Interactions may be 
+influenced by species abundance and 
+composition, and we thus expect the 
+similarity of the identity and frequency 
+of interactions also to decreases with 
+spatial distance. 
+networks. Oikos 118:1816-1829. 
+Nekola, J. C. and P. S. White. 1999. The distance decay of 
+similarity in biogeography and ecology. Journal of Biogeography 
+26:867-878. 
+Steffan-Dewenter, I. and T. Tscharntke. 1999. Effects of habitat 
+isolation on pollinator communities and seed set. Oecologia 
+121:432-440; 
+Floral composition 
+Floral abundance 
+distribution 
+Exotics dominance 
+Exotics 
+dominance 
+Pollinator abundance 
+distribution 
+Pollinator abundance and community 
+composition can be altered by exotic 
+plants. In the Seychelles, exotic plants 
+attract few, generalised and mostly 
+abundant pollinator species compared 
+to native plant species, suggesting that 
+networks with high levels of plant 
+invasion, but otherwise similar plant 
+species diversity, are more similar in 
+pollinator abundance and composition 
+compared to networks with few or no 
+exotic flowers. 
+Cox, P. A. and T. Elmqvist. 2000. Pollinator extinction in the 
+Pacific Islands. Conservation Biology 14:1237-1239. 
+Graves, S. D. and A. M. Shapiro. 2003. Exotics as host plants of the 
+California butterfly fauna. Biological Conservation 110:413-433. 
+Kaiser-Bunbury, C. N., T. Valentin, J. Mougal, D. Matatiken, and J. 
+Ghazoul. 2011. The tolerance of island plant–pollinator networks to 
+alien plants. Journal of Ecology 99:202-213. 
+Williams, N. M., D. Cariveau, R. Winfree, and C. Kremen. 2011. 
+Bees in disturbed habitats use, but do not prefer, alien plants. Basic 
+and Applied Ecology 12:332-341. 
+Pollinator 
+composition 
+
+40 
+Interaction pattern Exotic plant species that have invaded 
+natural areas compete with native 
+species for pollination. Interaction 
+patterns are thus influenced by exotic 
+flowering plants through changes in 
+pollinator behaviour. 
+Aizen, M. A., C. L. Morales, and J. M. Morales. 2008. Invasive 
+mutualists erode native pollination webs. PLoS Biology 6:396-403. 
+Bjerknes, A.-L., Ø. Totland, S. J. Hegland, and A. Nielsen. 2007. 
+Do alien plant invasions really affect pollination success in native 
+plant species? Biological Conservation 138:1-12. 
+Brown, B. J., R. J. Mitchell, and S. A. Graham. 2002. Competition 
+for pollination between an invasive species (purple loosestrife) and 
+a native congener. Ecology 83:2328-2336. 
+Flanagan, R., R. Mitchell, and J. Karron. 2010. Increased relative 
+abundance of an invasive competitor for pollination, Lythrum 
+salicaria, reduces seed number in Mimulus ringens. Oecologia 
+164:445-454. 
+Ghazoul, J. 2004. Alien abduction: disruption of native plantpollinator 
+interactions by invasive species. Biotropica 36:156-164. 
+Morales, C. L. and A. Traveset. 2009. A meta-analysis of impacts of 
+alien vs. native plants on pollinator visitation and reproductive 
+success of co-flowering native plants. Ecology Letters 12:716-728. 
+Muñoz, A. A. and L. A. Cavieres. 2008. The presence of a showy 
+invasive plant disrupts pollinator service and reproductive output in 
+native alpine species only at high densities. Journal of Ecology 
+96:459-467. 
+Floral composition Exotic plants compete with natives for 
+resources, light and water, thus causing 
+displacement and changes in the plant 
+community. Therefore, networks with 
+similar levels of exotic dominance are 
+likely to be more similar in floral 
+abundance and composition. 
+Cox, P. A. and T. Elmqvist. 2000. Pollinator extinction in the 
+Pacific Islands. Conservation Biology 14:1237-1239. 
+Gurevitch, J. and D. K. Padilla. 2004. Are invasive species a major 
+cause of extinctions? Trends in Ecology & Evolution 19:470-474. 
+Williams, N. M., D. Cariveau, R. Winfree, and C. Kremen. 2011. 
+Bees in disturbed habitats use, but do not prefer, alien plants. Basic 
+and Applied Ecology 12:332-341. 
+Floral abundance 
+distribution 
+Pollinator 
+abundance 
+distribution 
+Pollinator traits We expect that communities with 
+similar pollinator abundance 
+distributions are likely to show similar 
+body size abundance distributions. 
+Morse, D. R., N. E. Stork, and J. H. Lawton. 1988. Species number, 
+species abundance and body length relationships of arboreal beetles 
+in Bornean lowland rain forest trees. Ecological Entomology 13:25- 
+37. 
+
+41 
+Pollinator 
+composition 
+Communities that are similar in 
+pollinator abundance distribution 
+should also be similar in terms of 
+composition because the same species 
+are likely to contribute equivalently to 
+abundance. 
+Siemann, E., D. Tilman, and J. Haarstad. 1996. Insect species 
+diversity, abundance and body size relationships. Nature 380:704- 
+706. 
+Interaction pattern The neutrality hypothesis posits that 
+individuals interact randomly. This 
+implies that the abundance of species 
+determines interaction frequency and 
+diversity. Similarity in pollinator 
+abundance distribution between 
+networks should therefore correspond 
+to similarity in interaction pattern 
+among networks. 
+Vázquez, D. P., N. P. Chacoff, and L. Cagnolo. 2009. Evaluating 
+multiple determinants of the structure of plant-animal mutualistic 
+networks. Ecology 90:2039-2046. 
+Dupont, Y. L., D. M. Hansen, and J. M. Olesen. 2003. Structure of a 
+plant-flower-visitor network in the high-altitude sub-alpine desert of 
+Tenerife, Canary Islands. Ecography 26:301-310. 
+Ollerton, J., S. D. Johnson, L. Cranmer, and S. Kellie. 2003. The 
+pollination ecology of an assemblage of grassland asclepiads in 
+South Africa. Annals of Botany 92:807-834. 
+Vázquez, D. P., C. J. Melian, N. M. Williams, N. Bluthgen, B. R. 
+Krasnov, and R. Poulin. 2007. Species abundance and asymmetric 
+interaction strength in ecological networks. Oikos 116:1120-1127. 
+Floral 
+abundance 
+distribution 
+Floral traits Floral traits that determine the 
+pollinator spectrum evolved depending 
+on their relative abundance in the 
+community. Floral traits in 
+communities of the same habitat type 
+are thus expected to be more similar 
+when they show similar floral 
+abundance distributions. 
+Sargent, R. D. and S. P. Otto. 2006. The role of local species 
+abundance in the evolution of pollinator attraction in flowering 
+plants. The American Naturalist 167:67-80. 
+
+42 
+Floral composition Communities that are more similar in 
+the distribution of floral abundance 
+should also be more similar in terms of 
+composition because the same species 
+are likely to contribute equivalently to 
+abundance. 
+Kunin, W. E. 1997. Population size and density effects in 
+pollination: Pollinator foraging and plant reproductive success in 
+experimental arrays of Brassica kaber. Journal of Ecology 85:225- 
+234. 
+Stang, M., P. G. L. Klinkhamer, and E. van der Meijden. 2006. Size 
+constraints and flower abundance determine the number of 
+interactions in a plant-flower visitor web. Oikos 112:111-121. 
+Vázquez, D. P., N. P. Chacoff, and L. Cagnolo. 2009. Evaluating 
+multiple determinants of the structure of plant-animal mutualistic 
+networks. Ecology 90:2039-2046. 
+Interaction pattern The neutrality hypothesis posits that 
+individuals interact randomly. This 
+implies that floral abundance 
+determines interaction frequency and 
+diversity independent of the identity of 
+the flowering plant species. Similarity 
+in the distribution of floral abundance 
+between networks should therefore 
+correspond to similarity in interaction 
+patterns between networks. 
+Dupont, Y. L., D. M. Hansen, and J. M. Olesen. 2003. Structure of a 
+plant-flower-visitor network in the high-altitude sub-alpine desert of 
+Tenerife, Canary Islands. Ecography 26:301-310. 
+Ollerton, J., S. D. Johnson, L. Cranmer, and S. Kellie. 2003. The 
+pollination ecology of an assemblage of grassland asclepiads in 
+South Africa. Annals of Botany 92:807-834. 
+Vázquez, D. P., C. J. Melian, N. M. Williams, N. Bluthgen, B. R. 
+Krasnov, and R. Poulin. 2007. Species abundance and asymmetric 
+interaction strength in ecological networks. Oikos 116:1120-1127. 
+Vázquez, D. P., N. P. Chacoff, and L. Cagnolo. 2009. Evaluating 
+multiple determinants of the structure of plant-animal mutualistic 
+networks. Ecology 90:2039-2046. 
+Pollinator 
+traits 
+Pollinator 
+composition 
+Functional traits and environmental 
+filtering are prominent mechanisms that 
+structure species abundance and 
+composition. We expect that a change 
+in composition could lead to a change 
+in traits and a change in traits will 
+imply a change in composition 
+(reciprocal causation). Thus, networks 
+with similar distributions of pollinator 
+traits are similar in pollinator 
+Sargent, R. D. and D. D. Ackerly. 2008. Plant–pollinator 
+interactions and the assembly of plant communities. Trends in 
+Ecology & Evolution 23:123-130. 
+Stang, M., P. G. L. Klinkhamer, N. M. Waser, I. Stang, and E. van 
+der Meijden. 2009. Size-specific Interaction pattern and size 
+matching in a plant–pollinator interaction web. Annals of Botany 
+103:1459-1469. 
+Webb, C. O., D. D. Ackerly, M. A. McPeek, and M. J. Donoghue. 
+2002. Phylogenies and community ecology. Annual Review of 
+Ecology and Systematics 33:475-505. 
+Interaction pattern 
+
+43 
+community composition and interaction 
+patterns 
+Floral traits Floral composition Mechanisms such as environmental 
+filtering based on floral traits determine 
+the abundance and identity of flowering 
+plant species in the community. Thus, 
+filtering mechanism can result in 
+communities of species that share 
+similar morphological traits. 
+Sargent, R. D. and D. D. Ackerly. 2008. Plant–pollinator 
+interactions and the assembly of plant communities. Trends in 
+Ecology & Evolution 23:123-130. 
+Webb, C. O., D. D. Ackerly, M. A. McPeek, and M. J. Donoghue. 
+2002. Phylogenies and community ecology. Annual Review of 
+Ecology and Systematics 33:475-505. 
+Interaction pattern Floral traits determine which species in 
+a community can interact with each 
+other. Such phenotypic constraints 
+drive the positive relationship in 
+network similarity in floral traits and 
+interactions patterns. 
+Gibson, M. R., D. M. Richardson, and A. Pauw. 2012. Can floral 
+traits predict an invasive plant's impact on native plant–pollinator 
+communities? Journal of Ecology 100:1216-1223. 
+Jordano, P., J. Bascompte, and J. M. Olesen. 2003. Invariant 
+properties in coevolutionary networks of plant-animal interactions. 
+Ecology Letters 6:69-81. 
+Lázaro, A., S. J. Hegland, and Ø. Totland. 2008. The relationships 
+between floral traits and specificity of pollination systems in three 
+Scandinavian plant communities. Oecologia 157:249-257. 
+Rezende, E. L., P. Jordano, and J. Bascompte. 2007. Effects of 
+phenotypic complementarity and phylogeny on the nested structure 
+of mutualistic networks. Oikos 116:1919-1929. 
+Stang, M., P. G. L. Klinkhamer, N. M. Waser, I. Stang, and E. van 
+der Meijden. 2009. Size-specific Interaction pattern and size 
+matching in a plant–pollinator interaction web. Annals of Botany 
+103:1459-1469. 
+
+44 
+Pollinator 
+composition 
+Pollinator traits The abundance and identity of 
+pollinators determines the distribution 
+of pollinator traits in the community. 
+We expect that communities similar in 
+pollinator composition are also similar 
+in the distribution of pollinator traits. 
+Stang, M., P. G. L. Klinkhamer, and E. van der Meijden. 2006. Size 
+constraints and flower abundance determine the number of 
+interactions in a plant-flower visitor web. Oikos 112:111-121. 
+Interaction pattern Pollinator community composition 
+determines which and how frequent coevolved 
+species interact, so that 
+interaction patterns are a direct 
+consequence of pollinator community 
+composition. 
+Kaiser-Bunbury, C. N., J. Memmott, and C. B. Müller. 2009. 
+Community structure of pollination webs of Mauritian heathland 
+habitats. Perspectives in Plant Ecology, Evolution and Systematics 
+11:241-254. 
+Floral 
+composition 
+Floral traits Floral community composition 
+determines the distribution of flower 
+traits in the community. We therefore 
+expect that communities similar in 
+floral community composition are also 
+similar in floral traits. 
+Stang, M., P. G. L. Klinkhamer, and E. van der Meijden. 2006. Size 
+constraints and flower abundance determine the number of 
+interactions in a plant-flower visitor web. Oikos 112:111-121. 
+
+45 
+Pollinator 
+composition 
+There is theoretical and empirical 
+evidence that increasing resource 
+diversity (i.e., plants) increases 
+consumer diversity (i.e., pollinators). 
+We predict that similarity in floral 
+community composition is reflected by 
+similarities in pollinator community 
+composition as pollinators respond 
+directly to changes in floral resources 
+offered in the community. 
+Hegland, S. J. and L. Boeke. 2006. Relationships between the 
+density and diversity of floral resources and flower visitor activity 
+in a temperate grassland community. Ecological Entomology 
+31:532-538. 
+Lázaro, A., A. Jakobsson, and Ø. Totland. 2013. How do pollinator 
+visitation rate and seed set relate to species’ floral traits and 
+community context? Oecologia 173:881-893. 
+Potts, S. G., B. Vulliamy, A. Dafni, G. Ne'eman, and P. Willmer. 
+2003. Linking bees and flowers: How do floral communities 
+structure pollinator communities? Ecology 84:2628-2642. 
+Ricketts, T. H. 2004. Tropical forest fragments enhance pollinator 
+activity in nearby coffee crops. Conservation Biology 18:1262- 
+1271. 
+Siemann, E., D. Tilman, J. Haarstad, and M. Ritchie. 1998. 
+Experimental tests of the dependence of arthropod diversity on plant 
+diversity. The American Naturalist 152:738-750. 
+Stang, M., P. G. L. Klinkhamer, and E. van der Meijden. 2006. Size 
+constraints and flower abundance determine the number of 
+interactions in a plant-flower visitor web. Oikos 112:111-121. 
+Steffan-Dewenter, I. and T. Tscharntke. 1999. Effects of habitat 
+isolation on pollinator communities and seed set. Oecologia 
+121:432-440. 
+Steffan-Dewenter, I., A.-M. Klein, V. Gaebele, T. Alfert, and T. 
+Tscharntke. 2006. Bee diversity and plant-pollinator interactions in 
+fragmented landscapes. Pages 387-407 in N. M. Waser and J. 
+Ollerton, editors. Plant-Pollinator Interactions: From Specialization 
+to Generalization. University of Chicago Press, Chicago. 
+
+46 
+Interaction pattern Floral community composition 
+determines the type, amount and 
+accessibility of resources in a 
+community, thereby directly regulating 
+the distribution and frequency of 
+interactions in a network. We expect 
+that similarity in floral composition 
+between networks entails similarity in 
+interaction pattern between networks. 
+Lázaro, A., A. Jakobsson, and Ø. Totland. 2013. How do pollinator 
+visitation rate and seed set relate to species’ floral traits and 
+community context? Oecologia 173:881-893. 
+Stang, M., P. G. L. Klinkhamer, and E. van der Meijden. 2006. Size 
+constraints and flower abundance determine the number of 
+interactions in a plant-flower visitor web. Oikos 112:111-121. 
+Vázquez, D. P., C. J. Melian, N. M. Williams, N. Bluthgen, B. R. 
+Krasnov, and R. Poulin. 2007. Species abundance and asymmetric 
+interaction strength in ecological networks. Oikos 116:1120-1127. 
+Vázquez, D. P., N. P. Chacoff, and L. Cagnolo. 2009. Evaluating 
+multiple determinants of the structure of plant-animal mutualistic 
+networks. Ecology 90:2039-2046. 
+
+47 
+TABLE A2. Distances (in meters) between the six study sites. 
+Bernica Casse Dent Copolia La Reserve Tea Plantation Trois Frères 
+Casse Dent 2172 
+Copolia 2272 2313 
+La Reserve 7681 9720 8289 
+Tea Plantation 1319 876 2107 8966 
+Trois Frères 3745 2314 2122 10299 2888 
+
+48 
+TABLE A3. Plant species included in the study. Given are species and family names, origin, IUCN status of endangerment, floral abundance and 
+floral complexity scores. The following species were recently renamed: Gastonia crassa = Polyscias crassa; Canthium bibracteatum = 
+Pyrostria bibracteata; Paraserianthes falcataria = Falcataria moluccana 
+Plant species Family Origin 
+IUCN 
+Status* 
+Floral abundance 
+across all networks 
+[# flowers/cube] 
+Floral 
+complexity 
+scores† 
+Alstonia macrophylla Apocynaceae Exotic - 0.405 12 
+Aphloia theiformis var. seychellensis Flacourtiaceae Native NT 0.227 6 
+Campnosperma seychellarum Anacardiaceae Endemic CR 0.126 5 
+Chrysobalanus icaco Chrysobalanaceae Exotic - 1.116 6 
+Cinnamomum verum Lauraceae Exotic - 0.707 9 
+Colea seychellarum Bignoniaceae Endemic EN 0.016 16 
+Craterispermum microdon Rubiaceae Endemic EN 0.100 11 
+Deckenia nobilis Palmae Endemic NT 0.383 3 
+Dillenia ferruginea Dilleniaceae Endemic NT 0.189 8 
+Dillenia suffruticosa Dilleniaceae Exotic - 0.031 8 
+Diospyros seychellarum Ebenaceae Endemic NT 0.064 9 
+Dracaena reflexa Dracenaceae Native LC 0.047 9 
+Erythroxylum sechellarum Erythroxylaceae Endemic LC 0.762 8 
+Euphorbia pyrifolia Euphorbiaceae Native LC 0.039 7 
+Excoecaria benthiamiana Euphorbiaceae Endemic VU 0.329 7 
+Falcataria moluccana Mimosaceae Exotic - 0.105 11 
+Glionnetia sericea Rubiaceae Endemic EN 0.024 13 
+Ixora pudica Rubiaceae Endemic NT 0.038 11 
+Medusagyne oppositifolia Medusagynaceae Endemic CR 0.522 10 
+Memecylon eleagni Melastomataceae Endemic LC 1.994 4 
+Mimusops sechellarum Sapotaceae Endemic NT 0.122 13 
+Nepenthes pervillei Nephentaceae Endemic NT 0.658 4 
+Nephrosperma vanhoutteanum Palmae Endemic VU 2.928 3 
+Northea hornei Sapotaceae Endemic VU 0.101 12 
+
+49 
+Ochna kirkii Ochnaceae Exotic - 0.219 6 
+Paragenipa wrightii Rubiaceae Endemic NT 0.958 13 
+Phoenicophorium borsigianum Palmae Endemic LC 2.674 3 
+Pittosporum senacia subsp. wrightii Pittosporaceae Native VU 0.070 7 
+Polyscias crassa Araliaceae Endemic VU 0.109 6 
+Premna serratifolia Lamiaceae Native LC 0.056 1 
+Psidium cattleianum Myrtaceae Exotic - 0.030 5 
+Psychotria pervillei Rubiaceae Endemic VU 0.246 10 
+Pyrostria bibracteata Rubiaceae Endemic LC 4.048 10 
+Roscheria melanochaetes Palmae Endemic NT 1.660 3 
+Soulamea terminaloides Simaroubaceae Endemic VU 0.380 6 
+Syzygium wrightii Myrtaceae Endemic VU 0.323 15 
+Timonius sechellensis Rubiaceae Endemic VU 0.077 11 
+* LC = least concern, NT = near threatened, VU = vulnerable, EN = endangered, CR = critically endangered; - = exotic species, not listed. 
+† Describes the floral resource accessibility and floral morphology on an ordinal scale. Values range from 0–20, with 0 describing very simple and 
+easily accessible flowers (TABLE A5) 
+
+50 
+TABLE A4. Pollinator taxa included in the study. Shown are species and orders where possible, total number of visits across the entire 8 month study 
+period, thorax width and body length, and the size class used to categorize pollinator taxa by morphological traits. Pollinators that could not 
+be identified to species level due to size or lack of taxonomic expertise were assigned a species code. Taxa IDs correspond to pollinator codes 
+that can be provided for FIG. B1. 
+ID Pollinator taxa Class/Order Visits Thorax width [mm] Body length [mm] Size class (1-8) 
+48 Foudia madagascariensis Aves 1 8.5* 130.0 8 
+68 Cinnyris dussumieri Aves 199 9.5* 120.0 8 
+7 Beetle sp1 Coleoptera 5 0.5 2.8 3 
+25 Beetle sp10 Coleoptera 64 0.8 1.6 4 
+88 Beetle sp13 Coleoptera 20 0.6 1.8 4 
+57 Beetle sp14 Coleoptera 79 0.9 2.0 4 
+4 Beetle sp4 Coleoptera 257 0.8 1.9 4 
+5 Beetle sp5 Coleoptera 325 0.9 3.2 4 
+17 Beetle sp6 Coleoptera 3 0.3 2.1 3 
+77 Beetle sp7 Coleoptera 5 0.2 2.5 2 
+14 Beetle sp8 Coleoptera 1 0.9 2.1 4 
+41 Beetle sp9 Coleoptera 2 0.2 2.6 2 
+92 Cratopus aurostriatus Coleoptera 60 2.3 10.0 6 
+36 Curculionidae sp12 Coleoptera 51 0.6 2.9 4 
+27 Elateroidea sp2 Coleoptera 26 0.8 3.4 4 
+19 Elateroidea sp3 Coleoptera 12 0.6 3.0 4 
+18 Mordellidae sp11 Coleoptera 26 0.6 2.7 4 
+78 Perissoma aenescens Coleoptera 2 4.0 9.9 7 
+75 Eristalinus vicarians Diptera 29 4.1 11.3 7 
+37 Eristalodes seychellarum Diptera 1 4.4 10.9 7 
+3 Fly sp1 Diptera 184 0.3 2.9 3 
+82 Fly sp10 Diptera 10 1.6 7.8 5 
+80 Fly sp11 Diptera 22 2.1 5.3 6 
+10 Fly sp12 Diptera 1 0.6 2.8 4 
+
+51 
+15 Fly sp13 Diptera 3 0.5 2.5 3 
+54 Fly sp14 Diptera 24 2.9 7.1 6 
+34 Fly sp15 Diptera 218 2.6 6.5 6 
+26 Fly sp16 Diptera 177 0.1 0.8 1 
+28 Fly sp17 Diptera 13 0.1 0.2 1 
+30 Fly sp18 Diptera 59 0.2 1.0 2 
+31 Fly sp19 Diptera 3 0.2 2.2 2 
+8 Fly sp2 Diptera 1 0.7 1.8 4 
+39 Fly sp20 Diptera 1 0.2 1.6 2 
+43 Fly sp21 Diptera 1 1.2 4.3 5 
+44 Fly sp22 Diptera 1 0.1 2.4 1 
+51 Fly sp23 Diptera 2 1.2 4.3 5 
+56 Fly sp24 Diptera 26 0.3 1.3 3 
+58 Fly sp25 Diptera 18 0.1 0.3 1 
+59 Fly sp26 Diptera 12 0.1 0.2 1 
+83 Fly sp27 Diptera 28 1.1 3.0 5 
+94 Fly sp28 Diptera 1 0.1 2.1 1 
+16 Fly sp3 Diptera 164 0.1 1.9 1 
+6 Fly sp30 Diptera 24 0.1 0.1 1 
+62 Fly sp31 Diptera 13 0.1 0.1 1 
+66 Fly sp32 Diptera 1 0.1 0.1 1 
+96 Fly sp33 Diptera 1 0.1 0.2 1 
+95 Fly sp34 Diptera 1 0.1 0.2 1 
+12 Fly sp35 Diptera 6 0.4 1.8 3 
+81 Fly sp4 Diptera 17 0.1 1.1 1 
+73 Fly sp5 Diptera 28 0.6 2.4 4 
+55 Fly sp6 Diptera 8 1.1 4.1 5 
+24 Fly sp7 Diptera 1 1.0 4.8 5 
+74 Fly sp8 Diptera 37 1.6 5.8 5 
+23 Fly sp9 Diptera 3 1.8 6.1 5 
+21 Hemipyrellia sp. Diptera 73 3.1 8.4 6 
+
+52 
+89 Melanostoma annulipes Diptera 19 1.6 8.1 5 
+79 Neavella albipectus Diptera 13 3.4 11.3 6 
+72 Ornidia obesa Diptera 224 4.7 10.6 7 
+91 Sarcophagidae sp. Diptera 3 2.4 12.0 6 
+52 Simosyrphus aegyptius Diptera 25 1.6 7.7 5 
+29 Allodapini sp. Hymenoptera 31 1.0 5.3 5 
+50 Apis mellifera adansonii Hymenoptera 3180 3.6 10.3 6 
+2 Bee sp1 Hymenoptera 1 1.5 6.2 5 
+32 Bee sp3 Hymenoptera 4 1.5 6.2 5 
+47 Bee sp4 Hymenoptera 10 0.4 2.0 3 
+53 Bee sp5 Hymenoptera 14 0.1 0.6 1 
+35 Ceratina tabescens Hymenoptera 39 1.2 5.6 5 
+22 Chalicodoma disjuncta Hymenoptera 20 4.6 14.3 7 
+90 Euodynerus cylindricus Hymenoptera 3 2.4 10.2 6 
+38 Lasioglossum mahense Hymenoptera 2218 1.5 6.2 5 
+20 Megachile seychellensis Hymenoptera 135 3.0 10.6 6 
+65 Polistes olivaceus Hymenoptera 29 4.1 17.2 7 
+86 Rhynchium brunneum Hymenoptera 63 4.8 16.4 7 
+70 Trypoxylon errans Hymenoptera 3 1.8 10.0 5 
+97 Xylocopa caffra Hymenoptera 114 8.5 18.6 8 
+49 Agrius convolvuli Lepidoptera 8 11.9 44.8 8 
+1 Cenophodes tamsi Lepidoptera 1 10.0 45.0 8 
+87 Eagris sabadius maheta Lepidoptera 8 4.6 15.1 7 
+84 Lampides boeticus Lepidoptera 3 1.5 9.6 5 
+46 Leptotes pirithous Lepidoptera 5 1.8 8.2 5 
+63 Phalanta phalantha aethiopica Lepidoptera 1 6.0 26.0 7 
+67 Mabuya sechellensis Lizard 34 11.5† 84.0† 8 
+64 Phelsuma astriata Lizard 156 8.2† 55.0† 8 
+* Head width (G. Rocomora, pers. com.; Craig 2010) 
+† Head width and snout to vent length (S. Rocha and A. Perera, unpubl. data) 
+
+53 
+TABLE A5. Floral complexity scoring table based on four traits of a flower complexity index (M. Stang, unpublished data). Total floral 
+complexity scores are obtained by adding the scores for each of the four traits. Each category is scored independently within and between 
+species. 
+Scores Pollen presentation pattern* Flower dimensionality** Accessibility of nectar† Flower orientation 
+0 Diffuse (many portions without 
+regular presentation pattern) 
+2D (e.g., dish-shaped) Open and easy Upright (0°) 
+1 Diffuse to marginal (many portions 
+in 2-3 circles) 
+2-3D (e.g., bowl-shaped) Open but not easy, concealed 
+behind hairs or in wide 
+shallow cups (max. depth 1-3 
+mm) 
+Upright to horizontal (0-90°) 
+2 Marginal (many portions in one 
+marginal circle) 
+2D and 3D (e.g., flat rim 
+with tube, flat heads with 
+tubes) 
+Semi-concealed in 1-4 mm 
+deep tubes, partly flexible or 
+wide 
+Upright to pendant; variable (45- 
+135°) 
+3 Marginal to central (several portions 
+more centralized presented) 
+3D with minimal crawling 
+(e.g., funnel, tubes or brush) 
+Concealed in 4-10 mm 
+flexible, wide or funnelshaped 
+tubes 
+Horizontal (90°) 
+4 Pollen presentation central 3D with short crawling (e.g., 
+funnel, bell, gullet, flag) 
+Concealed in 8-20 mm 
+narrow or angled tubes or in 
+10-30 mm very narrow tubes 
+Horizontal to pendant (90-135°) 
+5 Pollen presentation more or less 
+excentric, corolla often zygomorphic 
+3D with deep crawling or 
+closed entrance (e.g., bell, 
+gullet or flag, traps) 
+Concealed in 8-20 mm 
+narrow tubes with crawling 
+access or with closed entrance 
+or in extremely deep tubes (> 
+30 mm) 
+Pendant (135-180°) 
+* Pollen presentation pattern based on the degree of centralization and position in relation to floral center 
+** Corolla dimensionality without considering symmetry (with examples of corresponding traditional flower shape types) 
+† Nectar tube depth and width 
+
+54 
+TABLE A6. Goodness-of-fit indices for structural equation modelling and the modelling indices of Models A-C. 
+Index name Model A Model B Model C Threshold Model fit Reference 
+NFI 0.9897 0.9856 0.9842 > 0.95 acceptable fit Bentler and Bonnett 1980, Schumacker 
+and Lomax 2004 
+NNFI 0.9950 0.9903 1.0 > 0.95 acceptable fit Hu and Bentler 1998 
+RMSEA 0.0195 0.0231 0.0001 0.01–0.05 excellent–good fit MacCallum et al. 1996 
+CFI 0.9969 0.9945 1.0 close to 1 acceptable fit Bentler 1990 
+SRMR 0.0247 0.0233 0.0177 < 0.08 good fit Hu and Bentler 1998 
+
+55 
+FIG. A1. Path diagram describing two reduced (nested) hypothesized models of the relationships of 
+dissimilarities, in which either community composition (model B) or trait variables (model C) were entered 
+separately. See FIG. 1 for a depiction of the complete model. Path justifications are provided in TABLE A1. 
+
+56 
+FIG. A2. Correlation plots depict bivariate relationship between dissimilarities (range 0-1) and temporal and 
+spatial distances (days and meters, respectively) of variables across networks and the best-fit line with its 
+standard error (dark shade surround lines). Shown are only significant Spearman correlations at a Bonferronicorrected 
+a of 0.001; for all bivariate relationships refer to TABLE B2. Note the triangular relationship between 
+networks in D-floral composition and D-floral complexity. 
+
+57 
+LITERATURE CITED 
+Aizen, M. A., C. L. Morales, and J. M. Morales. 2008. Invasive mutualists erode native pollination webs. PLoS 
+Biology 6:396-403. 
+Bentler, P. M. 1990. Comparative fit indexes in structural models. Psychological Bulletin 107:238-246. 
+Bentler, P. M. and D. G. Bonett. 1980. Significance tests and goodness of fit in the analysis of covariance 
+structures. Psychological Bulletin 88:588-606. 
+Chittka, L. and S. Schürkens. 2001. Successful invasion of a floral market. Nature 411:653. 
+Craig, A. J. F. K. 2010. Family Ploceidae (Weavers). In J. del Hoyo, A. Elliott, and D. Christie, editors. 
+Handbook of the Birds of the World. Vol. 15: 74-197. Lynx Edicions, Barcelona. 
+Cudeck, R. 1989. Analysis of correlation matrices using covariance structure models. Psychological Bulletin 
+105:317-327. 
+Duncan, O. D., A. O. Haller, and A. Portes. 1968. Peer influences on aspiration: A reinterpretation. American 
+Journal of Sociology 74:119-137. 
+Fox, J., Z. Nie, and J. Byrnes. 2012. sem: Structural Equation Models. R package version 3.0-0. http://CRAN.Rproject.
+org/package=sem 
+Fox, J. 2006. Teacher's corner: Structural equation modeling with the sem package in R. Structural Equation 
+Modeling: A Multidisciplinary Journal 13:465-486. 
+Grace, J. B. 2006. Structural equation modeling and natural systems. Cambridge University Press, Cambridge, 
+UK. 
+Heck, K. L., G. van Belle, and D. Simberloff. 1975. Explicit calculation of the rarefaction diversity 
+measurement and the determination of sufficient sample size. Ecology 56:1459-1461. 
+Hu, L.-t. and P. M. Bentler. 1998. Fit indices in covariance structure modeling: Sensitivity to 
+underparameterized model misspecification. Psychological Methods 3:424-453. 
+Hurlbert, S. H. 1971. The nonconcept of species diversity: A critique and alternative parameters. Ecology 
+52:577-586. 
+Kaiser-Bunbury, C. N., T. Valentin, J. Mougal, D. Matatiken, and J. Ghazoul. 2011. The tolerance of island 
+plant–pollinator networks to alien plants. Journal of Ecology 99:202-213. 
+MacCallum, R. C., M. W. Browne, and H. M. Sugawara. 1996. Power analysis and determination of sample 
+size for covariance structure modeling. Psychological Methods 1:130-149. 
+McArdle, J. J. and R. P. McDonald. 1984. Some algebraic properties of the Reticular Action Model for moment 
+structures. British Journal of Mathematical and Statistical Psychology 37:234-251. 
+Ollerton, J. and L. Cranmer. 2002. Latitudinal trends in plant-pollinator interactions: are tropical plants more 
+specialised? Oikos 98:340-350. 
+Schumacker, R. E., and R. G.Lomax. 2004. A beginner's guide to structural equation modeling. Second edition. 
+Lawrence Erlbaum Associates. Mahwah, NJ. 
+Shipley, B. 2000. Cause and correlation in biology. A user’s guide to path analysis, structural equations, and 
+causal inference. . Cambridge University Press, Cambridge, UK. 
+Stang, M., P. G. L. Klinkhamer, and E. van der Meijden. 2006. Size constraints and flower abundance 
+determine the number of interactions in a plant-flower visitor web. Oikos 112:111-121. 
+

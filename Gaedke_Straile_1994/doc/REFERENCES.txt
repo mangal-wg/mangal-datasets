@@ -1,0 +1,12 @@
+@article{Gaedke_1994,
+	doi = {10.1016/0304-3800(94)90038-8},
+	url = {https://doi.org/10.1016%2F0304-3800%2894%2990038-8},
+	year = 1994,
+	month = {sep},
+	publisher = {Elsevier {BV}},
+	volume = {75-76},
+	pages = {435--445},
+	author = {Ursula Gaedke and Dietmar Straile},
+	title = {Seasonal changes of trophic transfer efficiencies in a plankton food web derived from biomass size distributions and network analysis},
+	journal = {Ecological Modelling}
+}

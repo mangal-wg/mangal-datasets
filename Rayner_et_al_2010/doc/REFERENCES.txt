@@ -1,0 +1,12 @@
+@article{Rayner_2010,
+	doi = {10.1071/mf09202},
+	url = {https://doi.org/10.1071%2Fmf09202},
+	year = 2010,
+	publisher = {{CSIRO} Publishing},
+	volume = {61},
+	number = {8},
+	pages = {909},
+	author = {Thomas S. Rayner and Bradley J. Pusey and Richard G. Pearson and Paul C. Godfrey},
+	title = {Food web dynamics in an Australian Wet Tropics river},
+	journal = {Marine and Freshwater Research}
+}

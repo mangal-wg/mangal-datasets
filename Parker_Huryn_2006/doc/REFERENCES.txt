@@ -1,0 +1,13 @@
+@article{PARKER_2006,
+	doi = {10.1111/j.1365-2427.2006.01567.x},
+	url = {https://doi.org/10.1111%2Fj.1365-2427.2006.01567.x},
+	year = 2006,
+	month = {jul},
+	publisher = {Wiley},
+	volume = {51},
+	number = {7},
+	pages = {1249--1263},
+	author = {STEPHANIE M. PARKER and ALEXANDER D. HURYN},
+	title = {Food web structure and function in two arctic streams with contrasting disturbance regimes},
+	journal = {Freshwater Biology}
+}

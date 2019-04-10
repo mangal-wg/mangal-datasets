@@ -1,0 +1,9 @@
+"M. Rejmanek, and P. Stary. (1979). Connectance in real biotic communities and critical values for stability of model ecosystems. Nature letters. 280, pp. 311-313.",,,,,,,,,,,,
+Aphid-parasitoid system on Betula pendula - Central Europe,Aphelinus chaonia,Trioxys betulae,T. compressicornis,Praon flavinode,Aphidius aquilus,Calaphidius elegans,Symydobius oblongus,Euceraphis betulae,Betulaphis quadrituberculata,Calaphis betulicola,Betulaphis brevipilosa,Hamamelistes betulinus
+Symydobius oblongus,1,1,0,0,0,0,0,0,0,0,0,0
+Euceraphis betulae,0,0,1,1,0,0,0,0,0,0,0,0
+Betulaphis quadrituberculata,0,0,0,1,1,0,0,0,0,0,0,0
+Calaphis betulicola,0,0,0,0,1,0,0,0,0,0,0,0
+Betulaphis brevipilosa,0,0,0,0,1,0,0,0,0,0,0,0
+Hamamelistes betulinus,0,0,0,0,0,1,0,0,0,0,0,0
+Betula pendula,0,0,0,0,0,0,1,1,1,1,1,1

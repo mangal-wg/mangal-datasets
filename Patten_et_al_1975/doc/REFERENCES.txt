@@ -1,0 +1,7 @@
+@book{patten2013systems,
+  title={Systems analysis and simulation in ecology},
+  author={Patten, Bernard C},
+  volume={3},
+  year={2013},
+  publisher={Elsevier}
+}

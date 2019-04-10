@@ -1,0 +1,13 @@
+@article{Dupont_2003,
+	doi = {10.1034/j.1600-0587.2003.03443.x},
+	url = {https://doi.org/10.1034%2Fj.1600-0587.2003.03443.x},
+	year = 2003,
+	month = {jun},
+	publisher = {Wiley},
+	volume = {26},
+	number = {3},
+	pages = {301--310},
+	author = {Yoko L. Dupont and Dennis M. Hansen and Jens M. Olesen},
+	title = {Structure of a plant-flower-visitor network in the high-altitude sub-alpine desert of Tenerife, Canary Islands},
+	journal = {Ecography}
+}

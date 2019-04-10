@@ -1,0 +1,8 @@
+"S.H. Hurlbert, M.S. Mulla, and H.R. Willson. (1972). Effects of an Organophosphorus Insecticide on the Phytoplankton, Zooplankton, and Insect Populations of Fresh-Water Ponds. Ecological Monographs. 42(3), pp. 269-299.",,,,,,
+Freshwater pond,small rotifers,Moina - Diaptomus,herbivorous insects,Cyclops (copepod),Asplancha,predaceous insects
+algae - bacteria - detritus,1,1,1,1,0,0
+small rotifers,0,0,1,1,1,0
+Moina - Diaptomus,0,0,0,1,1,1
+herbivorous insects,0,0,0,0,0,1
+Cyclops (copepod),0,0,0,0,1,1
+Asplancha,0,0,0,0,1,1

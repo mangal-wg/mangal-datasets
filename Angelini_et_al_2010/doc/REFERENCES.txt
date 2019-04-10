@@ -1,0 +1,9 @@
+@article{angelini2010mixed,
+  title={Mixed food web control and stability in a Cerrado river (Brazil)},
+  author={Angelini, RONALDO and Alo{\'\i}sio, GUSTAVO RIBEIRO and Carvalho, ADRIANA ROSA},
+  journal={Pan-American Journal of Aquatic Sciences},
+  volume={5},
+  number={3},
+  pages={421--431},
+  year={2010}
+}

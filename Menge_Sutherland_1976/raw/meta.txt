@@ -1,0 +1,5 @@
+Type	lat	lon
+an exposed rocky shore community, Pemaquid point, New England	43.8406	-69.50979999999998
+a protected rocky shore community, Grindstone Neck, New England	44.37215231143086	-68.09012124815234
+an exposed rocky shore community, Makah Bay, Washington	48.328556969062426	-124.67164848492166
+a protected rocky shore community, San Juan Island, Washington	48.5377	-123.084

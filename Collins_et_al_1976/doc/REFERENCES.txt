@@ -1,0 +1,13 @@
+@article{Collins_1976,
+	doi = {10.2307/1935046},
+	url = {https://doi.org/10.2307%2F1935046},
+	year = 1976,
+	month = {nov},
+	publisher = {Wiley},
+	volume = {57},
+	number = {6},
+	pages = {1221--1232},
+	author = {Nicholas C. Collins and Rodger Mitchell and Richard G. Wiegert},
+	title = {Functional Analysis of a Thermal Spring Ecosystem, with an Evaluation of the Role of Consumers},
+	journal = {Ecology}
+}

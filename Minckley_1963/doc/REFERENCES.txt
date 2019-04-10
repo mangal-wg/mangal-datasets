@@ -1,0 +1,9 @@
+@article{minckley1963ecology,
+  title={The ecology of a spring stream: Doe Run, Meade County, Kentucky},
+  author={Minckley, WL},
+  journal={Wildlife Monographs},
+  number={11},
+  pages={3--124},
+  year={1963},
+  publisher={JSTOR}
+}

@@ -1,0 +1,13 @@
+@article{Koslucher_1973,
+	doi = {10.2307/3225248},
+	url = {https://doi.org/10.2307%2F3225248},
+	year = 1973,
+	month = {jul},
+	publisher = {{JSTOR}},
+	volume = {92},
+	number = {3},
+	pages = {441},
+	author = {Dale G. Koslucher and G. Wayne Minshall},
+	title = {Food Habits of Some Benthic Invertebrates in a Northern Cool-Desert Stream (Deep Creek, Curlew Valley, Idaho-Utah)},
+	journal = {Transactions of the American Microscopical Society}
+}

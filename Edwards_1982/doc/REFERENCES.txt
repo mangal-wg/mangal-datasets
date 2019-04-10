@@ -1,0 +1,13 @@
+@article{Edwards_1982,
+	doi = {10.2307/1937256},
+	url = {https://doi.org/10.2307%2F1937256},
+	year = 1982,
+	month = {aug},
+	publisher = {Wiley},
+	volume = {63},
+	number = {4},
+	pages = {1175--1180},
+	author = {D. Craig Edwards and David O. Conover and Frederick Sutter},
+	title = {Mobile Predators and the Structure of Marine Intertidal Communities},
+	journal = {Ecology}
+}

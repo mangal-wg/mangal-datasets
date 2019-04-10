@@ -1,0 +1,13 @@
+@article{Schoenly_1983,
+	doi = {10.1093/aesa/76.4.790},
+	url = {https://doi.org/10.1093%2Faesa%2F76.4.790},
+	year = 1983,
+	month = {jul},
+	publisher = {Oxford University Press ({OUP})},
+	volume = {76},
+	number = {4},
+	pages = {790--796},
+	author = {Kenneth Schoenly},
+	title = {Arthropods Associated with Bovine and Equine Dung in an Ungrazed Chihuahuan Desert Ecosystem},
+	journal = {Annals of the Entomological Society of America}
+}

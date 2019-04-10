@@ -1,0 +1,13 @@
+@article{Cohen_2003,
+	doi = {10.1073/pnas.232715699},
+	url = {https://doi.org/10.1073%2Fpnas.232715699},
+	year = 2003,
+	month = {jan},
+	publisher = {Proceedings of the National Academy of Sciences},
+	volume = {100},
+	number = {4},
+	pages = {1781--1786},
+	author = {J. E. Cohen and T. Jonsson and S. R. Carpenter},
+	title = {Ecological community description using the food web, species abundance, and body size},
+	journal = {Proceedings of the National Academy of Sciences}
+}

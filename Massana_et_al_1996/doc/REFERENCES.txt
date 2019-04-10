@@ -1,0 +1,11 @@
+@article{Massana_1996,
+	doi = {10.3354/ame011279},
+	url = {https://doi.org/10.3354%2Fame011279},
+	year = 1996,
+	publisher = {Inter-Research Science Center},
+	volume = {11},
+	pages = {279--288},
+	author = {R Massana and J Garc{\'{\i}}a-Cantizano and C Pedr{\'{o}}s-Ali{\'{o}}},
+	title = {Components, structure and fluxes of the microbial food web in a small, stratified lake},
+	journal = {Aquatic Microbial Ecology}
+}

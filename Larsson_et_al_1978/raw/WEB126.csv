@@ -1,0 +1,23 @@
+"P. Larsson, J.E. Brittain, L. Lien, A. Lillehammer, and K. Tangen. (1978). The Lake Ecosystem of Ovre Heimdalsvatn. Holarctic Ecology, 1, pp. 304-320. ",,,,,,,,,,,,,,,,,,
+Ovre Heimdalsvatn Lake,Bosminia,Nemoura,Leptophlebia (mayfly),Lepidurus (tadpole shrimp),Mystacides,Eiseniella,Limnephilus,Holopedium,cyclops (copepod),Heteroscope,Procladius,Gammarus (amphipod),Salmo (brown trout),Hydra,Megacyclops,Anatidae,Homo (man),Mustela (mink)
+detritus - bacteria - fungi - ciliated protozoa,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0
+phytoplankton,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+epiphytic and benthic algae,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+macrophytes,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Bosminia,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Nemoura,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Leptophlebia (mayfly),0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Lepidurus (tadpole shrimp),0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Mystacides,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Eiseniella,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Limnephilus,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Holopedium,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+cyclops (copepod),0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+Rotatoria,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Eurycercus,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Procladius,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Lymnaea,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Gammarus (amphipod),0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Platambus,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Diura,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Salmo (brown trout),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1

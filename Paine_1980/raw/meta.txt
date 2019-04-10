@@ -1,0 +1,3 @@
+Place	lat	lon
+Torch Bay, Alaska	58.3211111	-136.795
+Cape Flattery, Washington	48.385277	-124.728734

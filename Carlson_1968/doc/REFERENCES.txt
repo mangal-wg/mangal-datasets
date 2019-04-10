@@ -1,0 +1,13 @@
+@article{Carlson_1968,
+	doi = {10.2307/1933577},
+	url = {https://doi.org/10.2307%2F1933577},
+	year = 1968,
+	month = {jan},
+	publisher = {Wiley},
+	volume = {49},
+	number = {1},
+	pages = {162--169},
+	author = {Clarence A. Carlson},
+	title = {Summer Bottom Fauna of the Mississippi River, above Dam 19, Keokuk, Iowa},
+	journal = {Ecology}
+}

@@ -1,0 +1,13 @@
+@article{Angelini_2006,
+	doi = {10.1590/s1679-62252006000200011},
+	url = {https://doi.org/10.1590%2Fs1679-62252006000200011},
+	year = 2006,
+	month = {jun},
+	publisher = {{FapUNIFESP} ({SciELO})},
+	volume = {4},
+	number = {2},
+	pages = {253--260},
+	author = {Ronaldo Angelini and Angelo Antonio Agostinho and Luiz Carlos Gomes},
+	title = {Modeling energy flow in a large Neotropical reservoir: a tool do evaluate fishing and stability},
+	journal = {Neotropical Ichthyology}
+}

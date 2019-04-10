@@ -1,0 +1,13 @@
+@article{Summerhayes_1928,
+	doi = {10.2307/2255796},
+	url = {https://doi.org/10.2307%2F2255796},
+	year = 1928,
+	month = {aug},
+	publisher = {{JSTOR}},
+	volume = {16},
+	number = {2},
+	pages = {201},
+	author = {V. S. Summerhayes},
+	title = {North-East Land and Hinlopen Strait},
+	journal = {The Journal of Ecology}
+}

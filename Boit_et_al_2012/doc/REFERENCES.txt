@@ -1,0 +1,13 @@
+@article{Boit_2012,
+	doi = {10.1111/j.1461-0248.2012.01777.x},
+	url = {https://doi.org/10.1111%2Fj.1461-0248.2012.01777.x},
+	year = 2012,
+	month = {apr},
+	publisher = {Wiley},
+	volume = {15},
+	number = {6},
+	pages = {594--602},
+	author = {Alice Boit and Neo D. Martinez and Richard J. Williams and Ursula Gaedke},
+	title = {Mechanistic theory and modelling of complex food-web dynamics in Lake Constance},
+	journal = {Ecology Letters}
+}

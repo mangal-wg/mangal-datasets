@@ -1,0 +1,13 @@
+@article{Twomey_1945,
+	doi = {10.2307/1948602},
+	url = {https://doi.org/10.2307%2F1948602},
+	year = 1945,
+	month = {feb},
+	publisher = {Wiley},
+	volume = {15},
+	number = {2},
+	pages = {173--205},
+	author = {Arthur C. Twomey},
+	title = {The Bird Population of an Elm-Maple Forest with Special Reference to Aspection, Territorialism, and Coactions},
+	journal = {Ecological Monographs}
+}

@@ -1,0 +1,13 @@
+@article{HAWKINS_1984,
+	doi = {10.1111/j.1365-2311.1984.tb00851.x},
+	url = {https://doi.org/10.1111%2Fj.1365-2311.1984.tb00851.x},
+	year = 1984,
+	month = {aug},
+	publisher = {Wiley},
+	volume = {9},
+	number = {3},
+	pages = {271--292},
+	author = {BRADFORD A. HAWKINS and RICHARD D. GOEDEN},
+	title = {Organization of a parasitoid community associated with a complex of galls on Atriplex spp. in southern California},
+	journal = {Ecological Entomology}
+}

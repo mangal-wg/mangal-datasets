@@ -1,0 +1,13 @@
+@article{Cornaby_1974,
+	doi = {10.2307/2989697},
+	url = {https://doi.org/10.2307%2F2989697},
+	year = 1974,
+	month = {apr},
+	publisher = {{JSTOR}},
+	volume = {6},
+	number = {1},
+	pages = {51},
+	author = {Barney W. Cornaby},
+	title = {Carrion Reduction by Animals in Contrasting Tropical Habitats},
+	journal = {Biotropica}
+}

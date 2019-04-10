@@ -1,0 +1,13 @@
+@article{Chapman_1955,
+	doi = {10.2307/1720},
+	url = {https://doi.org/10.2307%2F1720},
+	year = 1955,
+	month = {nov},
+	publisher = {{JSTOR}},
+	volume = {24},
+	number = {2},
+	pages = {395},
+	author = {R. F. Chapman and J. H. P. Sankey},
+	title = {The Larger Invertebrate Fauna of Three Rabbit Carcasses},
+	journal = {The Journal of Animal Ecology}
+}

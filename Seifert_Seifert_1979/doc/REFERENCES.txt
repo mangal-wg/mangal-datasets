@@ -1,0 +1,13 @@
+@article{Seifert_1979,
+	doi = {10.2307/1936064},
+	url = {https://doi.org/10.2307%2F1936064},
+	year = 1979,
+	month = {jun},
+	publisher = {Wiley},
+	volume = {60},
+	number = {3},
+	pages = {462--467},
+	author = {Richard P. Seifert and Florence Hammett Seifert},
+	title = {A Heliconia Insect Community in a Venezuelan Cloud Forest},
+	journal = {Ecology}
+}

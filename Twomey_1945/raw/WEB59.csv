@@ -1,0 +1,24 @@
+"A.C. Twomey. The Bird Population of an Elm-Maple Forest with Special Reference to Aspection, Territorialism, and Coactions. Ecological Monographs, 15(2), pp. 173-205.",,,,,,,,,,,,,,,,,,,,,,,,
+Trelease woods - Illinois,Hemiptera,Orthoptera,Diptera,Homoptera,Lepidoptera,rabbit,Coleoptera,deermice,wood-borers - weevils,Hymenoptera,indigo bunting,shrew,wood thrush,arachnids,Maryland yellow-throat,fox squirrel,downy woodpecker,crested flycatcher,tufted titmouse,white-breasted nuthatch,red-eyed vireo,red-headed woodpecker,cat,barred owl
+acorns,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+sap and plant juices,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+leaves,1,1,0,1,1,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+flowers,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dead organic material,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+roots - bark - wood,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hemiptera,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Orthoptera,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+Diptera,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,1,1,1,0,1,1,0,0
+Homoptera,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,1,1,0,0,0
+Lepidoptera,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,1,1,0,0
+rabbit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Coleoptera,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0,1,1,0,0
+deermice,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1
+wood-borers - weevils,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+Hymenoptera,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0
+indigo bunting,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+shrew,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+arachnids,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,0,0,0
+fox squirrel,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+downy woodpecker,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+crested flycatcher,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0

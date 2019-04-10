@@ -1,0 +1,13 @@
+@article{Fetahi_2011,
+	doi = {10.1016/j.ecolmodel.2010.09.038},
+	url = {https://doi.org/10.1016%2Fj.ecolmodel.2010.09.038},
+	year = 2011,
+	month = {feb},
+	publisher = {Elsevier {BV}},
+	volume = {222},
+	number = {3},
+	pages = {804--813},
+	author = {Tadesse Fetahi and Michael Schagerl and Seyoum Mengistou and Simone Libralato},
+	title = {Food web structure and trophic interactions of the tropical highland lake Hayq, Ethiopia},
+	journal = {Ecological Modelling}
+}

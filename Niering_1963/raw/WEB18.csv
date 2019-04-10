@@ -1,0 +1,20 @@
+"W.A. Niering. (1963). Terrestrial Ecology of Kapingamarangi Atoll, Caroline Islands. Ecological Monographs. 33(2), pp. 131-160.",,,,,,,,,,,,,,,,,,,
+Kapingamarangi atoll - Polynesia,zooplankton,invertebrates,fish,terns,frigate birds,boobies,man,sea turtles,pig,rat,coconut crabs,fowl,insects,skinks,reef heron,starlings,land crustacea,fungi - snails - annelids,geckos
+algae,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+phytoplankton,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+zooplankton,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+invertebrates,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fish,0,0,0,1,1,1,1,0,0,0,0,0,0,0,-1,0,0,0,0
+turtle grass,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+sea turtles,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+pig,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+coconut,0,0,0,0,0,0,1,0,1,1,1,0,0,0,0,0,1,0,0
+coconut crabs,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+fowl,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+land vegetation,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,1,1,0
+Cyrtosperma,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0
+Pandanus,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0
+breadfruit,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0
+insects,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1
+skinks,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+geckos,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0

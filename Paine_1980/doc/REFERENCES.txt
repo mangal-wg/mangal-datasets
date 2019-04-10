@@ -1,0 +1,13 @@
+@article{Paine_1980,
+	doi = {10.2307/4220},
+	url = {https://doi.org/10.2307%2F4220},
+	year = 1980,
+	month = {oct},
+	publisher = {{JSTOR}},
+	volume = {49},
+	number = {3},
+	pages = {666},
+	author = {R. T. Paine},
+	title = {Food Webs: Linkage, Interaction Strength and Community Infrastructure},
+	journal = {The Journal of Animal Ecology}
+}

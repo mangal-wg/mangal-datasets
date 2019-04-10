@@ -1,0 +1,8 @@
+@article{jiron1981insect,
+  title={Insect succession in the decomposition of a mammal in Costa Rica},
+  author={Jir{\'o}n, Luis Fernando and Cart{\'\i}n, V{\'\i}ctor M},
+  journal={Journal of the New York Entomological Society},
+  pages={158--165},
+  year={1981},
+  publisher={JSTOR}
+}

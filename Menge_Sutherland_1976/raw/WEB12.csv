@@ -1,0 +1,13 @@
+"B.A. Menge and J.P. Sutherland. Species Diversity Gradients: Synthesis of the Roles of Predation, Competition, and Temporal Heterogeneity. The American Naturalist, 110(973), pp. 351-369.",,,,,,,,,,
+Exposed rocky shore - Washington,acorn barnacles,limpets,Tegula,Mytilus californianus,Pollicipes,chitons,Littorina,Thais,Pisaster,Leptasterias
+detritus,1,0,0,1,1,0,0,0,0,0
+plankton,1,0,0,1,1,0,0,0,0,0
+algae,0,1,1,0,0,1,1,0,0,0
+acorn barnacles,0,0,0,0,0,0,0,1,1,1
+limpets,0,0,0,0,0,0,0,0,1,1
+Tegula,0,0,0,0,0,0,0,0,1,1
+Mytilus californianus,0,0,0,0,0,0,0,1,1,1
+Pollicipes,0,0,0,0,0,0,0,0,1,0
+chitons,0,0,0,0,0,0,0,0,1,1
+Littorina,0,0,0,0,0,0,0,0,0,1
+Thais,0,0,0,0,0,0,0,0,1,1

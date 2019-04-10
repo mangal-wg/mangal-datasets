@@ -1,0 +1,10 @@
+"Gaedke, U., and Straile, D. (1994). Seasonal changes of trophic transfer efficiencies in a plankton food web derived from biomass size distributions and network analysis. Ecological Modelling. 75/76, pp. 435-445. See also: Gaedke, U., S. Hochstädter & D. Straile (2002) Interplay between energy limitation and nutritional deficiency: Empirical data and food web models. Ecological Monographs 72: 251-270.",,,,,,,,
+Lake Constance - 1994 - Central Europe,Phytoplankton,Bacteria,HNF,Ciliates,Rotifers,Herbivorous Crustaceans,Carnivorous Crustaceans,Fish
+Phytoplankton,0,0,1,1,1,1,1,0
+Bacteria,0,0,1,1,1,1,0,0
+HNF,0,0,0,1,1,1,0,0
+Ciliates,0,0,0,1,1,1,1,0
+Rotifers,0,0,0,0,1,1,1,1
+Herbivorous Crustaceans,0,0,0,0,0,0,1,1
+Carnivorous Crustaceans,0,0,0,0,0,0,1,1
+Fish,0,0,0,0,0,0,0,1

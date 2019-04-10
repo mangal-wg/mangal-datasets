@@ -1,0 +1,6 @@
+@book{nybakken2001marine,
+  title={Marine biology: an ecological approach},
+  author={Nybakken, James Willard},
+  volume={5},
+  year={2001}
+}

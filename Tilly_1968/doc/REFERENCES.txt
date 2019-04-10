@@ -1,0 +1,13 @@
+@article{Tilly_1968,
+	doi = {10.2307/1942291},
+	url = {https://doi.org/10.2307%2F1942291},
+	year = 1968,
+	month = {feb},
+	publisher = {Wiley},
+	volume = {38},
+	number = {2},
+	pages = {169--197},
+	author = {Laurence J. Tilly},
+	title = {The Structure and Dynamics of Cone Spring},
+	journal = {Ecological Monographs}
+}

@@ -1,0 +1,13 @@
+@article{Angelini_2005,
+	doi = {10.1016/j.ecolmodel.2004.06.025},
+	url = {https://doi.org/10.1016%2Fj.ecolmodel.2004.06.025},
+	year = 2005,
+	month = {jan},
+	publisher = {Elsevier {BV}},
+	volume = {181},
+	number = {2-3},
+	pages = {109--121},
+	author = {Ronaldo Angelini and Angelo Antonio Agostinho},
+	title = {Food web model of the Upper Paran{\'{a}} River Floodplain: description and aggregation effects},
+	journal = {Ecological Modelling}
+}

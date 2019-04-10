@@ -1,0 +1,18 @@
+"Liu, Q-I., Chen, Y., Li, J-L., and Chen, L-Q. (2007). The food web structure and ecosystem properties of a filter-feeding carps dominated deep reservoir ecosystem. Ecological Modelling. 203, pp. 279-289.",,,,,,,,,,,,,
+"Lake Qiandaohu ecosystem - Ecopath model 2004 - Zhejiang Province, PR China",Elopichthys,Erythroculter,Pseudolaubuca,Bighead carp,Silver carp,Common carp,Xenocypris,Sinibrama,Other fish,Shrimp,Mollusk,Meiobenthos,Zooplankton
+Elopichthys,0,0,0,0,0,0,0,0,0,0,0,0,0
+Erythroculter,0.37,0.082,0,0,0,0,0,0,0,0,0,0,0
+Pseudolaubuca,0.025,0.03,0,0,0,0,0,0,0,0,0,0,0
+Bighead carp,0.16,0.292,0.24,0,0,0,0,0,0,0,0,0,0
+Silver carp,0.13,0.114,0.1,0,0,0,0,0,0,0,0,0,0
+Common carp,0.012,0.012,0,0,0,0,0,0,0,0,0,0,0
+Xenocypris,0.075,0.078,0,0,0,0,0,0,0,0,0,0,0
+Sinibrama,0.22,0.235,0,0,0,0,0,0,0,0,0,0,0
+Other fish,0.008,0.007,0.04,0,0,0,0,0,0,0,0,0,0
+Shrimp,0,0.15,0.06,0,0,0.05,0,0,0,0,0,0,0
+Mollusk,0,0,0,0,0,0.2,0,0,0.3,0,0,0,0
+Meiobenthos,0,0,0,0,0,0.75,0.02,0.35,0.35,0.25,0,0,0
+Zooplankton,0,0,0.56,0.95,0.1,0,0,0,0,0,0,0,0.02
+Phyoplankton,0,0,0,0.03,0.75,0,0,0,0,0,0.15,0,0.68
+Benthic producer,0,0,0,0,0,0,0.68,0.5,0.35,0.55,0.45,0,0
+Detritus,0,0,0,0.02,0.15,0,0.3,0.15,0,0.2,0.4,1,0.3

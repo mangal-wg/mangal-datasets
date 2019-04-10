@@ -1,0 +1,7 @@
+"M. Rejmanek, and P. Stary. (1979). Connectance in real biotic communities and critical values for stability of model ecosystems. Nature letters. 280, pp. 311-313.",,,,,,,,,,,
+Aphid-parasitoid system on Pinus silvestris - Central Europe,Pauesia picta,P. laricia,P. jezoensis,P. pini,Praon bicolor,Diaeretus leucopterus,Pauesia unilachni,Cinara pini,C. pinea,Eulachnus agilis,Schizolachnus pineti
+Cinara pini,1,0,0,0,0,0,0,0,0,0,0
+C. pinea,0,1,1,1,0,0,0,0,0,0,0
+Eulachnus agilis,0,0,0,0,1,1,0,0,0,0,0
+Schizolachnus pineti,0,0,0,0,0,0,1,0,0,0,0
+Pinus silvestris,0,0,0,0,0,0,0,1,1,1,1

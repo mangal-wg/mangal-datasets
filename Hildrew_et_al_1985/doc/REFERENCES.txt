@@ -1,0 +1,13 @@
+@article{HILDREW_1985,
+	doi = {10.1111/j.1365-2311.1985.tb00738.x},
+	url = {https://doi.org/10.1111%2Fj.1365-2311.1985.tb00738.x},
+	year = 1985,
+	month = {nov},
+	publisher = {Wiley},
+	volume = {10},
+	number = {4},
+	pages = {403--413},
+	author = {ALAN G. HILDREW and COLIN R. TOWNSEND and AZIM HASHAM},
+	title = {The predatory Chironomidae of an iron-rich stream: feeding ecology and food web structure},
+	journal = {Ecological Entomology}
+}

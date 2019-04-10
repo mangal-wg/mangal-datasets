@@ -1,0 +1,8 @@
+@article{kuusela1979early,
+  title={Early summer ecology and community structure of the macrozoobenthos on stones},
+  author={Kuusela, Kalevi},
+  journal={Acta Univer. Ouluensis Ser. A Sci. Rerum Nat},
+  volume={87},
+  pages={1--130},
+  year={1979}
+}

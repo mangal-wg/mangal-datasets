@@ -1,0 +1,13 @@
+@article{Allan_1982,
+	doi = {10.2307/1938871},
+	url = {https://doi.org/10.2307%2F1938871},
+	year = 1982,
+	month = {oct},
+	publisher = {Wiley},
+	volume = {63},
+	number = {5},
+	pages = {1444--1455},
+	author = {J. David Allan},
+	title = {The Effects of Reduction in Trout Density on the Invertebrate Community of a Mountain Stream},
+	journal = {Ecology}
+}

@@ -1,0 +1,12 @@
+@article{Angelini_2013,
+	doi = {10.1016/j.ecolmodel.2013.01.001},
+	url = {https://doi.org/10.1016%2Fj.ecolmodel.2013.01.001},
+	year = 2013,
+	month = {mar},
+	publisher = {Elsevier {BV}},
+	volume = {253},
+	pages = {82--96},
+	author = {Ronaldo Angelini and Ronny Jos{\'{e}} de Morais and Agostinho Carlos Catella and Emiko Kawakami Resende and Simone Libralato},
+	title = {Aquatic food webs of the oxbow lakes in the Pantanal: A new site for fisheries guaranteed by alternated control?},
+	journal = {Ecological Modelling}
+}

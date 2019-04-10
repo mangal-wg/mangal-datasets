@@ -1,0 +1,10 @@
+@article{larsson1978lake,
+  title={The lake ecosystem of {\O}vre Heimdalsvatn},
+  author={Larsson, Petter and Brittain, John E and Lien, Leif and Lillehammer, Albert and Tangen, Karl},
+  journal={Ecography},
+  volume={1},
+  number={2-3},
+  pages={304--320},
+  year={1978},
+  publisher={Wiley Online Library}
+}

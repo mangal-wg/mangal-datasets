@@ -1,0 +1,13 @@
+@article{Badcock_1949,
+	doi = {10.2307/1599},
+	url = {https://doi.org/10.2307%2F1599},
+	year = 1949,
+	month = {nov},
+	publisher = {{JSTOR}},
+	volume = {18},
+	number = {2},
+	pages = {193},
+	author = {Ruth M. Badcock},
+	title = {Studies in Stream Life in Tributaries of the Welsh Dee},
+	journal = {The Journal of Animal Ecology}
+}

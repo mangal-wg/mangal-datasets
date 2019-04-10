@@ -1,0 +1,13 @@
+@article{Mack_1996,
+	doi = {10.1071/mu9960089},
+	url = {https://doi.org/10.1071%2Fmu9960089},
+	year = 1996,
+	month = {jun},
+	publisher = {Informa {UK} Limited},
+	volume = {96},
+	number = {2},
+	pages = {89--101},
+	author = {Andrew L. Mack and Debra D. Wright},
+	title = {Notes on Occurrence and Feeding of Birds at Crater Mountain Biological Research Station, Papua New Guinea},
+	journal = {Emu - Austral Ornithology}
+}

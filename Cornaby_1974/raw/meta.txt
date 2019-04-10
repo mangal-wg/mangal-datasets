@@ -1,0 +1,3 @@
+network	lat	lon	date	name
+tropical dry lowland forest at Finac La pacifica, Guanacaste Prov.	10.456804	-85.094433	1968-02-08	Finac_La_pacifica
+tropical wet lowland forest near Rincon de Osa, Puntarenas Prov.	8.534018	-83.508334	1968-02-29	Rincon_de_Osa

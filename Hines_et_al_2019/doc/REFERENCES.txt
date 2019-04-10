@@ -1,0 +1,11 @@
+@article{Hines_2019,
+	doi = {10.1002/ecy.2679},
+	url = {https://doi.org/10.1002%2Fecy.2679},
+	year = 2019,
+	month = {mar},
+	publisher = {Wiley},
+	pages = {e02679},
+	author = {Jes Hines and Darren P. Giling and Michael Rzanny and Winfried Voigt and Sebastian T. Meyer and Wolfgang W. Weisser and Nico Eisenhauer and Anne Ebeling},
+	title = {A meta-food web for invertebrate species collected in a european grassland},
+	journal = {Ecology}
+}

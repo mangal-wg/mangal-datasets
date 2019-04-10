@@ -1,0 +1,13 @@
+@article{Hurlbert_1972,
+	doi = {10.2307/1942211},
+	url = {https://doi.org/10.2307%2F1942211},
+	year = 1972,
+	month = {feb},
+	publisher = {Wiley},
+	volume = {42},
+	number = {3},
+	pages = {269--299},
+	author = {Stuart H. Hurlbert and Mir S. Mulla and Harold R. Willson},
+	title = {Effects of an Organophosphorus Insecticide on the Phytoplankton, Zooplankton, and Insect Populations of Fresh-Water Ponds},
+	journal = {Ecological Monographs}
+}

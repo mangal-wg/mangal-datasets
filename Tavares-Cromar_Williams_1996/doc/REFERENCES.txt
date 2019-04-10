@@ -1,0 +1,13 @@
+@article{Tavares_Cromar_1996,
+	doi = {10.2307/2963482},
+	url = {https://doi.org/10.2307%2F2963482},
+	year = 1996,
+	month = {feb},
+	publisher = {Wiley},
+	volume = {66},
+	number = {1},
+	pages = {91--113},
+	author = {Annette F. Tavares-Cromar and D. Dudley Williams},
+	title = {The Importance of Temporal Resolution in Food Web Analysis: Evidence from a Detritus-Based Stream},
+	journal = {Ecological Monographs}
+}
